@@ -1,3 +1,5 @@
+[![robotframework-tests](https://github.com/opiproject/sessionOffload/actions/workflows/main.yml/badge.svg)](https://github.com/opiproject/sessionOffload/actions/workflows/main.yml)
+
 # Introduction 
 
 This repository has definitions of API's to accellerate network applications by offloading packet processing to a hardware switch. 
@@ -20,9 +22,11 @@ For details on the TunnelOffload for IP tunnels see the Tunnel README
 
 [TunnelOffload README](/README.TunnelOffload.md 'TunnelOffload Readme')
 
+# MAINTAINERS
 
-MAINTAINERS
------------
+Curent maintainers are the [OPI Maintainers](https://github.com/orgs/opiproject/teams/opi-maintainers/members).
+
+## Original MAINTAINERS
 
 Developed for AT&T by Brian Freeman and Richard Bowman, June 2020
 
@@ -32,7 +36,3 @@ Current maintainers:
  * Richard Bowman (at&t)
  * John McDowall (palo alto networks)
  * Omri Peri (drivenets) 
-
-
-
-
