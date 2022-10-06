@@ -1,5 +1,3 @@
-[![robotframework-tests](https://github.com/opiproject/sessionOffload/actions/workflows/main.yml/badge.svg)](https://github.com/opiproject/sessionOffload/actions/workflows/main.yml)
-
 # Overview
 The framework directory provides the C Language interface into the C++ gRPC OpneOffload Client and Server. Users of the OpenOffload client and server do not need to write any C++ code the interfaces are abstract through a C API for both the client and server.
 
