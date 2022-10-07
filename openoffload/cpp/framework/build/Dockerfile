@@ -44,7 +44,7 @@ WORKDIR /home/grpc/tmp/libconfig-1.7.2
 
 RUN ./configure && \
     make && \
-    RUN make install
+    make install
 
 WORKDIR /home/grpc/
 #
