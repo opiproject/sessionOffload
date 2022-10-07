@@ -8,12 +8,12 @@ WORKDIR /home/grpc/local
 ENV GRPC_INSTALL /home/grpc/local
 
 RUN echo $GRPC_INSTALL && \
-    yum -y update && \
     yum -y install wget && \
     yum -y install which && \
     yum -y groupinstall "Development tools" && \
+    yum clean all && \
     wget --no-check-certificate -q -O cmake-linux.sh https://github.com/Kitware/CMake/releases/download/v3.17.5/cmake-3.17.5-Linux-x86_64.sh && \
-    ["sh", "cmake-linux.sh",  "--", "--skip-license", "--prefix=/home/grpc/local"] && \
+    cmake-linux.sh -- --skip-license --prefix=/home/grpc/local && \
     rm cmake-linux.sh
 
 ENV PATH="$GRPC_INSTALL/bin:${PATH}"
@@ -48,4 +48,5 @@ RUN ./configure && \
 
 WORKDIR /home/grpc/
 #
+USER guest
 CMD ["sh", "-c", "tail -f /dev/null"]
