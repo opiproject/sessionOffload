@@ -3,7 +3,6 @@
 
 gRPC API to offload tunnel packet processing for VPN Gateway applications that use IPSEC encryption from an application to a hardware switch
 
-
 # Installation and build for tests
 
 The TunnelOffload has a Python based reference implemeentation to help demonstrate the API and to show scenarios like Rekeying for IPSEC. To just run the tests Python and a few libraries are required.
@@ -21,7 +20,7 @@ See the github workflow main.yaml for details on the required library installati
 The following command builds the Basic Python code
 
 ```bash
-$ ./builditIPTBasic.sh
+./builditIPTBasic.sh
 ```
 
 ## Testing the sample code with robot
@@ -31,8 +30,8 @@ A set of Robotframework tests are provided to quickly run the client and server 
 The IPTunnel test results can be viewed in the Client and Server logs a sshow here.
 
 ```bash
-$ cd robot
-$ mvn clean install
+cd robot
+mvn clean install
 ```
 
 ### Client Log
@@ -177,7 +176,9 @@ Sending IPSec Tunnel Request
 Sending IPSec Tunnel Request
 Sending IPSec Tunnel Request
 ```
+
 ### Server Log
+
 ```bash
 ############ Create Tunnel ID - 10000 ##################
 tunnelId: 10000
@@ -1003,7 +1004,6 @@ Tunnel Type: GENEVE Encap
 
 ```
 
-
 ## Testing the sample code with python directly
 
 Create four separate terminal windows a client and three server windows
@@ -1013,8 +1013,8 @@ Create four separate terminal windows a client and three server windows
 Start the tunnel server in one window by going to the build directory and running the script below.
 
 ```bash
-$ cd buildIPTBasic
-$ ./runIPTOffloadServer.sh
+cd buildIPTBasic
+./runIPTOffloadServer.sh
 ```
 
 ### Client window
@@ -1022,24 +1022,19 @@ $ ./runIPTOffloadServer.sh
 Start the client in the second window by going to the build directory and running the script below.
 
 ```bash
-$ cd buildIPTBasic
-$ ./runIPTClient.sh
+cd buildIPTBasic
+./runIPTClient.sh
 ```
+
 There should be results in the client and server windows similar to the robot output above.
 
-
-
-MAINTAINERS
------------
+# MAINTAINERS
 
 Developed by Omri Peri and Brian Freeman , April 2022
 
 Current maintainers:
 
- * Omri Peri (drivenets)
- * Brian Freeman (at&t)
+* Omri Peri (drivenets)
+* Brian Freeman (at&t)
 
 # References
-
-
-

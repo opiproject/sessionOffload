@@ -13,15 +13,14 @@ basic tests. Full blown error checking and regression would be done with the pyt
 Other reference implementation may be added by the community to confirm or demonstrate
 approaches such as with c++ or go clients and servers.
 
-
 ## Getting Started
 
-*  Contributer License Agreement and Code Signing
+* Contributer License Agreement and Code Signing
 
 This software is distributed under a permissive open source
 license to allow it to be used in any projects, whether open
 source or proprietary. Contributions to the project are welcome
-and it is important to maintain clear record of contributions 
+and it is important to maintain clear record of contributions
 and terms under which they are licensed.
 
 To indicate your acceptance of Developer's Certificate of Origin 1.1
@@ -30,10 +29,9 @@ for each contribution you make to the project:
 
 Signed-off-by : Your Name <your@email.com>
 
-
 For information we have copied the Certificate of Origin 1.1 here:
 
-```
+```bash
 
 Developer's Certificate of Origin 1.1
 
@@ -61,7 +59,6 @@ the open source license(s) involved.
 
 ```
 
-
 * Make sure you have a [GitHub account](https://github.com/join).
 * Create an issue in the github repository issues tab for your issue if one does not already exist.
   * Clearly describe the issue including steps to reproduce when it is a bug.
@@ -85,10 +82,9 @@ the open source license(s) involved.
 
 * Make sure you have added the necessary tests for your changes.
 
-
 ## Making Trivial Changes
 
-For trivial changes, it is not always necessary to create a new issue in github. 
+For trivial changes, it is not always necessary to create a new issue in github.
 In this case, it is appropriate to start the first line of a
 commit with one of `(docs)`, `(maint)`, or `(packaging)` instead of a ticket
 number.
@@ -96,7 +92,7 @@ number.
 If a issue exists for the documentation commit, you can include it
 after the `(docs)` token.
 
-```
+```bash
     (docs)(DOCUMENT-000) Add docs commit example to CONTRIBUTING
 
     There is no example for contributing a documentation commit
@@ -115,7 +111,7 @@ respectively.
 
 ## Submitting Changes
 
-* Sign your code indicating agreement to the Contributer Code of Conduct 
+* Sign your code indicating agreement to the Contributer Code of Conduct
 In the future we may use a Contributer License Agreement as well.
 * Push your changes to a topic branch in your fork of the repository.
 * Submit a pull request to the github repository.
@@ -129,14 +125,13 @@ In the future we may use a Contributer License Agreement as well.
 
 By running tests in advance and by engaging with peer review for prospective
 changes, your contributions have a high probability of becoming long lived
-parts of the the project. 
+parts of the the project.
 
 If the code change results in a test failure, we will make our best effort to
 correct the error. If a fix cannot be determined and committed within 24 hours
 of its discovery, the commit(s) responsible _may_ be reverted, at the
 discretion of the committer and maintainers. This action would be taken
 to help maintain passing states in our testing pipelines.
-
 
 ### Summary
 

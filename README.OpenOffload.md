@@ -1,24 +1,23 @@
-
 # OpenOffload
 
 gRPC API to offload TCP and UDP packet processing from an application to a hardware switch
 
-# Creating Language Bindings
+## Creating Language Bindings
 
 There are two language bindings implemented in the language Makefile.
 
-- Python
-- C++
+* Python
+* C++
 
-To generate the language bindings for a specific language the appropriate language and related gRPC tools need to be installed. It is the responsibility of individual implementer to create there client and server code. 
+To generate the language bindings for a specific language the appropriate language and related gRPC tools need to be installed. It is the responsibility of individual implementer to create there client and server code.
 
 ## Generating code
 
 ### Python
 
 ```bash
-$ cd openoffload
-$ make all-py
+cd openoffload
+make all-py
 ```
 
 ### C++ recommended method using docker container for dependencies
@@ -28,8 +27,8 @@ $ make all-py
 Create the basic build image with all the required libraries
 
 ```bash
-$ cd openoffload/cpp/framework/build
-$ docker build -t grpcbuild:v1 .
+cd openoffload/cpp/framework/build
+docker build -t grpcbuild:v1 .
 ```
 
 #### Step 2
@@ -38,40 +37,43 @@ Create the build container from the base image
 There is a little hack necessary to get the proto file in the right place for docker
 
 ```bash
-$ cd ..
-$ cp ../../../protos/openoffload.proto .
+cd ..
+cp ../../../protos/openoffload.proto .
 ```
+
 ```bash
-$ docker build -t opofbld:v1 .
-$ docker image ls
+docker build -t opofbld:v1 .
+docker image ls
 ```
 
 #### Step 3
+
 Access the container to get the files
 
 ```bash
-$ mkdir results
-$ docker create -it --name results opofbld:v1 /bin/bash
-$ docker cp results:/home/grpc/local/tests/bin/ results/
-$ cd results
-$ mkdir log
+mkdir results
+docker create -it --name results opofbld:v1 /bin/bash
+docker cp results:/home/grpc/local/tests/bin/ results/
+cd results
+mkdir log
 ```
+
 Run the binaries in separate windows :
+
 ```bash
 ./bin/opof_server_test 
 and 
 ./bin/opof_client_test -f -v
 ```
 
-
 ### C++ alternate method assumes all dependencies are installed on the build path
 
 ```bash
-$ cd openoffload
-$ make all-cpp
+cd openoffload
+make all-cpp
 ```
 
-# Installation and build for tests
+## Installation and build for tests
 
 Depending on which language binding used different development tools need to be installed. To just run the tests only Python is required.
 
@@ -89,17 +91,16 @@ The following command builds the Basic Python code
 Note: The PythonSimulator has more functional testing of error conditions and follows a similar build/test pattern.
 
 ```bash
-$ ./builditBasic.sh
+./builditBasic.sh
 ```
 
 ## Testing the sample code with robot
 
 A set of Robotframework tests are provided to quickly run the client and server tests.
 
-
 ```bash
-$ cd robot
-$ mvn clean install
+cd robot
+mvn clean install
 
 ==============================================================================
 Acceptance                                                                    
@@ -157,7 +158,6 @@ Acceptance                                                            | PASS |
 
 ```
 
-
 ## Testing the sample code with python directly
 
 Create four separate terminal windows a client and three server windows
@@ -167,8 +167,8 @@ Create four separate terminal windows a client and three server windows
 Start the offload server in one window by going to the build directory and running the script below.
 
 ```bash
-$ cd buildBasic
-$ ./runOffloadServer.sh
+cd buildBasic
+./runOffloadServer.sh
 ```
 
 ### Client window
@@ -176,9 +176,10 @@ $ ./runOffloadServer.sh
 Start the client in the fourth window by going to the build directory and running the script below.
 
 ```bash
-$ cd buildBasic
-$ ./runClient.sh
+cd buildBasic
+./runClient.sh
 ```
+
 There should be results in the client window similar to the below:
 
 ```bash
@@ -301,19 +302,16 @@ Status:  _DEVICE_ACTIVATED
 
 ```
 
-MAINTAINERS
------------
+## MAINTAINERS
 
 Developed for AT&T by Brian Freeman and Richard Bowman, June 2020
 
 Current maintainers:
 
- * Brian Freeman (at&t)
- * Richard Bowman (at&t)
- * John McDowall (palo alto networks)
+* Brian Freeman (at&t)
+* Richard Bowman (at&t)
+* John McDowall (palo alto networks)
 
-# References
+## References
 
 1. [gRPC Python Quick Start Guide](https://grpc.io/docs/quickstart/python/)
-
-

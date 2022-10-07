@@ -10,13 +10,11 @@ Through this service, it will be possible to offload several kinds of IP Tunnels
 
 The API will also allow the definition of switching between tunnels with decapsulating and encapsulating appropriate to the tunnel type for the incoming and outgoing traffic.
 
-
-
-# Offloading Rules
+## Offloading Rules
 
 With openOffload, the user can request to match the packet encapsulate it on a tunnel, this will be done by providing matching criteria, tunnel properties and the next action to perform.
 
-Each ipTunnelRule inserted will include *match* determines rule matching. Upon match tunnel provided by the *tunnel* 
+Each ipTunnelRule inserted will include *match* determines rule matching. Upon match tunnel provided by the *tunnel*
 field will be applied to the packet.
 
 `nextActinon` field will determine what will happen to the packet after applying the tunnel, with two possibilities: *recirculate* indicates the packet will overgo again the tunneling subsystem, and another tunnel rule may be applied. *forward* indicates that the packet will be forwarded directly from the device, without the process of any other tunnel.
@@ -25,7 +23,7 @@ To summarize the flow, see the following diagram:
 
 ![Matching](images/tunnelOffload/deviceDiagram.png)
 
-#### Tunnel ID
+### Tunnel ID
 
 As a response to `ipTunnelRule` creation, the offloading device will send back a unique 32-bit identifier to the tunnel - **tunnelId**.
 
@@ -49,25 +47,25 @@ Let's take a look at the following packet:
 
 ![Matching](images/tunnelOffload/vxlanPacket.png)
 
-*All of the matches below will match this packet:*
+Note: *All of the matches below will match this packet:*
 
-```
+```bash
 Source IP: 1.2.3.0/24
 VXLAN Packet {
    VNI: 466
 }
 ```
 
-*Source IP & VNI Match, Destination IP is not provided - matching on any destination IP*
+Note: *Source IP & VNI Match, Destination IP is not provided - matching on any destination IP*
 
-```
+```bash
 VXLAN Packet {
 }
 ```
 
-*Just specifying that packet is VXLan packet is enough, done by matching VXLan without any field in message*
+Note: *Just specifying that packet is VXLan packet is enough, done by matching VXLan without any field in message*
 
-```
+```bash
 Source IP: 1.2.3.0/24
 Destination IP: 5.5.5.0/24
 VXLAN Packet {
@@ -75,7 +73,7 @@ VXLAN Packet {
 }
 ```
 
-*Source & Dest outer IP match, inner source MAC match*
+Note: *Source & Dest outer IP match, inner source MAC match*
 
 ## Packet Encapsulation / Decapsulation
 
@@ -89,7 +87,7 @@ In the case of a uni-directional tunnel, tunnel definition will be for only enca
 
 GENEVE is a classic example of a bi-directional user - where the offloaded device can device to just encapsulate / decapsulate GENEVE.
 
-```
+```bash
 message GENEVE {
   oneof {
     GENEVEEncap geneveEncap = 1;
@@ -97,26 +95,24 @@ message GENEVE {
   }
 ```
 
-*Upon a match, the user decides to perform encapsulation / decapsulation, GENEVE is comprised of two distinct messages, 
+*Upon a match, the user decides to perform encapsulation / decapsulation, GENEVE is comprised of two distinct messages,
 choosing one of them decide about the tunnel operation*
 
 NAT is an example where the device is both encapsulating / decapsulating the tunnels and this is a bidirectional tunnel.
 
-```
+```bash
 message NAT {
   SourceIP sourceIP = 1;
 }
 ```
 
-*In NAT example, ipTunnelRule will be used for both encapsulation / decapsulation*
+Note: *In NAT example, ipTunnelRule will be used for both encapsulation / decapsulation*
 
 In a NAT example (of bidirectional tunnel), the match will be used for egress traffic only, and a packet that will be matched on it will perform NAT.
 
 After maching on egress, the NAT will write the rule for ingress matching, and this will yield on matching of ingress tunnel (see example below).
 
 ![Matching](images/tunnelOffload/uni_bi_directional_tunnel.png)
-
-
 
 **Match** is the only indicator for going into tunnel encapsulation / decapsulation.
 While wanting to perform decapsulation of the packet in a uni-directional tunnel (e.g. the GENEVE Decapsulation in the example above), a GENEVE match **MUST** be on MATCH criteria (the same applies for IPSec, VXLan, etc)
@@ -129,11 +125,11 @@ According to the following chart:
 
 ![Matching](images/tunnelOffload/deviceDiagram.png)
 
-Upon receipt of the packet into the offloading device, it will be matched and a tunnel will be applied. 
+Upon receipt of the packet into the offloading device, it will be matched and a tunnel will be applied.
 
 If the `nextAction` equals `RECIRCULATE`, the packet will be processed via the matching logic again, and if a match will be found - another tunnel will be applied to the packet.
 
-This iterative process will occur until one; the packet isn't matched via the matching logic. 2; the next action equals  `FORWARD`. That will yield immediate forwarding of the data. 
+This iterative process will occur until one; the packet isn't matched via the matching logic. 2; the next action equals  `FORWARD`. That will yield immediate forwarding of the data.
 
 Consider the following example:
 
@@ -149,12 +145,9 @@ Consider the following example:
 
 The advantage of using the "TunnelID" as a match, is the ability to know for sure that after some tunneling, the second will happen for sure.
 
-
-
 ## Capabilities
 
 Capabilities are needed so the user can detect which features are available with tunnel offload,
 user can detect which features are available with tunnel offload, both the tunnel capabilities & matching capabilities of the device.
 
 Please see the capabilities rpc; in the tunnels offload proto for more detailed information about it.
-
