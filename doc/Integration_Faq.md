@@ -1,6 +1,7 @@
 # Open Offload Integration FAQ
 
 ## Introduction
+
 This is not intended to be a comprehensive list of answers, but rather a compendium of questions and answers to help prospective developers implement a working open offload server.
 
 ## FAQ
@@ -13,7 +14,7 @@ This is not intended to be a comprehensive list of answers, but rather a compend
 
     * *C/C++:* There is a sample C++ implementation in this github repository under the openoffload directory.
 
-    * *C Implementation:* Nivdia has kindly put their implementation in github under open source at: [Firewall Offload]https://github.com/BodongWang/firewall_offload
+    * *C Implementation:* Nivdia has kindly put their implementation in github under open source at: [Firewall Offload](https://github.com/BodongWang/firewall_offload)
 
 2. **Question:** Can multiple VMs talking to the same SmartNIC be supported?
 
@@ -57,4 +58,4 @@ This is not intended to be a comprehensive list of answers, but rather a compend
 
 12. **Question:** How are timeouts handled?
 
-     **Answer:**  The device will track the cacheTimeout setting on each session entry. When no packets are received after the timeout period, the device will remove the session from the session table and stream the closed session and stats to the application over the getClosedSessions gRPC call. The application will handle the TCP and UDP overall timeout. If additional packets are received , it will be a cache miss so the application will process these packets and determine if the session should be re-inserted into the session table. The device does not need to track anything about the two disjoint in time session table entries, the application will sum up the total packet/byte counts. 
+     **Answer:**  The device will track the cacheTimeout setting on each session entry. When no packets are received after the timeout period, the device will remove the session from the session table and stream the closed session and stats to the application over the getClosedSessions gRPC call. The application will handle the TCP and UDP overall timeout. If additional packets are received , it will be a cache miss so the application will process these packets and determine if the session should be re-inserted into the session table. The device does not need to track anything about the two disjoint in time session table entries, the application will sum up the total packet/byte counts.

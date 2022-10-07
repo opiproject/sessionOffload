@@ -1,9 +1,11 @@
 # Overview
+
 The framework directory provides the C Language interface into the C++ gRPC OpneOffload Client and Server. Users of the OpenOffload client and server do not need to write any C++ code the interfaces are abstract through a C API for both the client and server.
 
 There are simple test programs for the client and server. The server code includes a simpel in-memory hashtable that allows the construction of more complex test cases.
 
-# System Requirements
+## System Requirements
+
 The current version runs on top of Debian Bullseye.
 
 ## Install Development tools
@@ -39,26 +41,27 @@ cmake -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=$MY_INSTAL
 make -j4
 make install
 ```
-# Test Programs
 
-## Build
+## Test Programs
+
+### Build
 
 ```bash
 make all
 ```
 
-## Run
+### Run
 
 Checkout the test program capabilities
 
 ```bash
-$ LD_LIBRARY_PATH=lib bin/opof_client_test -h
+LD_LIBRARY_PATH=lib bin/opof_client_test -h
 ```
 
 Run the server
 
 ```bash
-$ LD_LIBRARY_PATH=lib bin/opof_server_test
+LD_LIBRARY_PATH=lib bin/opof_server_test
 ```
 
 Run the client for a speed tests
@@ -66,19 +69,20 @@ Run the client for a speed tests
 'n' in the number of sessions and 'b' is the buffer size to stream
 
 ```bash
-$ LD_LIBRARY_PATH=lib bin/opof_client_test -s -n 128 - b 64
+LD_LIBRARY_PATH=lib bin/opof_client_test -s -n 128 - b 64
 ```
-## Testing 
+
+### Testing
 
 To run specific tests users can create configuration files and run them as specific tests. The configuration files are in the "config" directory.
 
 ```bash
-$ LD_LIBRARY_PATH=lib bin/opof_client_test -t 1 -c config/test1.cfg
+LD_LIBRARY_PATH=lib bin/opof_client_test -t 1 -c config/test1.cfg
 ```
 
-# Programming the C Interface
+## Programming the C Interface
 
-## Client Program
+### Client Program
 
 There is an example file "opof_client_test.c" that shows how to use the C client interface. All the C++ enums and structures have been converted to C and are included from the file "opof.h". This is the major work for any changes to the openoffload.proto file. There may be a way to automate this but currently it is a manual process.
 
@@ -183,7 +187,7 @@ typedef struct sessionRequestTuple {
 
 
 #endif  /* OPOF_H */
-``` 
+```
 
 ### Initializing the client
 
@@ -193,6 +197,7 @@ Initializing the client interface is as follows:
 sessionTable_t *handle;
 handle = opof_create_sessionTable(address, port, cert);
 ```
+
 The address is a string representing the address of the server and the port is an int giving the port the server is listening on.
 
 ### Adding a session
@@ -212,9 +217,10 @@ The address is a string representing the address of the server and the port is a
 ```C
  status = opof_del_session(handle, sessionId, &resp);
 ```
+
 ### Extending the server
 
-The server is started by calling 
+The server is started by calling
 
 ```C
 void opof_server(const char* address, unsigned short port, const char* cert, const char* key)
@@ -228,56 +234,64 @@ To implement the interfaces to the server the following functions defined in "op
  int opof_del_session_server(unsigned long sessionId, sessionResponse_t *response);
  sessionResponse_t **opof_get_closed_sessions_server(statisticsRequestArgs_t *request, int *sessionCount);
 ```
+
 The file "opof_server_test.c" is a sample implementation of each of the functions. The sample implementaton implements a simple in memory hashtable to enable more complex test scenarios to be implemented.
 
-# Building from dockerfiles
+## Building from dockerfiles
 
-## Step 1 
+### Step 1
+
 Create the basic build image with all the required libraries
 
 ```bash
-$ cd openoffload/cpp/framework/build
-$ docker build -t grpcbuild:v1 .
+cd openoffload/cpp/framework/build
+docker build -t grpcbuild:v1 .
 ```
-## Step 2
+
+### Step 2
+
 Create the build container from the base image
 There is a little hack necessary to get the proto file in the right place for docker
 
 ```bash
-$ cd ..
-$ cp ../../../protos/openoffload.proto .
+cd ..
+cp ../../../protos/openoffload.proto .
 ```
+
 ```bash
-$ docker build -t opofbld:v1 .
-$ docker image ls
+docker build -t opofbld:v1 .
+docker image ls
 ```
-## Step 3
+
+### Step 3
+
 Access the container to get the files
 
 ```bash
-$ mkdir results
-$ docker create -it --name results opofbld:v1 /bin/bash
-$ docker cp results:/home/grpc/local/tests/bin/ results/
-$ cd results
-$ mkdir log
+mkdir results
+docker create -it --name results opofbld:v1 /bin/bash
+docker cp results:/home/grpc/local/tests/bin/ results/
+cd results
+mkdir log
 ```
 
 Start the server  (optionally set -p port, -a address )
+
 ```bash
-$ ./bin/opof_server_test
+./bin/opof_server_test
 
 OPOF: Starting OPOF Version  0.1
 Info: Creating Insecure Server
 Server listening on: localhost:3443
-
 ```
+
 Check the client main program for the available performance and config tests to run
-```bash
-$ ./bin/opof_client_test -f -v
 
+```bash
+./bin/opof_client_test -f -v
 ```
-# References
+
+## References
 
 1. [gRPC Quick Start Install](https://grpc.io/docs/languages/cpp/quickstart/)
 2. [uthash Documentation](https://troydhanson.github.io/uthash/userguide.html)
-

@@ -3,8 +3,7 @@
 
 gRPC API to offload TCP and UDP stateful packet processing from an application to a hardware device.  The simulator consists of two main scripts.  The first script we execute is the nos_sessions_server_simulator.py.  This script should be thought of as the hardware device that implements the stateful session offload and implements the gRPC server side. The second script we execute is the fw_sessions_client_simulator.py. This second script should be thought of as the firewall device which desires to offload stateful existing sessions.
 
-
-# Installation and build 
+# Installation and build
 
 This section describes how to build and execute the simulators.
 
@@ -18,23 +17,24 @@ This section describes how to build and execute the simulators.
 The following command builds the Python Simulator code.  This basic shell script will create a new directory named buildPythonSimulator and run the gRPC code to generate the server and client interfaces from the openoffload protobuffer.  It will then copy the necessary scripts and SSL/TLS keys to the new directory leaving the user with a test environment.
 
 ```bash
-$ ./builditPythonSimulator.sh
+./builditPythonSimulator.sh
 ```
 
 ## Testing the sample code
 
-Create three separate terminal windows to run the server, client, and a script to watch the offload sessions. 
+Create three separate terminal windows to run the server, client, and a script to watch the offload sessions.
 
 ### Server 1 Window (Offload sessions server)
 
 Start the offload server in one window by going to the build directory and running the script below.
 
 ```bash
-$ cd buildPythonSimulator
-$ ./runServer.sh
+cd buildPythonSimulator
+./runServer.sh
 ```
 
 Sample Output
+
 ```bash
 ----- START simulateSessionsTraffic() -----
 ----- END simulateSessionsTraffic() total sessions ACTIVE=0 & CLOSED=0 -----
@@ -75,18 +75,17 @@ ActionNextHop: 12.2.3.4
 Found slot for new offload session @ id = 3
 ```
 
-
-
 ### Server 2 Window (Firewall offload client)
 
 Start the firewall client in another window by going to the build directory and running the script below. This script will simulate new sessions being processed by the firewall and then trying to send them to the offload sessions server.  It randomily creates sessions and then calls the offload server to receive back offloaded sessions that have closed / completed on the offload sessions server.
 
 ```bash
-$ cd buildBasic
-$ ./runClient.sh
+cd buildBasic
+./runClient.sh
 ```
 
 Sample Output
+
 ```bash
 -------------- Initialize the FW session table ---------------
  Some firewalls may want to get all the current offloaded sessions
@@ -210,11 +209,12 @@ Offload Engine has no room for this session, Offload failed since offload sessio
 Start the watch offloaded sessions client in another window by going to the build directory and running the script below.
 
 ```bash
-$ cd buildBasic
-$ ./fw_watch_nos_sessions.py
+cd buildBasic
+./fw_watch_nos_sessions.py
 ```
 
 Sample Output
+
 ```bash
 -------------- Get All the Sessions --------------
 SessionId: 1
@@ -272,17 +272,16 @@ SessionId: 10
 ***Found 5 sessions
 
 ```
-MAINTAINERS
------------
+
+# MAINTAINERS
 
 Developed for AT&T by Brian Freeman and Richard Bowman, June 2020
 
 Current maintainers:
- * Brian Freeman (at&t)
- * Richard Bowman (at&t)
+
+* Brian Freeman (at&t)
+* Richard Bowman (at&t)
 
 # References
 
 1. [gRPC Python Quick Start Guide](https://grpc.io/docs/quickstart/python/)
-
-
