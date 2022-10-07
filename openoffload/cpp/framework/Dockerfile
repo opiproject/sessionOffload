@@ -2,10 +2,7 @@ FROM grpcbuild:v1beta1
 USER root
 ENV PATH="/home/grpc/local/bin:${PATH}"
 
-RUN mkdir -p /home/grpc/local/tests && \
-    mkdir -p /home/grpc/local/tests/src/ && \
-    mkdir -p /home/grpc/local/tests/include/ && \
-    mkdir -p /home/grpc/local/tests/ssl/
+RUN mkdir -p /home/grpc/local/tests/{src,include,ssl}
 
 WORKDIR /home/grpc/local/tests
 
@@ -20,9 +17,7 @@ RUN mkdir -p /home/protos
 COPY openoffload.proto /home/protos/
 
 RUN ls ../../../protos && \
-    mkdir -p bin && \
-    mkdir -p obj && \
-    mkdir -p log && \
+    mkdir -p {bin,obj,log} && \
     make clean && \
     make HOME=/home/grpc all
 
