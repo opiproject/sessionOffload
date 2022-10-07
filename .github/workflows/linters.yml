@@ -24,18 +24,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package:
-          - agent
-          - client
-          - dhcp
-          - bootstrap
+        dockerfile:
+          - ./openoffload/cpp/framework/Dockerfile
+          - ./openoffload/cpp/framework/build/Dockerfile
     steps:
       - uses: actions/checkout@v3
       - uses: hadolint/hadolint-action@v2.1.0
         with:
           recursive: true
           ignore: DL3041,DL3008
-          dockerfile: Dockerfile.${{ matrix.package }}
+          dockerfile: ${{ matrix.dockerfile }}
 
   shellcheck:
     runs-on: ubuntu-latest
