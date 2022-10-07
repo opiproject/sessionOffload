@@ -19,9 +19,8 @@ RUN echo $GRPC_INSTALL && \
 ENV PATH="$GRPC_INSTALL/bin:${PATH}"
 
 RUN echo $PATH && \
-    git config --global  http.sslVerify false && \
-    git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc && \
-    cd grpc && \
+    git config --global http.sslVerify false && \
+    git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc grpc && \
     mkdir -p /home/grpc/local/grpc/cmake/build
 
 WORKDIR /home/grpc/local/grpc/cmake/build
@@ -34,12 +33,11 @@ RUN pwd && \
     cmake -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/home/grpc/local ../.. && \
     make -j 4 && \
     make install && \
-    cd ../.. && \
     mkdir -p /home/grpc/tmp
 
 WORKDIR /home/grpc/tmp
 
-RUN wget http://hyperrealm.github.io/libconfig/dist/libconfig-1.7.2.tar.gz && \
+RUN wget -nv http://hyperrealm.github.io/libconfig/dist/libconfig-1.7.2.tar.gz && \
     tar xvzf libconfig-1.7.2.tar.gz
 
 WORKDIR /home/grpc/tmp/libconfig-1.7.2
