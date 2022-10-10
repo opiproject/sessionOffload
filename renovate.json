@@ -3,6 +3,6 @@
   "extends": [
     "config:base"
   ],
-  "ignorePaths": ["openoffload/cpp/framework/Dockerfile/"],
+  "ignorePaths": ["openoffload/cpp/framework/Dockerfile"],
   "includeForks": true
 }
