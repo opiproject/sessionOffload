@@ -4,11 +4,19 @@
 name: robotframework-tests
 
 on:
+  workflow_dispatch:
   push:
-    branches: '**'
+    branches: [ main ]
+    paths:
+      - 'protos/**'
+      - 'tests/robot/**'
+      - '.github/workflows/main.yml'
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
+    paths:
+      - 'protos/**'
+      - 'tests/robot/**'
+      - '.github/workflows/main.yml'
 
 defaults:
   run:
