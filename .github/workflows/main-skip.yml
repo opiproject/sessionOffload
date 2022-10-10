@@ -19,10 +19,6 @@ concurrency:
   group: poc-security-skip-${{ github.ref }}
   cancel-in-progress: true
 
-defaults:
-  run:
-    working-directory: tests/robot
-
 jobs:
   build:
     runs-on: ubuntu-latest
