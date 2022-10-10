@@ -3,16 +3,16 @@ name: robotframework-tests
 on:
   push:
     branches: [ main ]
-  paths-ignore:
-    - 'protos/**'
-    - 'tests/robot/**'
-    - '.github/workflows/main.yml'
+    paths-ignore:
+      - 'protos/**'
+      - 'tests/robot/**'
+      - '.github/workflows/main.yml'
   pull_request:
     branches: [ main ]
-  paths-ignore:
-    - 'protos/**'
-    - 'tests/robot/**'
-    - '.github/workflows/main.yml'
+    paths-ignore:
+      - 'protos/**'
+      - 'tests/robot/**'
+      - '.github/workflows/main.yml'
 
 concurrency:
   # if workflow for PR or push is already running stop it, and start new one
@@ -27,4 +27,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "No security POC test run required"'
+      - run: 'echo "No robot test run required"'
