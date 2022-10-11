@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (C) 2022 Intel Corporation
+# Copyright (c) 2022 Dell Inc, or its subsidiaries.
+
+SHELL := /bin/bash
+
+all:
+	# Build protos
+	rm -rf ./v2/{autogen.md,gen}
+	mkdir -p  ./v2/gen/{go,cpp,python}
+
+	docker run --user=$$(id -u):$$(id -g) --rm -v "${PWD}":/defs namely/protoc-all:1.47_2 --lint -d v2 -l go -o ./v2/gen/go/ --go-source-relative
+	docker run --user=$$(id -u):$$(id -g) --rm -v "${PWD}":/defs namely/protoc-all:1.47_2 --lint -d v2 -l cpp -o ./v2/gen/cpp/ --go-source-relative
+	docker run --user=$$(id -u):$$(id -g) --rm -v "${PWD}":/defs namely/protoc-all:1.47_2 --lint -d v2 -l python -o ./v2/gen/python/  --go-source-relative
+	docker run --user=$$(id -u):$$(id -g) --rm -v "${PWD}"/v2/:/out -v "${PWD}"/v2:/protos pseudomuto/protoc-gen-doc --doc_opt=markdown,autogen.md
+
+	# Run linters
+	docker run --user=$$(id -u):$$(id -g) --rm -v "${PWD}"/v2/:/out -w /out --entrypoint=sh ghcr.io/docker-multiarch/google-api-linter:1.36.0 -c "api-linter /out/*.proto --output-format summary"

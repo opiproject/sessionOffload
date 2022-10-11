@@ -37,7 +37,7 @@ GRPC_CPP_PLUGIN_PATH ?= `which $(GRPC_CPP_PLUGIN)`
 #
 # Source Directories
 #
-PROTOS_PATH = ../../../protos
+PROTOS_PATH = ../../../sessionoffload/v2
 vpath %.proto $(PROTOS_PATH)
 
 C_SRC_DIR := src
@@ -228,13 +228,13 @@ $(DIRECTORIES):
 # Generate gPRC files
 #
 $(PROTO_NAME).pb.cc: $(PROTO_NAME).proto
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./protos -l cpp -o ./openoffload/cpp/framework/src  --go-source-relative
+	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l cpp -o ./openoffload/cpp/framework/src  --go-source-relative
 	#$(PROTOC) -I $(PROTOS_PATH) --cpp_out=src $(PROTO_NAME).proto
 	mv src/$(PROTO_NAME).pb.h $(INC_DIR)
 	mv src/$(PROTO_NAME).grpc.pb.h $(INC_DIR)
 #
 $(PROTO_NAME).grpc.pb.cc: $(PROTO_NAME).proto
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./protos -l cpp -o ./openoffload/cpp/framework/src  --go-source-relative
+	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l cpp -o ./openoffload/cpp/framework/src  --go-source-relative
 	#$(PROTOC) -I $(PROTOS_PATH) --grpc_out=src --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
 	mv src/$(PROTO_NAME).grpc.pb.h $(INC_DIR)
 #

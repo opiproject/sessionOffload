@@ -16,7 +16,7 @@ RUN mkdir -p /home/protos
 
 COPY openoffload.proto /home/protos/
 
-RUN ls ../../../protos && \
+RUN ls ../../../sessionoffload/v2 && \
     bash -c "mkdir -p {bin,obj,log}" && \
     make clean && \
     make HOME=/home/grpc all
