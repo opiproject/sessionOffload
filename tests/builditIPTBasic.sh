@@ -30,4 +30,4 @@ cd ssl
 cp ../../basicIPT/ssl/* .
 # build the libraries from proto buf files
 cd ..
-python3 -m grpc_tools.protoc -I../../protos --python_out=. --grpc_python_out=. ../../protos/tunneloffload.proto
+python3 -m grpc_tools.protoc -I../../sessionoffload/v2 --python_out=. --grpc_python_out=. ../../sessionoffload/v2/tunneloffload.proto

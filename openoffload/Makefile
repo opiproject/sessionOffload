@@ -18,22 +18,22 @@ GOCMD := go
 PYTHONCMD := python
 PROTOC:=protoc
 PYTHONOUT := python
-PROTOS_PATH = ../protos
+PROTOS_PATH = ../sessionoffload/v2
 MOUNT_PATH = ../
 vpath %.proto $(PROTOS_PATH)
 GOOUT := golang
 
 $(PROTO_NAME).pb.go: $(PROTO_NAME).proto
 	mkdir -p golang
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./protos -l go -o ./openoffload/golang  --go-source-relative
+	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l go -o ./openoffload/golang  --go-source-relative
 
 $(PROTO_NAME).pb.py: $(PROTO_NAME).proto
 	mkdir -p python
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./protos -l python -o ./openoffload/python  --go-source-relative
+	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l python -o ./openoffload/python  --go-source-relative
 
 $(PROTO_NAME).pb.cc: $(PROTO_NAME).proto
 	mkdir -p cpp
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./protos -l cpp -o ./openoffload/cpp  --go-source-relative
+	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l cpp -o ./openoffload/cpp  --go-source-relative
 
 all-go:  $(PROTO_NAME).pb.go
 

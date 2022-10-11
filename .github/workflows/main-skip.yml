@@ -4,13 +4,15 @@ on:
   push:
     branches: [ main ]
     paths-ignore:
-      - 'protos/**'
+      - 'sessionoffload/v2/**'
+      - 'sessionoffload/Makefile'
       - 'tests/robot/**'
       - '.github/workflows/main.yml'
   pull_request:
     branches: [ main ]
     paths-ignore:
-      - 'protos/**'
+      - 'sessionoffload/v2/**'
+      - 'sessionoffload/Makefile'
       - 'tests/robot/**'
       - '.github/workflows/main.yml'
 
@@ -20,6 +22,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build-protobuf:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No protobuf build required"'
+
   build:
     runs-on: ubuntu-latest
     steps:

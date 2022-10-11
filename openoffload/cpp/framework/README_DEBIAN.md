@@ -255,7 +255,7 @@ There is a little hack necessary to get the proto file in the right place for do
 
 ```bash
 cd ..
-cp ../../../protos/openoffload.proto .
+cp ../../../sessionoffload/v2/openoffload.proto .
 ```
 
 ```bash
