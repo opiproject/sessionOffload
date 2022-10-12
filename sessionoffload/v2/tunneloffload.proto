@@ -19,7 +19,8 @@
 syntax = "proto3";
 
 package tunneloffload.v2;
-option go_package = "github.com/att/sessionOffload/protos";
+
+option go_package = "github.com/opiproject/sessionOffload/sessionoffload/v2/gen/go";
 
 //
 // Errors for adding a tunnel

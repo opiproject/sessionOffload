@@ -354,15 +354,16 @@ const char descriptor_table_protodef_openoffload_2eproto[] PROTOBUF_SECTION_VARI
   "ionRequestArgs\032 .openoffload.v2.SessionR"
   "esponses\"\000\022\\\n\021GetClosedSessions\022\".openof"
   "fload.v2.SessionRequestArgs\032\037.openoffloa"
-  "d.v2.SessionResponse\"\0000\001B\022Z\020.;openoffloa"
-  "d_v2b\006proto3"
+  "d.v2.SessionResponse\"\0000\001B\?Z=github.com/o"
+  "piproject/sessionOffload/sessionoffload/"
+  "v2/gen/gob\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_openoffload_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_openoffload_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_openoffload_2eproto = {
-  false, false, 2652, descriptor_table_protodef_openoffload_2eproto, "openoffload.proto", 
+  false, false, 2697, descriptor_table_protodef_openoffload_2eproto, "openoffload.proto", 
   &descriptor_table_openoffload_2eproto_once, descriptor_table_openoffload_2eproto_deps, 1, 9,
   schemas, file_default_instances, TableStruct_openoffload_2eproto::offsets,
   file_level_metadata_openoffload_2eproto, file_level_enum_descriptors_openoffload_2eproto, file_level_service_descriptors_openoffload_2eproto,

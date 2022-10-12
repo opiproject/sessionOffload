@@ -1090,12 +1090,13 @@ const char descriptor_table_protodef_tunneloffload_2eproto[] PROTOBUF_SECTION_VA
   "tunneloffload.v2.IpTunnelResponses\"\0000\001\022i"
   "\n\024GetAllIpTunnelsStats\022#.tunneloffload.v"
   "2.TunnelRequestArgs\032(.tunneloffload.v2.I"
-  "pTunnelStatsResponses\"\0000\001B&Z$github.com/"
-  "att/sessionOffload/protosb\006proto3"
+  "pTunnelStatsResponses\"\0000\001B\?Z=github.com/"
+  "opiproject/sessionOffload/sessionoffload"
+  "/v2/gen/gob\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_tunneloffload_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_tunneloffload_2eproto = {
-  false, false, 6513, descriptor_table_protodef_tunneloffload_2eproto, "tunneloffload.proto", 
+  false, false, 6538, descriptor_table_protodef_tunneloffload_2eproto, "tunneloffload.proto", 
   &descriptor_table_tunneloffload_2eproto_once, nullptr, 0, 35,
   schemas, file_default_instances, TableStruct_tunneloffload_2eproto::offsets,
   file_level_metadata_tunneloffload_2eproto, file_level_enum_descriptors_tunneloffload_2eproto, file_level_service_descriptors_tunneloffload_2eproto,
