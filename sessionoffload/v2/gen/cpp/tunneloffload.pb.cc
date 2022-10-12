@@ -17,7 +17,7 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace tunneloffload {
-namespace v1alpha1 {
+namespace v2 {
 constexpr CapabilityRequest::CapabilityRequest(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
 struct CapabilityRequestDefaultTypeInternal {
@@ -515,7 +515,7 @@ struct TunnelRequestArgsDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TunnelRequestArgsDefaultTypeInternal _TunnelRequestArgs_default_instance_;
-}  // namespace v1alpha1
+}  // namespace v2
 }  // namespace tunneloffload
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_tunneloffload_2eproto[35];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_tunneloffload_2eproto[9];
@@ -523,590 +523,579 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const uint32_t TableStruct_tunneloffload_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_MatchCapabilities, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities, ingress_interface_matching_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities, vxlan_matching_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities, geneve_matching_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities, tunnel_matching_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities, spi_matching_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_MatchCapabilities, ingress_interface_matching_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_MatchCapabilities, vxlan_matching_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_MatchCapabilities, geneve_matching_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_MatchCapabilities, tunnel_matching_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_MatchCapabilities, spi_matching_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_IPSecCapabilities, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities, tunnel_type_supported_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities, encryption_supported_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_IPSecCapabilities, tunnel_type_supported_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_IPSecCapabilities, encryption_supported_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_GeneveCapabilities, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities, number_geneve_options_supported_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse_GeneveCapabilities, number_geneve_options_supported_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse, match_capabilities_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse, ipsec_capabilities_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CapabilityResponse, geneve_capabilities_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse, match_capabilities_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse, ipsec_capabilities_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CapabilityResponse, geneve_capabilities_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelAdditionError, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelAdditionError, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelAdditionError, match_error_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelAdditionError, tunnel_error_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelAdditionError, ipsec_error_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelAdditionError, geneve_error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelAdditionError, match_error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelAdditionError, tunnel_error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelAdditionError, ipsec_error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelAdditionError, geneve_error_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_IPSecMatch, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch, spi_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch, sn_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_IPSecMatch, spi_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_IPSecMatch, sn_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_GeneveMatch, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_GeneveMatch, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch, vni_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch, mac_match_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch, protocol_type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_GeneveMatch, vni_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_GeneveMatch, mac_match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_GeneveMatch, protocol_type_),
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch, ip_match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_GeneveMatch, ip_match_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_VXLanMatch, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_VXLanMatch, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch, vni_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch, mac_match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_VXLanMatch, vni_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_VXLanMatch, mac_match_),
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch, ip_match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria_VXLanMatch, ip_match_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, ingress_interface_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, mac_match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, ingress_interface_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, mac_match_),
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, tunnel_id_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, tunnel_id_),
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, ip_match_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MatchCriteria, match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, ip_match_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MatchCriteria, match_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, tunnel_id_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, operation_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, match_criteria_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, next_action_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, tunnel_id_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, operation_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, match_criteria_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, next_action_),
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelRequest, tunnel_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelRequest, tunnel_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Geneve, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Geneve, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Geneve, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Geneve, encap_decap_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveOption, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveOption, option_class_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveOption, type_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveOption, length_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveOption, data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Geneve, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, inner_mac_pair_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, option_length_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, control_packet_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, critical_option_present_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, vni_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, protocol_type_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, geneve_option_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveEncap, ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Geneve, encap_decap_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::GeneveDecap, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveOption, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveOption, option_class_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveOption, type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveOption, length_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveOption, data_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MacPair, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, _internal_metadata_),
   ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MacPair, destination_mac_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::MacPair, source_mac_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Pair, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Pair, source_ip_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Pair, destination_ip_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Pair, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Pair, source_ip_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Pair, destination_ip_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Match, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Match, source_ip_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Match, source_ip_prefix_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Match, destination_ip_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV4Match, destination_ip_prefix_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Match, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Match, source_ip_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Match, source_ip_prefix_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Match, destination_ip_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPV6Match, destination_ip_prefix_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Nat, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Nat, source_ip_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecEnc, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecEnc, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecEnc, tunnel_type_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecEnc, encryption_type_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecEnc, ipsec_sa_),
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecEnc, tunnelIps_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecDec, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecDec, tunnel_type_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecDec, encryption_type_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecDec, ipsec_sas_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecSAParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecSAParams, spi_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecSAParams, encryption_key_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecSAParams, operation_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecTunnel, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecTunnel, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IPSecTunnel, ipsec_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, inner_mac_pair_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, option_length_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, control_packet_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, critical_option_present_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, vni_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, protocol_type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, geneve_option_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveEncap, ip_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelId, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::GeneveDecap, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelId, tunnel_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MacPair, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, in_packets_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, out_packets_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, in_bytes_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, out_bytes_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, in_packets_drops_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, out_packets_drops_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, in_bytes_drops_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Counters, out_bytes_drops_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MacPair, destination_mac_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::MacPair, source_mac_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponses, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Pair, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponses, request_status_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponses, error_status_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponses, responses_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Pair, source_ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Pair, destination_ip_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Pair, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponse, tunnel_id_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::CreateIpTunnelResponse, error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Pair, source_ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Pair, destination_ip_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Error, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Match, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Error, error_message_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::Error, error_string_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Match, source_ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Match, source_ip_prefix_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Match, destination_ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV4Match, destination_ip_prefix_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponses, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Match, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponses, responses_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Match, source_ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Match, source_ip_prefix_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Match, destination_ip_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPV6Match, destination_ip_prefix_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Nat, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponse, tunnel_id_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponse, ip_tunnel_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponse, tunnel_counters_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelResponse, error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Nat, source_ip_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelStatsResponses, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecEnc, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecEnc, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecEnc, tunnel_type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecEnc, encryption_type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecEnc, ipsec_sa_),
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecEnc, tunnelIps_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecDec, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelStatsResponses, responses_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecDec, tunnel_type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecDec, encryption_type_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecDec, ipsec_sas_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelStatsResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecSAParams, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelStatsResponse, tunnel_id_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelStatsResponse, tunnel_counters_),
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::IpTunnelStatsResponse, error_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecSAParams, spi_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecSAParams, encryption_key_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecSAParams, operation_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelRequestArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecTunnel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecTunnel, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IPSecTunnel, ipsec_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelId, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::tunneloffload::v1alpha1::TunnelRequestArgs, tunnels_per_request_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelId, tunnel_id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, in_packets_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, out_packets_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, in_bytes_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, out_bytes_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, in_packets_drops_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, out_packets_drops_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, in_bytes_drops_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Counters, out_bytes_drops_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponses, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponses, request_status_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponses, error_status_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponses, responses_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponse, tunnel_id_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::CreateIpTunnelResponse, error_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Error, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Error, error_message_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::Error, error_string_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponses, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponses, responses_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponse, tunnel_id_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponse, ip_tunnel_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponse, tunnel_counters_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelResponse, error_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelStatsResponses, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelStatsResponses, responses_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelStatsResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelStatsResponse, tunnel_id_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelStatsResponse, tunnel_counters_),
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::IpTunnelStatsResponse, error_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelRequestArgs, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::tunneloffload::v2::TunnelRequestArgs, tunnels_per_request_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::tunneloffload::v1alpha1::CapabilityRequest)},
-  { 6, -1, -1, sizeof(::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities)},
-  { 17, -1, -1, sizeof(::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities)},
-  { 25, -1, -1, sizeof(::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities)},
-  { 32, -1, -1, sizeof(::tunneloffload::v1alpha1::CapabilityResponse)},
-  { 41, -1, -1, sizeof(::tunneloffload::v1alpha1::TunnelAdditionError)},
-  { 51, -1, -1, sizeof(::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch)},
-  { 59, -1, -1, sizeof(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch)},
-  { 71, -1, -1, sizeof(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch)},
-  { 82, -1, -1, sizeof(::tunneloffload::v1alpha1::MatchCriteria)},
-  { 98, -1, -1, sizeof(::tunneloffload::v1alpha1::IpTunnelRequest)},
-  { 112, -1, -1, sizeof(::tunneloffload::v1alpha1::Geneve)},
-  { 121, -1, -1, sizeof(::tunneloffload::v1alpha1::GeneveOption)},
-  { 131, -1, -1, sizeof(::tunneloffload::v1alpha1::GeneveEncap)},
-  { 147, -1, -1, sizeof(::tunneloffload::v1alpha1::GeneveDecap)},
-  { 153, -1, -1, sizeof(::tunneloffload::v1alpha1::MacPair)},
-  { 161, -1, -1, sizeof(::tunneloffload::v1alpha1::IPV4Pair)},
-  { 169, -1, -1, sizeof(::tunneloffload::v1alpha1::IPV6Pair)},
-  { 177, -1, -1, sizeof(::tunneloffload::v1alpha1::IPV4Match)},
-  { 187, -1, -1, sizeof(::tunneloffload::v1alpha1::IPV6Match)},
-  { 197, -1, -1, sizeof(::tunneloffload::v1alpha1::Nat)},
-  { 204, -1, -1, sizeof(::tunneloffload::v1alpha1::IPSecEnc)},
-  { 216, -1, -1, sizeof(::tunneloffload::v1alpha1::IPSecDec)},
-  { 225, -1, -1, sizeof(::tunneloffload::v1alpha1::IPSecSAParams)},
-  { 234, -1, -1, sizeof(::tunneloffload::v1alpha1::IPSecTunnel)},
-  { 243, -1, -1, sizeof(::tunneloffload::v1alpha1::TunnelId)},
-  { 250, -1, -1, sizeof(::tunneloffload::v1alpha1::Counters)},
-  { 264, -1, -1, sizeof(::tunneloffload::v1alpha1::CreateIpTunnelResponses)},
-  { 273, -1, -1, sizeof(::tunneloffload::v1alpha1::CreateIpTunnelResponse)},
-  { 281, -1, -1, sizeof(::tunneloffload::v1alpha1::Error)},
-  { 289, -1, -1, sizeof(::tunneloffload::v1alpha1::IpTunnelResponses)},
-  { 296, -1, -1, sizeof(::tunneloffload::v1alpha1::IpTunnelResponse)},
-  { 306, -1, -1, sizeof(::tunneloffload::v1alpha1::IpTunnelStatsResponses)},
-  { 313, -1, -1, sizeof(::tunneloffload::v1alpha1::IpTunnelStatsResponse)},
-  { 322, -1, -1, sizeof(::tunneloffload::v1alpha1::TunnelRequestArgs)},
+  { 0, -1, -1, sizeof(::tunneloffload::v2::CapabilityRequest)},
+  { 6, -1, -1, sizeof(::tunneloffload::v2::CapabilityResponse_MatchCapabilities)},
+  { 17, -1, -1, sizeof(::tunneloffload::v2::CapabilityResponse_IPSecCapabilities)},
+  { 25, -1, -1, sizeof(::tunneloffload::v2::CapabilityResponse_GeneveCapabilities)},
+  { 32, -1, -1, sizeof(::tunneloffload::v2::CapabilityResponse)},
+  { 41, -1, -1, sizeof(::tunneloffload::v2::TunnelAdditionError)},
+  { 51, -1, -1, sizeof(::tunneloffload::v2::MatchCriteria_IPSecMatch)},
+  { 59, -1, -1, sizeof(::tunneloffload::v2::MatchCriteria_GeneveMatch)},
+  { 71, -1, -1, sizeof(::tunneloffload::v2::MatchCriteria_VXLanMatch)},
+  { 82, -1, -1, sizeof(::tunneloffload::v2::MatchCriteria)},
+  { 98, -1, -1, sizeof(::tunneloffload::v2::IpTunnelRequest)},
+  { 112, -1, -1, sizeof(::tunneloffload::v2::Geneve)},
+  { 121, -1, -1, sizeof(::tunneloffload::v2::GeneveOption)},
+  { 131, -1, -1, sizeof(::tunneloffload::v2::GeneveEncap)},
+  { 147, -1, -1, sizeof(::tunneloffload::v2::GeneveDecap)},
+  { 153, -1, -1, sizeof(::tunneloffload::v2::MacPair)},
+  { 161, -1, -1, sizeof(::tunneloffload::v2::IPV4Pair)},
+  { 169, -1, -1, sizeof(::tunneloffload::v2::IPV6Pair)},
+  { 177, -1, -1, sizeof(::tunneloffload::v2::IPV4Match)},
+  { 187, -1, -1, sizeof(::tunneloffload::v2::IPV6Match)},
+  { 197, -1, -1, sizeof(::tunneloffload::v2::Nat)},
+  { 204, -1, -1, sizeof(::tunneloffload::v2::IPSecEnc)},
+  { 216, -1, -1, sizeof(::tunneloffload::v2::IPSecDec)},
+  { 225, -1, -1, sizeof(::tunneloffload::v2::IPSecSAParams)},
+  { 234, -1, -1, sizeof(::tunneloffload::v2::IPSecTunnel)},
+  { 243, -1, -1, sizeof(::tunneloffload::v2::TunnelId)},
+  { 250, -1, -1, sizeof(::tunneloffload::v2::Counters)},
+  { 264, -1, -1, sizeof(::tunneloffload::v2::CreateIpTunnelResponses)},
+  { 273, -1, -1, sizeof(::tunneloffload::v2::CreateIpTunnelResponse)},
+  { 281, -1, -1, sizeof(::tunneloffload::v2::Error)},
+  { 289, -1, -1, sizeof(::tunneloffload::v2::IpTunnelResponses)},
+  { 296, -1, -1, sizeof(::tunneloffload::v2::IpTunnelResponse)},
+  { 306, -1, -1, sizeof(::tunneloffload::v2::IpTunnelStatsResponses)},
+  { 313, -1, -1, sizeof(::tunneloffload::v2::IpTunnelStatsResponse)},
+  { 322, -1, -1, sizeof(::tunneloffload::v2::TunnelRequestArgs)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CapabilityRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CapabilityResponse_MatchCapabilities_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CapabilityResponse_IPSecCapabilities_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CapabilityResponse_GeneveCapabilities_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CapabilityResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_TunnelAdditionError_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_MatchCriteria_IPSecMatch_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_MatchCriteria_GeneveMatch_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_MatchCriteria_VXLanMatch_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_MatchCriteria_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IpTunnelRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_Geneve_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_GeneveOption_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_GeneveEncap_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_GeneveDecap_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_MacPair_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPV4Pair_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPV6Pair_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPV4Match_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPV6Match_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_Nat_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPSecEnc_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPSecDec_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPSecSAParams_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IPSecTunnel_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_TunnelId_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_Counters_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CreateIpTunnelResponses_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_CreateIpTunnelResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_Error_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IpTunnelResponses_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IpTunnelResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IpTunnelStatsResponses_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_IpTunnelStatsResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v1alpha1::_TunnelRequestArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CapabilityRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CapabilityResponse_MatchCapabilities_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CapabilityResponse_IPSecCapabilities_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CapabilityResponse_GeneveCapabilities_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CapabilityResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_TunnelAdditionError_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_MatchCriteria_IPSecMatch_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_MatchCriteria_GeneveMatch_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_MatchCriteria_VXLanMatch_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_MatchCriteria_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IpTunnelRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_Geneve_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_GeneveOption_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_GeneveEncap_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_GeneveDecap_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_MacPair_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPV4Pair_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPV6Pair_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPV4Match_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPV6Match_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_Nat_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPSecEnc_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPSecDec_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPSecSAParams_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IPSecTunnel_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_TunnelId_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_Counters_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CreateIpTunnelResponses_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_CreateIpTunnelResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_Error_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IpTunnelResponses_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IpTunnelResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IpTunnelStatsResponses_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_IpTunnelStatsResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::tunneloffload::v2::_TunnelRequestArgs_default_instance_),
 };
 
 const char descriptor_table_protodef_tunneloffload_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\023tunneloffload.proto\022\026tunneloffload.v1a"
-  "lpha1\"\023\n\021CapabilityRequest\"\232\005\n\022Capabilit"
-  "yResponse\022X\n\022match_capabilities\030\001 \001(\0132<."
-  "tunneloffload.v1alpha1.CapabilityRespons"
-  "e.MatchCapabilities\022X\n\022ipsec_capabilitie"
-  "s\030\002 \001(\0132<.tunneloffload.v1alpha1.Capabil"
-  "ityResponse.IPSecCapabilities\022Z\n\023geneve_"
-  "capabilities\030\003 \001(\0132=.tunneloffload.v1alp"
-  "ha1.CapabilityResponse.GeneveCapabilitie"
-  "s\032\227\001\n\021MatchCapabilities\022\"\n\032ingress_inter"
-  "face_matching\030\001 \001(\010\022\026\n\016vxlan_matching\030\002 "
-  "\001(\010\022\027\n\017geneve_matching\030\003 \001(\010\022\027\n\017tunnel_m"
-  "atching\030\004 \001(\010\022\024\n\014spi_matching\030\005 \001(\010\032\232\001\n\021"
-  "IPSecCapabilities\022F\n\025tunnel_type_support"
-  "ed\030\001 \003(\0162\'.tunneloffload.v1alpha1.IPSecT"
-  "unnelType\022=\n\024encryption_supported\030\002 \003(\0162"
-  "\037.tunneloffload.v1alpha1.EncType\032=\n\022Gene"
-  "veCapabilities\022\'\n\037number_geneve_options_"
-  "supported\030\001 \001(\r\"\375\001\n\023TunnelAdditionError\022"
-  "7\n\013match_error\030\001 \001(\0162\".tunneloffload.v1a"
-  "lpha1.MatchError\0229\n\014tunnel_error\030\002 \001(\0162#"
-  ".tunneloffload.v1alpha1.TunnelError\0227\n\013i"
-  "psec_error\030\003 \001(\0162\".tunneloffload.v1alpha"
-  "1.IPSecError\0229\n\014geneve_error\030\004 \001(\0162#.tun"
-  "neloffload.v1alpha1.GeneveError\"\260\007\n\rMatc"
-  "hCriteria\022\031\n\021ingress_interface\030\001 \001(\t\0222\n\t"
-  "mac_match\030\002 \001(\0132\037.tunneloffload.v1alpha1"
-  ".MacPair\0227\n\nipv4_match\030\003 \001(\0132!.tunneloff"
-  "load.v1alpha1.IPV4MatchH\000\0227\n\nipv6_match\030"
-  "\004 \001(\0132!.tunneloffload.v1alpha1.IPV6Match"
-  "H\000\022\021\n\ttunnel_id\030\005 \001(\004\022G\n\013ipsec_match\030\006 \001"
-  "(\01320.tunneloffload.v1alpha1.MatchCriteri"
-  "a.IPSecMatchH\001\022I\n\014geneve_match\030\007 \001(\01321.t"
-  "unneloffload.v1alpha1.MatchCriteria.Gene"
-  "veMatchH\001\022G\n\013vxlan_match\030\010 \001(\01320.tunnelo"
-  "ffload.v1alpha1.MatchCriteria.VXLanMatch"
-  "H\001\032%\n\nIPSecMatch\022\013\n\003spi\030\001 \001(\r\022\n\n\002sn\030\002 \001("
-  "\r\032\343\001\n\013GeneveMatch\022\013\n\003vni\030\001 \001(\r\0222\n\tmac_ma"
-  "tch\030\002 \001(\0132\037.tunneloffload.v1alpha1.MacPa"
-  "ir\022\025\n\rprotocol_type\030\003 \001(\r\0227\n\nipv4_match\030"
-  "\004 \001(\0132!.tunneloffload.v1alpha1.IPV4Match"
-  "H\000\0227\n\nipv6_match\030\005 \001(\0132!.tunneloffload.v"
-  "1alpha1.IPV6MatchH\000B\n\n\010ip_match\032\313\001\n\nVXLa"
-  "nMatch\022\013\n\003vni\030\001 \001(\r\0222\n\tmac_match\030\002 \001(\0132\037"
-  ".tunneloffload.v1alpha1.MacPair\0227\n\nipv4_"
-  "match\030\003 \001(\0132!.tunneloffload.v1alpha1.IPV"
-  "4MatchH\000\0227\n\nipv6_match\030\004 \001(\0132!.tunneloff"
-  "load.v1alpha1.IPV6MatchH\000B\n\n\010ip_matchB\n\n"
-  "\010ip_matchB\007\n\005match\"\363\002\n\017IpTunnelRequest\022\021"
-  "\n\ttunnel_id\030\001 \001(\004\0224\n\toperation\030\002 \001(\0162!.t"
-  "unneloffload.v1alpha1.Operation\022=\n\016match"
-  "_criteria\030\003 \001(\0132%.tunneloffload.v1alpha1"
-  ".MatchCriteria\0223\n\013next_action\030\004 \001(\0162\036.tu"
-  "nneloffload.v1alpha1.Action\022;\n\014ipsec_tun"
-  "nel\030\005 \001(\0132#.tunneloffload.v1alpha1.IPSec"
-  "TunnelH\000\0220\n\006geneve\030\006 \001(\0132\036.tunneloffload"
-  ".v1alpha1.GeneveH\000\022*\n\003nat\030\007 \001(\0132\033.tunnel"
-  "offload.v1alpha1.NatH\000B\010\n\006tunnel\"\221\001\n\006Gen"
-  "eve\022;\n\014geneve_encap\030\001 \001(\0132#.tunneloffloa"
-  "d.v1alpha1.GeneveEncapH\000\022;\n\014geneve_decap"
-  "\030\002 \001(\0132#.tunneloffload.v1alpha1.GeneveDe"
-  "capH\000B\r\n\013encap_decap\"P\n\014GeneveOption\022\024\n\014"
-  "option_class\030\001 \001(\r\022\014\n\004type\030\002 \001(\r\022\016\n\006leng"
-  "th\030\003 \001(\r\022\014\n\004data\030\004 \001(\014\"\367\002\n\013GeneveEncap\022;"
-  "\n\017outer_ipv4_pair\030\001 \001(\0132 .tunneloffload."
-  "v1alpha1.IPV4PairH\000\022;\n\017outer_ipv6_pair\030\002"
-  " \001(\0132 .tunneloffload.v1alpha1.IPV6PairH\000"
-  "\0227\n\016inner_mac_pair\030\003 \001(\0132\037.tunneloffload"
-  ".v1alpha1.MacPair\022\025\n\roption_length\030\004 \001(\r"
-  "\022\026\n\016control_packet\030\005 \001(\010\022\037\n\027critical_opt"
-  "ion_present\030\006 \001(\010\022\013\n\003vni\030\007 \001(\r\022\025\n\rprotoc"
-  "ol_type\030\010 \001(\r\022;\n\rgeneve_option\030\t \003(\0132$.t"
-  "unneloffload.v1alpha1.GeneveOptionB\004\n\002ip"
-  "\"\r\n\013GeneveDecap\"6\n\007MacPair\022\027\n\017destinatio"
-  "n_mac\030\001 \001(\014\022\022\n\nsource_mac\030\002 \001(\014\"5\n\010IPV4P"
-  "air\022\021\n\tsource_ip\030\001 \001(\007\022\026\n\016destination_ip"
-  "\030\002 \001(\007\"5\n\010IPV6Pair\022\021\n\tsource_ip\030\001 \001(\014\022\026\n"
-  "\016destination_ip\030\002 \001(\014\"o\n\tIPV4Match\022\021\n\tso"
-  "urce_ip\030\001 \001(\007\022\030\n\020source_ip_prefix\030\002 \001(\r\022"
-  "\026\n\016destination_ip\030\003 \001(\007\022\035\n\025destination_i"
-  "p_prefix\030\004 \001(\r\"o\n\tIPV6Match\022\021\n\tsource_ip"
-  "\030\001 \001(\014\022\030\n\020source_ip_prefix\030\002 \001(\r\022\026\n\016dest"
-  "ination_ip\030\003 \001(\014\022\035\n\025destination_ip_prefi"
-  "x\030\004 \001(\r\"\030\n\003Nat\022\021\n\tsource_ip\030\001 \001(\r\"\272\002\n\010IP"
-  "SecEnc\022<\n\013tunnel_type\030\001 \001(\0162\'.tunneloffl"
-  "oad.v1alpha1.IPSecTunnelType\0228\n\017encrypti"
-  "on_type\030\002 \001(\0162\037.tunneloffload.v1alpha1.E"
-  "ncType\0227\n\010ipsec_sa\030\003 \001(\0132%.tunneloffload"
-  ".v1alpha1.IPSecSAParams\0227\n\013ipv4_tunnel\030\004"
-  " \001(\0132 .tunneloffload.v1alpha1.IPV4PairH\000"
-  "\0227\n\013ipv6_tunnel\030\005 \001(\0132 .tunneloffload.v1"
-  "alpha1.IPV6PairH\000B\013\n\ttunnelIps\"\274\001\n\010IPSec"
-  "Dec\022<\n\013tunnel_type\030\001 \001(\0162\'.tunneloffload"
-  ".v1alpha1.IPSecTunnelType\0228\n\017encryption_"
-  "type\030\002 \001(\0162\037.tunneloffload.v1alpha1.EncT"
-  "ype\0228\n\tipsec_sas\030\003 \003(\0132%.tunneloffload.v"
-  "1alpha1.IPSecSAParams\"j\n\rIPSecSAParams\022\013"
-  "\n\003spi\030\001 \001(\r\022\026\n\016encryption_key\030\002 \001(\014\0224\n\to"
-  "peration\030\003 \001(\0162!.tunneloffload.v1alpha1."
-  "Operation\"\204\001\n\013IPSecTunnel\0225\n\tipsec_enc\030\001"
-  " \001(\0132 .tunneloffload.v1alpha1.IPSecEncH\000"
-  "\0225\n\tipsec_dec\030\002 \001(\0132 .tunneloffload.v1al"
-  "pha1.IPSecDecH\000B\007\n\005ipsec\"\035\n\010TunnelId\022\021\n\t"
-  "tunnel_id\030\001 \001(\004\"\276\001\n\010Counters\022\022\n\nin_packe"
-  "ts\030\001 \001(\004\022\023\n\013out_packets\030\002 \001(\004\022\020\n\010in_byte"
-  "s\030\003 \001(\004\022\021\n\tout_bytes\030\004 \001(\004\022\030\n\020in_packets"
-  "_drops\030\005 \001(\004\022\031\n\021out_packets_drops\030\006 \001(\004\022"
-  "\026\n\016in_bytes_drops\030\007 \001(\004\022\027\n\017out_bytes_dro"
-  "ps\030\010 \001(\004\"\263\001\n\027CreateIpTunnelResponses\022\?\n\016"
-  "request_status\030\001 \001(\0162\'.tunneloffload.v1a"
-  "lpha1.AddTunnelStatus\022\024\n\014error_status\030\002 "
-  "\001(\004\022A\n\tresponses\030\003 \003(\0132..tunneloffload.v"
-  "1alpha1.CreateIpTunnelResponse\"Y\n\026Create"
-  "IpTunnelResponse\022\021\n\ttunnel_id\030\001 \001(\004\022,\n\005e"
-  "rror\030\002 \001(\0132\035.tunneloffload.v1alpha1.Erro"
-  "r\"a\n\005Error\022B\n\rerror_message\030\001 \001(\0132+.tunn"
-  "eloffload.v1alpha1.TunnelAdditionError\022\024"
-  "\n\014error_string\030\002 \001(\t\"P\n\021IpTunnelResponse"
-  "s\022;\n\tresponses\030\001 \003(\0132(.tunneloffload.v1a"
-  "lpha1.IpTunnelResponse\"\312\001\n\020IpTunnelRespo"
-  "nse\022\021\n\ttunnel_id\030\001 \001(\004\022:\n\tip_tunnel\030\002 \001("
-  "\0132\'.tunneloffload.v1alpha1.IpTunnelReque"
-  "st\0229\n\017tunnel_counters\030\003 \001(\0132 .tunneloffl"
-  "oad.v1alpha1.Counters\022,\n\005error\030\004 \001(\0132\035.t"
-  "unneloffload.v1alpha1.Error\"Z\n\026IpTunnelS"
-  "tatsResponses\022@\n\tresponses\030\001 \003(\0132-.tunne"
-  "loffload.v1alpha1.IpTunnelStatsResponse\""
-  "\223\001\n\025IpTunnelStatsResponse\022\021\n\ttunnel_id\030\001"
-  " \001(\004\0229\n\017tunnel_counters\030\002 \001(\0132 .tunnelof"
-  "fload.v1alpha1.Counters\022,\n\005error\030\003 \001(\0132\035"
-  ".tunneloffload.v1alpha1.Error\"0\n\021TunnelR"
-  "equestArgs\022\033\n\023tunnels_per_request\030\001 \001(\r*"
-  "\220\001\n\017AddTunnelStatus\022\024\n\020_TUNNEL_ACCEPTED\020"
-  "\000\022\024\n\020_TUNNEL_REJECTED\020\001\022\026\n\022_TUNNEL_TABLE"
-  "_FULL\020\002\022\035\n\031_TUNNEL_TABLE_UNAVAILABLE\020\003\022\032"
-  "\n\026_TUNNEL_ALREADY_EXISTS\020\004*=\n\tOperation\022"
-  "\t\n\005_NONE\020\000\022\013\n\007_CREATE\020\001\022\013\n\007_UPDATE\020\002\022\013\n\007"
-  "_DELETE\020\003*\345\001\n\007EncType\022\020\n\014_AES256GCM64\020\000\022"
-  "\020\n\014_AES256GCM96\020\001\022\021\n\r_AES256GCM128\020\002\022\020\n\014"
-  "_AES128GCM64\020\003\022\020\n\014_AES128GCM96\020\004\022\021\n\r_AES"
-  "128GCM128\020\005\022\020\n\014_AES256CCM64\020\006\022\020\n\014_AES256"
-  "CCM96\020\007\022\021\n\r_AES256CCM128\020\010\022\020\n\014_AES128CCM"
-  "64\020\t\022\020\n\014_AES128CCM96\020\n\022\021\n\r_AES128CCM128\020"
-  "\013*0\n\006Action\022\010\n\004NONE\020\000\022\013\n\007FORWARD\020\001\022\017\n\013RE"
-  "CIRCULATE\020\002*c\n\nMatchError\022\021\n\rMISING_FIEL"
-  "DS\020\000\022\025\n\021INVALID_TUNNEL_ID\020\001\022\030\n\024INVALID_C"
-  "APABILITIES\020\002\022\021\n\rINVALID_FIELD\020\003*\'\n\013Tunn"
-  "elError\022\030\n\024NOT_SUPPORTED_TUNNEL\020\000*t\n\nIPS"
-  "ecError\022\017\n\013INVALID_KEY\020\000\022\034\n\030NON_SUPPORTE"
-  "D_ENCRYPTION\020\001\022\035\n\031NON_SUPPORTED_TUNNEL_T"
-  "YPE\020\002\022\030\n\024IPSEC_MISSING_FIELDS\020\003*Q\n\013Genev"
-  "eError\022\022\n\016INVALID_OPTION\020\000\022\024\n\020TOO_MANY_O"
-  "PTIONS\020\001\022\030\n\024INVALID_GENEVE_FIELD\020\002*c\n\017IP"
-  "SecTunnelType\022\r\n\tTRANSPORT\020\000\022\n\n\006TUNNEL\020\001"
-  "\022\033\n\027TRANSPORT_NAT_TRAVERSAL\020\002\022\030\n\024TUNNEL_"
-  "NAT_TRAVERSAL\020\0032\220\005\n\017IpTunnelService\022e\n\014C"
-  "apabilities\022).tunneloffload.v1alpha1.Cap"
-  "abilityRequest\032*.tunneloffload.v1alpha1."
-  "CapabilityResponse\022n\n\016CreateIpTunnel\022\'.t"
-  "unneloffload.v1alpha1.IpTunnelRequest\032/."
-  "tunneloffload.v1alpha1.CreateIpTunnelRes"
-  "ponses\"\000(\001\022[\n\013GetIpTunnel\022 .tunneloffloa"
-  "d.v1alpha1.TunnelId\032(.tunneloffload.v1al"
-  "pha1.IpTunnelResponse\"\000\022e\n\020GetIpTunnelSt"
-  "ats\022 .tunneloffload.v1alpha1.TunnelId\032-."
-  "tunneloffload.v1alpha1.IpTunnelStatsResp"
-  "onse\"\000\022k\n\017GetAllIpTunnels\022).tunneloffloa"
-  "d.v1alpha1.TunnelRequestArgs\032).tunneloff"
-  "load.v1alpha1.IpTunnelResponses\"\0000\001\022u\n\024G"
-  "etAllIpTunnelsStats\022).tunneloffload.v1al"
-  "pha1.TunnelRequestArgs\032..tunneloffload.v"
-  "1alpha1.IpTunnelStatsResponses\"\0000\001B&Z$gi"
-  "thub.com/att/sessionOffload/protosb\006prot"
-  "o3"
+  "\n\023tunneloffload.proto\022\020tunneloffload.v2\""
+  "\023\n\021CapabilityRequest\"\374\004\n\022CapabilityRespo"
+  "nse\022R\n\022match_capabilities\030\001 \001(\01326.tunnel"
+  "offload.v2.CapabilityResponse.MatchCapab"
+  "ilities\022R\n\022ipsec_capabilities\030\002 \001(\01326.tu"
+  "nneloffload.v2.CapabilityResponse.IPSecC"
+  "apabilities\022T\n\023geneve_capabilities\030\003 \001(\013"
+  "27.tunneloffload.v2.CapabilityResponse.G"
+  "eneveCapabilities\032\227\001\n\021MatchCapabilities\022"
+  "\"\n\032ingress_interface_matching\030\001 \001(\010\022\026\n\016v"
+  "xlan_matching\030\002 \001(\010\022\027\n\017geneve_matching\030\003"
+  " \001(\010\022\027\n\017tunnel_matching\030\004 \001(\010\022\024\n\014spi_mat"
+  "ching\030\005 \001(\010\032\216\001\n\021IPSecCapabilities\022@\n\025tun"
+  "nel_type_supported\030\001 \003(\0162!.tunneloffload"
+  ".v2.IPSecTunnelType\0227\n\024encryption_suppor"
+  "ted\030\002 \003(\0162\031.tunneloffload.v2.EncType\032=\n\022"
+  "GeneveCapabilities\022\'\n\037number_geneve_opti"
+  "ons_supported\030\001 \001(\r\"\345\001\n\023TunnelAdditionEr"
+  "ror\0221\n\013match_error\030\001 \001(\0162\034.tunneloffload"
+  ".v2.MatchError\0223\n\014tunnel_error\030\002 \001(\0162\035.t"
+  "unneloffload.v2.TunnelError\0221\n\013ipsec_err"
+  "or\030\003 \001(\0162\034.tunneloffload.v2.IPSecError\0223"
+  "\n\014geneve_error\030\004 \001(\0162\035.tunneloffload.v2."
+  "GeneveError\"\350\006\n\rMatchCriteria\022\031\n\021ingress"
+  "_interface\030\001 \001(\t\022,\n\tmac_match\030\002 \001(\0132\031.tu"
+  "nneloffload.v2.MacPair\0221\n\nipv4_match\030\003 \001"
+  "(\0132\033.tunneloffload.v2.IPV4MatchH\000\0221\n\nipv"
+  "6_match\030\004 \001(\0132\033.tunneloffload.v2.IPV6Mat"
+  "chH\000\022\021\n\ttunnel_id\030\005 \001(\004\022A\n\013ipsec_match\030\006"
+  " \001(\0132*.tunneloffload.v2.MatchCriteria.IP"
+  "SecMatchH\001\022C\n\014geneve_match\030\007 \001(\0132+.tunne"
+  "loffload.v2.MatchCriteria.GeneveMatchH\001\022"
+  "A\n\013vxlan_match\030\010 \001(\0132*.tunneloffload.v2."
+  "MatchCriteria.VXLanMatchH\001\032%\n\nIPSecMatch"
+  "\022\013\n\003spi\030\001 \001(\r\022\n\n\002sn\030\002 \001(\r\032\321\001\n\013GeneveMatc"
+  "h\022\013\n\003vni\030\001 \001(\r\022,\n\tmac_match\030\002 \001(\0132\031.tunn"
+  "eloffload.v2.MacPair\022\025\n\rprotocol_type\030\003 "
+  "\001(\r\0221\n\nipv4_match\030\004 \001(\0132\033.tunneloffload."
+  "v2.IPV4MatchH\000\0221\n\nipv6_match\030\005 \001(\0132\033.tun"
+  "neloffload.v2.IPV6MatchH\000B\n\n\010ip_match\032\271\001"
+  "\n\nVXLanMatch\022\013\n\003vni\030\001 \001(\r\022,\n\tmac_match\030\002"
+  " \001(\0132\031.tunneloffload.v2.MacPair\0221\n\nipv4_"
+  "match\030\003 \001(\0132\033.tunneloffload.v2.IPV4Match"
+  "H\000\0221\n\nipv6_match\030\004 \001(\0132\033.tunneloffload.v"
+  "2.IPV6MatchH\000B\n\n\010ip_matchB\n\n\010ip_matchB\007\n"
+  "\005match\"\317\002\n\017IpTunnelRequest\022\021\n\ttunnel_id\030"
+  "\001 \001(\004\022.\n\toperation\030\002 \001(\0162\033.tunneloffload"
+  ".v2.Operation\0227\n\016match_criteria\030\003 \001(\0132\037."
+  "tunneloffload.v2.MatchCriteria\022-\n\013next_a"
+  "ction\030\004 \001(\0162\030.tunneloffload.v2.Action\0225\n"
+  "\014ipsec_tunnel\030\005 \001(\0132\035.tunneloffload.v2.I"
+  "PSecTunnelH\000\022*\n\006geneve\030\006 \001(\0132\030.tunneloff"
+  "load.v2.GeneveH\000\022$\n\003nat\030\007 \001(\0132\025.tunnelof"
+  "fload.v2.NatH\000B\010\n\006tunnel\"\205\001\n\006Geneve\0225\n\014g"
+  "eneve_encap\030\001 \001(\0132\035.tunneloffload.v2.Gen"
+  "eveEncapH\000\0225\n\014geneve_decap\030\002 \001(\0132\035.tunne"
+  "loffload.v2.GeneveDecapH\000B\r\n\013encap_decap"
+  "\"P\n\014GeneveOption\022\024\n\014option_class\030\001 \001(\r\022\014"
+  "\n\004type\030\002 \001(\r\022\016\n\006length\030\003 \001(\r\022\014\n\004data\030\004 \001"
+  "(\014\"\337\002\n\013GeneveEncap\0225\n\017outer_ipv4_pair\030\001 "
+  "\001(\0132\032.tunneloffload.v2.IPV4PairH\000\0225\n\017out"
+  "er_ipv6_pair\030\002 \001(\0132\032.tunneloffload.v2.IP"
+  "V6PairH\000\0221\n\016inner_mac_pair\030\003 \001(\0132\031.tunne"
+  "loffload.v2.MacPair\022\025\n\roption_length\030\004 \001"
+  "(\r\022\026\n\016control_packet\030\005 \001(\010\022\037\n\027critical_o"
+  "ption_present\030\006 \001(\010\022\013\n\003vni\030\007 \001(\r\022\025\n\rprot"
+  "ocol_type\030\010 \001(\r\0225\n\rgeneve_option\030\t \003(\0132\036"
+  ".tunneloffload.v2.GeneveOptionB\004\n\002ip\"\r\n\013"
+  "GeneveDecap\"6\n\007MacPair\022\027\n\017destination_ma"
+  "c\030\001 \001(\014\022\022\n\nsource_mac\030\002 \001(\014\"5\n\010IPV4Pair\022"
+  "\021\n\tsource_ip\030\001 \001(\007\022\026\n\016destination_ip\030\002 \001"
+  "(\007\"5\n\010IPV6Pair\022\021\n\tsource_ip\030\001 \001(\014\022\026\n\016des"
+  "tination_ip\030\002 \001(\014\"o\n\tIPV4Match\022\021\n\tsource"
+  "_ip\030\001 \001(\007\022\030\n\020source_ip_prefix\030\002 \001(\r\022\026\n\016d"
+  "estination_ip\030\003 \001(\007\022\035\n\025destination_ip_pr"
+  "efix\030\004 \001(\r\"o\n\tIPV6Match\022\021\n\tsource_ip\030\001 \001"
+  "(\014\022\030\n\020source_ip_prefix\030\002 \001(\r\022\026\n\016destinat"
+  "ion_ip\030\003 \001(\014\022\035\n\025destination_ip_prefix\030\004 "
+  "\001(\r\"\030\n\003Nat\022\021\n\tsource_ip\030\001 \001(\r\"\234\002\n\010IPSecE"
+  "nc\0226\n\013tunnel_type\030\001 \001(\0162!.tunneloffload."
+  "v2.IPSecTunnelType\0222\n\017encryption_type\030\002 "
+  "\001(\0162\031.tunneloffload.v2.EncType\0221\n\010ipsec_"
+  "sa\030\003 \001(\0132\037.tunneloffload.v2.IPSecSAParam"
+  "s\0221\n\013ipv4_tunnel\030\004 \001(\0132\032.tunneloffload.v"
+  "2.IPV4PairH\000\0221\n\013ipv6_tunnel\030\005 \001(\0132\032.tunn"
+  "eloffload.v2.IPV6PairH\000B\013\n\ttunnelIps\"\252\001\n"
+  "\010IPSecDec\0226\n\013tunnel_type\030\001 \001(\0162!.tunnelo"
+  "ffload.v2.IPSecTunnelType\0222\n\017encryption_"
+  "type\030\002 \001(\0162\031.tunneloffload.v2.EncType\0222\n"
+  "\tipsec_sas\030\003 \003(\0132\037.tunneloffload.v2.IPSe"
+  "cSAParams\"d\n\rIPSecSAParams\022\013\n\003spi\030\001 \001(\r\022"
+  "\026\n\016encryption_key\030\002 \001(\014\022.\n\toperation\030\003 \001"
+  "(\0162\033.tunneloffload.v2.Operation\"x\n\013IPSec"
+  "Tunnel\022/\n\tipsec_enc\030\001 \001(\0132\032.tunneloffloa"
+  "d.v2.IPSecEncH\000\022/\n\tipsec_dec\030\002 \001(\0132\032.tun"
+  "neloffload.v2.IPSecDecH\000B\007\n\005ipsec\"\035\n\010Tun"
+  "nelId\022\021\n\ttunnel_id\030\001 \001(\004\"\276\001\n\010Counters\022\022\n"
+  "\nin_packets\030\001 \001(\004\022\023\n\013out_packets\030\002 \001(\004\022\020"
+  "\n\010in_bytes\030\003 \001(\004\022\021\n\tout_bytes\030\004 \001(\004\022\030\n\020i"
+  "n_packets_drops\030\005 \001(\004\022\031\n\021out_packets_dro"
+  "ps\030\006 \001(\004\022\026\n\016in_bytes_drops\030\007 \001(\004\022\027\n\017out_"
+  "bytes_drops\030\010 \001(\004\"\247\001\n\027CreateIpTunnelResp"
+  "onses\0229\n\016request_status\030\001 \001(\0162!.tunnelof"
+  "fload.v2.AddTunnelStatus\022\024\n\014error_status"
+  "\030\002 \001(\004\022;\n\tresponses\030\003 \003(\0132(.tunneloffloa"
+  "d.v2.CreateIpTunnelResponse\"S\n\026CreateIpT"
+  "unnelResponse\022\021\n\ttunnel_id\030\001 \001(\004\022&\n\005erro"
+  "r\030\002 \001(\0132\027.tunneloffload.v2.Error\"[\n\005Erro"
+  "r\022<\n\rerror_message\030\001 \001(\0132%.tunneloffload"
+  ".v2.TunnelAdditionError\022\024\n\014error_string\030"
+  "\002 \001(\t\"J\n\021IpTunnelResponses\0225\n\tresponses\030"
+  "\001 \003(\0132\".tunneloffload.v2.IpTunnelRespons"
+  "e\"\270\001\n\020IpTunnelResponse\022\021\n\ttunnel_id\030\001 \001("
+  "\004\0224\n\tip_tunnel\030\002 \001(\0132!.tunneloffload.v2."
+  "IpTunnelRequest\0223\n\017tunnel_counters\030\003 \001(\013"
+  "2\032.tunneloffload.v2.Counters\022&\n\005error\030\004 "
+  "\001(\0132\027.tunneloffload.v2.Error\"T\n\026IpTunnel"
+  "StatsResponses\022:\n\tresponses\030\001 \003(\0132\'.tunn"
+  "eloffload.v2.IpTunnelStatsResponse\"\207\001\n\025I"
+  "pTunnelStatsResponse\022\021\n\ttunnel_id\030\001 \001(\004\022"
+  "3\n\017tunnel_counters\030\002 \001(\0132\032.tunneloffload"
+  ".v2.Counters\022&\n\005error\030\003 \001(\0132\027.tunneloffl"
+  "oad.v2.Error\"0\n\021TunnelRequestArgs\022\033\n\023tun"
+  "nels_per_request\030\001 \001(\r*\220\001\n\017AddTunnelStat"
+  "us\022\024\n\020_TUNNEL_ACCEPTED\020\000\022\024\n\020_TUNNEL_REJE"
+  "CTED\020\001\022\026\n\022_TUNNEL_TABLE_FULL\020\002\022\035\n\031_TUNNE"
+  "L_TABLE_UNAVAILABLE\020\003\022\032\n\026_TUNNEL_ALREADY"
+  "_EXISTS\020\004*=\n\tOperation\022\t\n\005_NONE\020\000\022\013\n\007_CR"
+  "EATE\020\001\022\013\n\007_UPDATE\020\002\022\013\n\007_DELETE\020\003*\345\001\n\007Enc"
+  "Type\022\020\n\014_AES256GCM64\020\000\022\020\n\014_AES256GCM96\020\001"
+  "\022\021\n\r_AES256GCM128\020\002\022\020\n\014_AES128GCM64\020\003\022\020\n"
+  "\014_AES128GCM96\020\004\022\021\n\r_AES128GCM128\020\005\022\020\n\014_A"
+  "ES256CCM64\020\006\022\020\n\014_AES256CCM96\020\007\022\021\n\r_AES25"
+  "6CCM128\020\010\022\020\n\014_AES128CCM64\020\t\022\020\n\014_AES128CC"
+  "M96\020\n\022\021\n\r_AES128CCM128\020\013*0\n\006Action\022\010\n\004NO"
+  "NE\020\000\022\013\n\007FORWARD\020\001\022\017\n\013RECIRCULATE\020\002*c\n\nMa"
+  "tchError\022\021\n\rMISING_FIELDS\020\000\022\025\n\021INVALID_T"
+  "UNNEL_ID\020\001\022\030\n\024INVALID_CAPABILITIES\020\002\022\021\n\r"
+  "INVALID_FIELD\020\003*\'\n\013TunnelError\022\030\n\024NOT_SU"
+  "PPORTED_TUNNEL\020\000*t\n\nIPSecError\022\017\n\013INVALI"
+  "D_KEY\020\000\022\034\n\030NON_SUPPORTED_ENCRYPTION\020\001\022\035\n"
+  "\031NON_SUPPORTED_TUNNEL_TYPE\020\002\022\030\n\024IPSEC_MI"
+  "SSING_FIELDS\020\003*Q\n\013GeneveError\022\022\n\016INVALID"
+  "_OPTION\020\000\022\024\n\020TOO_MANY_OPTIONS\020\001\022\030\n\024INVAL"
+  "ID_GENEVE_FIELD\020\002*c\n\017IPSecTunnelType\022\r\n\t"
+  "TRANSPORT\020\000\022\n\n\006TUNNEL\020\001\022\033\n\027TRANSPORT_NAT"
+  "_TRAVERSAL\020\002\022\030\n\024TUNNEL_NAT_TRAVERSAL\020\0032\310"
+  "\004\n\017IpTunnelService\022Y\n\014Capabilities\022#.tun"
+  "neloffload.v2.CapabilityRequest\032$.tunnel"
+  "offload.v2.CapabilityResponse\022b\n\016CreateI"
+  "pTunnel\022!.tunneloffload.v2.IpTunnelReque"
+  "st\032).tunneloffload.v2.CreateIpTunnelResp"
+  "onses\"\000(\001\022O\n\013GetIpTunnel\022\032.tunneloffload"
+  ".v2.TunnelId\032\".tunneloffload.v2.IpTunnel"
+  "Response\"\000\022Y\n\020GetIpTunnelStats\022\032.tunnelo"
+  "ffload.v2.TunnelId\032\'.tunneloffload.v2.Ip"
+  "TunnelStatsResponse\"\000\022_\n\017GetAllIpTunnels"
+  "\022#.tunneloffload.v2.TunnelRequestArgs\032#."
+  "tunneloffload.v2.IpTunnelResponses\"\0000\001\022i"
+  "\n\024GetAllIpTunnelsStats\022#.tunneloffload.v"
+  "2.TunnelRequestArgs\032(.tunneloffload.v2.I"
+  "pTunnelStatsResponses\"\0000\001B&Z$github.com/"
+  "att/sessionOffload/protosb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_tunneloffload_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_tunneloffload_2eproto = {
-  false, false, 6922, descriptor_table_protodef_tunneloffload_2eproto, "tunneloffload.proto", 
+  false, false, 6513, descriptor_table_protodef_tunneloffload_2eproto, "tunneloffload.proto", 
   &descriptor_table_tunneloffload_2eproto_once, nullptr, 0, 35,
   schemas, file_default_instances, TableStruct_tunneloffload_2eproto::offsets,
   file_level_metadata_tunneloffload_2eproto, file_level_enum_descriptors_tunneloffload_2eproto, file_level_service_descriptors_tunneloffload_2eproto,
@@ -1118,7 +1107,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_tunneloffload_2eproto(&descriptor_table_tunneloffload_2eproto);
 namespace tunneloffload {
-namespace v1alpha1 {
+namespace v2 {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AddTunnelStatus_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_tunneloffload_2eproto);
   return file_level_enum_descriptors_tunneloffload_2eproto[0];
@@ -1277,12 +1266,12 @@ class CapabilityRequest::_Internal {
 CapabilityRequest::CapabilityRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CapabilityRequest)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CapabilityRequest)
 }
 CapabilityRequest::CapabilityRequest(const CapabilityRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CapabilityRequest)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CapabilityRequest)
 }
 
 
@@ -1320,7 +1309,7 @@ CapabilityResponse_MatchCapabilities::CapabilityResponse_MatchCapabilities(::PRO
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
 }
 CapabilityResponse_MatchCapabilities::CapabilityResponse_MatchCapabilities(const CapabilityResponse_MatchCapabilities& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1328,7 +1317,7 @@ CapabilityResponse_MatchCapabilities::CapabilityResponse_MatchCapabilities(const
   ::memcpy(&ingress_interface_matching_, &from.ingress_interface_matching_,
     static_cast<size_t>(reinterpret_cast<char*>(&spi_matching_) -
     reinterpret_cast<char*>(&ingress_interface_matching_)) + sizeof(spi_matching_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
 }
 
 inline void CapabilityResponse_MatchCapabilities::SharedCtor() {
@@ -1339,7 +1328,7 @@ inline void CapabilityResponse_MatchCapabilities::SharedCtor() {
 }
 
 CapabilityResponse_MatchCapabilities::~CapabilityResponse_MatchCapabilities() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -1360,7 +1349,7 @@ void CapabilityResponse_MatchCapabilities::SetCachedSize(int size) const {
 }
 
 void CapabilityResponse_MatchCapabilities::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1442,7 +1431,7 @@ failure:
 
 uint8_t* CapabilityResponse_MatchCapabilities::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1480,12 +1469,12 @@ uint8_t* CapabilityResponse_MatchCapabilities::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   return target;
 }
 
 size_t CapabilityResponse_MatchCapabilities::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1534,7 +1523,7 @@ void CapabilityResponse_MatchCapabilities::MergeImpl(::PROTOBUF_NAMESPACE_ID::Me
 
 
 void CapabilityResponse_MatchCapabilities::MergeFrom(const CapabilityResponse_MatchCapabilities& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1558,7 +1547,7 @@ void CapabilityResponse_MatchCapabilities::MergeFrom(const CapabilityResponse_Ma
 }
 
 void CapabilityResponse_MatchCapabilities::CopyFrom(const CapabilityResponse_MatchCapabilities& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.CapabilityResponse.MatchCapabilities)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1600,21 +1589,21 @@ CapabilityResponse_IPSecCapabilities::CapabilityResponse_IPSecCapabilities(::PRO
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
 }
 CapabilityResponse_IPSecCapabilities::CapabilityResponse_IPSecCapabilities(const CapabilityResponse_IPSecCapabilities& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       tunnel_type_supported_(from.tunnel_type_supported_),
       encryption_supported_(from.encryption_supported_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
 }
 
 inline void CapabilityResponse_IPSecCapabilities::SharedCtor() {
 }
 
 CapabilityResponse_IPSecCapabilities::~CapabilityResponse_IPSecCapabilities() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -1635,7 +1624,7 @@ void CapabilityResponse_IPSecCapabilities::SetCachedSize(int size) const {
 }
 
 void CapabilityResponse_IPSecCapabilities::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1651,7 +1640,7 @@ const char* CapabilityResponse_IPSecCapabilities::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type_supported = 1;
+      // repeated .tunneloffload.v2.IPSecTunnelType tunnel_type_supported = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedEnumParser(_internal_mutable_tunnel_type_supported(), ptr, ctx);
@@ -1659,11 +1648,11 @@ const char* CapabilityResponse_IPSecCapabilities::_InternalParse(const char* ptr
         } else if (static_cast<uint8_t>(tag) == 8) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_add_tunnel_type_supported(static_cast<::tunneloffload::v1alpha1::IPSecTunnelType>(val));
+          _internal_add_tunnel_type_supported(static_cast<::tunneloffload::v2::IPSecTunnelType>(val));
         } else
           goto handle_unusual;
         continue;
-      // repeated .tunneloffload.v1alpha1.EncType encryption_supported = 2;
+      // repeated .tunneloffload.v2.EncType encryption_supported = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedEnumParser(_internal_mutable_encryption_supported(), ptr, ctx);
@@ -1671,7 +1660,7 @@ const char* CapabilityResponse_IPSecCapabilities::_InternalParse(const char* ptr
         } else if (static_cast<uint8_t>(tag) == 16) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_add_encryption_supported(static_cast<::tunneloffload::v1alpha1::EncType>(val));
+          _internal_add_encryption_supported(static_cast<::tunneloffload::v2::EncType>(val));
         } else
           goto handle_unusual;
         continue;
@@ -1700,11 +1689,11 @@ failure:
 
 uint8_t* CapabilityResponse_IPSecCapabilities::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type_supported = 1;
+  // repeated .tunneloffload.v2.IPSecTunnelType tunnel_type_supported = 1;
   {
     int byte_size = _tunnel_type_supported_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
@@ -1713,7 +1702,7 @@ uint8_t* CapabilityResponse_IPSecCapabilities::_InternalSerialize(
     }
   }
 
-  // repeated .tunneloffload.v1alpha1.EncType encryption_supported = 2;
+  // repeated .tunneloffload.v2.EncType encryption_supported = 2;
   {
     int byte_size = _encryption_supported_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
@@ -1726,19 +1715,19 @@ uint8_t* CapabilityResponse_IPSecCapabilities::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   return target;
 }
 
 size_t CapabilityResponse_IPSecCapabilities::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type_supported = 1;
+  // repeated .tunneloffload.v2.IPSecTunnelType tunnel_type_supported = 1;
   {
     size_t data_size = 0;
     unsigned int count = static_cast<unsigned int>(this->_internal_tunnel_type_supported_size());for (unsigned int i = 0; i < count; i++) {
@@ -1756,7 +1745,7 @@ size_t CapabilityResponse_IPSecCapabilities::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // repeated .tunneloffload.v1alpha1.EncType encryption_supported = 2;
+  // repeated .tunneloffload.v2.EncType encryption_supported = 2;
   {
     size_t data_size = 0;
     unsigned int count = static_cast<unsigned int>(this->_internal_encryption_supported_size());for (unsigned int i = 0; i < count; i++) {
@@ -1791,7 +1780,7 @@ void CapabilityResponse_IPSecCapabilities::MergeImpl(::PROTOBUF_NAMESPACE_ID::Me
 
 
 void CapabilityResponse_IPSecCapabilities::MergeFrom(const CapabilityResponse_IPSecCapabilities& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1802,7 +1791,7 @@ void CapabilityResponse_IPSecCapabilities::MergeFrom(const CapabilityResponse_IP
 }
 
 void CapabilityResponse_IPSecCapabilities::CopyFrom(const CapabilityResponse_IPSecCapabilities& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.CapabilityResponse.IPSecCapabilities)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1838,13 +1827,13 @@ CapabilityResponse_GeneveCapabilities::CapabilityResponse_GeneveCapabilities(::P
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
 }
 CapabilityResponse_GeneveCapabilities::CapabilityResponse_GeneveCapabilities(const CapabilityResponse_GeneveCapabilities& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   number_geneve_options_supported_ = from.number_geneve_options_supported_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
 }
 
 inline void CapabilityResponse_GeneveCapabilities::SharedCtor() {
@@ -1852,7 +1841,7 @@ number_geneve_options_supported_ = 0u;
 }
 
 CapabilityResponse_GeneveCapabilities::~CapabilityResponse_GeneveCapabilities() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -1873,7 +1862,7 @@ void CapabilityResponse_GeneveCapabilities::SetCachedSize(int size) const {
 }
 
 void CapabilityResponse_GeneveCapabilities::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1921,7 +1910,7 @@ failure:
 
 uint8_t* CapabilityResponse_GeneveCapabilities::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1935,12 +1924,12 @@ uint8_t* CapabilityResponse_GeneveCapabilities::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   return target;
 }
 
 size_t CapabilityResponse_GeneveCapabilities::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1969,7 +1958,7 @@ void CapabilityResponse_GeneveCapabilities::MergeImpl(::PROTOBUF_NAMESPACE_ID::M
 
 
 void CapabilityResponse_GeneveCapabilities::MergeFrom(const CapabilityResponse_GeneveCapabilities& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1981,7 +1970,7 @@ void CapabilityResponse_GeneveCapabilities::MergeFrom(const CapabilityResponse_G
 }
 
 void CapabilityResponse_GeneveCapabilities::CopyFrom(const CapabilityResponse_GeneveCapabilities& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.CapabilityResponse.GeneveCapabilities)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2007,20 +1996,20 @@ void CapabilityResponse_GeneveCapabilities::InternalSwap(CapabilityResponse_Gene
 
 class CapabilityResponse::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities& match_capabilities(const CapabilityResponse* msg);
-  static const ::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities& ipsec_capabilities(const CapabilityResponse* msg);
-  static const ::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities& geneve_capabilities(const CapabilityResponse* msg);
+  static const ::tunneloffload::v2::CapabilityResponse_MatchCapabilities& match_capabilities(const CapabilityResponse* msg);
+  static const ::tunneloffload::v2::CapabilityResponse_IPSecCapabilities& ipsec_capabilities(const CapabilityResponse* msg);
+  static const ::tunneloffload::v2::CapabilityResponse_GeneveCapabilities& geneve_capabilities(const CapabilityResponse* msg);
 };
 
-const ::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities&
+const ::tunneloffload::v2::CapabilityResponse_MatchCapabilities&
 CapabilityResponse::_Internal::match_capabilities(const CapabilityResponse* msg) {
   return *msg->match_capabilities_;
 }
-const ::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities&
+const ::tunneloffload::v2::CapabilityResponse_IPSecCapabilities&
 CapabilityResponse::_Internal::ipsec_capabilities(const CapabilityResponse* msg) {
   return *msg->ipsec_capabilities_;
 }
-const ::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities&
+const ::tunneloffload::v2::CapabilityResponse_GeneveCapabilities&
 CapabilityResponse::_Internal::geneve_capabilities(const CapabilityResponse* msg) {
   return *msg->geneve_capabilities_;
 }
@@ -2031,27 +2020,27 @@ CapabilityResponse::CapabilityResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CapabilityResponse)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CapabilityResponse)
 }
 CapabilityResponse::CapabilityResponse(const CapabilityResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_match_capabilities()) {
-    match_capabilities_ = new ::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities(*from.match_capabilities_);
+    match_capabilities_ = new ::tunneloffload::v2::CapabilityResponse_MatchCapabilities(*from.match_capabilities_);
   } else {
     match_capabilities_ = nullptr;
   }
   if (from._internal_has_ipsec_capabilities()) {
-    ipsec_capabilities_ = new ::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities(*from.ipsec_capabilities_);
+    ipsec_capabilities_ = new ::tunneloffload::v2::CapabilityResponse_IPSecCapabilities(*from.ipsec_capabilities_);
   } else {
     ipsec_capabilities_ = nullptr;
   }
   if (from._internal_has_geneve_capabilities()) {
-    geneve_capabilities_ = new ::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities(*from.geneve_capabilities_);
+    geneve_capabilities_ = new ::tunneloffload::v2::CapabilityResponse_GeneveCapabilities(*from.geneve_capabilities_);
   } else {
     geneve_capabilities_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CapabilityResponse)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CapabilityResponse)
 }
 
 inline void CapabilityResponse::SharedCtor() {
@@ -2062,7 +2051,7 @@ inline void CapabilityResponse::SharedCtor() {
 }
 
 CapabilityResponse::~CapabilityResponse() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.CapabilityResponse)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.CapabilityResponse)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2086,7 +2075,7 @@ void CapabilityResponse::SetCachedSize(int size) const {
 }
 
 void CapabilityResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.CapabilityResponse)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.CapabilityResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2112,7 +2101,7 @@ const char* CapabilityResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities match_capabilities = 1;
+      // .tunneloffload.v2.CapabilityResponse.MatchCapabilities match_capabilities = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_match_capabilities(), ptr);
@@ -2120,7 +2109,7 @@ const char* CapabilityResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities ipsec_capabilities = 2;
+      // .tunneloffload.v2.CapabilityResponse.IPSecCapabilities ipsec_capabilities = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipsec_capabilities(), ptr);
@@ -2128,7 +2117,7 @@ const char* CapabilityResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities geneve_capabilities = 3;
+      // .tunneloffload.v2.CapabilityResponse.GeneveCapabilities geneve_capabilities = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_geneve_capabilities(), ptr);
@@ -2161,11 +2150,11 @@ failure:
 
 uint8_t* CapabilityResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.CapabilityResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.CapabilityResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities match_capabilities = 1;
+  // .tunneloffload.v2.CapabilityResponse.MatchCapabilities match_capabilities = 1;
   if (this->_internal_has_match_capabilities()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -2173,7 +2162,7 @@ uint8_t* CapabilityResponse::_InternalSerialize(
         1, _Internal::match_capabilities(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities ipsec_capabilities = 2;
+  // .tunneloffload.v2.CapabilityResponse.IPSecCapabilities ipsec_capabilities = 2;
   if (this->_internal_has_ipsec_capabilities()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -2181,7 +2170,7 @@ uint8_t* CapabilityResponse::_InternalSerialize(
         2, _Internal::ipsec_capabilities(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities geneve_capabilities = 3;
+  // .tunneloffload.v2.CapabilityResponse.GeneveCapabilities geneve_capabilities = 3;
   if (this->_internal_has_geneve_capabilities()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -2193,33 +2182,33 @@ uint8_t* CapabilityResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.CapabilityResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.CapabilityResponse)
   return target;
 }
 
 size_t CapabilityResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.CapabilityResponse)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.CapabilityResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.CapabilityResponse.MatchCapabilities match_capabilities = 1;
+  // .tunneloffload.v2.CapabilityResponse.MatchCapabilities match_capabilities = 1;
   if (this->_internal_has_match_capabilities()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *match_capabilities_);
   }
 
-  // .tunneloffload.v1alpha1.CapabilityResponse.IPSecCapabilities ipsec_capabilities = 2;
+  // .tunneloffload.v2.CapabilityResponse.IPSecCapabilities ipsec_capabilities = 2;
   if (this->_internal_has_ipsec_capabilities()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *ipsec_capabilities_);
   }
 
-  // .tunneloffload.v1alpha1.CapabilityResponse.GeneveCapabilities geneve_capabilities = 3;
+  // .tunneloffload.v2.CapabilityResponse.GeneveCapabilities geneve_capabilities = 3;
   if (this->_internal_has_geneve_capabilities()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2243,25 +2232,25 @@ void CapabilityResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void CapabilityResponse::MergeFrom(const CapabilityResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.CapabilityResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.CapabilityResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_match_capabilities()) {
-    _internal_mutable_match_capabilities()->::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities::MergeFrom(from._internal_match_capabilities());
+    _internal_mutable_match_capabilities()->::tunneloffload::v2::CapabilityResponse_MatchCapabilities::MergeFrom(from._internal_match_capabilities());
   }
   if (from._internal_has_ipsec_capabilities()) {
-    _internal_mutable_ipsec_capabilities()->::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities::MergeFrom(from._internal_ipsec_capabilities());
+    _internal_mutable_ipsec_capabilities()->::tunneloffload::v2::CapabilityResponse_IPSecCapabilities::MergeFrom(from._internal_ipsec_capabilities());
   }
   if (from._internal_has_geneve_capabilities()) {
-    _internal_mutable_geneve_capabilities()->::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities::MergeFrom(from._internal_geneve_capabilities());
+    _internal_mutable_geneve_capabilities()->::tunneloffload::v2::CapabilityResponse_GeneveCapabilities::MergeFrom(from._internal_geneve_capabilities());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapabilityResponse::CopyFrom(const CapabilityResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.CapabilityResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.CapabilityResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2301,7 +2290,7 @@ TunnelAdditionError::TunnelAdditionError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.TunnelAdditionError)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.TunnelAdditionError)
 }
 TunnelAdditionError::TunnelAdditionError(const TunnelAdditionError& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2309,7 +2298,7 @@ TunnelAdditionError::TunnelAdditionError(const TunnelAdditionError& from)
   ::memcpy(&match_error_, &from.match_error_,
     static_cast<size_t>(reinterpret_cast<char*>(&geneve_error_) -
     reinterpret_cast<char*>(&match_error_)) + sizeof(geneve_error_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.TunnelAdditionError)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.TunnelAdditionError)
 }
 
 inline void TunnelAdditionError::SharedCtor() {
@@ -2320,7 +2309,7 @@ inline void TunnelAdditionError::SharedCtor() {
 }
 
 TunnelAdditionError::~TunnelAdditionError() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.TunnelAdditionError)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.TunnelAdditionError)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2341,7 +2330,7 @@ void TunnelAdditionError::SetCachedSize(int size) const {
 }
 
 void TunnelAdditionError::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.TunnelAdditionError)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.TunnelAdditionError)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2358,39 +2347,39 @@ const char* TunnelAdditionError::_InternalParse(const char* ptr, ::PROTOBUF_NAME
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.MatchError match_error = 1;
+      // .tunneloffload.v2.MatchError match_error = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_match_error(static_cast<::tunneloffload::v1alpha1::MatchError>(val));
+          _internal_set_match_error(static_cast<::tunneloffload::v2::MatchError>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.TunnelError tunnel_error = 2;
+      // .tunneloffload.v2.TunnelError tunnel_error = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_tunnel_error(static_cast<::tunneloffload::v1alpha1::TunnelError>(val));
+          _internal_set_tunnel_error(static_cast<::tunneloffload::v2::TunnelError>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPSecError ipsec_error = 3;
+      // .tunneloffload.v2.IPSecError ipsec_error = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_ipsec_error(static_cast<::tunneloffload::v1alpha1::IPSecError>(val));
+          _internal_set_ipsec_error(static_cast<::tunneloffload::v2::IPSecError>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.GeneveError geneve_error = 4;
+      // .tunneloffload.v2.GeneveError geneve_error = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_geneve_error(static_cast<::tunneloffload::v1alpha1::GeneveError>(val));
+          _internal_set_geneve_error(static_cast<::tunneloffload::v2::GeneveError>(val));
         } else
           goto handle_unusual;
         continue;
@@ -2419,32 +2408,32 @@ failure:
 
 uint8_t* TunnelAdditionError::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.TunnelAdditionError)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.TunnelAdditionError)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.MatchError match_error = 1;
+  // .tunneloffload.v2.MatchError match_error = 1;
   if (this->_internal_match_error() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->_internal_match_error(), target);
   }
 
-  // .tunneloffload.v1alpha1.TunnelError tunnel_error = 2;
+  // .tunneloffload.v2.TunnelError tunnel_error = 2;
   if (this->_internal_tunnel_error() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_tunnel_error(), target);
   }
 
-  // .tunneloffload.v1alpha1.IPSecError ipsec_error = 3;
+  // .tunneloffload.v2.IPSecError ipsec_error = 3;
   if (this->_internal_ipsec_error() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       3, this->_internal_ipsec_error(), target);
   }
 
-  // .tunneloffload.v1alpha1.GeneveError geneve_error = 4;
+  // .tunneloffload.v2.GeneveError geneve_error = 4;
   if (this->_internal_geneve_error() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2455,37 +2444,37 @@ uint8_t* TunnelAdditionError::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.TunnelAdditionError)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.TunnelAdditionError)
   return target;
 }
 
 size_t TunnelAdditionError::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.TunnelAdditionError)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.TunnelAdditionError)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.MatchError match_error = 1;
+  // .tunneloffload.v2.MatchError match_error = 1;
   if (this->_internal_match_error() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_match_error());
   }
 
-  // .tunneloffload.v1alpha1.TunnelError tunnel_error = 2;
+  // .tunneloffload.v2.TunnelError tunnel_error = 2;
   if (this->_internal_tunnel_error() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_tunnel_error());
   }
 
-  // .tunneloffload.v1alpha1.IPSecError ipsec_error = 3;
+  // .tunneloffload.v2.IPSecError ipsec_error = 3;
   if (this->_internal_ipsec_error() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_ipsec_error());
   }
 
-  // .tunneloffload.v1alpha1.GeneveError geneve_error = 4;
+  // .tunneloffload.v2.GeneveError geneve_error = 4;
   if (this->_internal_geneve_error() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_geneve_error());
@@ -2508,7 +2497,7 @@ void TunnelAdditionError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void TunnelAdditionError::MergeFrom(const TunnelAdditionError& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.TunnelAdditionError)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.TunnelAdditionError)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2529,7 +2518,7 @@ void TunnelAdditionError::MergeFrom(const TunnelAdditionError& from) {
 }
 
 void TunnelAdditionError::CopyFrom(const TunnelAdditionError& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.TunnelAdditionError)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.TunnelAdditionError)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2569,7 +2558,7 @@ MatchCriteria_IPSecMatch::MatchCriteria_IPSecMatch(::PROTOBUF_NAMESPACE_ID::Aren
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.MatchCriteria.IPSecMatch)
 }
 MatchCriteria_IPSecMatch::MatchCriteria_IPSecMatch(const MatchCriteria_IPSecMatch& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2577,7 +2566,7 @@ MatchCriteria_IPSecMatch::MatchCriteria_IPSecMatch(const MatchCriteria_IPSecMatc
   ::memcpy(&spi_, &from.spi_,
     static_cast<size_t>(reinterpret_cast<char*>(&sn_) -
     reinterpret_cast<char*>(&spi_)) + sizeof(sn_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.MatchCriteria.IPSecMatch)
 }
 
 inline void MatchCriteria_IPSecMatch::SharedCtor() {
@@ -2588,7 +2577,7 @@ inline void MatchCriteria_IPSecMatch::SharedCtor() {
 }
 
 MatchCriteria_IPSecMatch::~MatchCriteria_IPSecMatch() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.MatchCriteria.IPSecMatch)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2609,7 +2598,7 @@ void MatchCriteria_IPSecMatch::SetCachedSize(int size) const {
 }
 
 void MatchCriteria_IPSecMatch::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.MatchCriteria.IPSecMatch)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2667,7 +2656,7 @@ failure:
 
 uint8_t* MatchCriteria_IPSecMatch::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.MatchCriteria.IPSecMatch)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2687,12 +2676,12 @@ uint8_t* MatchCriteria_IPSecMatch::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.MatchCriteria.IPSecMatch)
   return target;
 }
 
 size_t MatchCriteria_IPSecMatch::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.MatchCriteria.IPSecMatch)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2726,7 +2715,7 @@ void MatchCriteria_IPSecMatch::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void MatchCriteria_IPSecMatch::MergeFrom(const MatchCriteria_IPSecMatch& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.MatchCriteria.IPSecMatch)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2741,7 +2730,7 @@ void MatchCriteria_IPSecMatch::MergeFrom(const MatchCriteria_IPSecMatch& from) {
 }
 
 void MatchCriteria_IPSecMatch::CopyFrom(const MatchCriteria_IPSecMatch& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.MatchCriteria.IPSecMatch)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.MatchCriteria.IPSecMatch)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2772,29 +2761,29 @@ void MatchCriteria_IPSecMatch::InternalSwap(MatchCriteria_IPSecMatch* other) {
 
 class MatchCriteria_GeneveMatch::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::MacPair& mac_match(const MatchCriteria_GeneveMatch* msg);
-  static const ::tunneloffload::v1alpha1::IPV4Match& ipv4_match(const MatchCriteria_GeneveMatch* msg);
-  static const ::tunneloffload::v1alpha1::IPV6Match& ipv6_match(const MatchCriteria_GeneveMatch* msg);
+  static const ::tunneloffload::v2::MacPair& mac_match(const MatchCriteria_GeneveMatch* msg);
+  static const ::tunneloffload::v2::IPV4Match& ipv4_match(const MatchCriteria_GeneveMatch* msg);
+  static const ::tunneloffload::v2::IPV6Match& ipv6_match(const MatchCriteria_GeneveMatch* msg);
 };
 
-const ::tunneloffload::v1alpha1::MacPair&
+const ::tunneloffload::v2::MacPair&
 MatchCriteria_GeneveMatch::_Internal::mac_match(const MatchCriteria_GeneveMatch* msg) {
   return *msg->mac_match_;
 }
-const ::tunneloffload::v1alpha1::IPV4Match&
+const ::tunneloffload::v2::IPV4Match&
 MatchCriteria_GeneveMatch::_Internal::ipv4_match(const MatchCriteria_GeneveMatch* msg) {
   return *msg->ip_match_.ipv4_match_;
 }
-const ::tunneloffload::v1alpha1::IPV6Match&
+const ::tunneloffload::v2::IPV6Match&
 MatchCriteria_GeneveMatch::_Internal::ipv6_match(const MatchCriteria_GeneveMatch* msg) {
   return *msg->ip_match_.ipv6_match_;
 }
-void MatchCriteria_GeneveMatch::set_allocated_ipv4_match(::tunneloffload::v1alpha1::IPV4Match* ipv4_match) {
+void MatchCriteria_GeneveMatch::set_allocated_ipv4_match(::tunneloffload::v2::IPV4Match* ipv4_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip_match();
   if (ipv4_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV4Match>::GetOwningArena(ipv4_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV4Match>::GetOwningArena(ipv4_match);
     if (message_arena != submessage_arena) {
       ipv4_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv4_match, submessage_arena);
@@ -2802,14 +2791,14 @@ void MatchCriteria_GeneveMatch::set_allocated_ipv4_match(::tunneloffload::v1alph
     set_has_ipv4_match();
     ip_match_.ipv4_match_ = ipv4_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch.ipv4_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.GeneveMatch.ipv4_match)
 }
-void MatchCriteria_GeneveMatch::set_allocated_ipv6_match(::tunneloffload::v1alpha1::IPV6Match* ipv6_match) {
+void MatchCriteria_GeneveMatch::set_allocated_ipv6_match(::tunneloffload::v2::IPV6Match* ipv6_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip_match();
   if (ipv6_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV6Match>::GetOwningArena(ipv6_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV6Match>::GetOwningArena(ipv6_match);
     if (message_arena != submessage_arena) {
       ipv6_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv6_match, submessage_arena);
@@ -2817,7 +2806,7 @@ void MatchCriteria_GeneveMatch::set_allocated_ipv6_match(::tunneloffload::v1alph
     set_has_ipv6_match();
     ip_match_.ipv6_match_ = ipv6_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch.ipv6_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.GeneveMatch.ipv6_match)
 }
 MatchCriteria_GeneveMatch::MatchCriteria_GeneveMatch(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2826,13 +2815,13 @@ MatchCriteria_GeneveMatch::MatchCriteria_GeneveMatch(::PROTOBUF_NAMESPACE_ID::Ar
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.MatchCriteria.GeneveMatch)
 }
 MatchCriteria_GeneveMatch::MatchCriteria_GeneveMatch(const MatchCriteria_GeneveMatch& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_mac_match()) {
-    mac_match_ = new ::tunneloffload::v1alpha1::MacPair(*from.mac_match_);
+    mac_match_ = new ::tunneloffload::v2::MacPair(*from.mac_match_);
   } else {
     mac_match_ = nullptr;
   }
@@ -2842,18 +2831,18 @@ MatchCriteria_GeneveMatch::MatchCriteria_GeneveMatch(const MatchCriteria_GeneveM
   clear_has_ip_match();
   switch (from.ip_match_case()) {
     case kIpv4Match: {
-      _internal_mutable_ipv4_match()->::tunneloffload::v1alpha1::IPV4Match::MergeFrom(from._internal_ipv4_match());
+      _internal_mutable_ipv4_match()->::tunneloffload::v2::IPV4Match::MergeFrom(from._internal_ipv4_match());
       break;
     }
     case kIpv6Match: {
-      _internal_mutable_ipv6_match()->::tunneloffload::v1alpha1::IPV6Match::MergeFrom(from._internal_ipv6_match());
+      _internal_mutable_ipv6_match()->::tunneloffload::v2::IPV6Match::MergeFrom(from._internal_ipv6_match());
       break;
     }
     case IP_MATCH_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.MatchCriteria.GeneveMatch)
 }
 
 inline void MatchCriteria_GeneveMatch::SharedCtor() {
@@ -2865,7 +2854,7 @@ clear_has_ip_match();
 }
 
 MatchCriteria_GeneveMatch::~MatchCriteria_GeneveMatch() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.MatchCriteria.GeneveMatch)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2890,7 +2879,7 @@ void MatchCriteria_GeneveMatch::SetCachedSize(int size) const {
 }
 
 void MatchCriteria_GeneveMatch::clear_ip_match() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.MatchCriteria.GeneveMatch)
   switch (ip_match_case()) {
     case kIpv4Match: {
       if (GetArenaForAllocation() == nullptr) {
@@ -2913,7 +2902,7 @@ void MatchCriteria_GeneveMatch::clear_ip_match() {
 
 
 void MatchCriteria_GeneveMatch::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.MatchCriteria.GeneveMatch)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2943,7 +2932,7 @@ const char* MatchCriteria_GeneveMatch::_InternalParse(const char* ptr, ::PROTOBU
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+      // .tunneloffload.v2.MacPair mac_match = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_mac_match(), ptr);
@@ -2959,7 +2948,7 @@ const char* MatchCriteria_GeneveMatch::_InternalParse(const char* ptr, ::PROTOBU
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 4;
+      // .tunneloffload.v2.IPV4Match ipv4_match = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv4_match(), ptr);
@@ -2967,7 +2956,7 @@ const char* MatchCriteria_GeneveMatch::_InternalParse(const char* ptr, ::PROTOBU
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 5;
+      // .tunneloffload.v2.IPV6Match ipv6_match = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv6_match(), ptr);
@@ -3000,7 +2989,7 @@ failure:
 
 uint8_t* MatchCriteria_GeneveMatch::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.MatchCriteria.GeneveMatch)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3010,7 +2999,7 @@ uint8_t* MatchCriteria_GeneveMatch::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_vni(), target);
   }
 
-  // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+  // .tunneloffload.v2.MacPair mac_match = 2;
   if (this->_internal_has_mac_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3024,7 +3013,7 @@ uint8_t* MatchCriteria_GeneveMatch::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_protocol_type(), target);
   }
 
-  // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 4;
+  // .tunneloffload.v2.IPV4Match ipv4_match = 4;
   if (_internal_has_ipv4_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3032,7 +3021,7 @@ uint8_t* MatchCriteria_GeneveMatch::_InternalSerialize(
         4, _Internal::ipv4_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 5;
+  // .tunneloffload.v2.IPV6Match ipv6_match = 5;
   if (_internal_has_ipv6_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3044,19 +3033,19 @@ uint8_t* MatchCriteria_GeneveMatch::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.MatchCriteria.GeneveMatch)
   return target;
 }
 
 size_t MatchCriteria_GeneveMatch::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.MatchCriteria.GeneveMatch)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+  // .tunneloffload.v2.MacPair mac_match = 2;
   if (this->_internal_has_mac_match()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3074,14 +3063,14 @@ size_t MatchCriteria_GeneveMatch::ByteSizeLong() const {
   }
 
   switch (ip_match_case()) {
-    // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 4;
+    // .tunneloffload.v2.IPV4Match ipv4_match = 4;
     case kIpv4Match: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *ip_match_.ipv4_match_);
       break;
     }
-    // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 5;
+    // .tunneloffload.v2.IPV6Match ipv6_match = 5;
     case kIpv6Match: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3109,13 +3098,13 @@ void MatchCriteria_GeneveMatch::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void MatchCriteria_GeneveMatch::MergeFrom(const MatchCriteria_GeneveMatch& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.MatchCriteria.GeneveMatch)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_mac_match()) {
-    _internal_mutable_mac_match()->::tunneloffload::v1alpha1::MacPair::MergeFrom(from._internal_mac_match());
+    _internal_mutable_mac_match()->::tunneloffload::v2::MacPair::MergeFrom(from._internal_mac_match());
   }
   if (from._internal_vni() != 0) {
     _internal_set_vni(from._internal_vni());
@@ -3125,11 +3114,11 @@ void MatchCriteria_GeneveMatch::MergeFrom(const MatchCriteria_GeneveMatch& from)
   }
   switch (from.ip_match_case()) {
     case kIpv4Match: {
-      _internal_mutable_ipv4_match()->::tunneloffload::v1alpha1::IPV4Match::MergeFrom(from._internal_ipv4_match());
+      _internal_mutable_ipv4_match()->::tunneloffload::v2::IPV4Match::MergeFrom(from._internal_ipv4_match());
       break;
     }
     case kIpv6Match: {
-      _internal_mutable_ipv6_match()->::tunneloffload::v1alpha1::IPV6Match::MergeFrom(from._internal_ipv6_match());
+      _internal_mutable_ipv6_match()->::tunneloffload::v2::IPV6Match::MergeFrom(from._internal_ipv6_match());
       break;
     }
     case IP_MATCH_NOT_SET: {
@@ -3140,7 +3129,7 @@ void MatchCriteria_GeneveMatch::MergeFrom(const MatchCriteria_GeneveMatch& from)
 }
 
 void MatchCriteria_GeneveMatch::CopyFrom(const MatchCriteria_GeneveMatch& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.MatchCriteria.GeneveMatch)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.MatchCriteria.GeneveMatch)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3173,29 +3162,29 @@ void MatchCriteria_GeneveMatch::InternalSwap(MatchCriteria_GeneveMatch* other) {
 
 class MatchCriteria_VXLanMatch::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::MacPair& mac_match(const MatchCriteria_VXLanMatch* msg);
-  static const ::tunneloffload::v1alpha1::IPV4Match& ipv4_match(const MatchCriteria_VXLanMatch* msg);
-  static const ::tunneloffload::v1alpha1::IPV6Match& ipv6_match(const MatchCriteria_VXLanMatch* msg);
+  static const ::tunneloffload::v2::MacPair& mac_match(const MatchCriteria_VXLanMatch* msg);
+  static const ::tunneloffload::v2::IPV4Match& ipv4_match(const MatchCriteria_VXLanMatch* msg);
+  static const ::tunneloffload::v2::IPV6Match& ipv6_match(const MatchCriteria_VXLanMatch* msg);
 };
 
-const ::tunneloffload::v1alpha1::MacPair&
+const ::tunneloffload::v2::MacPair&
 MatchCriteria_VXLanMatch::_Internal::mac_match(const MatchCriteria_VXLanMatch* msg) {
   return *msg->mac_match_;
 }
-const ::tunneloffload::v1alpha1::IPV4Match&
+const ::tunneloffload::v2::IPV4Match&
 MatchCriteria_VXLanMatch::_Internal::ipv4_match(const MatchCriteria_VXLanMatch* msg) {
   return *msg->ip_match_.ipv4_match_;
 }
-const ::tunneloffload::v1alpha1::IPV6Match&
+const ::tunneloffload::v2::IPV6Match&
 MatchCriteria_VXLanMatch::_Internal::ipv6_match(const MatchCriteria_VXLanMatch* msg) {
   return *msg->ip_match_.ipv6_match_;
 }
-void MatchCriteria_VXLanMatch::set_allocated_ipv4_match(::tunneloffload::v1alpha1::IPV4Match* ipv4_match) {
+void MatchCriteria_VXLanMatch::set_allocated_ipv4_match(::tunneloffload::v2::IPV4Match* ipv4_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip_match();
   if (ipv4_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV4Match>::GetOwningArena(ipv4_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV4Match>::GetOwningArena(ipv4_match);
     if (message_arena != submessage_arena) {
       ipv4_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv4_match, submessage_arena);
@@ -3203,14 +3192,14 @@ void MatchCriteria_VXLanMatch::set_allocated_ipv4_match(::tunneloffload::v1alpha
     set_has_ipv4_match();
     ip_match_.ipv4_match_ = ipv4_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch.ipv4_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.VXLanMatch.ipv4_match)
 }
-void MatchCriteria_VXLanMatch::set_allocated_ipv6_match(::tunneloffload::v1alpha1::IPV6Match* ipv6_match) {
+void MatchCriteria_VXLanMatch::set_allocated_ipv6_match(::tunneloffload::v2::IPV6Match* ipv6_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip_match();
   if (ipv6_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV6Match>::GetOwningArena(ipv6_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV6Match>::GetOwningArena(ipv6_match);
     if (message_arena != submessage_arena) {
       ipv6_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv6_match, submessage_arena);
@@ -3218,7 +3207,7 @@ void MatchCriteria_VXLanMatch::set_allocated_ipv6_match(::tunneloffload::v1alpha
     set_has_ipv6_match();
     ip_match_.ipv6_match_ = ipv6_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch.ipv6_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.VXLanMatch.ipv6_match)
 }
 MatchCriteria_VXLanMatch::MatchCriteria_VXLanMatch(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -3227,13 +3216,13 @@ MatchCriteria_VXLanMatch::MatchCriteria_VXLanMatch(::PROTOBUF_NAMESPACE_ID::Aren
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.MatchCriteria.VXLanMatch)
 }
 MatchCriteria_VXLanMatch::MatchCriteria_VXLanMatch(const MatchCriteria_VXLanMatch& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_mac_match()) {
-    mac_match_ = new ::tunneloffload::v1alpha1::MacPair(*from.mac_match_);
+    mac_match_ = new ::tunneloffload::v2::MacPair(*from.mac_match_);
   } else {
     mac_match_ = nullptr;
   }
@@ -3241,18 +3230,18 @@ MatchCriteria_VXLanMatch::MatchCriteria_VXLanMatch(const MatchCriteria_VXLanMatc
   clear_has_ip_match();
   switch (from.ip_match_case()) {
     case kIpv4Match: {
-      _internal_mutable_ipv4_match()->::tunneloffload::v1alpha1::IPV4Match::MergeFrom(from._internal_ipv4_match());
+      _internal_mutable_ipv4_match()->::tunneloffload::v2::IPV4Match::MergeFrom(from._internal_ipv4_match());
       break;
     }
     case kIpv6Match: {
-      _internal_mutable_ipv6_match()->::tunneloffload::v1alpha1::IPV6Match::MergeFrom(from._internal_ipv6_match());
+      _internal_mutable_ipv6_match()->::tunneloffload::v2::IPV6Match::MergeFrom(from._internal_ipv6_match());
       break;
     }
     case IP_MATCH_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.MatchCriteria.VXLanMatch)
 }
 
 inline void MatchCriteria_VXLanMatch::SharedCtor() {
@@ -3264,7 +3253,7 @@ clear_has_ip_match();
 }
 
 MatchCriteria_VXLanMatch::~MatchCriteria_VXLanMatch() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.MatchCriteria.VXLanMatch)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -3289,7 +3278,7 @@ void MatchCriteria_VXLanMatch::SetCachedSize(int size) const {
 }
 
 void MatchCriteria_VXLanMatch::clear_ip_match() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.MatchCriteria.VXLanMatch)
   switch (ip_match_case()) {
     case kIpv4Match: {
       if (GetArenaForAllocation() == nullptr) {
@@ -3312,7 +3301,7 @@ void MatchCriteria_VXLanMatch::clear_ip_match() {
 
 
 void MatchCriteria_VXLanMatch::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.MatchCriteria.VXLanMatch)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3340,7 +3329,7 @@ const char* MatchCriteria_VXLanMatch::_InternalParse(const char* ptr, ::PROTOBUF
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+      // .tunneloffload.v2.MacPair mac_match = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_mac_match(), ptr);
@@ -3348,7 +3337,7 @@ const char* MatchCriteria_VXLanMatch::_InternalParse(const char* ptr, ::PROTOBUF
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 3;
+      // .tunneloffload.v2.IPV4Match ipv4_match = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv4_match(), ptr);
@@ -3356,7 +3345,7 @@ const char* MatchCriteria_VXLanMatch::_InternalParse(const char* ptr, ::PROTOBUF
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 4;
+      // .tunneloffload.v2.IPV6Match ipv6_match = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv6_match(), ptr);
@@ -3389,7 +3378,7 @@ failure:
 
 uint8_t* MatchCriteria_VXLanMatch::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.MatchCriteria.VXLanMatch)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3399,7 +3388,7 @@ uint8_t* MatchCriteria_VXLanMatch::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_vni(), target);
   }
 
-  // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+  // .tunneloffload.v2.MacPair mac_match = 2;
   if (this->_internal_has_mac_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3407,7 +3396,7 @@ uint8_t* MatchCriteria_VXLanMatch::_InternalSerialize(
         2, _Internal::mac_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 3;
+  // .tunneloffload.v2.IPV4Match ipv4_match = 3;
   if (_internal_has_ipv4_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3415,7 +3404,7 @@ uint8_t* MatchCriteria_VXLanMatch::_InternalSerialize(
         3, _Internal::ipv4_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 4;
+  // .tunneloffload.v2.IPV6Match ipv6_match = 4;
   if (_internal_has_ipv6_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3427,19 +3416,19 @@ uint8_t* MatchCriteria_VXLanMatch::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.MatchCriteria.VXLanMatch)
   return target;
 }
 
 size_t MatchCriteria_VXLanMatch::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.MatchCriteria.VXLanMatch)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+  // .tunneloffload.v2.MacPair mac_match = 2;
   if (this->_internal_has_mac_match()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3452,14 +3441,14 @@ size_t MatchCriteria_VXLanMatch::ByteSizeLong() const {
   }
 
   switch (ip_match_case()) {
-    // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 3;
+    // .tunneloffload.v2.IPV4Match ipv4_match = 3;
     case kIpv4Match: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *ip_match_.ipv4_match_);
       break;
     }
-    // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 4;
+    // .tunneloffload.v2.IPV6Match ipv6_match = 4;
     case kIpv6Match: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3487,24 +3476,24 @@ void MatchCriteria_VXLanMatch::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void MatchCriteria_VXLanMatch::MergeFrom(const MatchCriteria_VXLanMatch& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.MatchCriteria.VXLanMatch)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_mac_match()) {
-    _internal_mutable_mac_match()->::tunneloffload::v1alpha1::MacPair::MergeFrom(from._internal_mac_match());
+    _internal_mutable_mac_match()->::tunneloffload::v2::MacPair::MergeFrom(from._internal_mac_match());
   }
   if (from._internal_vni() != 0) {
     _internal_set_vni(from._internal_vni());
   }
   switch (from.ip_match_case()) {
     case kIpv4Match: {
-      _internal_mutable_ipv4_match()->::tunneloffload::v1alpha1::IPV4Match::MergeFrom(from._internal_ipv4_match());
+      _internal_mutable_ipv4_match()->::tunneloffload::v2::IPV4Match::MergeFrom(from._internal_ipv4_match());
       break;
     }
     case kIpv6Match: {
-      _internal_mutable_ipv6_match()->::tunneloffload::v1alpha1::IPV6Match::MergeFrom(from._internal_ipv6_match());
+      _internal_mutable_ipv6_match()->::tunneloffload::v2::IPV6Match::MergeFrom(from._internal_ipv6_match());
       break;
     }
     case IP_MATCH_NOT_SET: {
@@ -3515,7 +3504,7 @@ void MatchCriteria_VXLanMatch::MergeFrom(const MatchCriteria_VXLanMatch& from) {
 }
 
 void MatchCriteria_VXLanMatch::CopyFrom(const MatchCriteria_VXLanMatch& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.MatchCriteria.VXLanMatch)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.MatchCriteria.VXLanMatch)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3548,44 +3537,44 @@ void MatchCriteria_VXLanMatch::InternalSwap(MatchCriteria_VXLanMatch* other) {
 
 class MatchCriteria::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::MacPair& mac_match(const MatchCriteria* msg);
-  static const ::tunneloffload::v1alpha1::IPV4Match& ipv4_match(const MatchCriteria* msg);
-  static const ::tunneloffload::v1alpha1::IPV6Match& ipv6_match(const MatchCriteria* msg);
-  static const ::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch& ipsec_match(const MatchCriteria* msg);
-  static const ::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch& geneve_match(const MatchCriteria* msg);
-  static const ::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch& vxlan_match(const MatchCriteria* msg);
+  static const ::tunneloffload::v2::MacPair& mac_match(const MatchCriteria* msg);
+  static const ::tunneloffload::v2::IPV4Match& ipv4_match(const MatchCriteria* msg);
+  static const ::tunneloffload::v2::IPV6Match& ipv6_match(const MatchCriteria* msg);
+  static const ::tunneloffload::v2::MatchCriteria_IPSecMatch& ipsec_match(const MatchCriteria* msg);
+  static const ::tunneloffload::v2::MatchCriteria_GeneveMatch& geneve_match(const MatchCriteria* msg);
+  static const ::tunneloffload::v2::MatchCriteria_VXLanMatch& vxlan_match(const MatchCriteria* msg);
 };
 
-const ::tunneloffload::v1alpha1::MacPair&
+const ::tunneloffload::v2::MacPair&
 MatchCriteria::_Internal::mac_match(const MatchCriteria* msg) {
   return *msg->mac_match_;
 }
-const ::tunneloffload::v1alpha1::IPV4Match&
+const ::tunneloffload::v2::IPV4Match&
 MatchCriteria::_Internal::ipv4_match(const MatchCriteria* msg) {
   return *msg->ip_match_.ipv4_match_;
 }
-const ::tunneloffload::v1alpha1::IPV6Match&
+const ::tunneloffload::v2::IPV6Match&
 MatchCriteria::_Internal::ipv6_match(const MatchCriteria* msg) {
   return *msg->ip_match_.ipv6_match_;
 }
-const ::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch&
+const ::tunneloffload::v2::MatchCriteria_IPSecMatch&
 MatchCriteria::_Internal::ipsec_match(const MatchCriteria* msg) {
   return *msg->match_.ipsec_match_;
 }
-const ::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch&
+const ::tunneloffload::v2::MatchCriteria_GeneveMatch&
 MatchCriteria::_Internal::geneve_match(const MatchCriteria* msg) {
   return *msg->match_.geneve_match_;
 }
-const ::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch&
+const ::tunneloffload::v2::MatchCriteria_VXLanMatch&
 MatchCriteria::_Internal::vxlan_match(const MatchCriteria* msg) {
   return *msg->match_.vxlan_match_;
 }
-void MatchCriteria::set_allocated_ipv4_match(::tunneloffload::v1alpha1::IPV4Match* ipv4_match) {
+void MatchCriteria::set_allocated_ipv4_match(::tunneloffload::v2::IPV4Match* ipv4_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip_match();
   if (ipv4_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV4Match>::GetOwningArena(ipv4_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV4Match>::GetOwningArena(ipv4_match);
     if (message_arena != submessage_arena) {
       ipv4_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv4_match, submessage_arena);
@@ -3593,14 +3582,14 @@ void MatchCriteria::set_allocated_ipv4_match(::tunneloffload::v1alpha1::IPV4Matc
     set_has_ipv4_match();
     ip_match_.ipv4_match_ = ipv4_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.ipv4_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.ipv4_match)
 }
-void MatchCriteria::set_allocated_ipv6_match(::tunneloffload::v1alpha1::IPV6Match* ipv6_match) {
+void MatchCriteria::set_allocated_ipv6_match(::tunneloffload::v2::IPV6Match* ipv6_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip_match();
   if (ipv6_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV6Match>::GetOwningArena(ipv6_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV6Match>::GetOwningArena(ipv6_match);
     if (message_arena != submessage_arena) {
       ipv6_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv6_match, submessage_arena);
@@ -3608,14 +3597,14 @@ void MatchCriteria::set_allocated_ipv6_match(::tunneloffload::v1alpha1::IPV6Matc
     set_has_ipv6_match();
     ip_match_.ipv6_match_ = ipv6_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.ipv6_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.ipv6_match)
 }
-void MatchCriteria::set_allocated_ipsec_match(::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch* ipsec_match) {
+void MatchCriteria::set_allocated_ipsec_match(::tunneloffload::v2::MatchCriteria_IPSecMatch* ipsec_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_match();
   if (ipsec_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch>::GetOwningArena(ipsec_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::MatchCriteria_IPSecMatch>::GetOwningArena(ipsec_match);
     if (message_arena != submessage_arena) {
       ipsec_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipsec_match, submessage_arena);
@@ -3623,14 +3612,14 @@ void MatchCriteria::set_allocated_ipsec_match(::tunneloffload::v1alpha1::MatchCr
     set_has_ipsec_match();
     match_.ipsec_match_ = ipsec_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.ipsec_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.ipsec_match)
 }
-void MatchCriteria::set_allocated_geneve_match(::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch* geneve_match) {
+void MatchCriteria::set_allocated_geneve_match(::tunneloffload::v2::MatchCriteria_GeneveMatch* geneve_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_match();
   if (geneve_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch>::GetOwningArena(geneve_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::MatchCriteria_GeneveMatch>::GetOwningArena(geneve_match);
     if (message_arena != submessage_arena) {
       geneve_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, geneve_match, submessage_arena);
@@ -3638,14 +3627,14 @@ void MatchCriteria::set_allocated_geneve_match(::tunneloffload::v1alpha1::MatchC
     set_has_geneve_match();
     match_.geneve_match_ = geneve_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.geneve_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.geneve_match)
 }
-void MatchCriteria::set_allocated_vxlan_match(::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch* vxlan_match) {
+void MatchCriteria::set_allocated_vxlan_match(::tunneloffload::v2::MatchCriteria_VXLanMatch* vxlan_match) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_match();
   if (vxlan_match) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch>::GetOwningArena(vxlan_match);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::MatchCriteria_VXLanMatch>::GetOwningArena(vxlan_match);
     if (message_arena != submessage_arena) {
       vxlan_match = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, vxlan_match, submessage_arena);
@@ -3653,7 +3642,7 @@ void MatchCriteria::set_allocated_vxlan_match(::tunneloffload::v1alpha1::MatchCr
     set_has_vxlan_match();
     match_.vxlan_match_ = vxlan_match;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.MatchCriteria.vxlan_match)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.MatchCriteria.vxlan_match)
 }
 MatchCriteria::MatchCriteria(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -3662,7 +3651,7 @@ MatchCriteria::MatchCriteria(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.MatchCriteria)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.MatchCriteria)
 }
 MatchCriteria::MatchCriteria(const MatchCriteria& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3676,7 +3665,7 @@ MatchCriteria::MatchCriteria(const MatchCriteria& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_mac_match()) {
-    mac_match_ = new ::tunneloffload::v1alpha1::MacPair(*from.mac_match_);
+    mac_match_ = new ::tunneloffload::v2::MacPair(*from.mac_match_);
   } else {
     mac_match_ = nullptr;
   }
@@ -3684,11 +3673,11 @@ MatchCriteria::MatchCriteria(const MatchCriteria& from)
   clear_has_ip_match();
   switch (from.ip_match_case()) {
     case kIpv4Match: {
-      _internal_mutable_ipv4_match()->::tunneloffload::v1alpha1::IPV4Match::MergeFrom(from._internal_ipv4_match());
+      _internal_mutable_ipv4_match()->::tunneloffload::v2::IPV4Match::MergeFrom(from._internal_ipv4_match());
       break;
     }
     case kIpv6Match: {
-      _internal_mutable_ipv6_match()->::tunneloffload::v1alpha1::IPV6Match::MergeFrom(from._internal_ipv6_match());
+      _internal_mutable_ipv6_match()->::tunneloffload::v2::IPV6Match::MergeFrom(from._internal_ipv6_match());
       break;
     }
     case IP_MATCH_NOT_SET: {
@@ -3698,22 +3687,22 @@ MatchCriteria::MatchCriteria(const MatchCriteria& from)
   clear_has_match();
   switch (from.match_case()) {
     case kIpsecMatch: {
-      _internal_mutable_ipsec_match()->::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch::MergeFrom(from._internal_ipsec_match());
+      _internal_mutable_ipsec_match()->::tunneloffload::v2::MatchCriteria_IPSecMatch::MergeFrom(from._internal_ipsec_match());
       break;
     }
     case kGeneveMatch: {
-      _internal_mutable_geneve_match()->::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch::MergeFrom(from._internal_geneve_match());
+      _internal_mutable_geneve_match()->::tunneloffload::v2::MatchCriteria_GeneveMatch::MergeFrom(from._internal_geneve_match());
       break;
     }
     case kVxlanMatch: {
-      _internal_mutable_vxlan_match()->::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch::MergeFrom(from._internal_vxlan_match());
+      _internal_mutable_vxlan_match()->::tunneloffload::v2::MatchCriteria_VXLanMatch::MergeFrom(from._internal_vxlan_match());
       break;
     }
     case MATCH_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.MatchCriteria)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.MatchCriteria)
 }
 
 inline void MatchCriteria::SharedCtor() {
@@ -3730,7 +3719,7 @@ clear_has_match();
 }
 
 MatchCriteria::~MatchCriteria() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.MatchCriteria)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.MatchCriteria)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -3759,7 +3748,7 @@ void MatchCriteria::SetCachedSize(int size) const {
 }
 
 void MatchCriteria::clear_ip_match() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.MatchCriteria)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.MatchCriteria)
   switch (ip_match_case()) {
     case kIpv4Match: {
       if (GetArenaForAllocation() == nullptr) {
@@ -3781,7 +3770,7 @@ void MatchCriteria::clear_ip_match() {
 }
 
 void MatchCriteria::clear_match() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.MatchCriteria)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.MatchCriteria)
   switch (match_case()) {
     case kIpsecMatch: {
       if (GetArenaForAllocation() == nullptr) {
@@ -3810,7 +3799,7 @@ void MatchCriteria::clear_match() {
 
 
 void MatchCriteria::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.MatchCriteria)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.MatchCriteria)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3837,12 +3826,12 @@ const char* MatchCriteria::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_ingress_interface();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "tunneloffload.v1alpha1.MatchCriteria.ingress_interface"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "tunneloffload.v2.MatchCriteria.ingress_interface"));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+      // .tunneloffload.v2.MacPair mac_match = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_mac_match(), ptr);
@@ -3850,7 +3839,7 @@ const char* MatchCriteria::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 3;
+      // .tunneloffload.v2.IPV4Match ipv4_match = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv4_match(), ptr);
@@ -3858,7 +3847,7 @@ const char* MatchCriteria::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 4;
+      // .tunneloffload.v2.IPV6Match ipv6_match = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv6_match(), ptr);
@@ -3874,7 +3863,7 @@ const char* MatchCriteria::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MatchCriteria.IPSecMatch ipsec_match = 6;
+      // .tunneloffload.v2.MatchCriteria.IPSecMatch ipsec_match = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipsec_match(), ptr);
@@ -3882,7 +3871,7 @@ const char* MatchCriteria::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MatchCriteria.GeneveMatch geneve_match = 7;
+      // .tunneloffload.v2.MatchCriteria.GeneveMatch geneve_match = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_geneve_match(), ptr);
@@ -3890,7 +3879,7 @@ const char* MatchCriteria::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MatchCriteria.VXLanMatch vxlan_match = 8;
+      // .tunneloffload.v2.MatchCriteria.VXLanMatch vxlan_match = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_vxlan_match(), ptr);
@@ -3923,7 +3912,7 @@ failure:
 
 uint8_t* MatchCriteria::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.MatchCriteria)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.MatchCriteria)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3932,12 +3921,12 @@ uint8_t* MatchCriteria::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_ingress_interface().data(), static_cast<int>(this->_internal_ingress_interface().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "tunneloffload.v1alpha1.MatchCriteria.ingress_interface");
+      "tunneloffload.v2.MatchCriteria.ingress_interface");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_ingress_interface(), target);
   }
 
-  // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+  // .tunneloffload.v2.MacPair mac_match = 2;
   if (this->_internal_has_mac_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3945,7 +3934,7 @@ uint8_t* MatchCriteria::_InternalSerialize(
         2, _Internal::mac_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 3;
+  // .tunneloffload.v2.IPV4Match ipv4_match = 3;
   if (_internal_has_ipv4_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3953,7 +3942,7 @@ uint8_t* MatchCriteria::_InternalSerialize(
         3, _Internal::ipv4_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 4;
+  // .tunneloffload.v2.IPV6Match ipv6_match = 4;
   if (_internal_has_ipv6_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3967,7 +3956,7 @@ uint8_t* MatchCriteria::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(5, this->_internal_tunnel_id(), target);
   }
 
-  // .tunneloffload.v1alpha1.MatchCriteria.IPSecMatch ipsec_match = 6;
+  // .tunneloffload.v2.MatchCriteria.IPSecMatch ipsec_match = 6;
   if (_internal_has_ipsec_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3975,7 +3964,7 @@ uint8_t* MatchCriteria::_InternalSerialize(
         6, _Internal::ipsec_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.MatchCriteria.GeneveMatch geneve_match = 7;
+  // .tunneloffload.v2.MatchCriteria.GeneveMatch geneve_match = 7;
   if (_internal_has_geneve_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3983,7 +3972,7 @@ uint8_t* MatchCriteria::_InternalSerialize(
         7, _Internal::geneve_match(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.MatchCriteria.VXLanMatch vxlan_match = 8;
+  // .tunneloffload.v2.MatchCriteria.VXLanMatch vxlan_match = 8;
   if (_internal_has_vxlan_match()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3995,12 +3984,12 @@ uint8_t* MatchCriteria::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.MatchCriteria)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.MatchCriteria)
   return target;
 }
 
 size_t MatchCriteria::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.MatchCriteria)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.MatchCriteria)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4014,7 +4003,7 @@ size_t MatchCriteria::ByteSizeLong() const {
         this->_internal_ingress_interface());
   }
 
-  // .tunneloffload.v1alpha1.MacPair mac_match = 2;
+  // .tunneloffload.v2.MacPair mac_match = 2;
   if (this->_internal_has_mac_match()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4027,14 +4016,14 @@ size_t MatchCriteria::ByteSizeLong() const {
   }
 
   switch (ip_match_case()) {
-    // .tunneloffload.v1alpha1.IPV4Match ipv4_match = 3;
+    // .tunneloffload.v2.IPV4Match ipv4_match = 3;
     case kIpv4Match: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *ip_match_.ipv4_match_);
       break;
     }
-    // .tunneloffload.v1alpha1.IPV6Match ipv6_match = 4;
+    // .tunneloffload.v2.IPV6Match ipv6_match = 4;
     case kIpv6Match: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4046,21 +4035,21 @@ size_t MatchCriteria::ByteSizeLong() const {
     }
   }
   switch (match_case()) {
-    // .tunneloffload.v1alpha1.MatchCriteria.IPSecMatch ipsec_match = 6;
+    // .tunneloffload.v2.MatchCriteria.IPSecMatch ipsec_match = 6;
     case kIpsecMatch: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *match_.ipsec_match_);
       break;
     }
-    // .tunneloffload.v1alpha1.MatchCriteria.GeneveMatch geneve_match = 7;
+    // .tunneloffload.v2.MatchCriteria.GeneveMatch geneve_match = 7;
     case kGeneveMatch: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *match_.geneve_match_);
       break;
     }
-    // .tunneloffload.v1alpha1.MatchCriteria.VXLanMatch vxlan_match = 8;
+    // .tunneloffload.v2.MatchCriteria.VXLanMatch vxlan_match = 8;
     case kVxlanMatch: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4088,7 +4077,7 @@ void MatchCriteria::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void MatchCriteria::MergeFrom(const MatchCriteria& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.MatchCriteria)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.MatchCriteria)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4097,18 +4086,18 @@ void MatchCriteria::MergeFrom(const MatchCriteria& from) {
     _internal_set_ingress_interface(from._internal_ingress_interface());
   }
   if (from._internal_has_mac_match()) {
-    _internal_mutable_mac_match()->::tunneloffload::v1alpha1::MacPair::MergeFrom(from._internal_mac_match());
+    _internal_mutable_mac_match()->::tunneloffload::v2::MacPair::MergeFrom(from._internal_mac_match());
   }
   if (from._internal_tunnel_id() != 0) {
     _internal_set_tunnel_id(from._internal_tunnel_id());
   }
   switch (from.ip_match_case()) {
     case kIpv4Match: {
-      _internal_mutable_ipv4_match()->::tunneloffload::v1alpha1::IPV4Match::MergeFrom(from._internal_ipv4_match());
+      _internal_mutable_ipv4_match()->::tunneloffload::v2::IPV4Match::MergeFrom(from._internal_ipv4_match());
       break;
     }
     case kIpv6Match: {
-      _internal_mutable_ipv6_match()->::tunneloffload::v1alpha1::IPV6Match::MergeFrom(from._internal_ipv6_match());
+      _internal_mutable_ipv6_match()->::tunneloffload::v2::IPV6Match::MergeFrom(from._internal_ipv6_match());
       break;
     }
     case IP_MATCH_NOT_SET: {
@@ -4117,15 +4106,15 @@ void MatchCriteria::MergeFrom(const MatchCriteria& from) {
   }
   switch (from.match_case()) {
     case kIpsecMatch: {
-      _internal_mutable_ipsec_match()->::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch::MergeFrom(from._internal_ipsec_match());
+      _internal_mutable_ipsec_match()->::tunneloffload::v2::MatchCriteria_IPSecMatch::MergeFrom(from._internal_ipsec_match());
       break;
     }
     case kGeneveMatch: {
-      _internal_mutable_geneve_match()->::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch::MergeFrom(from._internal_geneve_match());
+      _internal_mutable_geneve_match()->::tunneloffload::v2::MatchCriteria_GeneveMatch::MergeFrom(from._internal_geneve_match());
       break;
     }
     case kVxlanMatch: {
-      _internal_mutable_vxlan_match()->::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch::MergeFrom(from._internal_vxlan_match());
+      _internal_mutable_vxlan_match()->::tunneloffload::v2::MatchCriteria_VXLanMatch::MergeFrom(from._internal_vxlan_match());
       break;
     }
     case MATCH_NOT_SET: {
@@ -4136,7 +4125,7 @@ void MatchCriteria::MergeFrom(const MatchCriteria& from) {
 }
 
 void MatchCriteria::CopyFrom(const MatchCriteria& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.MatchCriteria)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.MatchCriteria)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4178,34 +4167,34 @@ void MatchCriteria::InternalSwap(MatchCriteria* other) {
 
 class IpTunnelRequest::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::MatchCriteria& match_criteria(const IpTunnelRequest* msg);
-  static const ::tunneloffload::v1alpha1::IPSecTunnel& ipsec_tunnel(const IpTunnelRequest* msg);
-  static const ::tunneloffload::v1alpha1::Geneve& geneve(const IpTunnelRequest* msg);
-  static const ::tunneloffload::v1alpha1::Nat& nat(const IpTunnelRequest* msg);
+  static const ::tunneloffload::v2::MatchCriteria& match_criteria(const IpTunnelRequest* msg);
+  static const ::tunneloffload::v2::IPSecTunnel& ipsec_tunnel(const IpTunnelRequest* msg);
+  static const ::tunneloffload::v2::Geneve& geneve(const IpTunnelRequest* msg);
+  static const ::tunneloffload::v2::Nat& nat(const IpTunnelRequest* msg);
 };
 
-const ::tunneloffload::v1alpha1::MatchCriteria&
+const ::tunneloffload::v2::MatchCriteria&
 IpTunnelRequest::_Internal::match_criteria(const IpTunnelRequest* msg) {
   return *msg->match_criteria_;
 }
-const ::tunneloffload::v1alpha1::IPSecTunnel&
+const ::tunneloffload::v2::IPSecTunnel&
 IpTunnelRequest::_Internal::ipsec_tunnel(const IpTunnelRequest* msg) {
   return *msg->tunnel_.ipsec_tunnel_;
 }
-const ::tunneloffload::v1alpha1::Geneve&
+const ::tunneloffload::v2::Geneve&
 IpTunnelRequest::_Internal::geneve(const IpTunnelRequest* msg) {
   return *msg->tunnel_.geneve_;
 }
-const ::tunneloffload::v1alpha1::Nat&
+const ::tunneloffload::v2::Nat&
 IpTunnelRequest::_Internal::nat(const IpTunnelRequest* msg) {
   return *msg->tunnel_.nat_;
 }
-void IpTunnelRequest::set_allocated_ipsec_tunnel(::tunneloffload::v1alpha1::IPSecTunnel* ipsec_tunnel) {
+void IpTunnelRequest::set_allocated_ipsec_tunnel(::tunneloffload::v2::IPSecTunnel* ipsec_tunnel) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_tunnel();
   if (ipsec_tunnel) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPSecTunnel>::GetOwningArena(ipsec_tunnel);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPSecTunnel>::GetOwningArena(ipsec_tunnel);
     if (message_arena != submessage_arena) {
       ipsec_tunnel = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipsec_tunnel, submessage_arena);
@@ -4213,14 +4202,14 @@ void IpTunnelRequest::set_allocated_ipsec_tunnel(::tunneloffload::v1alpha1::IPSe
     set_has_ipsec_tunnel();
     tunnel_.ipsec_tunnel_ = ipsec_tunnel;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IpTunnelRequest.ipsec_tunnel)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IpTunnelRequest.ipsec_tunnel)
 }
-void IpTunnelRequest::set_allocated_geneve(::tunneloffload::v1alpha1::Geneve* geneve) {
+void IpTunnelRequest::set_allocated_geneve(::tunneloffload::v2::Geneve* geneve) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_tunnel();
   if (geneve) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::Geneve>::GetOwningArena(geneve);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::Geneve>::GetOwningArena(geneve);
     if (message_arena != submessage_arena) {
       geneve = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, geneve, submessage_arena);
@@ -4228,14 +4217,14 @@ void IpTunnelRequest::set_allocated_geneve(::tunneloffload::v1alpha1::Geneve* ge
     set_has_geneve();
     tunnel_.geneve_ = geneve;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IpTunnelRequest.geneve)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IpTunnelRequest.geneve)
 }
-void IpTunnelRequest::set_allocated_nat(::tunneloffload::v1alpha1::Nat* nat) {
+void IpTunnelRequest::set_allocated_nat(::tunneloffload::v2::Nat* nat) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_tunnel();
   if (nat) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::Nat>::GetOwningArena(nat);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::Nat>::GetOwningArena(nat);
     if (message_arena != submessage_arena) {
       nat = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, nat, submessage_arena);
@@ -4243,7 +4232,7 @@ void IpTunnelRequest::set_allocated_nat(::tunneloffload::v1alpha1::Nat* nat) {
     set_has_nat();
     tunnel_.nat_ = nat;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IpTunnelRequest.nat)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IpTunnelRequest.nat)
 }
 IpTunnelRequest::IpTunnelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -4252,13 +4241,13 @@ IpTunnelRequest::IpTunnelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IpTunnelRequest)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IpTunnelRequest)
 }
 IpTunnelRequest::IpTunnelRequest(const IpTunnelRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_match_criteria()) {
-    match_criteria_ = new ::tunneloffload::v1alpha1::MatchCriteria(*from.match_criteria_);
+    match_criteria_ = new ::tunneloffload::v2::MatchCriteria(*from.match_criteria_);
   } else {
     match_criteria_ = nullptr;
   }
@@ -4268,22 +4257,22 @@ IpTunnelRequest::IpTunnelRequest(const IpTunnelRequest& from)
   clear_has_tunnel();
   switch (from.tunnel_case()) {
     case kIpsecTunnel: {
-      _internal_mutable_ipsec_tunnel()->::tunneloffload::v1alpha1::IPSecTunnel::MergeFrom(from._internal_ipsec_tunnel());
+      _internal_mutable_ipsec_tunnel()->::tunneloffload::v2::IPSecTunnel::MergeFrom(from._internal_ipsec_tunnel());
       break;
     }
     case kGeneve: {
-      _internal_mutable_geneve()->::tunneloffload::v1alpha1::Geneve::MergeFrom(from._internal_geneve());
+      _internal_mutable_geneve()->::tunneloffload::v2::Geneve::MergeFrom(from._internal_geneve());
       break;
     }
     case kNat: {
-      _internal_mutable_nat()->::tunneloffload::v1alpha1::Nat::MergeFrom(from._internal_nat());
+      _internal_mutable_nat()->::tunneloffload::v2::Nat::MergeFrom(from._internal_nat());
       break;
     }
     case TUNNEL_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IpTunnelRequest)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IpTunnelRequest)
 }
 
 inline void IpTunnelRequest::SharedCtor() {
@@ -4295,7 +4284,7 @@ clear_has_tunnel();
 }
 
 IpTunnelRequest::~IpTunnelRequest() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IpTunnelRequest)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IpTunnelRequest)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -4320,7 +4309,7 @@ void IpTunnelRequest::SetCachedSize(int size) const {
 }
 
 void IpTunnelRequest::clear_tunnel() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.IpTunnelRequest)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.IpTunnelRequest)
   switch (tunnel_case()) {
     case kIpsecTunnel: {
       if (GetArenaForAllocation() == nullptr) {
@@ -4349,7 +4338,7 @@ void IpTunnelRequest::clear_tunnel() {
 
 
 void IpTunnelRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IpTunnelRequest)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IpTunnelRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4379,16 +4368,16 @@ const char* IpTunnelRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Operation operation = 2;
+      // .tunneloffload.v2.Operation operation = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_operation(static_cast<::tunneloffload::v1alpha1::Operation>(val));
+          _internal_set_operation(static_cast<::tunneloffload::v2::Operation>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MatchCriteria match_criteria = 3;
+      // .tunneloffload.v2.MatchCriteria match_criteria = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_match_criteria(), ptr);
@@ -4396,16 +4385,16 @@ const char* IpTunnelRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Action next_action = 4;
+      // .tunneloffload.v2.Action next_action = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_next_action(static_cast<::tunneloffload::v1alpha1::Action>(val));
+          _internal_set_next_action(static_cast<::tunneloffload::v2::Action>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPSecTunnel ipsec_tunnel = 5;
+      // .tunneloffload.v2.IPSecTunnel ipsec_tunnel = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipsec_tunnel(), ptr);
@@ -4413,7 +4402,7 @@ const char* IpTunnelRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Geneve geneve = 6;
+      // .tunneloffload.v2.Geneve geneve = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_geneve(), ptr);
@@ -4421,7 +4410,7 @@ const char* IpTunnelRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Nat nat = 7;
+      // .tunneloffload.v2.Nat nat = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_nat(), ptr);
@@ -4454,7 +4443,7 @@ failure:
 
 uint8_t* IpTunnelRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IpTunnelRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IpTunnelRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4464,14 +4453,14 @@ uint8_t* IpTunnelRequest::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_tunnel_id(), target);
   }
 
-  // .tunneloffload.v1alpha1.Operation operation = 2;
+  // .tunneloffload.v2.Operation operation = 2;
   if (this->_internal_operation() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_operation(), target);
   }
 
-  // .tunneloffload.v1alpha1.MatchCriteria match_criteria = 3;
+  // .tunneloffload.v2.MatchCriteria match_criteria = 3;
   if (this->_internal_has_match_criteria()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4479,14 +4468,14 @@ uint8_t* IpTunnelRequest::_InternalSerialize(
         3, _Internal::match_criteria(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.Action next_action = 4;
+  // .tunneloffload.v2.Action next_action = 4;
   if (this->_internal_next_action() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       4, this->_internal_next_action(), target);
   }
 
-  // .tunneloffload.v1alpha1.IPSecTunnel ipsec_tunnel = 5;
+  // .tunneloffload.v2.IPSecTunnel ipsec_tunnel = 5;
   if (_internal_has_ipsec_tunnel()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4494,7 +4483,7 @@ uint8_t* IpTunnelRequest::_InternalSerialize(
         5, _Internal::ipsec_tunnel(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.Geneve geneve = 6;
+  // .tunneloffload.v2.Geneve geneve = 6;
   if (_internal_has_geneve()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4502,7 +4491,7 @@ uint8_t* IpTunnelRequest::_InternalSerialize(
         6, _Internal::geneve(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.Nat nat = 7;
+  // .tunneloffload.v2.Nat nat = 7;
   if (_internal_has_nat()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4514,19 +4503,19 @@ uint8_t* IpTunnelRequest::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IpTunnelRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IpTunnelRequest)
   return target;
 }
 
 size_t IpTunnelRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IpTunnelRequest)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IpTunnelRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.MatchCriteria match_criteria = 3;
+  // .tunneloffload.v2.MatchCriteria match_criteria = 3;
   if (this->_internal_has_match_criteria()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4538,34 +4527,34 @@ size_t IpTunnelRequest::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64SizePlusOne(this->_internal_tunnel_id());
   }
 
-  // .tunneloffload.v1alpha1.Operation operation = 2;
+  // .tunneloffload.v2.Operation operation = 2;
   if (this->_internal_operation() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_operation());
   }
 
-  // .tunneloffload.v1alpha1.Action next_action = 4;
+  // .tunneloffload.v2.Action next_action = 4;
   if (this->_internal_next_action() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_next_action());
   }
 
   switch (tunnel_case()) {
-    // .tunneloffload.v1alpha1.IPSecTunnel ipsec_tunnel = 5;
+    // .tunneloffload.v2.IPSecTunnel ipsec_tunnel = 5;
     case kIpsecTunnel: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *tunnel_.ipsec_tunnel_);
       break;
     }
-    // .tunneloffload.v1alpha1.Geneve geneve = 6;
+    // .tunneloffload.v2.Geneve geneve = 6;
     case kGeneve: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *tunnel_.geneve_);
       break;
     }
-    // .tunneloffload.v1alpha1.Nat nat = 7;
+    // .tunneloffload.v2.Nat nat = 7;
     case kNat: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4593,13 +4582,13 @@ void IpTunnelRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IpTunnelRequest::MergeFrom(const IpTunnelRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IpTunnelRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IpTunnelRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_match_criteria()) {
-    _internal_mutable_match_criteria()->::tunneloffload::v1alpha1::MatchCriteria::MergeFrom(from._internal_match_criteria());
+    _internal_mutable_match_criteria()->::tunneloffload::v2::MatchCriteria::MergeFrom(from._internal_match_criteria());
   }
   if (from._internal_tunnel_id() != 0) {
     _internal_set_tunnel_id(from._internal_tunnel_id());
@@ -4612,15 +4601,15 @@ void IpTunnelRequest::MergeFrom(const IpTunnelRequest& from) {
   }
   switch (from.tunnel_case()) {
     case kIpsecTunnel: {
-      _internal_mutable_ipsec_tunnel()->::tunneloffload::v1alpha1::IPSecTunnel::MergeFrom(from._internal_ipsec_tunnel());
+      _internal_mutable_ipsec_tunnel()->::tunneloffload::v2::IPSecTunnel::MergeFrom(from._internal_ipsec_tunnel());
       break;
     }
     case kGeneve: {
-      _internal_mutable_geneve()->::tunneloffload::v1alpha1::Geneve::MergeFrom(from._internal_geneve());
+      _internal_mutable_geneve()->::tunneloffload::v2::Geneve::MergeFrom(from._internal_geneve());
       break;
     }
     case kNat: {
-      _internal_mutable_nat()->::tunneloffload::v1alpha1::Nat::MergeFrom(from._internal_nat());
+      _internal_mutable_nat()->::tunneloffload::v2::Nat::MergeFrom(from._internal_nat());
       break;
     }
     case TUNNEL_NOT_SET: {
@@ -4631,7 +4620,7 @@ void IpTunnelRequest::MergeFrom(const IpTunnelRequest& from) {
 }
 
 void IpTunnelRequest::CopyFrom(const IpTunnelRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IpTunnelRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IpTunnelRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4664,24 +4653,24 @@ void IpTunnelRequest::InternalSwap(IpTunnelRequest* other) {
 
 class Geneve::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::GeneveEncap& geneve_encap(const Geneve* msg);
-  static const ::tunneloffload::v1alpha1::GeneveDecap& geneve_decap(const Geneve* msg);
+  static const ::tunneloffload::v2::GeneveEncap& geneve_encap(const Geneve* msg);
+  static const ::tunneloffload::v2::GeneveDecap& geneve_decap(const Geneve* msg);
 };
 
-const ::tunneloffload::v1alpha1::GeneveEncap&
+const ::tunneloffload::v2::GeneveEncap&
 Geneve::_Internal::geneve_encap(const Geneve* msg) {
   return *msg->encap_decap_.geneve_encap_;
 }
-const ::tunneloffload::v1alpha1::GeneveDecap&
+const ::tunneloffload::v2::GeneveDecap&
 Geneve::_Internal::geneve_decap(const Geneve* msg) {
   return *msg->encap_decap_.geneve_decap_;
 }
-void Geneve::set_allocated_geneve_encap(::tunneloffload::v1alpha1::GeneveEncap* geneve_encap) {
+void Geneve::set_allocated_geneve_encap(::tunneloffload::v2::GeneveEncap* geneve_encap) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_encap_decap();
   if (geneve_encap) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::GeneveEncap>::GetOwningArena(geneve_encap);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::GeneveEncap>::GetOwningArena(geneve_encap);
     if (message_arena != submessage_arena) {
       geneve_encap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, geneve_encap, submessage_arena);
@@ -4689,14 +4678,14 @@ void Geneve::set_allocated_geneve_encap(::tunneloffload::v1alpha1::GeneveEncap* 
     set_has_geneve_encap();
     encap_decap_.geneve_encap_ = geneve_encap;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.Geneve.geneve_encap)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.Geneve.geneve_encap)
 }
-void Geneve::set_allocated_geneve_decap(::tunneloffload::v1alpha1::GeneveDecap* geneve_decap) {
+void Geneve::set_allocated_geneve_decap(::tunneloffload::v2::GeneveDecap* geneve_decap) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_encap_decap();
   if (geneve_decap) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::GeneveDecap>::GetOwningArena(geneve_decap);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::GeneveDecap>::GetOwningArena(geneve_decap);
     if (message_arena != submessage_arena) {
       geneve_decap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, geneve_decap, submessage_arena);
@@ -4704,7 +4693,7 @@ void Geneve::set_allocated_geneve_decap(::tunneloffload::v1alpha1::GeneveDecap* 
     set_has_geneve_decap();
     encap_decap_.geneve_decap_ = geneve_decap;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.Geneve.geneve_decap)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.Geneve.geneve_decap)
 }
 Geneve::Geneve(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -4713,7 +4702,7 @@ Geneve::Geneve(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.Geneve)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.Geneve)
 }
 Geneve::Geneve(const Geneve& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4721,18 +4710,18 @@ Geneve::Geneve(const Geneve& from)
   clear_has_encap_decap();
   switch (from.encap_decap_case()) {
     case kGeneveEncap: {
-      _internal_mutable_geneve_encap()->::tunneloffload::v1alpha1::GeneveEncap::MergeFrom(from._internal_geneve_encap());
+      _internal_mutable_geneve_encap()->::tunneloffload::v2::GeneveEncap::MergeFrom(from._internal_geneve_encap());
       break;
     }
     case kGeneveDecap: {
-      _internal_mutable_geneve_decap()->::tunneloffload::v1alpha1::GeneveDecap::MergeFrom(from._internal_geneve_decap());
+      _internal_mutable_geneve_decap()->::tunneloffload::v2::GeneveDecap::MergeFrom(from._internal_geneve_decap());
       break;
     }
     case ENCAP_DECAP_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.Geneve)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.Geneve)
 }
 
 inline void Geneve::SharedCtor() {
@@ -4740,7 +4729,7 @@ clear_has_encap_decap();
 }
 
 Geneve::~Geneve() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.Geneve)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.Geneve)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -4764,7 +4753,7 @@ void Geneve::SetCachedSize(int size) const {
 }
 
 void Geneve::clear_encap_decap() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.Geneve)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.Geneve)
   switch (encap_decap_case()) {
     case kGeneveEncap: {
       if (GetArenaForAllocation() == nullptr) {
@@ -4787,7 +4776,7 @@ void Geneve::clear_encap_decap() {
 
 
 void Geneve::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.Geneve)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.Geneve)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4802,7 +4791,7 @@ const char* Geneve::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.GeneveEncap geneve_encap = 1;
+      // .tunneloffload.v2.GeneveEncap geneve_encap = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_geneve_encap(), ptr);
@@ -4810,7 +4799,7 @@ const char* Geneve::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.GeneveDecap geneve_decap = 2;
+      // .tunneloffload.v2.GeneveDecap geneve_decap = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_geneve_decap(), ptr);
@@ -4843,11 +4832,11 @@ failure:
 
 uint8_t* Geneve::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.Geneve)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.Geneve)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.GeneveEncap geneve_encap = 1;
+  // .tunneloffload.v2.GeneveEncap geneve_encap = 1;
   if (_internal_has_geneve_encap()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4855,7 +4844,7 @@ uint8_t* Geneve::_InternalSerialize(
         1, _Internal::geneve_encap(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.GeneveDecap geneve_decap = 2;
+  // .tunneloffload.v2.GeneveDecap geneve_decap = 2;
   if (_internal_has_geneve_decap()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4867,12 +4856,12 @@ uint8_t* Geneve::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.Geneve)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.Geneve)
   return target;
 }
 
 size_t Geneve::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.Geneve)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.Geneve)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4880,14 +4869,14 @@ size_t Geneve::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (encap_decap_case()) {
-    // .tunneloffload.v1alpha1.GeneveEncap geneve_encap = 1;
+    // .tunneloffload.v2.GeneveEncap geneve_encap = 1;
     case kGeneveEncap: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *encap_decap_.geneve_encap_);
       break;
     }
-    // .tunneloffload.v1alpha1.GeneveDecap geneve_decap = 2;
+    // .tunneloffload.v2.GeneveDecap geneve_decap = 2;
     case kGeneveDecap: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4915,18 +4904,18 @@ void Geneve::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void Geneve::MergeFrom(const Geneve& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.Geneve)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.Geneve)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   switch (from.encap_decap_case()) {
     case kGeneveEncap: {
-      _internal_mutable_geneve_encap()->::tunneloffload::v1alpha1::GeneveEncap::MergeFrom(from._internal_geneve_encap());
+      _internal_mutable_geneve_encap()->::tunneloffload::v2::GeneveEncap::MergeFrom(from._internal_geneve_encap());
       break;
     }
     case kGeneveDecap: {
-      _internal_mutable_geneve_decap()->::tunneloffload::v1alpha1::GeneveDecap::MergeFrom(from._internal_geneve_decap());
+      _internal_mutable_geneve_decap()->::tunneloffload::v2::GeneveDecap::MergeFrom(from._internal_geneve_decap());
       break;
     }
     case ENCAP_DECAP_NOT_SET: {
@@ -4937,7 +4926,7 @@ void Geneve::MergeFrom(const Geneve& from) {
 }
 
 void Geneve::CopyFrom(const Geneve& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.Geneve)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.Geneve)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4973,7 +4962,7 @@ GeneveOption::GeneveOption(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.GeneveOption)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.GeneveOption)
 }
 GeneveOption::GeneveOption(const GeneveOption& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4989,7 +4978,7 @@ GeneveOption::GeneveOption(const GeneveOption& from)
   ::memcpy(&option_class_, &from.option_class_,
     static_cast<size_t>(reinterpret_cast<char*>(&length_) -
     reinterpret_cast<char*>(&option_class_)) + sizeof(length_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.GeneveOption)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.GeneveOption)
 }
 
 inline void GeneveOption::SharedCtor() {
@@ -5004,7 +4993,7 @@ data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlready
 }
 
 GeneveOption::~GeneveOption() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.GeneveOption)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.GeneveOption)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -5026,7 +5015,7 @@ void GeneveOption::SetCachedSize(int size) const {
 }
 
 void GeneveOption::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.GeneveOption)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.GeneveOption)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5102,7 +5091,7 @@ failure:
 
 uint8_t* GeneveOption::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.GeneveOption)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.GeneveOption)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5134,12 +5123,12 @@ uint8_t* GeneveOption::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.GeneveOption)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.GeneveOption)
   return target;
 }
 
 size_t GeneveOption::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.GeneveOption)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.GeneveOption)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5185,7 +5174,7 @@ void GeneveOption::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void GeneveOption::MergeFrom(const GeneveOption& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.GeneveOption)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.GeneveOption)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5206,7 +5195,7 @@ void GeneveOption::MergeFrom(const GeneveOption& from) {
 }
 
 void GeneveOption::CopyFrom(const GeneveOption& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.GeneveOption)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.GeneveOption)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5244,29 +5233,29 @@ void GeneveOption::InternalSwap(GeneveOption* other) {
 
 class GeneveEncap::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::IPV4Pair& outer_ipv4_pair(const GeneveEncap* msg);
-  static const ::tunneloffload::v1alpha1::IPV6Pair& outer_ipv6_pair(const GeneveEncap* msg);
-  static const ::tunneloffload::v1alpha1::MacPair& inner_mac_pair(const GeneveEncap* msg);
+  static const ::tunneloffload::v2::IPV4Pair& outer_ipv4_pair(const GeneveEncap* msg);
+  static const ::tunneloffload::v2::IPV6Pair& outer_ipv6_pair(const GeneveEncap* msg);
+  static const ::tunneloffload::v2::MacPair& inner_mac_pair(const GeneveEncap* msg);
 };
 
-const ::tunneloffload::v1alpha1::IPV4Pair&
+const ::tunneloffload::v2::IPV4Pair&
 GeneveEncap::_Internal::outer_ipv4_pair(const GeneveEncap* msg) {
   return *msg->ip_.outer_ipv4_pair_;
 }
-const ::tunneloffload::v1alpha1::IPV6Pair&
+const ::tunneloffload::v2::IPV6Pair&
 GeneveEncap::_Internal::outer_ipv6_pair(const GeneveEncap* msg) {
   return *msg->ip_.outer_ipv6_pair_;
 }
-const ::tunneloffload::v1alpha1::MacPair&
+const ::tunneloffload::v2::MacPair&
 GeneveEncap::_Internal::inner_mac_pair(const GeneveEncap* msg) {
   return *msg->inner_mac_pair_;
 }
-void GeneveEncap::set_allocated_outer_ipv4_pair(::tunneloffload::v1alpha1::IPV4Pair* outer_ipv4_pair) {
+void GeneveEncap::set_allocated_outer_ipv4_pair(::tunneloffload::v2::IPV4Pair* outer_ipv4_pair) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip();
   if (outer_ipv4_pair) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV4Pair>::GetOwningArena(outer_ipv4_pair);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV4Pair>::GetOwningArena(outer_ipv4_pair);
     if (message_arena != submessage_arena) {
       outer_ipv4_pair = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, outer_ipv4_pair, submessage_arena);
@@ -5274,14 +5263,14 @@ void GeneveEncap::set_allocated_outer_ipv4_pair(::tunneloffload::v1alpha1::IPV4P
     set_has_outer_ipv4_pair();
     ip_.outer_ipv4_pair_ = outer_ipv4_pair;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.GeneveEncap.outer_ipv4_pair)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.GeneveEncap.outer_ipv4_pair)
 }
-void GeneveEncap::set_allocated_outer_ipv6_pair(::tunneloffload::v1alpha1::IPV6Pair* outer_ipv6_pair) {
+void GeneveEncap::set_allocated_outer_ipv6_pair(::tunneloffload::v2::IPV6Pair* outer_ipv6_pair) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ip();
   if (outer_ipv6_pair) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV6Pair>::GetOwningArena(outer_ipv6_pair);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV6Pair>::GetOwningArena(outer_ipv6_pair);
     if (message_arena != submessage_arena) {
       outer_ipv6_pair = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, outer_ipv6_pair, submessage_arena);
@@ -5289,7 +5278,7 @@ void GeneveEncap::set_allocated_outer_ipv6_pair(::tunneloffload::v1alpha1::IPV6P
     set_has_outer_ipv6_pair();
     ip_.outer_ipv6_pair_ = outer_ipv6_pair;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.GeneveEncap.outer_ipv6_pair)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.GeneveEncap.outer_ipv6_pair)
 }
 GeneveEncap::GeneveEncap(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -5299,14 +5288,14 @@ GeneveEncap::GeneveEncap(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.GeneveEncap)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.GeneveEncap)
 }
 GeneveEncap::GeneveEncap(const GeneveEncap& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       geneve_option_(from.geneve_option_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_inner_mac_pair()) {
-    inner_mac_pair_ = new ::tunneloffload::v1alpha1::MacPair(*from.inner_mac_pair_);
+    inner_mac_pair_ = new ::tunneloffload::v2::MacPair(*from.inner_mac_pair_);
   } else {
     inner_mac_pair_ = nullptr;
   }
@@ -5316,18 +5305,18 @@ GeneveEncap::GeneveEncap(const GeneveEncap& from)
   clear_has_ip();
   switch (from.ip_case()) {
     case kOuterIpv4Pair: {
-      _internal_mutable_outer_ipv4_pair()->::tunneloffload::v1alpha1::IPV4Pair::MergeFrom(from._internal_outer_ipv4_pair());
+      _internal_mutable_outer_ipv4_pair()->::tunneloffload::v2::IPV4Pair::MergeFrom(from._internal_outer_ipv4_pair());
       break;
     }
     case kOuterIpv6Pair: {
-      _internal_mutable_outer_ipv6_pair()->::tunneloffload::v1alpha1::IPV6Pair::MergeFrom(from._internal_outer_ipv6_pair());
+      _internal_mutable_outer_ipv6_pair()->::tunneloffload::v2::IPV6Pair::MergeFrom(from._internal_outer_ipv6_pair());
       break;
     }
     case IP_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.GeneveEncap)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.GeneveEncap)
 }
 
 inline void GeneveEncap::SharedCtor() {
@@ -5339,7 +5328,7 @@ clear_has_ip();
 }
 
 GeneveEncap::~GeneveEncap() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.GeneveEncap)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.GeneveEncap)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -5364,7 +5353,7 @@ void GeneveEncap::SetCachedSize(int size) const {
 }
 
 void GeneveEncap::clear_ip() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.GeneveEncap)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.GeneveEncap)
   switch (ip_case()) {
     case kOuterIpv4Pair: {
       if (GetArenaForAllocation() == nullptr) {
@@ -5387,7 +5376,7 @@ void GeneveEncap::clear_ip() {
 
 
 void GeneveEncap::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.GeneveEncap)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.GeneveEncap)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5410,7 +5399,7 @@ const char* GeneveEncap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.IPV4Pair outer_ipv4_pair = 1;
+      // .tunneloffload.v2.IPV4Pair outer_ipv4_pair = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_outer_ipv4_pair(), ptr);
@@ -5418,7 +5407,7 @@ const char* GeneveEncap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV6Pair outer_ipv6_pair = 2;
+      // .tunneloffload.v2.IPV6Pair outer_ipv6_pair = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_outer_ipv6_pair(), ptr);
@@ -5426,7 +5415,7 @@ const char* GeneveEncap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.MacPair inner_mac_pair = 3;
+      // .tunneloffload.v2.MacPair inner_mac_pair = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_inner_mac_pair(), ptr);
@@ -5474,7 +5463,7 @@ const char* GeneveEncap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // repeated .tunneloffload.v1alpha1.GeneveOption geneve_option = 9;
+      // repeated .tunneloffload.v2.GeneveOption geneve_option = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr -= 1;
@@ -5512,11 +5501,11 @@ failure:
 
 uint8_t* GeneveEncap::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.GeneveEncap)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.GeneveEncap)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.IPV4Pair outer_ipv4_pair = 1;
+  // .tunneloffload.v2.IPV4Pair outer_ipv4_pair = 1;
   if (_internal_has_outer_ipv4_pair()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -5524,7 +5513,7 @@ uint8_t* GeneveEncap::_InternalSerialize(
         1, _Internal::outer_ipv4_pair(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV6Pair outer_ipv6_pair = 2;
+  // .tunneloffload.v2.IPV6Pair outer_ipv6_pair = 2;
   if (_internal_has_outer_ipv6_pair()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -5532,7 +5521,7 @@ uint8_t* GeneveEncap::_InternalSerialize(
         2, _Internal::outer_ipv6_pair(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.MacPair inner_mac_pair = 3;
+  // .tunneloffload.v2.MacPair inner_mac_pair = 3;
   if (this->_internal_has_inner_mac_pair()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -5570,7 +5559,7 @@ uint8_t* GeneveEncap::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(8, this->_internal_protocol_type(), target);
   }
 
-  // repeated .tunneloffload.v1alpha1.GeneveOption geneve_option = 9;
+  // repeated .tunneloffload.v2.GeneveOption geneve_option = 9;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_geneve_option_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -5582,26 +5571,26 @@ uint8_t* GeneveEncap::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.GeneveEncap)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.GeneveEncap)
   return target;
 }
 
 size_t GeneveEncap::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.GeneveEncap)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.GeneveEncap)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.GeneveOption geneve_option = 9;
+  // repeated .tunneloffload.v2.GeneveOption geneve_option = 9;
   total_size += 1UL * this->_internal_geneve_option_size();
   for (const auto& msg : this->geneve_option_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // .tunneloffload.v1alpha1.MacPair inner_mac_pair = 3;
+  // .tunneloffload.v2.MacPair inner_mac_pair = 3;
   if (this->_internal_has_inner_mac_pair()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -5634,14 +5623,14 @@ size_t GeneveEncap::ByteSizeLong() const {
   }
 
   switch (ip_case()) {
-    // .tunneloffload.v1alpha1.IPV4Pair outer_ipv4_pair = 1;
+    // .tunneloffload.v2.IPV4Pair outer_ipv4_pair = 1;
     case kOuterIpv4Pair: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *ip_.outer_ipv4_pair_);
       break;
     }
-    // .tunneloffload.v1alpha1.IPV6Pair outer_ipv6_pair = 2;
+    // .tunneloffload.v2.IPV6Pair outer_ipv6_pair = 2;
     case kOuterIpv6Pair: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -5669,14 +5658,14 @@ void GeneveEncap::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void GeneveEncap::MergeFrom(const GeneveEncap& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.GeneveEncap)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.GeneveEncap)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   geneve_option_.MergeFrom(from.geneve_option_);
   if (from._internal_has_inner_mac_pair()) {
-    _internal_mutable_inner_mac_pair()->::tunneloffload::v1alpha1::MacPair::MergeFrom(from._internal_inner_mac_pair());
+    _internal_mutable_inner_mac_pair()->::tunneloffload::v2::MacPair::MergeFrom(from._internal_inner_mac_pair());
   }
   if (from._internal_option_length() != 0) {
     _internal_set_option_length(from._internal_option_length());
@@ -5695,11 +5684,11 @@ void GeneveEncap::MergeFrom(const GeneveEncap& from) {
   }
   switch (from.ip_case()) {
     case kOuterIpv4Pair: {
-      _internal_mutable_outer_ipv4_pair()->::tunneloffload::v1alpha1::IPV4Pair::MergeFrom(from._internal_outer_ipv4_pair());
+      _internal_mutable_outer_ipv4_pair()->::tunneloffload::v2::IPV4Pair::MergeFrom(from._internal_outer_ipv4_pair());
       break;
     }
     case kOuterIpv6Pair: {
-      _internal_mutable_outer_ipv6_pair()->::tunneloffload::v1alpha1::IPV6Pair::MergeFrom(from._internal_outer_ipv6_pair());
+      _internal_mutable_outer_ipv6_pair()->::tunneloffload::v2::IPV6Pair::MergeFrom(from._internal_outer_ipv6_pair());
       break;
     }
     case IP_NOT_SET: {
@@ -5710,7 +5699,7 @@ void GeneveEncap::MergeFrom(const GeneveEncap& from) {
 }
 
 void GeneveEncap::CopyFrom(const GeneveEncap& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.GeneveEncap)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.GeneveEncap)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5749,12 +5738,12 @@ class GeneveDecap::_Internal {
 GeneveDecap::GeneveDecap(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.GeneveDecap)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.GeneveDecap)
 }
 GeneveDecap::GeneveDecap(const GeneveDecap& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.GeneveDecap)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.GeneveDecap)
 }
 
 
@@ -5792,7 +5781,7 @@ MacPair::MacPair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.MacPair)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.MacPair)
 }
 MacPair::MacPair(const MacPair& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5813,7 +5802,7 @@ MacPair::MacPair(const MacPair& from)
     source_mac_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_source_mac(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.MacPair)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.MacPair)
 }
 
 inline void MacPair::SharedCtor() {
@@ -5828,7 +5817,7 @@ source_mac_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringA
 }
 
 MacPair::~MacPair() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.MacPair)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.MacPair)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -5851,7 +5840,7 @@ void MacPair::SetCachedSize(int size) const {
 }
 
 void MacPair::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.MacPair)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.MacPair)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5910,7 +5899,7 @@ failure:
 
 uint8_t* MacPair::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.MacPair)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.MacPair)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5930,12 +5919,12 @@ uint8_t* MacPair::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.MacPair)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.MacPair)
   return target;
 }
 
 size_t MacPair::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.MacPair)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.MacPair)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5973,7 +5962,7 @@ void MacPair::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void MacPair::MergeFrom(const MacPair& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.MacPair)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.MacPair)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5988,7 +5977,7 @@ void MacPair::MergeFrom(const MacPair& from) {
 }
 
 void MacPair::CopyFrom(const MacPair& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.MacPair)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.MacPair)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6034,7 +6023,7 @@ IPV4Pair::IPV4Pair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPV4Pair)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPV4Pair)
 }
 IPV4Pair::IPV4Pair(const IPV4Pair& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6042,7 +6031,7 @@ IPV4Pair::IPV4Pair(const IPV4Pair& from)
   ::memcpy(&source_ip_, &from.source_ip_,
     static_cast<size_t>(reinterpret_cast<char*>(&destination_ip_) -
     reinterpret_cast<char*>(&source_ip_)) + sizeof(destination_ip_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPV4Pair)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPV4Pair)
 }
 
 inline void IPV4Pair::SharedCtor() {
@@ -6053,7 +6042,7 @@ inline void IPV4Pair::SharedCtor() {
 }
 
 IPV4Pair::~IPV4Pair() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPV4Pair)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPV4Pair)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -6074,7 +6063,7 @@ void IPV4Pair::SetCachedSize(int size) const {
 }
 
 void IPV4Pair::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPV4Pair)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPV4Pair)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6132,7 +6121,7 @@ failure:
 
 uint8_t* IPV4Pair::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPV4Pair)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPV4Pair)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -6152,12 +6141,12 @@ uint8_t* IPV4Pair::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPV4Pair)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPV4Pair)
   return target;
 }
 
 size_t IPV4Pair::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPV4Pair)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPV4Pair)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -6191,7 +6180,7 @@ void IPV4Pair::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPV4Pair::MergeFrom(const IPV4Pair& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPV4Pair)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPV4Pair)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -6206,7 +6195,7 @@ void IPV4Pair::MergeFrom(const IPV4Pair& from) {
 }
 
 void IPV4Pair::CopyFrom(const IPV4Pair& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPV4Pair)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPV4Pair)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6246,7 +6235,7 @@ IPV6Pair::IPV6Pair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPV6Pair)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPV6Pair)
 }
 IPV6Pair::IPV6Pair(const IPV6Pair& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6267,7 +6256,7 @@ IPV6Pair::IPV6Pair(const IPV6Pair& from)
     destination_ip_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_destination_ip(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPV6Pair)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPV6Pair)
 }
 
 inline void IPV6Pair::SharedCtor() {
@@ -6282,7 +6271,7 @@ destination_ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStr
 }
 
 IPV6Pair::~IPV6Pair() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPV6Pair)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPV6Pair)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -6305,7 +6294,7 @@ void IPV6Pair::SetCachedSize(int size) const {
 }
 
 void IPV6Pair::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPV6Pair)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPV6Pair)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6364,7 +6353,7 @@ failure:
 
 uint8_t* IPV6Pair::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPV6Pair)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPV6Pair)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -6384,12 +6373,12 @@ uint8_t* IPV6Pair::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPV6Pair)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPV6Pair)
   return target;
 }
 
 size_t IPV6Pair::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPV6Pair)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPV6Pair)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -6427,7 +6416,7 @@ void IPV6Pair::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPV6Pair::MergeFrom(const IPV6Pair& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPV6Pair)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPV6Pair)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -6442,7 +6431,7 @@ void IPV6Pair::MergeFrom(const IPV6Pair& from) {
 }
 
 void IPV6Pair::CopyFrom(const IPV6Pair& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPV6Pair)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPV6Pair)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6488,7 +6477,7 @@ IPV4Match::IPV4Match(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPV4Match)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPV4Match)
 }
 IPV4Match::IPV4Match(const IPV4Match& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6496,7 +6485,7 @@ IPV4Match::IPV4Match(const IPV4Match& from)
   ::memcpy(&source_ip_, &from.source_ip_,
     static_cast<size_t>(reinterpret_cast<char*>(&destination_ip_prefix_) -
     reinterpret_cast<char*>(&source_ip_)) + sizeof(destination_ip_prefix_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPV4Match)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPV4Match)
 }
 
 inline void IPV4Match::SharedCtor() {
@@ -6507,7 +6496,7 @@ inline void IPV4Match::SharedCtor() {
 }
 
 IPV4Match::~IPV4Match() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPV4Match)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPV4Match)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -6528,7 +6517,7 @@ void IPV4Match::SetCachedSize(int size) const {
 }
 
 void IPV4Match::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPV4Match)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPV4Match)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6602,7 +6591,7 @@ failure:
 
 uint8_t* IPV4Match::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPV4Match)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPV4Match)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -6634,12 +6623,12 @@ uint8_t* IPV4Match::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPV4Match)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPV4Match)
   return target;
 }
 
 size_t IPV4Match::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPV4Match)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPV4Match)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -6683,7 +6672,7 @@ void IPV4Match::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPV4Match::MergeFrom(const IPV4Match& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPV4Match)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPV4Match)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -6704,7 +6693,7 @@ void IPV4Match::MergeFrom(const IPV4Match& from) {
 }
 
 void IPV4Match::CopyFrom(const IPV4Match& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPV4Match)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPV4Match)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6744,7 +6733,7 @@ IPV6Match::IPV6Match(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPV6Match)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPV6Match)
 }
 IPV6Match::IPV6Match(const IPV6Match& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6768,7 +6757,7 @@ IPV6Match::IPV6Match(const IPV6Match& from)
   ::memcpy(&source_ip_prefix_, &from.source_ip_prefix_,
     static_cast<size_t>(reinterpret_cast<char*>(&destination_ip_prefix_) -
     reinterpret_cast<char*>(&source_ip_prefix_)) + sizeof(destination_ip_prefix_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPV6Match)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPV6Match)
 }
 
 inline void IPV6Match::SharedCtor() {
@@ -6787,7 +6776,7 @@ destination_ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStr
 }
 
 IPV6Match::~IPV6Match() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPV6Match)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPV6Match)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -6810,7 +6799,7 @@ void IPV6Match::SetCachedSize(int size) const {
 }
 
 void IPV6Match::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPV6Match)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPV6Match)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6888,7 +6877,7 @@ failure:
 
 uint8_t* IPV6Match::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPV6Match)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPV6Match)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -6920,12 +6909,12 @@ uint8_t* IPV6Match::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPV6Match)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPV6Match)
   return target;
 }
 
 size_t IPV6Match::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPV6Match)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPV6Match)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -6973,7 +6962,7 @@ void IPV6Match::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPV6Match::MergeFrom(const IPV6Match& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPV6Match)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPV6Match)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -6994,7 +6983,7 @@ void IPV6Match::MergeFrom(const IPV6Match& from) {
 }
 
 void IPV6Match::CopyFrom(const IPV6Match& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPV6Match)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPV6Match)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7046,13 +7035,13 @@ Nat::Nat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.Nat)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.Nat)
 }
 Nat::Nat(const Nat& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   source_ip_ = from.source_ip_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.Nat)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.Nat)
 }
 
 inline void Nat::SharedCtor() {
@@ -7060,7 +7049,7 @@ source_ip_ = 0u;
 }
 
 Nat::~Nat() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.Nat)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.Nat)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -7081,7 +7070,7 @@ void Nat::SetCachedSize(int size) const {
 }
 
 void Nat::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.Nat)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.Nat)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7129,7 +7118,7 @@ failure:
 
 uint8_t* Nat::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.Nat)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.Nat)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7143,12 +7132,12 @@ uint8_t* Nat::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.Nat)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.Nat)
   return target;
 }
 
 size_t Nat::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.Nat)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.Nat)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -7177,7 +7166,7 @@ void Nat::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void Nat::MergeFrom(const Nat& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.Nat)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.Nat)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7189,7 +7178,7 @@ void Nat::MergeFrom(const Nat& from) {
 }
 
 void Nat::CopyFrom(const Nat& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.Nat)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.Nat)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7215,29 +7204,29 @@ void Nat::InternalSwap(Nat* other) {
 
 class IPSecEnc::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::IPSecSAParams& ipsec_sa(const IPSecEnc* msg);
-  static const ::tunneloffload::v1alpha1::IPV4Pair& ipv4_tunnel(const IPSecEnc* msg);
-  static const ::tunneloffload::v1alpha1::IPV6Pair& ipv6_tunnel(const IPSecEnc* msg);
+  static const ::tunneloffload::v2::IPSecSAParams& ipsec_sa(const IPSecEnc* msg);
+  static const ::tunneloffload::v2::IPV4Pair& ipv4_tunnel(const IPSecEnc* msg);
+  static const ::tunneloffload::v2::IPV6Pair& ipv6_tunnel(const IPSecEnc* msg);
 };
 
-const ::tunneloffload::v1alpha1::IPSecSAParams&
+const ::tunneloffload::v2::IPSecSAParams&
 IPSecEnc::_Internal::ipsec_sa(const IPSecEnc* msg) {
   return *msg->ipsec_sa_;
 }
-const ::tunneloffload::v1alpha1::IPV4Pair&
+const ::tunneloffload::v2::IPV4Pair&
 IPSecEnc::_Internal::ipv4_tunnel(const IPSecEnc* msg) {
   return *msg->tunnelIps_.ipv4_tunnel_;
 }
-const ::tunneloffload::v1alpha1::IPV6Pair&
+const ::tunneloffload::v2::IPV6Pair&
 IPSecEnc::_Internal::ipv6_tunnel(const IPSecEnc* msg) {
   return *msg->tunnelIps_.ipv6_tunnel_;
 }
-void IPSecEnc::set_allocated_ipv4_tunnel(::tunneloffload::v1alpha1::IPV4Pair* ipv4_tunnel) {
+void IPSecEnc::set_allocated_ipv4_tunnel(::tunneloffload::v2::IPV4Pair* ipv4_tunnel) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_tunnelIps();
   if (ipv4_tunnel) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV4Pair>::GetOwningArena(ipv4_tunnel);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV4Pair>::GetOwningArena(ipv4_tunnel);
     if (message_arena != submessage_arena) {
       ipv4_tunnel = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv4_tunnel, submessage_arena);
@@ -7245,14 +7234,14 @@ void IPSecEnc::set_allocated_ipv4_tunnel(::tunneloffload::v1alpha1::IPV4Pair* ip
     set_has_ipv4_tunnel();
     tunnelIps_.ipv4_tunnel_ = ipv4_tunnel;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IPSecEnc.ipv4_tunnel)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IPSecEnc.ipv4_tunnel)
 }
-void IPSecEnc::set_allocated_ipv6_tunnel(::tunneloffload::v1alpha1::IPV6Pair* ipv6_tunnel) {
+void IPSecEnc::set_allocated_ipv6_tunnel(::tunneloffload::v2::IPV6Pair* ipv6_tunnel) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_tunnelIps();
   if (ipv6_tunnel) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPV6Pair>::GetOwningArena(ipv6_tunnel);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPV6Pair>::GetOwningArena(ipv6_tunnel);
     if (message_arena != submessage_arena) {
       ipv6_tunnel = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipv6_tunnel, submessage_arena);
@@ -7260,7 +7249,7 @@ void IPSecEnc::set_allocated_ipv6_tunnel(::tunneloffload::v1alpha1::IPV6Pair* ip
     set_has_ipv6_tunnel();
     tunnelIps_.ipv6_tunnel_ = ipv6_tunnel;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IPSecEnc.ipv6_tunnel)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IPSecEnc.ipv6_tunnel)
 }
 IPSecEnc::IPSecEnc(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -7269,13 +7258,13 @@ IPSecEnc::IPSecEnc(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPSecEnc)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPSecEnc)
 }
 IPSecEnc::IPSecEnc(const IPSecEnc& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_ipsec_sa()) {
-    ipsec_sa_ = new ::tunneloffload::v1alpha1::IPSecSAParams(*from.ipsec_sa_);
+    ipsec_sa_ = new ::tunneloffload::v2::IPSecSAParams(*from.ipsec_sa_);
   } else {
     ipsec_sa_ = nullptr;
   }
@@ -7285,18 +7274,18 @@ IPSecEnc::IPSecEnc(const IPSecEnc& from)
   clear_has_tunnelIps();
   switch (from.tunnelIps_case()) {
     case kIpv4Tunnel: {
-      _internal_mutable_ipv4_tunnel()->::tunneloffload::v1alpha1::IPV4Pair::MergeFrom(from._internal_ipv4_tunnel());
+      _internal_mutable_ipv4_tunnel()->::tunneloffload::v2::IPV4Pair::MergeFrom(from._internal_ipv4_tunnel());
       break;
     }
     case kIpv6Tunnel: {
-      _internal_mutable_ipv6_tunnel()->::tunneloffload::v1alpha1::IPV6Pair::MergeFrom(from._internal_ipv6_tunnel());
+      _internal_mutable_ipv6_tunnel()->::tunneloffload::v2::IPV6Pair::MergeFrom(from._internal_ipv6_tunnel());
       break;
     }
     case TUNNELIPS_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPSecEnc)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPSecEnc)
 }
 
 inline void IPSecEnc::SharedCtor() {
@@ -7308,7 +7297,7 @@ clear_has_tunnelIps();
 }
 
 IPSecEnc::~IPSecEnc() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPSecEnc)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPSecEnc)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -7333,7 +7322,7 @@ void IPSecEnc::SetCachedSize(int size) const {
 }
 
 void IPSecEnc::clear_tunnelIps() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.IPSecEnc)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.IPSecEnc)
   switch (tunnelIps_case()) {
     case kIpv4Tunnel: {
       if (GetArenaForAllocation() == nullptr) {
@@ -7356,7 +7345,7 @@ void IPSecEnc::clear_tunnelIps() {
 
 
 void IPSecEnc::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPSecEnc)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPSecEnc)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7378,25 +7367,25 @@ const char* IPSecEnc::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type = 1;
+      // .tunneloffload.v2.IPSecTunnelType tunnel_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_tunnel_type(static_cast<::tunneloffload::v1alpha1::IPSecTunnelType>(val));
+          _internal_set_tunnel_type(static_cast<::tunneloffload::v2::IPSecTunnelType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.EncType encryption_type = 2;
+      // .tunneloffload.v2.EncType encryption_type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_encryption_type(static_cast<::tunneloffload::v1alpha1::EncType>(val));
+          _internal_set_encryption_type(static_cast<::tunneloffload::v2::EncType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPSecSAParams ipsec_sa = 3;
+      // .tunneloffload.v2.IPSecSAParams ipsec_sa = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipsec_sa(), ptr);
@@ -7404,7 +7393,7 @@ const char* IPSecEnc::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV4Pair ipv4_tunnel = 4;
+      // .tunneloffload.v2.IPV4Pair ipv4_tunnel = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv4_tunnel(), ptr);
@@ -7412,7 +7401,7 @@ const char* IPSecEnc::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPV6Pair ipv6_tunnel = 5;
+      // .tunneloffload.v2.IPV6Pair ipv6_tunnel = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipv6_tunnel(), ptr);
@@ -7445,25 +7434,25 @@ failure:
 
 uint8_t* IPSecEnc::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPSecEnc)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPSecEnc)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type = 1;
+  // .tunneloffload.v2.IPSecTunnelType tunnel_type = 1;
   if (this->_internal_tunnel_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->_internal_tunnel_type(), target);
   }
 
-  // .tunneloffload.v1alpha1.EncType encryption_type = 2;
+  // .tunneloffload.v2.EncType encryption_type = 2;
   if (this->_internal_encryption_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_encryption_type(), target);
   }
 
-  // .tunneloffload.v1alpha1.IPSecSAParams ipsec_sa = 3;
+  // .tunneloffload.v2.IPSecSAParams ipsec_sa = 3;
   if (this->_internal_has_ipsec_sa()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -7471,7 +7460,7 @@ uint8_t* IPSecEnc::_InternalSerialize(
         3, _Internal::ipsec_sa(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV4Pair ipv4_tunnel = 4;
+  // .tunneloffload.v2.IPV4Pair ipv4_tunnel = 4;
   if (_internal_has_ipv4_tunnel()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -7479,7 +7468,7 @@ uint8_t* IPSecEnc::_InternalSerialize(
         4, _Internal::ipv4_tunnel(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPV6Pair ipv6_tunnel = 5;
+  // .tunneloffload.v2.IPV6Pair ipv6_tunnel = 5;
   if (_internal_has_ipv6_tunnel()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -7491,46 +7480,46 @@ uint8_t* IPSecEnc::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPSecEnc)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPSecEnc)
   return target;
 }
 
 size_t IPSecEnc::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPSecEnc)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPSecEnc)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.IPSecSAParams ipsec_sa = 3;
+  // .tunneloffload.v2.IPSecSAParams ipsec_sa = 3;
   if (this->_internal_has_ipsec_sa()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *ipsec_sa_);
   }
 
-  // .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type = 1;
+  // .tunneloffload.v2.IPSecTunnelType tunnel_type = 1;
   if (this->_internal_tunnel_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_tunnel_type());
   }
 
-  // .tunneloffload.v1alpha1.EncType encryption_type = 2;
+  // .tunneloffload.v2.EncType encryption_type = 2;
   if (this->_internal_encryption_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_encryption_type());
   }
 
   switch (tunnelIps_case()) {
-    // .tunneloffload.v1alpha1.IPV4Pair ipv4_tunnel = 4;
+    // .tunneloffload.v2.IPV4Pair ipv4_tunnel = 4;
     case kIpv4Tunnel: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *tunnelIps_.ipv4_tunnel_);
       break;
     }
-    // .tunneloffload.v1alpha1.IPV6Pair ipv6_tunnel = 5;
+    // .tunneloffload.v2.IPV6Pair ipv6_tunnel = 5;
     case kIpv6Tunnel: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -7558,13 +7547,13 @@ void IPSecEnc::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPSecEnc::MergeFrom(const IPSecEnc& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPSecEnc)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPSecEnc)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_ipsec_sa()) {
-    _internal_mutable_ipsec_sa()->::tunneloffload::v1alpha1::IPSecSAParams::MergeFrom(from._internal_ipsec_sa());
+    _internal_mutable_ipsec_sa()->::tunneloffload::v2::IPSecSAParams::MergeFrom(from._internal_ipsec_sa());
   }
   if (from._internal_tunnel_type() != 0) {
     _internal_set_tunnel_type(from._internal_tunnel_type());
@@ -7574,11 +7563,11 @@ void IPSecEnc::MergeFrom(const IPSecEnc& from) {
   }
   switch (from.tunnelIps_case()) {
     case kIpv4Tunnel: {
-      _internal_mutable_ipv4_tunnel()->::tunneloffload::v1alpha1::IPV4Pair::MergeFrom(from._internal_ipv4_tunnel());
+      _internal_mutable_ipv4_tunnel()->::tunneloffload::v2::IPV4Pair::MergeFrom(from._internal_ipv4_tunnel());
       break;
     }
     case kIpv6Tunnel: {
-      _internal_mutable_ipv6_tunnel()->::tunneloffload::v1alpha1::IPV6Pair::MergeFrom(from._internal_ipv6_tunnel());
+      _internal_mutable_ipv6_tunnel()->::tunneloffload::v2::IPV6Pair::MergeFrom(from._internal_ipv6_tunnel());
       break;
     }
     case TUNNELIPS_NOT_SET: {
@@ -7589,7 +7578,7 @@ void IPSecEnc::MergeFrom(const IPSecEnc& from) {
 }
 
 void IPSecEnc::CopyFrom(const IPSecEnc& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPSecEnc)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPSecEnc)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7632,7 +7621,7 @@ IPSecDec::IPSecDec(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPSecDec)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPSecDec)
 }
 IPSecDec::IPSecDec(const IPSecDec& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -7641,7 +7630,7 @@ IPSecDec::IPSecDec(const IPSecDec& from)
   ::memcpy(&tunnel_type_, &from.tunnel_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&encryption_type_) -
     reinterpret_cast<char*>(&tunnel_type_)) + sizeof(encryption_type_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPSecDec)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPSecDec)
 }
 
 inline void IPSecDec::SharedCtor() {
@@ -7652,7 +7641,7 @@ inline void IPSecDec::SharedCtor() {
 }
 
 IPSecDec::~IPSecDec() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPSecDec)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPSecDec)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -7673,7 +7662,7 @@ void IPSecDec::SetCachedSize(int size) const {
 }
 
 void IPSecDec::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPSecDec)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPSecDec)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7691,25 +7680,25 @@ const char* IPSecDec::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type = 1;
+      // .tunneloffload.v2.IPSecTunnelType tunnel_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_tunnel_type(static_cast<::tunneloffload::v1alpha1::IPSecTunnelType>(val));
+          _internal_set_tunnel_type(static_cast<::tunneloffload::v2::IPSecTunnelType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.EncType encryption_type = 2;
+      // .tunneloffload.v2.EncType encryption_type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_encryption_type(static_cast<::tunneloffload::v1alpha1::EncType>(val));
+          _internal_set_encryption_type(static_cast<::tunneloffload::v2::EncType>(val));
         } else
           goto handle_unusual;
         continue;
-      // repeated .tunneloffload.v1alpha1.IPSecSAParams ipsec_sas = 3;
+      // repeated .tunneloffload.v2.IPSecSAParams ipsec_sas = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -7747,25 +7736,25 @@ failure:
 
 uint8_t* IPSecDec::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPSecDec)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPSecDec)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type = 1;
+  // .tunneloffload.v2.IPSecTunnelType tunnel_type = 1;
   if (this->_internal_tunnel_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->_internal_tunnel_type(), target);
   }
 
-  // .tunneloffload.v1alpha1.EncType encryption_type = 2;
+  // .tunneloffload.v2.EncType encryption_type = 2;
   if (this->_internal_encryption_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_encryption_type(), target);
   }
 
-  // repeated .tunneloffload.v1alpha1.IPSecSAParams ipsec_sas = 3;
+  // repeated .tunneloffload.v2.IPSecSAParams ipsec_sas = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_ipsec_sas_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -7777,32 +7766,32 @@ uint8_t* IPSecDec::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPSecDec)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPSecDec)
   return target;
 }
 
 size_t IPSecDec::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPSecDec)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPSecDec)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IPSecSAParams ipsec_sas = 3;
+  // repeated .tunneloffload.v2.IPSecSAParams ipsec_sas = 3;
   total_size += 1UL * this->_internal_ipsec_sas_size();
   for (const auto& msg : this->ipsec_sas_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // .tunneloffload.v1alpha1.IPSecTunnelType tunnel_type = 1;
+  // .tunneloffload.v2.IPSecTunnelType tunnel_type = 1;
   if (this->_internal_tunnel_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_tunnel_type());
   }
 
-  // .tunneloffload.v1alpha1.EncType encryption_type = 2;
+  // .tunneloffload.v2.EncType encryption_type = 2;
   if (this->_internal_encryption_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_encryption_type());
@@ -7825,7 +7814,7 @@ void IPSecDec::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPSecDec::MergeFrom(const IPSecDec& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPSecDec)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPSecDec)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7841,7 +7830,7 @@ void IPSecDec::MergeFrom(const IPSecDec& from) {
 }
 
 void IPSecDec::CopyFrom(const IPSecDec& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPSecDec)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPSecDec)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7882,7 +7871,7 @@ IPSecSAParams::IPSecSAParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPSecSAParams)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPSecSAParams)
 }
 IPSecSAParams::IPSecSAParams(const IPSecSAParams& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7898,7 +7887,7 @@ IPSecSAParams::IPSecSAParams(const IPSecSAParams& from)
   ::memcpy(&spi_, &from.spi_,
     static_cast<size_t>(reinterpret_cast<char*>(&operation_) -
     reinterpret_cast<char*>(&spi_)) + sizeof(operation_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPSecSAParams)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPSecSAParams)
 }
 
 inline void IPSecSAParams::SharedCtor() {
@@ -7913,7 +7902,7 @@ encryption_key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStr
 }
 
 IPSecSAParams::~IPSecSAParams() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPSecSAParams)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPSecSAParams)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -7935,7 +7924,7 @@ void IPSecSAParams::SetCachedSize(int size) const {
 }
 
 void IPSecSAParams::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPSecSAParams)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPSecSAParams)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7970,12 +7959,12 @@ const char* IPSecSAParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Operation operation = 3;
+      // .tunneloffload.v2.Operation operation = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_operation(static_cast<::tunneloffload::v1alpha1::Operation>(val));
+          _internal_set_operation(static_cast<::tunneloffload::v2::Operation>(val));
         } else
           goto handle_unusual;
         continue;
@@ -8004,7 +7993,7 @@ failure:
 
 uint8_t* IPSecSAParams::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPSecSAParams)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPSecSAParams)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8020,7 +8009,7 @@ uint8_t* IPSecSAParams::_InternalSerialize(
         2, this->_internal_encryption_key(), target);
   }
 
-  // .tunneloffload.v1alpha1.Operation operation = 3;
+  // .tunneloffload.v2.Operation operation = 3;
   if (this->_internal_operation() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -8031,12 +8020,12 @@ uint8_t* IPSecSAParams::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPSecSAParams)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPSecSAParams)
   return target;
 }
 
 size_t IPSecSAParams::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPSecSAParams)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPSecSAParams)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8055,7 +8044,7 @@ size_t IPSecSAParams::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32SizePlusOne(this->_internal_spi());
   }
 
-  // .tunneloffload.v1alpha1.Operation operation = 3;
+  // .tunneloffload.v2.Operation operation = 3;
   if (this->_internal_operation() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_operation());
@@ -8078,7 +8067,7 @@ void IPSecSAParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPSecSAParams::MergeFrom(const IPSecSAParams& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPSecSAParams)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPSecSAParams)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8096,7 +8085,7 @@ void IPSecSAParams::MergeFrom(const IPSecSAParams& from) {
 }
 
 void IPSecSAParams::CopyFrom(const IPSecSAParams& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPSecSAParams)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPSecSAParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8134,24 +8123,24 @@ void IPSecSAParams::InternalSwap(IPSecSAParams* other) {
 
 class IPSecTunnel::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::IPSecEnc& ipsec_enc(const IPSecTunnel* msg);
-  static const ::tunneloffload::v1alpha1::IPSecDec& ipsec_dec(const IPSecTunnel* msg);
+  static const ::tunneloffload::v2::IPSecEnc& ipsec_enc(const IPSecTunnel* msg);
+  static const ::tunneloffload::v2::IPSecDec& ipsec_dec(const IPSecTunnel* msg);
 };
 
-const ::tunneloffload::v1alpha1::IPSecEnc&
+const ::tunneloffload::v2::IPSecEnc&
 IPSecTunnel::_Internal::ipsec_enc(const IPSecTunnel* msg) {
   return *msg->ipsec_.ipsec_enc_;
 }
-const ::tunneloffload::v1alpha1::IPSecDec&
+const ::tunneloffload::v2::IPSecDec&
 IPSecTunnel::_Internal::ipsec_dec(const IPSecTunnel* msg) {
   return *msg->ipsec_.ipsec_dec_;
 }
-void IPSecTunnel::set_allocated_ipsec_enc(::tunneloffload::v1alpha1::IPSecEnc* ipsec_enc) {
+void IPSecTunnel::set_allocated_ipsec_enc(::tunneloffload::v2::IPSecEnc* ipsec_enc) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ipsec();
   if (ipsec_enc) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPSecEnc>::GetOwningArena(ipsec_enc);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPSecEnc>::GetOwningArena(ipsec_enc);
     if (message_arena != submessage_arena) {
       ipsec_enc = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipsec_enc, submessage_arena);
@@ -8159,14 +8148,14 @@ void IPSecTunnel::set_allocated_ipsec_enc(::tunneloffload::v1alpha1::IPSecEnc* i
     set_has_ipsec_enc();
     ipsec_.ipsec_enc_ = ipsec_enc;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IPSecTunnel.ipsec_enc)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IPSecTunnel.ipsec_enc)
 }
-void IPSecTunnel::set_allocated_ipsec_dec(::tunneloffload::v1alpha1::IPSecDec* ipsec_dec) {
+void IPSecTunnel::set_allocated_ipsec_dec(::tunneloffload::v2::IPSecDec* ipsec_dec) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_ipsec();
   if (ipsec_dec) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v1alpha1::IPSecDec>::GetOwningArena(ipsec_dec);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::tunneloffload::v2::IPSecDec>::GetOwningArena(ipsec_dec);
     if (message_arena != submessage_arena) {
       ipsec_dec = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ipsec_dec, submessage_arena);
@@ -8174,7 +8163,7 @@ void IPSecTunnel::set_allocated_ipsec_dec(::tunneloffload::v1alpha1::IPSecDec* i
     set_has_ipsec_dec();
     ipsec_.ipsec_dec_ = ipsec_dec;
   }
-  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v1alpha1.IPSecTunnel.ipsec_dec)
+  // @@protoc_insertion_point(field_set_allocated:tunneloffload.v2.IPSecTunnel.ipsec_dec)
 }
 IPSecTunnel::IPSecTunnel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -8183,7 +8172,7 @@ IPSecTunnel::IPSecTunnel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IPSecTunnel)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IPSecTunnel)
 }
 IPSecTunnel::IPSecTunnel(const IPSecTunnel& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -8191,18 +8180,18 @@ IPSecTunnel::IPSecTunnel(const IPSecTunnel& from)
   clear_has_ipsec();
   switch (from.ipsec_case()) {
     case kIpsecEnc: {
-      _internal_mutable_ipsec_enc()->::tunneloffload::v1alpha1::IPSecEnc::MergeFrom(from._internal_ipsec_enc());
+      _internal_mutable_ipsec_enc()->::tunneloffload::v2::IPSecEnc::MergeFrom(from._internal_ipsec_enc());
       break;
     }
     case kIpsecDec: {
-      _internal_mutable_ipsec_dec()->::tunneloffload::v1alpha1::IPSecDec::MergeFrom(from._internal_ipsec_dec());
+      _internal_mutable_ipsec_dec()->::tunneloffload::v2::IPSecDec::MergeFrom(from._internal_ipsec_dec());
       break;
     }
     case IPSEC_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IPSecTunnel)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IPSecTunnel)
 }
 
 inline void IPSecTunnel::SharedCtor() {
@@ -8210,7 +8199,7 @@ clear_has_ipsec();
 }
 
 IPSecTunnel::~IPSecTunnel() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IPSecTunnel)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IPSecTunnel)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -8234,7 +8223,7 @@ void IPSecTunnel::SetCachedSize(int size) const {
 }
 
 void IPSecTunnel::clear_ipsec() {
-// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v1alpha1.IPSecTunnel)
+// @@protoc_insertion_point(one_of_clear_start:tunneloffload.v2.IPSecTunnel)
   switch (ipsec_case()) {
     case kIpsecEnc: {
       if (GetArenaForAllocation() == nullptr) {
@@ -8257,7 +8246,7 @@ void IPSecTunnel::clear_ipsec() {
 
 
 void IPSecTunnel::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IPSecTunnel)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IPSecTunnel)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8272,7 +8261,7 @@ const char* IPSecTunnel::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.IPSecEnc ipsec_enc = 1;
+      // .tunneloffload.v2.IPSecEnc ipsec_enc = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipsec_enc(), ptr);
@@ -8280,7 +8269,7 @@ const char* IPSecTunnel::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IPSecDec ipsec_dec = 2;
+      // .tunneloffload.v2.IPSecDec ipsec_dec = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ipsec_dec(), ptr);
@@ -8313,11 +8302,11 @@ failure:
 
 uint8_t* IPSecTunnel::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IPSecTunnel)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IPSecTunnel)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.IPSecEnc ipsec_enc = 1;
+  // .tunneloffload.v2.IPSecEnc ipsec_enc = 1;
   if (_internal_has_ipsec_enc()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -8325,7 +8314,7 @@ uint8_t* IPSecTunnel::_InternalSerialize(
         1, _Internal::ipsec_enc(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.IPSecDec ipsec_dec = 2;
+  // .tunneloffload.v2.IPSecDec ipsec_dec = 2;
   if (_internal_has_ipsec_dec()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -8337,12 +8326,12 @@ uint8_t* IPSecTunnel::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IPSecTunnel)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IPSecTunnel)
   return target;
 }
 
 size_t IPSecTunnel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IPSecTunnel)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IPSecTunnel)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8350,14 +8339,14 @@ size_t IPSecTunnel::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (ipsec_case()) {
-    // .tunneloffload.v1alpha1.IPSecEnc ipsec_enc = 1;
+    // .tunneloffload.v2.IPSecEnc ipsec_enc = 1;
     case kIpsecEnc: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *ipsec_.ipsec_enc_);
       break;
     }
-    // .tunneloffload.v1alpha1.IPSecDec ipsec_dec = 2;
+    // .tunneloffload.v2.IPSecDec ipsec_dec = 2;
     case kIpsecDec: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -8385,18 +8374,18 @@ void IPSecTunnel::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IPSecTunnel::MergeFrom(const IPSecTunnel& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IPSecTunnel)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IPSecTunnel)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   switch (from.ipsec_case()) {
     case kIpsecEnc: {
-      _internal_mutable_ipsec_enc()->::tunneloffload::v1alpha1::IPSecEnc::MergeFrom(from._internal_ipsec_enc());
+      _internal_mutable_ipsec_enc()->::tunneloffload::v2::IPSecEnc::MergeFrom(from._internal_ipsec_enc());
       break;
     }
     case kIpsecDec: {
-      _internal_mutable_ipsec_dec()->::tunneloffload::v1alpha1::IPSecDec::MergeFrom(from._internal_ipsec_dec());
+      _internal_mutable_ipsec_dec()->::tunneloffload::v2::IPSecDec::MergeFrom(from._internal_ipsec_dec());
       break;
     }
     case IPSEC_NOT_SET: {
@@ -8407,7 +8396,7 @@ void IPSecTunnel::MergeFrom(const IPSecTunnel& from) {
 }
 
 void IPSecTunnel::CopyFrom(const IPSecTunnel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IPSecTunnel)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IPSecTunnel)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8443,13 +8432,13 @@ TunnelId::TunnelId(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.TunnelId)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.TunnelId)
 }
 TunnelId::TunnelId(const TunnelId& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tunnel_id_ = from.tunnel_id_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.TunnelId)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.TunnelId)
 }
 
 inline void TunnelId::SharedCtor() {
@@ -8457,7 +8446,7 @@ tunnel_id_ = uint64_t{0u};
 }
 
 TunnelId::~TunnelId() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.TunnelId)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.TunnelId)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -8478,7 +8467,7 @@ void TunnelId::SetCachedSize(int size) const {
 }
 
 void TunnelId::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.TunnelId)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.TunnelId)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8526,7 +8515,7 @@ failure:
 
 uint8_t* TunnelId::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.TunnelId)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.TunnelId)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8540,12 +8529,12 @@ uint8_t* TunnelId::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.TunnelId)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.TunnelId)
   return target;
 }
 
 size_t TunnelId::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.TunnelId)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.TunnelId)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8574,7 +8563,7 @@ void TunnelId::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void TunnelId::MergeFrom(const TunnelId& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.TunnelId)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.TunnelId)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8586,7 +8575,7 @@ void TunnelId::MergeFrom(const TunnelId& from) {
 }
 
 void TunnelId::CopyFrom(const TunnelId& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.TunnelId)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.TunnelId)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8621,7 +8610,7 @@ Counters::Counters(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.Counters)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.Counters)
 }
 Counters::Counters(const Counters& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -8629,7 +8618,7 @@ Counters::Counters(const Counters& from)
   ::memcpy(&in_packets_, &from.in_packets_,
     static_cast<size_t>(reinterpret_cast<char*>(&out_bytes_drops_) -
     reinterpret_cast<char*>(&in_packets_)) + sizeof(out_bytes_drops_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.Counters)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.Counters)
 }
 
 inline void Counters::SharedCtor() {
@@ -8640,7 +8629,7 @@ inline void Counters::SharedCtor() {
 }
 
 Counters::~Counters() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.Counters)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.Counters)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -8661,7 +8650,7 @@ void Counters::SetCachedSize(int size) const {
 }
 
 void Counters::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.Counters)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.Counters)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8767,7 +8756,7 @@ failure:
 
 uint8_t* Counters::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.Counters)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.Counters)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8823,12 +8812,12 @@ uint8_t* Counters::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.Counters)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.Counters)
   return target;
 }
 
 size_t Counters::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.Counters)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.Counters)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8892,7 +8881,7 @@ void Counters::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void Counters::MergeFrom(const Counters& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.Counters)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.Counters)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8925,7 +8914,7 @@ void Counters::MergeFrom(const Counters& from) {
 }
 
 void Counters::CopyFrom(const Counters& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.Counters)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.Counters)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8966,7 +8955,7 @@ CreateIpTunnelResponses::CreateIpTunnelResponses(::PROTOBUF_NAMESPACE_ID::Arena*
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CreateIpTunnelResponses)
 }
 CreateIpTunnelResponses::CreateIpTunnelResponses(const CreateIpTunnelResponses& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -8975,7 +8964,7 @@ CreateIpTunnelResponses::CreateIpTunnelResponses(const CreateIpTunnelResponses& 
   ::memcpy(&error_status_, &from.error_status_,
     static_cast<size_t>(reinterpret_cast<char*>(&request_status_) -
     reinterpret_cast<char*>(&error_status_)) + sizeof(request_status_));
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CreateIpTunnelResponses)
 }
 
 inline void CreateIpTunnelResponses::SharedCtor() {
@@ -8986,7 +8975,7 @@ inline void CreateIpTunnelResponses::SharedCtor() {
 }
 
 CreateIpTunnelResponses::~CreateIpTunnelResponses() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.CreateIpTunnelResponses)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -9007,7 +8996,7 @@ void CreateIpTunnelResponses::SetCachedSize(int size) const {
 }
 
 void CreateIpTunnelResponses::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.CreateIpTunnelResponses)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9025,12 +9014,12 @@ const char* CreateIpTunnelResponses::_InternalParse(const char* ptr, ::PROTOBUF_
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.AddTunnelStatus request_status = 1;
+      // .tunneloffload.v2.AddTunnelStatus request_status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_request_status(static_cast<::tunneloffload::v1alpha1::AddTunnelStatus>(val));
+          _internal_set_request_status(static_cast<::tunneloffload::v2::AddTunnelStatus>(val));
         } else
           goto handle_unusual;
         continue;
@@ -9042,7 +9031,7 @@ const char* CreateIpTunnelResponses::_InternalParse(const char* ptr, ::PROTOBUF_
         } else
           goto handle_unusual;
         continue;
-      // repeated .tunneloffload.v1alpha1.CreateIpTunnelResponse responses = 3;
+      // repeated .tunneloffload.v2.CreateIpTunnelResponse responses = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -9080,11 +9069,11 @@ failure:
 
 uint8_t* CreateIpTunnelResponses::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.CreateIpTunnelResponses)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.AddTunnelStatus request_status = 1;
+  // .tunneloffload.v2.AddTunnelStatus request_status = 1;
   if (this->_internal_request_status() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -9097,7 +9086,7 @@ uint8_t* CreateIpTunnelResponses::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_error_status(), target);
   }
 
-  // repeated .tunneloffload.v1alpha1.CreateIpTunnelResponse responses = 3;
+  // repeated .tunneloffload.v2.CreateIpTunnelResponse responses = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_responses_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -9109,19 +9098,19 @@ uint8_t* CreateIpTunnelResponses::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.CreateIpTunnelResponses)
   return target;
 }
 
 size_t CreateIpTunnelResponses::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.CreateIpTunnelResponses)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.CreateIpTunnelResponse responses = 3;
+  // repeated .tunneloffload.v2.CreateIpTunnelResponse responses = 3;
   total_size += 1UL * this->_internal_responses_size();
   for (const auto& msg : this->responses_) {
     total_size +=
@@ -9133,7 +9122,7 @@ size_t CreateIpTunnelResponses::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64SizePlusOne(this->_internal_error_status());
   }
 
-  // .tunneloffload.v1alpha1.AddTunnelStatus request_status = 1;
+  // .tunneloffload.v2.AddTunnelStatus request_status = 1;
   if (this->_internal_request_status() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_request_status());
@@ -9156,7 +9145,7 @@ void CreateIpTunnelResponses::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void CreateIpTunnelResponses::MergeFrom(const CreateIpTunnelResponses& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.CreateIpTunnelResponses)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -9172,7 +9161,7 @@ void CreateIpTunnelResponses::MergeFrom(const CreateIpTunnelResponses& from) {
 }
 
 void CreateIpTunnelResponses::CopyFrom(const CreateIpTunnelResponses& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.CreateIpTunnelResponses)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.CreateIpTunnelResponses)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9204,10 +9193,10 @@ void CreateIpTunnelResponses::InternalSwap(CreateIpTunnelResponses* other) {
 
 class CreateIpTunnelResponse::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::Error& error(const CreateIpTunnelResponse* msg);
+  static const ::tunneloffload::v2::Error& error(const CreateIpTunnelResponse* msg);
 };
 
-const ::tunneloffload::v1alpha1::Error&
+const ::tunneloffload::v2::Error&
 CreateIpTunnelResponse::_Internal::error(const CreateIpTunnelResponse* msg) {
   return *msg->error_;
 }
@@ -9218,18 +9207,18 @@ CreateIpTunnelResponse::CreateIpTunnelResponse(::PROTOBUF_NAMESPACE_ID::Arena* a
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.CreateIpTunnelResponse)
 }
 CreateIpTunnelResponse::CreateIpTunnelResponse(const CreateIpTunnelResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_error()) {
-    error_ = new ::tunneloffload::v1alpha1::Error(*from.error_);
+    error_ = new ::tunneloffload::v2::Error(*from.error_);
   } else {
     error_ = nullptr;
   }
   tunnel_id_ = from.tunnel_id_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.CreateIpTunnelResponse)
 }
 
 inline void CreateIpTunnelResponse::SharedCtor() {
@@ -9240,7 +9229,7 @@ inline void CreateIpTunnelResponse::SharedCtor() {
 }
 
 CreateIpTunnelResponse::~CreateIpTunnelResponse() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.CreateIpTunnelResponse)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -9262,7 +9251,7 @@ void CreateIpTunnelResponse::SetCachedSize(int size) const {
 }
 
 void CreateIpTunnelResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.CreateIpTunnelResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9289,7 +9278,7 @@ const char* CreateIpTunnelResponse::_InternalParse(const char* ptr, ::PROTOBUF_N
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Error error = 2;
+      // .tunneloffload.v2.Error error = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
@@ -9322,7 +9311,7 @@ failure:
 
 uint8_t* CreateIpTunnelResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.CreateIpTunnelResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -9332,7 +9321,7 @@ uint8_t* CreateIpTunnelResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_tunnel_id(), target);
   }
 
-  // .tunneloffload.v1alpha1.Error error = 2;
+  // .tunneloffload.v2.Error error = 2;
   if (this->_internal_has_error()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -9344,19 +9333,19 @@ uint8_t* CreateIpTunnelResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.CreateIpTunnelResponse)
   return target;
 }
 
 size_t CreateIpTunnelResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.CreateIpTunnelResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.Error error = 2;
+  // .tunneloffload.v2.Error error = 2;
   if (this->_internal_has_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -9385,13 +9374,13 @@ void CreateIpTunnelResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void CreateIpTunnelResponse::MergeFrom(const CreateIpTunnelResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.CreateIpTunnelResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_error()) {
-    _internal_mutable_error()->::tunneloffload::v1alpha1::Error::MergeFrom(from._internal_error());
+    _internal_mutable_error()->::tunneloffload::v2::Error::MergeFrom(from._internal_error());
   }
   if (from._internal_tunnel_id() != 0) {
     _internal_set_tunnel_id(from._internal_tunnel_id());
@@ -9400,7 +9389,7 @@ void CreateIpTunnelResponse::MergeFrom(const CreateIpTunnelResponse& from) {
 }
 
 void CreateIpTunnelResponse::CopyFrom(const CreateIpTunnelResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.CreateIpTunnelResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.CreateIpTunnelResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9431,10 +9420,10 @@ void CreateIpTunnelResponse::InternalSwap(CreateIpTunnelResponse* other) {
 
 class Error::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::TunnelAdditionError& error_message(const Error* msg);
+  static const ::tunneloffload::v2::TunnelAdditionError& error_message(const Error* msg);
 };
 
-const ::tunneloffload::v1alpha1::TunnelAdditionError&
+const ::tunneloffload::v2::TunnelAdditionError&
 Error::_Internal::error_message(const Error* msg) {
   return *msg->error_message_;
 }
@@ -9445,7 +9434,7 @@ Error::Error(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.Error)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.Error)
 }
 Error::Error(const Error& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -9459,11 +9448,11 @@ Error::Error(const Error& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_error_message()) {
-    error_message_ = new ::tunneloffload::v1alpha1::TunnelAdditionError(*from.error_message_);
+    error_message_ = new ::tunneloffload::v2::TunnelAdditionError(*from.error_message_);
   } else {
     error_message_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.Error)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.Error)
 }
 
 inline void Error::SharedCtor() {
@@ -9475,7 +9464,7 @@ error_message_ = nullptr;
 }
 
 Error::~Error() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.Error)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.Error)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -9498,7 +9487,7 @@ void Error::SetCachedSize(int size) const {
 }
 
 void Error::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.Error)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.Error)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9517,7 +9506,7 @@ const char* Error::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .tunneloffload.v1alpha1.TunnelAdditionError error_message = 1;
+      // .tunneloffload.v2.TunnelAdditionError error_message = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_error_message(), ptr);
@@ -9530,7 +9519,7 @@ const char* Error::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_error_string();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "tunneloffload.v1alpha1.Error.error_string"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "tunneloffload.v2.Error.error_string"));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9560,11 +9549,11 @@ failure:
 
 uint8_t* Error::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.Error)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.Error)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.TunnelAdditionError error_message = 1;
+  // .tunneloffload.v2.TunnelAdditionError error_message = 1;
   if (this->_internal_has_error_message()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -9577,7 +9566,7 @@ uint8_t* Error::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_error_string().data(), static_cast<int>(this->_internal_error_string().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "tunneloffload.v1alpha1.Error.error_string");
+      "tunneloffload.v2.Error.error_string");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_error_string(), target);
   }
@@ -9586,12 +9575,12 @@ uint8_t* Error::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.Error)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.Error)
   return target;
 }
 
 size_t Error::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.Error)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.Error)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -9605,7 +9594,7 @@ size_t Error::ByteSizeLong() const {
         this->_internal_error_string());
   }
 
-  // .tunneloffload.v1alpha1.TunnelAdditionError error_message = 1;
+  // .tunneloffload.v2.TunnelAdditionError error_message = 1;
   if (this->_internal_has_error_message()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -9629,7 +9618,7 @@ void Error::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void Error::MergeFrom(const Error& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.Error)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.Error)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -9638,13 +9627,13 @@ void Error::MergeFrom(const Error& from) {
     _internal_set_error_string(from._internal_error_string());
   }
   if (from._internal_has_error_message()) {
-    _internal_mutable_error_message()->::tunneloffload::v1alpha1::TunnelAdditionError::MergeFrom(from._internal_error_message());
+    _internal_mutable_error_message()->::tunneloffload::v2::TunnelAdditionError::MergeFrom(from._internal_error_message());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Error::CopyFrom(const Error& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.Error)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.Error)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9687,20 +9676,20 @@ IpTunnelResponses::IpTunnelResponses(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IpTunnelResponses)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IpTunnelResponses)
 }
 IpTunnelResponses::IpTunnelResponses(const IpTunnelResponses& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       responses_(from.responses_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IpTunnelResponses)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IpTunnelResponses)
 }
 
 inline void IpTunnelResponses::SharedCtor() {
 }
 
 IpTunnelResponses::~IpTunnelResponses() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IpTunnelResponses)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IpTunnelResponses)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -9721,7 +9710,7 @@ void IpTunnelResponses::SetCachedSize(int size) const {
 }
 
 void IpTunnelResponses::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IpTunnelResponses)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IpTunnelResponses)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9736,7 +9725,7 @@ const char* IpTunnelResponses::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .tunneloffload.v1alpha1.IpTunnelResponse responses = 1;
+      // repeated .tunneloffload.v2.IpTunnelResponse responses = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -9774,11 +9763,11 @@ failure:
 
 uint8_t* IpTunnelResponses::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IpTunnelResponses)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IpTunnelResponses)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IpTunnelResponse responses = 1;
+  // repeated .tunneloffload.v2.IpTunnelResponse responses = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_responses_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -9790,19 +9779,19 @@ uint8_t* IpTunnelResponses::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IpTunnelResponses)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IpTunnelResponses)
   return target;
 }
 
 size_t IpTunnelResponses::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IpTunnelResponses)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IpTunnelResponses)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IpTunnelResponse responses = 1;
+  // repeated .tunneloffload.v2.IpTunnelResponse responses = 1;
   total_size += 1UL * this->_internal_responses_size();
   for (const auto& msg : this->responses_) {
     total_size +=
@@ -9826,7 +9815,7 @@ void IpTunnelResponses::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IpTunnelResponses::MergeFrom(const IpTunnelResponses& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IpTunnelResponses)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IpTunnelResponses)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -9836,7 +9825,7 @@ void IpTunnelResponses::MergeFrom(const IpTunnelResponses& from) {
 }
 
 void IpTunnelResponses::CopyFrom(const IpTunnelResponses& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IpTunnelResponses)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IpTunnelResponses)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9862,20 +9851,20 @@ void IpTunnelResponses::InternalSwap(IpTunnelResponses* other) {
 
 class IpTunnelResponse::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::IpTunnelRequest& ip_tunnel(const IpTunnelResponse* msg);
-  static const ::tunneloffload::v1alpha1::Counters& tunnel_counters(const IpTunnelResponse* msg);
-  static const ::tunneloffload::v1alpha1::Error& error(const IpTunnelResponse* msg);
+  static const ::tunneloffload::v2::IpTunnelRequest& ip_tunnel(const IpTunnelResponse* msg);
+  static const ::tunneloffload::v2::Counters& tunnel_counters(const IpTunnelResponse* msg);
+  static const ::tunneloffload::v2::Error& error(const IpTunnelResponse* msg);
 };
 
-const ::tunneloffload::v1alpha1::IpTunnelRequest&
+const ::tunneloffload::v2::IpTunnelRequest&
 IpTunnelResponse::_Internal::ip_tunnel(const IpTunnelResponse* msg) {
   return *msg->ip_tunnel_;
 }
-const ::tunneloffload::v1alpha1::Counters&
+const ::tunneloffload::v2::Counters&
 IpTunnelResponse::_Internal::tunnel_counters(const IpTunnelResponse* msg) {
   return *msg->tunnel_counters_;
 }
-const ::tunneloffload::v1alpha1::Error&
+const ::tunneloffload::v2::Error&
 IpTunnelResponse::_Internal::error(const IpTunnelResponse* msg) {
   return *msg->error_;
 }
@@ -9886,28 +9875,28 @@ IpTunnelResponse::IpTunnelResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IpTunnelResponse)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IpTunnelResponse)
 }
 IpTunnelResponse::IpTunnelResponse(const IpTunnelResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_ip_tunnel()) {
-    ip_tunnel_ = new ::tunneloffload::v1alpha1::IpTunnelRequest(*from.ip_tunnel_);
+    ip_tunnel_ = new ::tunneloffload::v2::IpTunnelRequest(*from.ip_tunnel_);
   } else {
     ip_tunnel_ = nullptr;
   }
   if (from._internal_has_tunnel_counters()) {
-    tunnel_counters_ = new ::tunneloffload::v1alpha1::Counters(*from.tunnel_counters_);
+    tunnel_counters_ = new ::tunneloffload::v2::Counters(*from.tunnel_counters_);
   } else {
     tunnel_counters_ = nullptr;
   }
   if (from._internal_has_error()) {
-    error_ = new ::tunneloffload::v1alpha1::Error(*from.error_);
+    error_ = new ::tunneloffload::v2::Error(*from.error_);
   } else {
     error_ = nullptr;
   }
   tunnel_id_ = from.tunnel_id_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IpTunnelResponse)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IpTunnelResponse)
 }
 
 inline void IpTunnelResponse::SharedCtor() {
@@ -9918,7 +9907,7 @@ inline void IpTunnelResponse::SharedCtor() {
 }
 
 IpTunnelResponse::~IpTunnelResponse() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IpTunnelResponse)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IpTunnelResponse)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -9942,7 +9931,7 @@ void IpTunnelResponse::SetCachedSize(int size) const {
 }
 
 void IpTunnelResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IpTunnelResponse)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IpTunnelResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9977,7 +9966,7 @@ const char* IpTunnelResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.IpTunnelRequest ip_tunnel = 2;
+      // .tunneloffload.v2.IpTunnelRequest ip_tunnel = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ip_tunnel(), ptr);
@@ -9985,7 +9974,7 @@ const char* IpTunnelResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Counters tunnel_counters = 3;
+      // .tunneloffload.v2.Counters tunnel_counters = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_tunnel_counters(), ptr);
@@ -9993,7 +9982,7 @@ const char* IpTunnelResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Error error = 4;
+      // .tunneloffload.v2.Error error = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
@@ -10026,7 +10015,7 @@ failure:
 
 uint8_t* IpTunnelResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IpTunnelResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IpTunnelResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -10036,7 +10025,7 @@ uint8_t* IpTunnelResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_tunnel_id(), target);
   }
 
-  // .tunneloffload.v1alpha1.IpTunnelRequest ip_tunnel = 2;
+  // .tunneloffload.v2.IpTunnelRequest ip_tunnel = 2;
   if (this->_internal_has_ip_tunnel()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -10044,7 +10033,7 @@ uint8_t* IpTunnelResponse::_InternalSerialize(
         2, _Internal::ip_tunnel(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.Counters tunnel_counters = 3;
+  // .tunneloffload.v2.Counters tunnel_counters = 3;
   if (this->_internal_has_tunnel_counters()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -10052,7 +10041,7 @@ uint8_t* IpTunnelResponse::_InternalSerialize(
         3, _Internal::tunnel_counters(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.Error error = 4;
+  // .tunneloffload.v2.Error error = 4;
   if (this->_internal_has_error()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -10064,33 +10053,33 @@ uint8_t* IpTunnelResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IpTunnelResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IpTunnelResponse)
   return target;
 }
 
 size_t IpTunnelResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IpTunnelResponse)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IpTunnelResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.IpTunnelRequest ip_tunnel = 2;
+  // .tunneloffload.v2.IpTunnelRequest ip_tunnel = 2;
   if (this->_internal_has_ip_tunnel()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *ip_tunnel_);
   }
 
-  // .tunneloffload.v1alpha1.Counters tunnel_counters = 3;
+  // .tunneloffload.v2.Counters tunnel_counters = 3;
   if (this->_internal_has_tunnel_counters()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *tunnel_counters_);
   }
 
-  // .tunneloffload.v1alpha1.Error error = 4;
+  // .tunneloffload.v2.Error error = 4;
   if (this->_internal_has_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -10119,19 +10108,19 @@ void IpTunnelResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IpTunnelResponse::MergeFrom(const IpTunnelResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IpTunnelResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IpTunnelResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_ip_tunnel()) {
-    _internal_mutable_ip_tunnel()->::tunneloffload::v1alpha1::IpTunnelRequest::MergeFrom(from._internal_ip_tunnel());
+    _internal_mutable_ip_tunnel()->::tunneloffload::v2::IpTunnelRequest::MergeFrom(from._internal_ip_tunnel());
   }
   if (from._internal_has_tunnel_counters()) {
-    _internal_mutable_tunnel_counters()->::tunneloffload::v1alpha1::Counters::MergeFrom(from._internal_tunnel_counters());
+    _internal_mutable_tunnel_counters()->::tunneloffload::v2::Counters::MergeFrom(from._internal_tunnel_counters());
   }
   if (from._internal_has_error()) {
-    _internal_mutable_error()->::tunneloffload::v1alpha1::Error::MergeFrom(from._internal_error());
+    _internal_mutable_error()->::tunneloffload::v2::Error::MergeFrom(from._internal_error());
   }
   if (from._internal_tunnel_id() != 0) {
     _internal_set_tunnel_id(from._internal_tunnel_id());
@@ -10140,7 +10129,7 @@ void IpTunnelResponse::MergeFrom(const IpTunnelResponse& from) {
 }
 
 void IpTunnelResponse::CopyFrom(const IpTunnelResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IpTunnelResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IpTunnelResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10181,20 +10170,20 @@ IpTunnelStatsResponses::IpTunnelStatsResponses(::PROTOBUF_NAMESPACE_ID::Arena* a
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IpTunnelStatsResponses)
 }
 IpTunnelStatsResponses::IpTunnelStatsResponses(const IpTunnelStatsResponses& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       responses_(from.responses_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IpTunnelStatsResponses)
 }
 
 inline void IpTunnelStatsResponses::SharedCtor() {
 }
 
 IpTunnelStatsResponses::~IpTunnelStatsResponses() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IpTunnelStatsResponses)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -10215,7 +10204,7 @@ void IpTunnelStatsResponses::SetCachedSize(int size) const {
 }
 
 void IpTunnelStatsResponses::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IpTunnelStatsResponses)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10230,7 +10219,7 @@ const char* IpTunnelStatsResponses::_InternalParse(const char* ptr, ::PROTOBUF_N
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .tunneloffload.v1alpha1.IpTunnelStatsResponse responses = 1;
+      // repeated .tunneloffload.v2.IpTunnelStatsResponse responses = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -10268,11 +10257,11 @@ failure:
 
 uint8_t* IpTunnelStatsResponses::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IpTunnelStatsResponses)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IpTunnelStatsResponse responses = 1;
+  // repeated .tunneloffload.v2.IpTunnelStatsResponse responses = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_responses_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -10284,19 +10273,19 @@ uint8_t* IpTunnelStatsResponses::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IpTunnelStatsResponses)
   return target;
 }
 
 size_t IpTunnelStatsResponses::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IpTunnelStatsResponses)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .tunneloffload.v1alpha1.IpTunnelStatsResponse responses = 1;
+  // repeated .tunneloffload.v2.IpTunnelStatsResponse responses = 1;
   total_size += 1UL * this->_internal_responses_size();
   for (const auto& msg : this->responses_) {
     total_size +=
@@ -10320,7 +10309,7 @@ void IpTunnelStatsResponses::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IpTunnelStatsResponses::MergeFrom(const IpTunnelStatsResponses& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IpTunnelStatsResponses)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -10330,7 +10319,7 @@ void IpTunnelStatsResponses::MergeFrom(const IpTunnelStatsResponses& from) {
 }
 
 void IpTunnelStatsResponses::CopyFrom(const IpTunnelStatsResponses& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IpTunnelStatsResponses)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IpTunnelStatsResponses)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10356,15 +10345,15 @@ void IpTunnelStatsResponses::InternalSwap(IpTunnelStatsResponses* other) {
 
 class IpTunnelStatsResponse::_Internal {
  public:
-  static const ::tunneloffload::v1alpha1::Counters& tunnel_counters(const IpTunnelStatsResponse* msg);
-  static const ::tunneloffload::v1alpha1::Error& error(const IpTunnelStatsResponse* msg);
+  static const ::tunneloffload::v2::Counters& tunnel_counters(const IpTunnelStatsResponse* msg);
+  static const ::tunneloffload::v2::Error& error(const IpTunnelStatsResponse* msg);
 };
 
-const ::tunneloffload::v1alpha1::Counters&
+const ::tunneloffload::v2::Counters&
 IpTunnelStatsResponse::_Internal::tunnel_counters(const IpTunnelStatsResponse* msg) {
   return *msg->tunnel_counters_;
 }
-const ::tunneloffload::v1alpha1::Error&
+const ::tunneloffload::v2::Error&
 IpTunnelStatsResponse::_Internal::error(const IpTunnelStatsResponse* msg) {
   return *msg->error_;
 }
@@ -10375,23 +10364,23 @@ IpTunnelStatsResponse::IpTunnelStatsResponse(::PROTOBUF_NAMESPACE_ID::Arena* are
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.IpTunnelStatsResponse)
 }
 IpTunnelStatsResponse::IpTunnelStatsResponse(const IpTunnelStatsResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_tunnel_counters()) {
-    tunnel_counters_ = new ::tunneloffload::v1alpha1::Counters(*from.tunnel_counters_);
+    tunnel_counters_ = new ::tunneloffload::v2::Counters(*from.tunnel_counters_);
   } else {
     tunnel_counters_ = nullptr;
   }
   if (from._internal_has_error()) {
-    error_ = new ::tunneloffload::v1alpha1::Error(*from.error_);
+    error_ = new ::tunneloffload::v2::Error(*from.error_);
   } else {
     error_ = nullptr;
   }
   tunnel_id_ = from.tunnel_id_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.IpTunnelStatsResponse)
 }
 
 inline void IpTunnelStatsResponse::SharedCtor() {
@@ -10402,7 +10391,7 @@ inline void IpTunnelStatsResponse::SharedCtor() {
 }
 
 IpTunnelStatsResponse::~IpTunnelStatsResponse() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.IpTunnelStatsResponse)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -10425,7 +10414,7 @@ void IpTunnelStatsResponse::SetCachedSize(int size) const {
 }
 
 void IpTunnelStatsResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.IpTunnelStatsResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10456,7 +10445,7 @@ const char* IpTunnelStatsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NA
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Counters tunnel_counters = 2;
+      // .tunneloffload.v2.Counters tunnel_counters = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_tunnel_counters(), ptr);
@@ -10464,7 +10453,7 @@ const char* IpTunnelStatsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NA
         } else
           goto handle_unusual;
         continue;
-      // .tunneloffload.v1alpha1.Error error = 3;
+      // .tunneloffload.v2.Error error = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_error(), ptr);
@@ -10497,7 +10486,7 @@ failure:
 
 uint8_t* IpTunnelStatsResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.IpTunnelStatsResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -10507,7 +10496,7 @@ uint8_t* IpTunnelStatsResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_tunnel_id(), target);
   }
 
-  // .tunneloffload.v1alpha1.Counters tunnel_counters = 2;
+  // .tunneloffload.v2.Counters tunnel_counters = 2;
   if (this->_internal_has_tunnel_counters()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -10515,7 +10504,7 @@ uint8_t* IpTunnelStatsResponse::_InternalSerialize(
         2, _Internal::tunnel_counters(this), target, stream);
   }
 
-  // .tunneloffload.v1alpha1.Error error = 3;
+  // .tunneloffload.v2.Error error = 3;
   if (this->_internal_has_error()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -10527,26 +10516,26 @@ uint8_t* IpTunnelStatsResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.IpTunnelStatsResponse)
   return target;
 }
 
 size_t IpTunnelStatsResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.IpTunnelStatsResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .tunneloffload.v1alpha1.Counters tunnel_counters = 2;
+  // .tunneloffload.v2.Counters tunnel_counters = 2;
   if (this->_internal_has_tunnel_counters()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *tunnel_counters_);
   }
 
-  // .tunneloffload.v1alpha1.Error error = 3;
+  // .tunneloffload.v2.Error error = 3;
   if (this->_internal_has_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -10575,16 +10564,16 @@ void IpTunnelStatsResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void IpTunnelStatsResponse::MergeFrom(const IpTunnelStatsResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.IpTunnelStatsResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_tunnel_counters()) {
-    _internal_mutable_tunnel_counters()->::tunneloffload::v1alpha1::Counters::MergeFrom(from._internal_tunnel_counters());
+    _internal_mutable_tunnel_counters()->::tunneloffload::v2::Counters::MergeFrom(from._internal_tunnel_counters());
   }
   if (from._internal_has_error()) {
-    _internal_mutable_error()->::tunneloffload::v1alpha1::Error::MergeFrom(from._internal_error());
+    _internal_mutable_error()->::tunneloffload::v2::Error::MergeFrom(from._internal_error());
   }
   if (from._internal_tunnel_id() != 0) {
     _internal_set_tunnel_id(from._internal_tunnel_id());
@@ -10593,7 +10582,7 @@ void IpTunnelStatsResponse::MergeFrom(const IpTunnelStatsResponse& from) {
 }
 
 void IpTunnelStatsResponse::CopyFrom(const IpTunnelStatsResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.IpTunnelStatsResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.IpTunnelStatsResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10633,13 +10622,13 @@ TunnelRequestArgs::TunnelRequestArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:tunneloffload.v1alpha1.TunnelRequestArgs)
+  // @@protoc_insertion_point(arena_constructor:tunneloffload.v2.TunnelRequestArgs)
 }
 TunnelRequestArgs::TunnelRequestArgs(const TunnelRequestArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tunnels_per_request_ = from.tunnels_per_request_;
-  // @@protoc_insertion_point(copy_constructor:tunneloffload.v1alpha1.TunnelRequestArgs)
+  // @@protoc_insertion_point(copy_constructor:tunneloffload.v2.TunnelRequestArgs)
 }
 
 inline void TunnelRequestArgs::SharedCtor() {
@@ -10647,7 +10636,7 @@ tunnels_per_request_ = 0u;
 }
 
 TunnelRequestArgs::~TunnelRequestArgs() {
-  // @@protoc_insertion_point(destructor:tunneloffload.v1alpha1.TunnelRequestArgs)
+  // @@protoc_insertion_point(destructor:tunneloffload.v2.TunnelRequestArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -10668,7 +10657,7 @@ void TunnelRequestArgs::SetCachedSize(int size) const {
 }
 
 void TunnelRequestArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:tunneloffload.v1alpha1.TunnelRequestArgs)
+// @@protoc_insertion_point(message_clear_start:tunneloffload.v2.TunnelRequestArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10716,7 +10705,7 @@ failure:
 
 uint8_t* TunnelRequestArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v1alpha1.TunnelRequestArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:tunneloffload.v2.TunnelRequestArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -10730,12 +10719,12 @@ uint8_t* TunnelRequestArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v1alpha1.TunnelRequestArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:tunneloffload.v2.TunnelRequestArgs)
   return target;
 }
 
 size_t TunnelRequestArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v1alpha1.TunnelRequestArgs)
+// @@protoc_insertion_point(message_byte_size_start:tunneloffload.v2.TunnelRequestArgs)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -10764,7 +10753,7 @@ void TunnelRequestArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void TunnelRequestArgs::MergeFrom(const TunnelRequestArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v1alpha1.TunnelRequestArgs)
+// @@protoc_insertion_point(class_specific_merge_from_start:tunneloffload.v2.TunnelRequestArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -10776,7 +10765,7 @@ void TunnelRequestArgs::MergeFrom(const TunnelRequestArgs& from) {
 }
 
 void TunnelRequestArgs::CopyFrom(const TunnelRequestArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v1alpha1.TunnelRequestArgs)
+// @@protoc_insertion_point(class_specific_copy_from_start:tunneloffload.v2.TunnelRequestArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10799,113 +10788,113 @@ void TunnelRequestArgs::InternalSwap(TunnelRequestArgs* other) {
 }
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace v1alpha1
+}  // namespace v2
 }  // namespace tunneloffload
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CapabilityRequest* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CapabilityRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CapabilityRequest >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CapabilityRequest* Arena::CreateMaybeMessage< ::tunneloffload::v2::CapabilityRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CapabilityRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CapabilityResponse_MatchCapabilities >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CapabilityResponse_MatchCapabilities* Arena::CreateMaybeMessage< ::tunneloffload::v2::CapabilityResponse_MatchCapabilities >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CapabilityResponse_MatchCapabilities >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CapabilityResponse_IPSecCapabilities >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CapabilityResponse_IPSecCapabilities* Arena::CreateMaybeMessage< ::tunneloffload::v2::CapabilityResponse_IPSecCapabilities >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CapabilityResponse_IPSecCapabilities >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CapabilityResponse_GeneveCapabilities >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CapabilityResponse_GeneveCapabilities* Arena::CreateMaybeMessage< ::tunneloffload::v2::CapabilityResponse_GeneveCapabilities >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CapabilityResponse_GeneveCapabilities >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CapabilityResponse* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CapabilityResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CapabilityResponse >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CapabilityResponse* Arena::CreateMaybeMessage< ::tunneloffload::v2::CapabilityResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CapabilityResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::TunnelAdditionError* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::TunnelAdditionError >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::TunnelAdditionError >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::TunnelAdditionError* Arena::CreateMaybeMessage< ::tunneloffload::v2::TunnelAdditionError >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::TunnelAdditionError >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::MatchCriteria_IPSecMatch >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::MatchCriteria_IPSecMatch* Arena::CreateMaybeMessage< ::tunneloffload::v2::MatchCriteria_IPSecMatch >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::MatchCriteria_IPSecMatch >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::MatchCriteria_GeneveMatch >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::MatchCriteria_GeneveMatch* Arena::CreateMaybeMessage< ::tunneloffload::v2::MatchCriteria_GeneveMatch >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::MatchCriteria_GeneveMatch >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::MatchCriteria_VXLanMatch >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::MatchCriteria_VXLanMatch* Arena::CreateMaybeMessage< ::tunneloffload::v2::MatchCriteria_VXLanMatch >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::MatchCriteria_VXLanMatch >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::MatchCriteria* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::MatchCriteria >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::MatchCriteria >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::MatchCriteria* Arena::CreateMaybeMessage< ::tunneloffload::v2::MatchCriteria >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::MatchCriteria >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IpTunnelRequest* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IpTunnelRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IpTunnelRequest >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IpTunnelRequest* Arena::CreateMaybeMessage< ::tunneloffload::v2::IpTunnelRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IpTunnelRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::Geneve* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::Geneve >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::Geneve >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::Geneve* Arena::CreateMaybeMessage< ::tunneloffload::v2::Geneve >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::Geneve >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::GeneveOption* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::GeneveOption >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::GeneveOption >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::GeneveOption* Arena::CreateMaybeMessage< ::tunneloffload::v2::GeneveOption >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::GeneveOption >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::GeneveEncap* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::GeneveEncap >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::GeneveEncap >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::GeneveEncap* Arena::CreateMaybeMessage< ::tunneloffload::v2::GeneveEncap >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::GeneveEncap >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::GeneveDecap* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::GeneveDecap >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::GeneveDecap >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::GeneveDecap* Arena::CreateMaybeMessage< ::tunneloffload::v2::GeneveDecap >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::GeneveDecap >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::MacPair* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::MacPair >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::MacPair >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::MacPair* Arena::CreateMaybeMessage< ::tunneloffload::v2::MacPair >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::MacPair >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPV4Pair* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPV4Pair >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPV4Pair >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPV4Pair* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPV4Pair >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPV4Pair >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPV6Pair* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPV6Pair >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPV6Pair >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPV6Pair* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPV6Pair >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPV6Pair >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPV4Match* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPV4Match >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPV4Match >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPV4Match* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPV4Match >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPV4Match >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPV6Match* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPV6Match >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPV6Match >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPV6Match* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPV6Match >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPV6Match >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::Nat* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::Nat >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::Nat >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::Nat* Arena::CreateMaybeMessage< ::tunneloffload::v2::Nat >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::Nat >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPSecEnc* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPSecEnc >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPSecEnc >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPSecEnc* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPSecEnc >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPSecEnc >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPSecDec* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPSecDec >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPSecDec >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPSecDec* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPSecDec >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPSecDec >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPSecSAParams* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPSecSAParams >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPSecSAParams >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPSecSAParams* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPSecSAParams >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPSecSAParams >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IPSecTunnel* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IPSecTunnel >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IPSecTunnel >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IPSecTunnel* Arena::CreateMaybeMessage< ::tunneloffload::v2::IPSecTunnel >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IPSecTunnel >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::TunnelId* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::TunnelId >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::TunnelId >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::TunnelId* Arena::CreateMaybeMessage< ::tunneloffload::v2::TunnelId >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::TunnelId >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::Counters* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::Counters >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::Counters >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::Counters* Arena::CreateMaybeMessage< ::tunneloffload::v2::Counters >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::Counters >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CreateIpTunnelResponses* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CreateIpTunnelResponses >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CreateIpTunnelResponses >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CreateIpTunnelResponses* Arena::CreateMaybeMessage< ::tunneloffload::v2::CreateIpTunnelResponses >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CreateIpTunnelResponses >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::CreateIpTunnelResponse* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::CreateIpTunnelResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::CreateIpTunnelResponse >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::CreateIpTunnelResponse* Arena::CreateMaybeMessage< ::tunneloffload::v2::CreateIpTunnelResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::CreateIpTunnelResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::Error* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::Error >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::Error >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::Error* Arena::CreateMaybeMessage< ::tunneloffload::v2::Error >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::Error >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IpTunnelResponses* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IpTunnelResponses >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IpTunnelResponses >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IpTunnelResponses* Arena::CreateMaybeMessage< ::tunneloffload::v2::IpTunnelResponses >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IpTunnelResponses >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IpTunnelResponse* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IpTunnelResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IpTunnelResponse >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IpTunnelResponse* Arena::CreateMaybeMessage< ::tunneloffload::v2::IpTunnelResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IpTunnelResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IpTunnelStatsResponses* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IpTunnelStatsResponses >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IpTunnelStatsResponses >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IpTunnelStatsResponses* Arena::CreateMaybeMessage< ::tunneloffload::v2::IpTunnelStatsResponses >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IpTunnelStatsResponses >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::IpTunnelStatsResponse* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::IpTunnelStatsResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::IpTunnelStatsResponse >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::IpTunnelStatsResponse* Arena::CreateMaybeMessage< ::tunneloffload::v2::IpTunnelStatsResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::IpTunnelStatsResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::tunneloffload::v1alpha1::TunnelRequestArgs* Arena::CreateMaybeMessage< ::tunneloffload::v1alpha1::TunnelRequestArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::tunneloffload::v1alpha1::TunnelRequestArgs >(arena);
+template<> PROTOBUF_NOINLINE ::tunneloffload::v2::TunnelRequestArgs* Arena::CreateMaybeMessage< ::tunneloffload::v2::TunnelRequestArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::tunneloffload::v2::TunnelRequestArgs >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

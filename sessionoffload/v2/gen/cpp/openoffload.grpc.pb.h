@@ -44,7 +44,7 @@
 #include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace openoffload {
-namespace v1 {
+namespace v2 {
 
 //
 // The session table was combined with the statistices service
@@ -53,7 +53,7 @@ namespace v1 {
 class SessionTable final {
  public:
   static constexpr char const* service_full_name() {
-    return "openoffload.v1.SessionTable";
+    return "openoffload.v2.SessionTable";
   }
   class StubInterface {
    public:
@@ -62,54 +62,54 @@ class SessionTable final {
     // Adds a session
     // This was changed in v1alpha4 to be a streaming API, for performance
     // reasons.
-    std::unique_ptr< ::grpc::ClientWriterInterface< ::openoffload::v1::SessionRequest>> AddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response) {
-      return std::unique_ptr< ::grpc::ClientWriterInterface< ::openoffload::v1::SessionRequest>>(AddSessionRaw(context, response));
+    std::unique_ptr< ::grpc::ClientWriterInterface< ::openoffload::v2::SessionRequest>> AddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response) {
+      return std::unique_ptr< ::grpc::ClientWriterInterface< ::openoffload::v2::SessionRequest>>(AddSessionRaw(context, response));
     }
-    std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v1::SessionRequest>> AsyncAddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v1::SessionRequest>>(AsyncAddSessionRaw(context, response, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v2::SessionRequest>> AsyncAddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v2::SessionRequest>>(AsyncAddSessionRaw(context, response, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v1::SessionRequest>> PrepareAsyncAddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v1::SessionRequest>>(PrepareAsyncAddSessionRaw(context, response, cq));
+    std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v2::SessionRequest>> PrepareAsyncAddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncWriterInterface< ::openoffload::v2::SessionRequest>>(PrepareAsyncAddSessionRaw(context, response, cq));
     }
     //
     // Obtains the session
-    virtual ::grpc::Status GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::openoffload::v1::SessionResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>> AsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>>(AsyncGetSessionRaw(context, request, cq));
+    virtual ::grpc::Status GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::openoffload::v2::SessionResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>> AsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>>(AsyncGetSessionRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>> PrepareAsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>>(PrepareAsyncGetSessionRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>> PrepareAsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>>(PrepareAsyncGetSessionRaw(context, request, cq));
     }
     //
     // Delete a session
-    virtual ::grpc::Status DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::openoffload::v1::SessionResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>> AsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>>(AsyncDeleteSessionRaw(context, request, cq));
+    virtual ::grpc::Status DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::openoffload::v2::SessionResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>> AsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>>(AsyncDeleteSessionRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>> PrepareAsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>>(PrepareAsyncDeleteSessionRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>> PrepareAsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>>(PrepareAsyncDeleteSessionRaw(context, request, cq));
     }
     //
     // Stream back a specific session or all current sessions
     // To stream a single session, pass SessionId as zero
-    virtual ::grpc::Status GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::openoffload::v1::SessionResponses* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponses>> AsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponses>>(AsyncGetAllSessionsRaw(context, request, cq));
+    virtual ::grpc::Status GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::openoffload::v2::SessionResponses* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponses>> AsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponses>>(AsyncGetAllSessionsRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponses>> PrepareAsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponses>>(PrepareAsyncGetAllSessionsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponses>> PrepareAsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponses>>(PrepareAsyncGetAllSessionsRaw(context, request, cq));
     }
     //
     // statistics as a outgoing session from the WB to Applications ?
     // grpc seems to need a request input streamId is a placeholder
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::openoffload::v1::SessionResponse>> GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::openoffload::v1::SessionResponse>>(GetClosedSessionsRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::openoffload::v2::SessionResponse>> GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::openoffload::v2::SessionResponse>>(GetClosedSessionsRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v1::SessionResponse>> AsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v1::SessionResponse>>(AsyncGetClosedSessionsRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v2::SessionResponse>> AsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v2::SessionResponse>>(AsyncGetClosedSessionsRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v1::SessionResponse>> PrepareAsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v1::SessionResponse>>(PrepareAsyncGetClosedSessionsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v2::SessionResponse>> PrepareAsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::openoffload::v2::SessionResponse>>(PrepareAsyncGetClosedSessionsRaw(context, request, cq));
     }
     class async_interface {
      public:
@@ -118,95 +118,95 @@ class SessionTable final {
       // Adds a session
       // This was changed in v1alpha4 to be a streaming API, for performance
       // reasons.
-      virtual void AddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::ClientWriteReactor< ::openoffload::v1::SessionRequest>* reactor) = 0;
+      virtual void AddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::ClientWriteReactor< ::openoffload::v2::SessionRequest>* reactor) = 0;
       //
       // Obtains the session
-      virtual void GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       //
       // Delete a session
-      virtual void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       //
       // Stream back a specific session or all current sessions
       // To stream a single session, pass SessionId as zero
-      virtual void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       //
       // statistics as a outgoing session from the WB to Applications ?
       // grpc seems to need a request input streamId is a placeholder
-      virtual void GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::grpc::ClientReadReactor< ::openoffload::v1::SessionResponse>* reactor) = 0;
+      virtual void GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::grpc::ClientReadReactor< ::openoffload::v2::SessionResponse>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientWriterInterface< ::openoffload::v1::SessionRequest>* AddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response) = 0;
-    virtual ::grpc::ClientAsyncWriterInterface< ::openoffload::v1::SessionRequest>* AsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncWriterInterface< ::openoffload::v1::SessionRequest>* PrepareAsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>* AsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>* PrepareAsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>* AsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponse>* PrepareAsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponses>* AsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v1::SessionResponses>* PrepareAsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::openoffload::v1::SessionResponse>* GetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::openoffload::v1::SessionResponse>* AsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::openoffload::v1::SessionResponse>* PrepareAsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientWriterInterface< ::openoffload::v2::SessionRequest>* AddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response) = 0;
+    virtual ::grpc::ClientAsyncWriterInterface< ::openoffload::v2::SessionRequest>* AsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncWriterInterface< ::openoffload::v2::SessionRequest>* PrepareAsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>* AsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>* PrepareAsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>* AsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponse>* PrepareAsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponses>* AsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::openoffload::v2::SessionResponses>* PrepareAsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::openoffload::v2::SessionResponse>* GetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::openoffload::v2::SessionResponse>* AsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::openoffload::v2::SessionResponse>* PrepareAsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    std::unique_ptr< ::grpc::ClientWriter< ::openoffload::v1::SessionRequest>> AddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response) {
-      return std::unique_ptr< ::grpc::ClientWriter< ::openoffload::v1::SessionRequest>>(AddSessionRaw(context, response));
+    std::unique_ptr< ::grpc::ClientWriter< ::openoffload::v2::SessionRequest>> AddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response) {
+      return std::unique_ptr< ::grpc::ClientWriter< ::openoffload::v2::SessionRequest>>(AddSessionRaw(context, response));
     }
-    std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>> AsyncAddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>>(AsyncAddSessionRaw(context, response, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>> AsyncAddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>>(AsyncAddSessionRaw(context, response, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>> PrepareAsyncAddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>>(PrepareAsyncAddSessionRaw(context, response, cq));
+    std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>> PrepareAsyncAddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>>(PrepareAsyncAddSessionRaw(context, response, cq));
     }
-    ::grpc::Status GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::openoffload::v1::SessionResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>> AsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>>(AsyncGetSessionRaw(context, request, cq));
+    ::grpc::Status GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::openoffload::v2::SessionResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>> AsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>>(AsyncGetSessionRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>> PrepareAsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>>(PrepareAsyncGetSessionRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>> PrepareAsyncGetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>>(PrepareAsyncGetSessionRaw(context, request, cq));
     }
-    ::grpc::Status DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::openoffload::v1::SessionResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>> AsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>>(AsyncDeleteSessionRaw(context, request, cq));
+    ::grpc::Status DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::openoffload::v2::SessionResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>> AsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>>(AsyncDeleteSessionRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>> PrepareAsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>>(PrepareAsyncDeleteSessionRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>> PrepareAsyncDeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>>(PrepareAsyncDeleteSessionRaw(context, request, cq));
     }
-    ::grpc::Status GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::openoffload::v1::SessionResponses* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>> AsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>>(AsyncGetAllSessionsRaw(context, request, cq));
+    ::grpc::Status GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::openoffload::v2::SessionResponses* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>> AsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>>(AsyncGetAllSessionsRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>> PrepareAsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>>(PrepareAsyncGetAllSessionsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>> PrepareAsyncGetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>>(PrepareAsyncGetAllSessionsRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::openoffload::v1::SessionResponse>> GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::openoffload::v1::SessionResponse>>(GetClosedSessionsRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::openoffload::v2::SessionResponse>> GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::openoffload::v2::SessionResponse>>(GetClosedSessionsRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>> AsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>>(AsyncGetClosedSessionsRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>> AsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>>(AsyncGetClosedSessionsRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>> PrepareAsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>>(PrepareAsyncGetClosedSessionsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>> PrepareAsyncGetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>>(PrepareAsyncGetClosedSessionsRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void AddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::ClientWriteReactor< ::openoffload::v1::SessionRequest>* reactor) override;
-      void GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, std::function<void(::grpc::Status)>) override;
-      void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response, std::function<void(::grpc::Status)>) override;
-      void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::grpc::ClientReadReactor< ::openoffload::v1::SessionResponse>* reactor) override;
+      void AddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::ClientWriteReactor< ::openoffload::v2::SessionRequest>* reactor) override;
+      void GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, std::function<void(::grpc::Status)>) override;
+      void DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response, std::function<void(::grpc::Status)>) override;
+      void GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::grpc::ClientReadReactor< ::openoffload::v2::SessionResponse>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -218,18 +218,18 @@ class SessionTable final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientWriter< ::openoffload::v1::SessionRequest>* AddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response) override;
-    ::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>* AsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>* PrepareAsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* AsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* PrepareAsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* AsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* PrepareAsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>* AsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>* PrepareAsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::openoffload::v1::SessionResponse>* GetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request) override;
-    ::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>* AsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>* PrepareAsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientWriter< ::openoffload::v2::SessionRequest>* AddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response) override;
+    ::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>* AsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>* PrepareAsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* AsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* PrepareAsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* AsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* PrepareAsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>* AsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>* PrepareAsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::openoffload::v2::SessionResponse>* GetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request) override;
+    ::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>* AsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>* PrepareAsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AddSession_;
     const ::grpc::internal::RpcMethod rpcmethod_GetSession_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteSession_;
@@ -246,21 +246,21 @@ class SessionTable final {
     // Adds a session
     // This was changed in v1alpha4 to be a streaming API, for performance
     // reasons.
-    virtual ::grpc::Status AddSession(::grpc::ServerContext* context, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* reader, ::openoffload::v1::AddSessionResponse* response);
+    virtual ::grpc::Status AddSession(::grpc::ServerContext* context, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* reader, ::openoffload::v2::AddSessionResponse* response);
     //
     // Obtains the session
-    virtual ::grpc::Status GetSession(::grpc::ServerContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response);
+    virtual ::grpc::Status GetSession(::grpc::ServerContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response);
     //
     // Delete a session
-    virtual ::grpc::Status DeleteSession(::grpc::ServerContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response);
+    virtual ::grpc::Status DeleteSession(::grpc::ServerContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response);
     //
     // Stream back a specific session or all current sessions
     // To stream a single session, pass SessionId as zero
-    virtual ::grpc::Status GetAllSessions(::grpc::ServerContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response);
+    virtual ::grpc::Status GetAllSessions(::grpc::ServerContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response);
     //
     // statistics as a outgoing session from the WB to Applications ?
     // grpc seems to need a request input streamId is a placeholder
-    virtual ::grpc::Status GetClosedSessions(::grpc::ServerContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* writer);
+    virtual ::grpc::Status GetClosedSessions(::grpc::ServerContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_AddSession : public BaseClass {
@@ -274,11 +274,11 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* /*reader*/, ::openoffload::v1::AddSessionResponse* /*response*/) override {
+    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* /*reader*/, ::openoffload::v2::AddSessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestAddSession(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::openoffload::v1::AddSessionResponse, ::openoffload::v1::SessionRequest>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestAddSession(::grpc::ServerContext* context, ::grpc::ServerAsyncReader< ::openoffload::v2::AddSessionResponse, ::openoffload::v2::SessionRequest>* reader, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncClientStreaming(0, context, reader, new_call_cq, notification_cq, tag);
     }
   };
@@ -294,11 +294,11 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetSession(::grpc::ServerContext* context, ::openoffload::v1::SessionId* request, ::grpc::ServerAsyncResponseWriter< ::openoffload::v1::SessionResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetSession(::grpc::ServerContext* context, ::openoffload::v2::SessionId* request, ::grpc::ServerAsyncResponseWriter< ::openoffload::v2::SessionResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -314,11 +314,11 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDeleteSession(::grpc::ServerContext* context, ::openoffload::v1::SessionId* request, ::grpc::ServerAsyncResponseWriter< ::openoffload::v1::SessionResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDeleteSession(::grpc::ServerContext* context, ::openoffload::v2::SessionId* request, ::grpc::ServerAsyncResponseWriter< ::openoffload::v2::SessionResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -334,11 +334,11 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/) override {
+    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetAllSessions(::grpc::ServerContext* context, ::openoffload::v1::SessionRequestArgs* request, ::grpc::ServerAsyncResponseWriter< ::openoffload::v1::SessionResponses>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetAllSessions(::grpc::ServerContext* context, ::openoffload::v2::SessionRequestArgs* request, ::grpc::ServerAsyncResponseWriter< ::openoffload::v2::SessionResponses>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -354,11 +354,11 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* /*writer*/) override {
+    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetClosedSessions(::grpc::ServerContext* context, ::openoffload::v1::SessionRequestArgs* request, ::grpc::ServerAsyncWriter< ::openoffload::v1::SessionResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetClosedSessions(::grpc::ServerContext* context, ::openoffload::v2::SessionRequestArgs* request, ::grpc::ServerAsyncWriter< ::openoffload::v2::SessionResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(4, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -370,20 +370,20 @@ class SessionTable final {
    public:
     WithCallbackMethod_AddSession() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackClientStreamingHandler< ::openoffload::v1::SessionRequest, ::openoffload::v1::AddSessionResponse>(
+          new ::grpc::internal::CallbackClientStreamingHandler< ::openoffload::v2::SessionRequest, ::openoffload::v2::AddSessionResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, ::openoffload::v1::AddSessionResponse* response) { return this->AddSession(context, response); }));
+                   ::grpc::CallbackServerContext* context, ::openoffload::v2::AddSessionResponse* response) { return this->AddSession(context, response); }));
     }
     ~WithCallbackMethod_AddSession() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* /*reader*/, ::openoffload::v1::AddSessionResponse* /*response*/) override {
+    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* /*reader*/, ::openoffload::v2::AddSessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerReadReactor< ::openoffload::v1::SessionRequest>* AddSession(
-      ::grpc::CallbackServerContext* /*context*/, ::openoffload::v1::AddSessionResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerReadReactor< ::openoffload::v2::SessionRequest>* AddSession(
+      ::grpc::CallbackServerContext* /*context*/, ::openoffload::v2::AddSessionResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetSession : public BaseClass {
@@ -392,25 +392,25 @@ class SessionTable final {
    public:
     WithCallbackMethod_GetSession() {
       ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response) { return this->GetSession(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response) { return this->GetSession(context, request, response); }));}
     void SetMessageAllocatorFor_GetSession(
-        ::grpc::MessageAllocator< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>* allocator) {
+        ::grpc::MessageAllocator< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetSession() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetSession(
-      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_DeleteSession : public BaseClass {
@@ -419,25 +419,25 @@ class SessionTable final {
    public:
     WithCallbackMethod_DeleteSession() {
       ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response) { return this->DeleteSession(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response) { return this->DeleteSession(context, request, response); }));}
     void SetMessageAllocatorFor_DeleteSession(
-        ::grpc::MessageAllocator< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>* allocator) {
+        ::grpc::MessageAllocator< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_DeleteSession() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* DeleteSession(
-      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetAllSessions : public BaseClass {
@@ -446,25 +446,25 @@ class SessionTable final {
    public:
     WithCallbackMethod_GetAllSessions() {
       ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses>(
+          new ::grpc::internal::CallbackUnaryHandler< ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response) { return this->GetAllSessions(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response) { return this->GetAllSessions(context, request, response); }));}
     void SetMessageAllocatorFor_GetAllSessions(
-        ::grpc::MessageAllocator< ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses>* allocator) {
+        ::grpc::MessageAllocator< ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_GetAllSessions() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/) override {
+    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetAllSessions(
-      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetClosedSessions : public BaseClass {
@@ -473,20 +473,20 @@ class SessionTable final {
    public:
     WithCallbackMethod_GetClosedSessions() {
       ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponse>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::openoffload::v1::SessionRequestArgs* request) { return this->GetClosedSessions(context, request); }));
+                   ::grpc::CallbackServerContext* context, const ::openoffload::v2::SessionRequestArgs* request) { return this->GetClosedSessions(context, request); }));
     }
     ~WithCallbackMethod_GetClosedSessions() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* /*writer*/) override {
+    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::openoffload::v1::SessionResponse>* GetClosedSessions(
-      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::openoffload::v2::SessionResponse>* GetClosedSessions(
+      ::grpc::CallbackServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_AddSession<WithCallbackMethod_GetSession<WithCallbackMethod_DeleteSession<WithCallbackMethod_GetAllSessions<WithCallbackMethod_GetClosedSessions<Service > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -502,7 +502,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* /*reader*/, ::openoffload::v1::AddSessionResponse* /*response*/) override {
+    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* /*reader*/, ::openoffload::v2::AddSessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -519,7 +519,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -536,7 +536,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -553,7 +553,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/) override {
+    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -570,7 +570,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* /*writer*/) override {
+    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -587,7 +587,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* /*reader*/, ::openoffload::v1::AddSessionResponse* /*response*/) override {
+    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* /*reader*/, ::openoffload::v2::AddSessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -607,7 +607,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -627,7 +627,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -647,7 +647,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/) override {
+    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -667,7 +667,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* /*writer*/) override {
+    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -690,7 +690,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* /*reader*/, ::openoffload::v1::AddSessionResponse* /*response*/) override {
+    ::grpc::Status AddSession(::grpc::ServerContext* /*context*/, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* /*reader*/, ::openoffload::v2::AddSessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -712,7 +712,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -734,7 +734,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -756,7 +756,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/) override {
+    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -778,7 +778,7 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* /*writer*/) override {
+    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -793,10 +793,10 @@ class SessionTable final {
     WithStreamedUnaryMethod_GetSession() {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>(
+          ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>* streamer) {
+                     ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>* streamer) {
                        return this->StreamedGetSession(context,
                          streamer);
                   }));
@@ -805,12 +805,12 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status GetSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetSession(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::openoffload::v1::SessionId,::openoffload::v1::SessionResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetSession(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::openoffload::v2::SessionId,::openoffload::v2::SessionResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DeleteSession : public BaseClass {
@@ -820,10 +820,10 @@ class SessionTable final {
     WithStreamedUnaryMethod_DeleteSession() {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>(
+          ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse>* streamer) {
+                     ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse>* streamer) {
                        return this->StreamedDeleteSession(context,
                          streamer);
                   }));
@@ -832,12 +832,12 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionId* /*request*/, ::openoffload::v1::SessionResponse* /*response*/) override {
+    ::grpc::Status DeleteSession(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionId* /*request*/, ::openoffload::v2::SessionResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDeleteSession(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::openoffload::v1::SessionId,::openoffload::v1::SessionResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDeleteSession(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::openoffload::v2::SessionId,::openoffload::v2::SessionResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetAllSessions : public BaseClass {
@@ -847,10 +847,10 @@ class SessionTable final {
     WithStreamedUnaryMethod_GetAllSessions() {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses>(
+          ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses>* streamer) {
+                     ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses>* streamer) {
                        return this->StreamedGetAllSessions(context,
                          streamer);
                   }));
@@ -859,12 +859,12 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::openoffload::v1::SessionResponses* /*response*/) override {
+    ::grpc::Status GetAllSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::openoffload::v2::SessionResponses* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetAllSessions(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::openoffload::v1::SessionRequestArgs,::openoffload::v1::SessionResponses>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetAllSessions(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::openoffload::v2::SessionRequestArgs,::openoffload::v2::SessionResponses>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_GetSession<WithStreamedUnaryMethod_DeleteSession<WithStreamedUnaryMethod_GetAllSessions<Service > > > StreamedUnaryService;
   template <class BaseClass>
@@ -875,10 +875,10 @@ class SessionTable final {
     WithSplitStreamingMethod_GetClosedSessions() {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponse>(
+          ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerSplitStreamer<
-                     ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponse>* streamer) {
+                     ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponse>* streamer) {
                        return this->StreamedGetClosedSessions(context,
                          streamer);
                   }));
@@ -887,18 +887,18 @@ class SessionTable final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v1::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* /*writer*/) override {
+    ::grpc::Status GetClosedSessions(::grpc::ServerContext* /*context*/, const ::openoffload::v2::SessionRequestArgs* /*request*/, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedGetClosedSessions(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::openoffload::v1::SessionRequestArgs,::openoffload::v1::SessionResponse>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedGetClosedSessions(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::openoffload::v2::SessionRequestArgs,::openoffload::v2::SessionResponse>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_GetClosedSessions<Service > SplitStreamedService;
   typedef WithStreamedUnaryMethod_GetSession<WithStreamedUnaryMethod_DeleteSession<WithStreamedUnaryMethod_GetAllSessions<WithSplitStreamingMethod_GetClosedSessions<Service > > > > StreamedService;
 };
 
-}  // namespace v1
+}  // namespace v2
 }  // namespace openoffload
 
 

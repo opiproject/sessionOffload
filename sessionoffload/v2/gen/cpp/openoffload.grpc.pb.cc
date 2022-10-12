@@ -20,14 +20,14 @@
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
 namespace openoffload {
-namespace v1 {
+namespace v2 {
 
 static const char* SessionTable_method_names[] = {
-  "/openoffload.v1.SessionTable/AddSession",
-  "/openoffload.v1.SessionTable/GetSession",
-  "/openoffload.v1.SessionTable/DeleteSession",
-  "/openoffload.v1.SessionTable/GetAllSessions",
-  "/openoffload.v1.SessionTable/GetClosedSessions",
+  "/openoffload.v2.SessionTable/AddSession",
+  "/openoffload.v2.SessionTable/GetSession",
+  "/openoffload.v2.SessionTable/DeleteSession",
+  "/openoffload.v2.SessionTable/GetAllSessions",
+  "/openoffload.v2.SessionTable/GetClosedSessions",
 };
 
 std::unique_ptr< SessionTable::Stub> SessionTable::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -44,156 +44,156 @@ SessionTable::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_GetClosedSessions_(SessionTable_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
-::grpc::ClientWriter< ::openoffload::v1::SessionRequest>* SessionTable::Stub::AddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response) {
-  return ::grpc::internal::ClientWriterFactory< ::openoffload::v1::SessionRequest>::Create(channel_.get(), rpcmethod_AddSession_, context, response);
+::grpc::ClientWriter< ::openoffload::v2::SessionRequest>* SessionTable::Stub::AddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response) {
+  return ::grpc::internal::ClientWriterFactory< ::openoffload::v2::SessionRequest>::Create(channel_.get(), rpcmethod_AddSession_, context, response);
 }
 
-void SessionTable::Stub::async::AddSession(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::ClientWriteReactor< ::openoffload::v1::SessionRequest>* reactor) {
-  ::grpc::internal::ClientCallbackWriterFactory< ::openoffload::v1::SessionRequest>::Create(stub_->channel_.get(), stub_->rpcmethod_AddSession_, context, response, reactor);
+void SessionTable::Stub::async::AddSession(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::ClientWriteReactor< ::openoffload::v2::SessionRequest>* reactor) {
+  ::grpc::internal::ClientCallbackWriterFactory< ::openoffload::v2::SessionRequest>::Create(stub_->channel_.get(), stub_->rpcmethod_AddSession_, context, response, reactor);
 }
 
-::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>* SessionTable::Stub::AsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncWriterFactory< ::openoffload::v1::SessionRequest>::Create(channel_.get(), cq, rpcmethod_AddSession_, context, response, true, tag);
+::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>* SessionTable::Stub::AsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncWriterFactory< ::openoffload::v2::SessionRequest>::Create(channel_.get(), cq, rpcmethod_AddSession_, context, response, true, tag);
 }
 
-::grpc::ClientAsyncWriter< ::openoffload::v1::SessionRequest>* SessionTable::Stub::PrepareAsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v1::AddSessionResponse* response, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncWriterFactory< ::openoffload::v1::SessionRequest>::Create(channel_.get(), cq, rpcmethod_AddSession_, context, response, false, nullptr);
+::grpc::ClientAsyncWriter< ::openoffload::v2::SessionRequest>* SessionTable::Stub::PrepareAsyncAddSessionRaw(::grpc::ClientContext* context, ::openoffload::v2::AddSessionResponse* response, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncWriterFactory< ::openoffload::v2::SessionRequest>::Create(channel_.get(), cq, rpcmethod_AddSession_, context, response, false, nullptr);
 }
 
-::grpc::Status SessionTable::Stub::GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::openoffload::v1::SessionResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetSession_, context, request, response);
+::grpc::Status SessionTable::Stub::GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::openoffload::v2::SessionResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetSession_, context, request, response);
 }
 
-void SessionTable::Stub::async::GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetSession_, context, request, response, std::move(f));
+void SessionTable::Stub::async::GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetSession_, context, request, response, std::move(f));
 }
 
-void SessionTable::Stub::async::GetSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SessionTable::Stub::async::GetSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetSession_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::PrepareAsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::openoffload::v1::SessionResponse, ::openoffload::v1::SessionId, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetSession_, context, request);
+::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::PrepareAsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::openoffload::v2::SessionResponse, ::openoffload::v2::SessionId, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetSession_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::AsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::AsyncGetSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetSessionRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SessionTable::Stub::DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::openoffload::v1::SessionResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteSession_, context, request, response);
+::grpc::Status SessionTable::Stub::DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::openoffload::v2::SessionResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteSession_, context, request, response);
 }
 
-void SessionTable::Stub::async::DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteSession_, context, request, response, std::move(f));
+void SessionTable::Stub::async::DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteSession_, context, request, response, std::move(f));
 }
 
-void SessionTable::Stub::async::DeleteSession(::grpc::ClientContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void SessionTable::Stub::async::DeleteSession(::grpc::ClientContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteSession_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::PrepareAsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::openoffload::v1::SessionResponse, ::openoffload::v1::SessionId, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteSession_, context, request);
+::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::PrepareAsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::openoffload::v2::SessionResponse, ::openoffload::v2::SessionId, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteSession_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::AsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionId& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::AsyncDeleteSessionRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionId& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncDeleteSessionRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SessionTable::Stub::GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::openoffload::v1::SessionResponses* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetAllSessions_, context, request, response);
+::grpc::Status SessionTable::Stub::GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::openoffload::v2::SessionResponses* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetAllSessions_, context, request, response);
 }
 
-void SessionTable::Stub::async::GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllSessions_, context, request, response, std::move(f));
+void SessionTable::Stub::async::GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllSessions_, context, request, response, std::move(f));
 }
 
-void SessionTable::Stub::async::GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response, ::grpc::ClientUnaryReactor* reactor) {
+void SessionTable::Stub::async::GetAllSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAllSessions_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>* SessionTable::Stub::PrepareAsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::openoffload::v1::SessionResponses, ::openoffload::v1::SessionRequestArgs, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetAllSessions_, context, request);
+::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>* SessionTable::Stub::PrepareAsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::openoffload::v2::SessionResponses, ::openoffload::v2::SessionRequestArgs, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetAllSessions_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::openoffload::v1::SessionResponses>* SessionTable::Stub::AsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::openoffload::v2::SessionResponses>* SessionTable::Stub::AsyncGetAllSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetAllSessionsRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::ClientReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::GetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request) {
-  return ::grpc::internal::ClientReaderFactory< ::openoffload::v1::SessionResponse>::Create(channel_.get(), rpcmethod_GetClosedSessions_, context, request);
+::grpc::ClientReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::GetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request) {
+  return ::grpc::internal::ClientReaderFactory< ::openoffload::v2::SessionResponse>::Create(channel_.get(), rpcmethod_GetClosedSessions_, context, request);
 }
 
-void SessionTable::Stub::async::GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::grpc::ClientReadReactor< ::openoffload::v1::SessionResponse>* reactor) {
-  ::grpc::internal::ClientCallbackReaderFactory< ::openoffload::v1::SessionResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_GetClosedSessions_, context, request, reactor);
+void SessionTable::Stub::async::GetClosedSessions(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::grpc::ClientReadReactor< ::openoffload::v2::SessionResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::openoffload::v2::SessionResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_GetClosedSessions_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::AsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::openoffload::v1::SessionResponse>::Create(channel_.get(), cq, rpcmethod_GetClosedSessions_, context, request, true, tag);
+::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::AsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::openoffload::v2::SessionResponse>::Create(channel_.get(), cq, rpcmethod_GetClosedSessions_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::openoffload::v1::SessionResponse>* SessionTable::Stub::PrepareAsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v1::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::openoffload::v1::SessionResponse>::Create(channel_.get(), cq, rpcmethod_GetClosedSessions_, context, request, false, nullptr);
+::grpc::ClientAsyncReader< ::openoffload::v2::SessionResponse>* SessionTable::Stub::PrepareAsyncGetClosedSessionsRaw(::grpc::ClientContext* context, const ::openoffload::v2::SessionRequestArgs& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::openoffload::v2::SessionResponse>::Create(channel_.get(), cq, rpcmethod_GetClosedSessions_, context, request, false, nullptr);
 }
 
 SessionTable::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SessionTable_method_names[0],
       ::grpc::internal::RpcMethod::CLIENT_STREAMING,
-      new ::grpc::internal::ClientStreamingHandler< SessionTable::Service, ::openoffload::v1::SessionRequest, ::openoffload::v1::AddSessionResponse>(
+      new ::grpc::internal::ClientStreamingHandler< SessionTable::Service, ::openoffload::v2::SessionRequest, ::openoffload::v2::AddSessionResponse>(
           [](SessionTable::Service* service,
              ::grpc::ServerContext* ctx,
-             ::grpc::ServerReader<::openoffload::v1::SessionRequest>* reader,
-             ::openoffload::v1::AddSessionResponse* resp) {
+             ::grpc::ServerReader<::openoffload::v2::SessionRequest>* reader,
+             ::openoffload::v2::AddSessionResponse* resp) {
                return service->AddSession(ctx, reader, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SessionTable_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SessionTable::Service, ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SessionTable::Service, ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SessionTable::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::openoffload::v1::SessionId* req,
-             ::openoffload::v1::SessionResponse* resp) {
+             const ::openoffload::v2::SessionId* req,
+             ::openoffload::v2::SessionResponse* resp) {
                return service->GetSession(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SessionTable_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SessionTable::Service, ::openoffload::v1::SessionId, ::openoffload::v1::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SessionTable::Service, ::openoffload::v2::SessionId, ::openoffload::v2::SessionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SessionTable::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::openoffload::v1::SessionId* req,
-             ::openoffload::v1::SessionResponse* resp) {
+             const ::openoffload::v2::SessionId* req,
+             ::openoffload::v2::SessionResponse* resp) {
                return service->DeleteSession(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SessionTable_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SessionTable::Service, ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponses, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SessionTable::Service, ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponses, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SessionTable::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::openoffload::v1::SessionRequestArgs* req,
-             ::openoffload::v1::SessionResponses* resp) {
+             const ::openoffload::v2::SessionRequestArgs* req,
+             ::openoffload::v2::SessionResponses* resp) {
                return service->GetAllSessions(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SessionTable_method_names[4],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< SessionTable::Service, ::openoffload::v1::SessionRequestArgs, ::openoffload::v1::SessionResponse>(
+      new ::grpc::internal::ServerStreamingHandler< SessionTable::Service, ::openoffload::v2::SessionRequestArgs, ::openoffload::v2::SessionResponse>(
           [](SessionTable::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::openoffload::v1::SessionRequestArgs* req,
-             ::grpc::ServerWriter<::openoffload::v1::SessionResponse>* writer) {
+             const ::openoffload::v2::SessionRequestArgs* req,
+             ::grpc::ServerWriter<::openoffload::v2::SessionResponse>* writer) {
                return service->GetClosedSessions(ctx, req, writer);
              }, this)));
 }
@@ -201,35 +201,35 @@ SessionTable::Service::Service() {
 SessionTable::Service::~Service() {
 }
 
-::grpc::Status SessionTable::Service::AddSession(::grpc::ServerContext* context, ::grpc::ServerReader< ::openoffload::v1::SessionRequest>* reader, ::openoffload::v1::AddSessionResponse* response) {
+::grpc::Status SessionTable::Service::AddSession(::grpc::ServerContext* context, ::grpc::ServerReader< ::openoffload::v2::SessionRequest>* reader, ::openoffload::v2::AddSessionResponse* response) {
   (void) context;
   (void) reader;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SessionTable::Service::GetSession(::grpc::ServerContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response) {
+::grpc::Status SessionTable::Service::GetSession(::grpc::ServerContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SessionTable::Service::DeleteSession(::grpc::ServerContext* context, const ::openoffload::v1::SessionId* request, ::openoffload::v1::SessionResponse* response) {
+::grpc::Status SessionTable::Service::DeleteSession(::grpc::ServerContext* context, const ::openoffload::v2::SessionId* request, ::openoffload::v2::SessionResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SessionTable::Service::GetAllSessions(::grpc::ServerContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::openoffload::v1::SessionResponses* response) {
+::grpc::Status SessionTable::Service::GetAllSessions(::grpc::ServerContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::openoffload::v2::SessionResponses* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SessionTable::Service::GetClosedSessions(::grpc::ServerContext* context, const ::openoffload::v1::SessionRequestArgs* request, ::grpc::ServerWriter< ::openoffload::v1::SessionResponse>* writer) {
+::grpc::Status SessionTable::Service::GetClosedSessions(::grpc::ServerContext* context, const ::openoffload::v2::SessionRequestArgs* request, ::grpc::ServerWriter< ::openoffload::v2::SessionResponse>* writer) {
   (void) context;
   (void) request;
   (void) writer;
@@ -238,5 +238,5 @@ SessionTable::Service::~Service() {
 
 
 }  // namespace openoffload
-}  // namespace v1
+}  // namespace v2
 

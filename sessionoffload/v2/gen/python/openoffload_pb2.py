@@ -16,7 +16,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11openoffload.proto\x12\x0eopenoffload.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"\x15\n\x04Uuid\x12\r\n\x05value\x18\x01 \x01(\t\"\x1f\n\tSessionId\x12\x12\n\nsession_id\x18\x01 \x01(\x04\"x\n\x10\x41\x63tionParameters\x12/\n\x0b\x61\x63tion_type\x18\x01 \x01(\x0e\x32\x1a.openoffload.v1.ActionType\x12\x17\n\x0f\x61\x63tion_next_hop\x18\x02 \x01(\r\x12\x1a\n\x12\x61\x63tion_next_hop_v6\x18\x03 \x01(\x0c\"\xf7\x02\n\x0eSessionRequest\x12\x12\n\nsession_id\x18\x01 \x01(\x04\x12\x0e\n\x06in_lif\x18\x02 \x01(\x05\x12\x0f\n\x07out_lif\x18\x03 \x01(\x05\x12-\n\nip_version\x18\x04 \x01(\x0e\x32\x19.openoffload.v1.IpVersion\x12\x11\n\tsource_ip\x18\x05 \x01(\r\x12\x13\n\x0bsource_ipv6\x18\x06 \x01(\x0c\x12\x13\n\x0bsource_port\x18\x07 \x01(\r\x12\x16\n\x0e\x64\x65stination_ip\x18\x08 \x01(\r\x12\x18\n\x10\x64\x65stination_ipv6\x18\t \x01(\x0c\x12\x18\n\x10\x64\x65stination_port\x18\n \x01(\r\x12/\n\x0bprotocol_id\x18\x0b \x01(\x0e\x32\x1a.openoffload.v1.ProtocolId\x12\x30\n\x06\x61\x63tion\x18\x0c \x01(\x0b\x32 .openoffload.v1.ActionParameters\x12\x15\n\rcache_timeout\x18\r \x01(\r\"@\n\x14SessionResponseError\x12\x12\n\nsession_id\x18\x01 \x01(\x04\x12\x14\n\x0c\x65rror_status\x18\x02 \x01(\x05\"[\n\x10SessionResponses\x12\x35\n\x0csession_info\x18\x01 \x03(\x0b\x32\x1f.openoffload.v1.SessionResponse\x12\x10\n\x08next_key\x18\x02 \x01(\x04\"\xd2\x01\n\x12\x41\x64\x64SessionResponse\x12\x38\n\x0erequest_status\x18\x01 \x01(\x0e\x32 .openoffload.v1.AddSessionStatus\x12\x14\n\x0c\x65rror_status\x18\x02 \x01(\x04\x12.\n\nstart_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12<\n\x0eresponse_error\x18\x04 \x03(\x0b\x32$.openoffload.v1.SessionResponseError\"\xfb\x02\n\x0fSessionResponse\x12\x12\n\nsession_id\x18\x01 \x01(\x04\x12\x12\n\nin_packets\x18\x02 \x01(\x04\x12\x13\n\x0bout_packets\x18\x03 \x01(\x04\x12\x10\n\x08in_bytes\x18\x04 \x01(\x04\x12\x11\n\tout_bytes\x18\x05 \x01(\x04\x12\x33\n\rsession_state\x18\x06 \x01(\x0e\x32\x1c.openoffload.v1.SessionState\x12<\n\x12session_close_code\x18\x07 \x01(\x0e\x32 .openoffload.v1.SessionCloseCode\x12\x35\n\x0erequest_status\x18\x08 \x01(\x0e\x32\x1d.openoffload.v1.RequestStatus\x12.\n\nstart_time\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"L\n\x12SessionRequestArgs\x12\x11\n\tpage_size\x18\x01 \x01(\r\x12\x0c\n\x04page\x18\x02 \x01(\r\x12\x15\n\rstart_session\x18\x03 \x01(\x04*!\n\tIpVersion\x12\t\n\x05_IPV4\x10\x00\x12\t\n\x05_IPV6\x10\x01*@\n\nProtocolId\x12\x0b\n\x07_HOPOPT\x10\x00\x12\x08\n\x04_TCP\x10\x06\x12\x08\n\x04_UDP\x10\x11\"\x04\x08\x01\x10\x05\"\x04\x08\x07\x10\x10\"\x05\x08\x12\x10\xff\x01*a\n\x0cSessionState\x12\x10\n\x0c_ESTABLISHED\x10\x00\x12\x0e\n\n_CLOSING_1\x10\x01\x12\x0e\n\n_CLOSING_2\x10\x02\x12\x0b\n\x07_CLOSED\x10\x03\x12\x12\n\x0e_UNKNOWN_STATE\x10\x04*a\n\x10SessionCloseCode\x12\x0f\n\x0b_NOT_CLOSED\x10\x00\x12\x0b\n\x07_FINACK\x10\x01\x12\x08\n\x04_RST\x10\x02\x12\x0c\n\x08_TIMEOUT\x10\x03\x12\x17\n\x13_UNKNOWN_CLOSE_CODE\x10\x04*\x96\x01\n\x10\x41\x64\x64SessionStatus\x12\x15\n\x11_SESSION_ACCEPTED\x10\x00\x12\x15\n\x11_SESSION_REJECTED\x10\x01\x12\x17\n\x13_SESSION_TABLE_FULL\x10\x02\x12\x1e\n\x1a_SESSION_TABLE_UNAVAILABLE\x10\x03\x12\x1b\n\x17_SESSION_ALREADY_EXISTS\x10\x04*\xcf\x01\n\rRequestStatus\x12\r\n\t_ACCEPTED\x10\x00\x12\r\n\t_REJECTED\x10\x01\x12!\n\x1d_REJECTED_SESSION_NONEXISTENT\x10\x02\x12 \n\x1c_REJECTED_SESSION_TABLE_FULL\x10\x03\x12$\n _REJECTED_SESSION_ALREADY_EXISTS\x10\x04\x12\x17\n\x13_NO_CLOSED_SESSIONS\x10\x05\x12\x1c\n\x18_REJECTED_INTERNAL_ERROR\x10\x06*>\n\nActionType\x12\t\n\x05_DROP\x10\x00\x12\x0c\n\x08_FORWARD\x10\x01\x12\x0b\n\x07_MIRROR\x10\x02\x12\n\n\x06_SNOOP\x10\x03\x32\xb7\x03\n\x0cSessionTable\x12T\n\nAddSession\x12\x1e.openoffload.v1.SessionRequest\x1a\".openoffload.v1.AddSessionResponse\"\x00(\x01\x12J\n\nGetSession\x12\x19.openoffload.v1.SessionId\x1a\x1f.openoffload.v1.SessionResponse\"\x00\x12M\n\rDeleteSession\x12\x19.openoffload.v1.SessionId\x1a\x1f.openoffload.v1.SessionResponse\"\x00\x12X\n\x0eGetAllSessions\x12\".openoffload.v1.SessionRequestArgs\x1a .openoffload.v1.SessionResponses\"\x00\x12\\\n\x11GetClosedSessions\x12\".openoffload.v1.SessionRequestArgs\x1a\x1f.openoffload.v1.SessionResponse\"\x00\x30\x01\x42\x17Z\x15.;openoffload_v1beta1b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11openoffload.proto\x12\x0eopenoffload.v2\x1a\x1fgoogle/protobuf/timestamp.proto\"\x15\n\x04Uuid\x12\r\n\x05value\x18\x01 \x01(\t\"\x1f\n\tSessionId\x12\x12\n\nsession_id\x18\x01 \x01(\x04\"x\n\x10\x41\x63tionParameters\x12/\n\x0b\x61\x63tion_type\x18\x01 \x01(\x0e\x32\x1a.openoffload.v2.ActionType\x12\x17\n\x0f\x61\x63tion_next_hop\x18\x02 \x01(\r\x12\x1a\n\x12\x61\x63tion_next_hop_v6\x18\x03 \x01(\x0c\"\xf7\x02\n\x0eSessionRequest\x12\x12\n\nsession_id\x18\x01 \x01(\x04\x12\x0e\n\x06in_lif\x18\x02 \x01(\x05\x12\x0f\n\x07out_lif\x18\x03 \x01(\x05\x12-\n\nip_version\x18\x04 \x01(\x0e\x32\x19.openoffload.v2.IpVersion\x12\x11\n\tsource_ip\x18\x05 \x01(\r\x12\x13\n\x0bsource_ipv6\x18\x06 \x01(\x0c\x12\x13\n\x0bsource_port\x18\x07 \x01(\r\x12\x16\n\x0e\x64\x65stination_ip\x18\x08 \x01(\r\x12\x18\n\x10\x64\x65stination_ipv6\x18\t \x01(\x0c\x12\x18\n\x10\x64\x65stination_port\x18\n \x01(\r\x12/\n\x0bprotocol_id\x18\x0b \x01(\x0e\x32\x1a.openoffload.v2.ProtocolId\x12\x30\n\x06\x61\x63tion\x18\x0c \x01(\x0b\x32 .openoffload.v2.ActionParameters\x12\x15\n\rcache_timeout\x18\r \x01(\r\"@\n\x14SessionResponseError\x12\x12\n\nsession_id\x18\x01 \x01(\x04\x12\x14\n\x0c\x65rror_status\x18\x02 \x01(\x05\"[\n\x10SessionResponses\x12\x35\n\x0csession_info\x18\x01 \x03(\x0b\x32\x1f.openoffload.v2.SessionResponse\x12\x10\n\x08next_key\x18\x02 \x01(\x04\"\xd2\x01\n\x12\x41\x64\x64SessionResponse\x12\x38\n\x0erequest_status\x18\x01 \x01(\x0e\x32 .openoffload.v2.AddSessionStatus\x12\x14\n\x0c\x65rror_status\x18\x02 \x01(\x04\x12.\n\nstart_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12<\n\x0eresponse_error\x18\x04 \x03(\x0b\x32$.openoffload.v2.SessionResponseError\"\xfb\x02\n\x0fSessionResponse\x12\x12\n\nsession_id\x18\x01 \x01(\x04\x12\x12\n\nin_packets\x18\x02 \x01(\x04\x12\x13\n\x0bout_packets\x18\x03 \x01(\x04\x12\x10\n\x08in_bytes\x18\x04 \x01(\x04\x12\x11\n\tout_bytes\x18\x05 \x01(\x04\x12\x33\n\rsession_state\x18\x06 \x01(\x0e\x32\x1c.openoffload.v2.SessionState\x12<\n\x12session_close_code\x18\x07 \x01(\x0e\x32 .openoffload.v2.SessionCloseCode\x12\x35\n\x0erequest_status\x18\x08 \x01(\x0e\x32\x1d.openoffload.v2.RequestStatus\x12.\n\nstart_time\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"L\n\x12SessionRequestArgs\x12\x11\n\tpage_size\x18\x01 \x01(\r\x12\x0c\n\x04page\x18\x02 \x01(\r\x12\x15\n\rstart_session\x18\x03 \x01(\x04*!\n\tIpVersion\x12\t\n\x05_IPV4\x10\x00\x12\t\n\x05_IPV6\x10\x01*@\n\nProtocolId\x12\x0b\n\x07_HOPOPT\x10\x00\x12\x08\n\x04_TCP\x10\x06\x12\x08\n\x04_UDP\x10\x11\"\x04\x08\x01\x10\x05\"\x04\x08\x07\x10\x10\"\x05\x08\x12\x10\xff\x01*a\n\x0cSessionState\x12\x10\n\x0c_ESTABLISHED\x10\x00\x12\x0e\n\n_CLOSING_1\x10\x01\x12\x0e\n\n_CLOSING_2\x10\x02\x12\x0b\n\x07_CLOSED\x10\x03\x12\x12\n\x0e_UNKNOWN_STATE\x10\x04*a\n\x10SessionCloseCode\x12\x0f\n\x0b_NOT_CLOSED\x10\x00\x12\x0b\n\x07_FINACK\x10\x01\x12\x08\n\x04_RST\x10\x02\x12\x0c\n\x08_TIMEOUT\x10\x03\x12\x17\n\x13_UNKNOWN_CLOSE_CODE\x10\x04*\x96\x01\n\x10\x41\x64\x64SessionStatus\x12\x15\n\x11_SESSION_ACCEPTED\x10\x00\x12\x15\n\x11_SESSION_REJECTED\x10\x01\x12\x17\n\x13_SESSION_TABLE_FULL\x10\x02\x12\x1e\n\x1a_SESSION_TABLE_UNAVAILABLE\x10\x03\x12\x1b\n\x17_SESSION_ALREADY_EXISTS\x10\x04*\xcf\x01\n\rRequestStatus\x12\r\n\t_ACCEPTED\x10\x00\x12\r\n\t_REJECTED\x10\x01\x12!\n\x1d_REJECTED_SESSION_NONEXISTENT\x10\x02\x12 \n\x1c_REJECTED_SESSION_TABLE_FULL\x10\x03\x12$\n _REJECTED_SESSION_ALREADY_EXISTS\x10\x04\x12\x17\n\x13_NO_CLOSED_SESSIONS\x10\x05\x12\x1c\n\x18_REJECTED_INTERNAL_ERROR\x10\x06*>\n\nActionType\x12\t\n\x05_DROP\x10\x00\x12\x0c\n\x08_FORWARD\x10\x01\x12\x0b\n\x07_MIRROR\x10\x02\x12\n\n\x06_SNOOP\x10\x03\x32\xb7\x03\n\x0cSessionTable\x12T\n\nAddSession\x12\x1e.openoffload.v2.SessionRequest\x1a\".openoffload.v2.AddSessionResponse\"\x00(\x01\x12J\n\nGetSession\x12\x19.openoffload.v2.SessionId\x1a\x1f.openoffload.v2.SessionResponse\"\x00\x12M\n\rDeleteSession\x12\x19.openoffload.v2.SessionId\x1a\x1f.openoffload.v2.SessionResponse\"\x00\x12X\n\x0eGetAllSessions\x12\".openoffload.v2.SessionRequestArgs\x1a .openoffload.v2.SessionResponses\"\x00\x12\\\n\x11GetClosedSessions\x12\".openoffload.v2.SessionRequestArgs\x1a\x1f.openoffload.v2.SessionResponse\"\x00\x30\x01\x42\x12Z\x10.;openoffload_v2b\x06proto3')
 
 _IPVERSION = DESCRIPTOR.enum_types_by_name['IpVersion']
 IpVersion = enum_type_wrapper.EnumTypeWrapper(_IPVERSION)
@@ -77,63 +77,63 @@ _SESSIONREQUESTARGS = DESCRIPTOR.message_types_by_name['SessionRequestArgs']
 Uuid = _reflection.GeneratedProtocolMessageType('Uuid', (_message.Message,), {
   'DESCRIPTOR' : _UUID,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.Uuid)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.Uuid)
   })
 _sym_db.RegisterMessage(Uuid)
 
 SessionId = _reflection.GeneratedProtocolMessageType('SessionId', (_message.Message,), {
   'DESCRIPTOR' : _SESSIONID,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.SessionId)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.SessionId)
   })
 _sym_db.RegisterMessage(SessionId)
 
 ActionParameters = _reflection.GeneratedProtocolMessageType('ActionParameters', (_message.Message,), {
   'DESCRIPTOR' : _ACTIONPARAMETERS,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.ActionParameters)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.ActionParameters)
   })
 _sym_db.RegisterMessage(ActionParameters)
 
 SessionRequest = _reflection.GeneratedProtocolMessageType('SessionRequest', (_message.Message,), {
   'DESCRIPTOR' : _SESSIONREQUEST,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.SessionRequest)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.SessionRequest)
   })
 _sym_db.RegisterMessage(SessionRequest)
 
 SessionResponseError = _reflection.GeneratedProtocolMessageType('SessionResponseError', (_message.Message,), {
   'DESCRIPTOR' : _SESSIONRESPONSEERROR,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.SessionResponseError)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.SessionResponseError)
   })
 _sym_db.RegisterMessage(SessionResponseError)
 
 SessionResponses = _reflection.GeneratedProtocolMessageType('SessionResponses', (_message.Message,), {
   'DESCRIPTOR' : _SESSIONRESPONSES,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.SessionResponses)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.SessionResponses)
   })
 _sym_db.RegisterMessage(SessionResponses)
 
 AddSessionResponse = _reflection.GeneratedProtocolMessageType('AddSessionResponse', (_message.Message,), {
   'DESCRIPTOR' : _ADDSESSIONRESPONSE,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.AddSessionResponse)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.AddSessionResponse)
   })
 _sym_db.RegisterMessage(AddSessionResponse)
 
 SessionResponse = _reflection.GeneratedProtocolMessageType('SessionResponse', (_message.Message,), {
   'DESCRIPTOR' : _SESSIONRESPONSE,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.SessionResponse)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.SessionResponse)
   })
 _sym_db.RegisterMessage(SessionResponse)
 
 SessionRequestArgs = _reflection.GeneratedProtocolMessageType('SessionRequestArgs', (_message.Message,), {
   'DESCRIPTOR' : _SESSIONREQUESTARGS,
   '__module__' : 'openoffload_pb2'
-  # @@protoc_insertion_point(class_scope:openoffload.v1.SessionRequestArgs)
+  # @@protoc_insertion_point(class_scope:openoffload.v2.SessionRequestArgs)
   })
 _sym_db.RegisterMessage(SessionRequestArgs)
 
@@ -141,7 +141,7 @@ _SESSIONTABLE = DESCRIPTOR.services_by_name['SessionTable']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z\025.;openoffload_v1beta1'
+  DESCRIPTOR._serialized_options = b'Z\020.;openoffload_v2'
   _IPVERSION._serialized_start=1458
   _IPVERSION._serialized_end=1491
   _PROTOCOLID._serialized_start=1493

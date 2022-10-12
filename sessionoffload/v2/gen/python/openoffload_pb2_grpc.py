@@ -19,27 +19,27 @@ class SessionTableStub(object):
             channel: A grpc.Channel.
         """
         self.AddSession = channel.stream_unary(
-                '/openoffload.v1.SessionTable/AddSession',
+                '/openoffload.v2.SessionTable/AddSession',
                 request_serializer=openoffload__pb2.SessionRequest.SerializeToString,
                 response_deserializer=openoffload__pb2.AddSessionResponse.FromString,
                 )
         self.GetSession = channel.unary_unary(
-                '/openoffload.v1.SessionTable/GetSession',
+                '/openoffload.v2.SessionTable/GetSession',
                 request_serializer=openoffload__pb2.SessionId.SerializeToString,
                 response_deserializer=openoffload__pb2.SessionResponse.FromString,
                 )
         self.DeleteSession = channel.unary_unary(
-                '/openoffload.v1.SessionTable/DeleteSession',
+                '/openoffload.v2.SessionTable/DeleteSession',
                 request_serializer=openoffload__pb2.SessionId.SerializeToString,
                 response_deserializer=openoffload__pb2.SessionResponse.FromString,
                 )
         self.GetAllSessions = channel.unary_unary(
-                '/openoffload.v1.SessionTable/GetAllSessions',
+                '/openoffload.v2.SessionTable/GetAllSessions',
                 request_serializer=openoffload__pb2.SessionRequestArgs.SerializeToString,
                 response_deserializer=openoffload__pb2.SessionResponses.FromString,
                 )
         self.GetClosedSessions = channel.unary_stream(
-                '/openoffload.v1.SessionTable/GetClosedSessions',
+                '/openoffload.v2.SessionTable/GetClosedSessions',
                 request_serializer=openoffload__pb2.SessionRequestArgs.SerializeToString,
                 response_deserializer=openoffload__pb2.SessionResponse.FromString,
                 )
@@ -126,7 +126,7 @@ def add_SessionTableServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'openoffload.v1.SessionTable', rpc_method_handlers)
+            'openoffload.v2.SessionTable', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -149,7 +149,7 @@ class SessionTable(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/openoffload.v1.SessionTable/AddSession',
+        return grpc.experimental.stream_unary(request_iterator, target, '/openoffload.v2.SessionTable/AddSession',
             openoffload__pb2.SessionRequest.SerializeToString,
             openoffload__pb2.AddSessionResponse.FromString,
             options, channel_credentials,
@@ -166,7 +166,7 @@ class SessionTable(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/openoffload.v1.SessionTable/GetSession',
+        return grpc.experimental.unary_unary(request, target, '/openoffload.v2.SessionTable/GetSession',
             openoffload__pb2.SessionId.SerializeToString,
             openoffload__pb2.SessionResponse.FromString,
             options, channel_credentials,
@@ -183,7 +183,7 @@ class SessionTable(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/openoffload.v1.SessionTable/DeleteSession',
+        return grpc.experimental.unary_unary(request, target, '/openoffload.v2.SessionTable/DeleteSession',
             openoffload__pb2.SessionId.SerializeToString,
             openoffload__pb2.SessionResponse.FromString,
             options, channel_credentials,
@@ -200,7 +200,7 @@ class SessionTable(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/openoffload.v1.SessionTable/GetAllSessions',
+        return grpc.experimental.unary_unary(request, target, '/openoffload.v2.SessionTable/GetAllSessions',
             openoffload__pb2.SessionRequestArgs.SerializeToString,
             openoffload__pb2.SessionResponses.FromString,
             options, channel_credentials,
@@ -217,7 +217,7 @@ class SessionTable(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/openoffload.v1.SessionTable/GetClosedSessions',
+        return grpc.experimental.unary_stream(request, target, '/openoffload.v2.SessionTable/GetClosedSessions',
             openoffload__pb2.SessionRequestArgs.SerializeToString,
             openoffload__pb2.SessionResponse.FromString,
             options, channel_credentials,
