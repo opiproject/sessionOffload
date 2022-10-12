@@ -15,32 +15,32 @@ class IpTunnelServiceStub(object):
             channel: A grpc.Channel.
         """
         self.Capabilities = channel.unary_unary(
-                '/tunneloffload.v1alpha1.IpTunnelService/Capabilities',
+                '/tunneloffload.v2.IpTunnelService/Capabilities',
                 request_serializer=tunneloffload__pb2.CapabilityRequest.SerializeToString,
                 response_deserializer=tunneloffload__pb2.CapabilityResponse.FromString,
                 )
         self.CreateIpTunnel = channel.stream_unary(
-                '/tunneloffload.v1alpha1.IpTunnelService/CreateIpTunnel',
+                '/tunneloffload.v2.IpTunnelService/CreateIpTunnel',
                 request_serializer=tunneloffload__pb2.IpTunnelRequest.SerializeToString,
                 response_deserializer=tunneloffload__pb2.CreateIpTunnelResponses.FromString,
                 )
         self.GetIpTunnel = channel.unary_unary(
-                '/tunneloffload.v1alpha1.IpTunnelService/GetIpTunnel',
+                '/tunneloffload.v2.IpTunnelService/GetIpTunnel',
                 request_serializer=tunneloffload__pb2.TunnelId.SerializeToString,
                 response_deserializer=tunneloffload__pb2.IpTunnelResponse.FromString,
                 )
         self.GetIpTunnelStats = channel.unary_unary(
-                '/tunneloffload.v1alpha1.IpTunnelService/GetIpTunnelStats',
+                '/tunneloffload.v2.IpTunnelService/GetIpTunnelStats',
                 request_serializer=tunneloffload__pb2.TunnelId.SerializeToString,
                 response_deserializer=tunneloffload__pb2.IpTunnelStatsResponse.FromString,
                 )
         self.GetAllIpTunnels = channel.unary_stream(
-                '/tunneloffload.v1alpha1.IpTunnelService/GetAllIpTunnels',
+                '/tunneloffload.v2.IpTunnelService/GetAllIpTunnels',
                 request_serializer=tunneloffload__pb2.TunnelRequestArgs.SerializeToString,
                 response_deserializer=tunneloffload__pb2.IpTunnelResponses.FromString,
                 )
         self.GetAllIpTunnelsStats = channel.unary_stream(
-                '/tunneloffload.v1alpha1.IpTunnelService/GetAllIpTunnelsStats',
+                '/tunneloffload.v2.IpTunnelService/GetAllIpTunnelsStats',
                 request_serializer=tunneloffload__pb2.TunnelRequestArgs.SerializeToString,
                 response_deserializer=tunneloffload__pb2.IpTunnelStatsResponses.FromString,
                 )
@@ -127,7 +127,7 @@ def add_IpTunnelServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'tunneloffload.v1alpha1.IpTunnelService', rpc_method_handlers)
+            'tunneloffload.v2.IpTunnelService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -146,7 +146,7 @@ class IpTunnelService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tunneloffload.v1alpha1.IpTunnelService/Capabilities',
+        return grpc.experimental.unary_unary(request, target, '/tunneloffload.v2.IpTunnelService/Capabilities',
             tunneloffload__pb2.CapabilityRequest.SerializeToString,
             tunneloffload__pb2.CapabilityResponse.FromString,
             options, channel_credentials,
@@ -163,7 +163,7 @@ class IpTunnelService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/tunneloffload.v1alpha1.IpTunnelService/CreateIpTunnel',
+        return grpc.experimental.stream_unary(request_iterator, target, '/tunneloffload.v2.IpTunnelService/CreateIpTunnel',
             tunneloffload__pb2.IpTunnelRequest.SerializeToString,
             tunneloffload__pb2.CreateIpTunnelResponses.FromString,
             options, channel_credentials,
@@ -180,7 +180,7 @@ class IpTunnelService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tunneloffload.v1alpha1.IpTunnelService/GetIpTunnel',
+        return grpc.experimental.unary_unary(request, target, '/tunneloffload.v2.IpTunnelService/GetIpTunnel',
             tunneloffload__pb2.TunnelId.SerializeToString,
             tunneloffload__pb2.IpTunnelResponse.FromString,
             options, channel_credentials,
@@ -197,7 +197,7 @@ class IpTunnelService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tunneloffload.v1alpha1.IpTunnelService/GetIpTunnelStats',
+        return grpc.experimental.unary_unary(request, target, '/tunneloffload.v2.IpTunnelService/GetIpTunnelStats',
             tunneloffload__pb2.TunnelId.SerializeToString,
             tunneloffload__pb2.IpTunnelStatsResponse.FromString,
             options, channel_credentials,
@@ -214,7 +214,7 @@ class IpTunnelService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/tunneloffload.v1alpha1.IpTunnelService/GetAllIpTunnels',
+        return grpc.experimental.unary_stream(request, target, '/tunneloffload.v2.IpTunnelService/GetAllIpTunnels',
             tunneloffload__pb2.TunnelRequestArgs.SerializeToString,
             tunneloffload__pb2.IpTunnelResponses.FromString,
             options, channel_credentials,
@@ -231,7 +231,7 @@ class IpTunnelService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/tunneloffload.v1alpha1.IpTunnelService/GetAllIpTunnelsStats',
+        return grpc.experimental.unary_stream(request, target, '/tunneloffload.v2.IpTunnelService/GetAllIpTunnelsStats',
             tunneloffload__pb2.TunnelRequestArgs.SerializeToString,
             tunneloffload__pb2.IpTunnelStatsResponses.FromString,
             options, channel_credentials,

@@ -17,7 +17,7 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace openoffload {
-namespace v1 {
+namespace v2 {
 constexpr Uuid::Uuid(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : value_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
@@ -163,7 +163,7 @@ struct SessionRequestArgsDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SessionRequestArgsDefaultTypeInternal _SessionRequestArgs_default_instance_;
-}  // namespace v1
+}  // namespace v2
 }  // namespace openoffload
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_openoffload_2eproto[9];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_openoffload_2eproto[7];
@@ -171,156 +171,156 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const uint32_t TableStruct_openoffload_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::Uuid, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::Uuid, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::Uuid, value_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::Uuid, value_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionId, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionId, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionId, session_id_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionId, session_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::ActionParameters, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::ActionParameters, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::ActionParameters, action_type_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::ActionParameters, action_next_hop_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::ActionParameters, action_next_hop_v6_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::ActionParameters, action_type_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::ActionParameters, action_next_hop_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::ActionParameters, action_next_hop_v6_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, session_id_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, in_lif_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, out_lif_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, ip_version_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, source_ip_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, source_ipv6_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, source_port_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, destination_ip_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, destination_ipv6_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, destination_port_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, protocol_id_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, action_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequest, cache_timeout_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, session_id_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, in_lif_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, out_lif_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, ip_version_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, source_ip_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, source_ipv6_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, source_port_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, destination_ip_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, destination_ipv6_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, destination_port_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, protocol_id_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, action_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequest, cache_timeout_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponseError, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponseError, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponseError, session_id_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponseError, error_status_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponseError, session_id_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponseError, error_status_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponses, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponses, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponses, session_info_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponses, next_key_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponses, session_info_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponses, next_key_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::AddSessionResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::AddSessionResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::AddSessionResponse, request_status_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::AddSessionResponse, error_status_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::AddSessionResponse, start_time_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::AddSessionResponse, response_error_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::AddSessionResponse, request_status_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::AddSessionResponse, error_status_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::AddSessionResponse, start_time_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::AddSessionResponse, response_error_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, session_id_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, in_packets_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, out_packets_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, in_bytes_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, out_bytes_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, session_state_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, session_close_code_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, request_status_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, start_time_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionResponse, end_time_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, session_id_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, in_packets_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, out_packets_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, in_bytes_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, out_bytes_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, session_state_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, session_close_code_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, request_status_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, start_time_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionResponse, end_time_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequestArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequestArgs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequestArgs, page_size_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequestArgs, page_),
-  PROTOBUF_FIELD_OFFSET(::openoffload::v1::SessionRequestArgs, start_session_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequestArgs, page_size_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequestArgs, page_),
+  PROTOBUF_FIELD_OFFSET(::openoffload::v2::SessionRequestArgs, start_session_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::openoffload::v1::Uuid)},
-  { 7, -1, -1, sizeof(::openoffload::v1::SessionId)},
-  { 14, -1, -1, sizeof(::openoffload::v1::ActionParameters)},
-  { 23, -1, -1, sizeof(::openoffload::v1::SessionRequest)},
-  { 42, -1, -1, sizeof(::openoffload::v1::SessionResponseError)},
-  { 50, -1, -1, sizeof(::openoffload::v1::SessionResponses)},
-  { 58, -1, -1, sizeof(::openoffload::v1::AddSessionResponse)},
-  { 68, -1, -1, sizeof(::openoffload::v1::SessionResponse)},
-  { 84, -1, -1, sizeof(::openoffload::v1::SessionRequestArgs)},
+  { 0, -1, -1, sizeof(::openoffload::v2::Uuid)},
+  { 7, -1, -1, sizeof(::openoffload::v2::SessionId)},
+  { 14, -1, -1, sizeof(::openoffload::v2::ActionParameters)},
+  { 23, -1, -1, sizeof(::openoffload::v2::SessionRequest)},
+  { 42, -1, -1, sizeof(::openoffload::v2::SessionResponseError)},
+  { 50, -1, -1, sizeof(::openoffload::v2::SessionResponses)},
+  { 58, -1, -1, sizeof(::openoffload::v2::AddSessionResponse)},
+  { 68, -1, -1, sizeof(::openoffload::v2::SessionResponse)},
+  { 84, -1, -1, sizeof(::openoffload::v2::SessionRequestArgs)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_Uuid_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_SessionId_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_ActionParameters_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_SessionRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_SessionResponseError_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_SessionResponses_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_AddSessionResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_SessionResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v1::_SessionRequestArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_Uuid_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_SessionId_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_ActionParameters_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_SessionRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_SessionResponseError_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_SessionResponses_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_AddSessionResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_SessionResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::openoffload::v2::_SessionRequestArgs_default_instance_),
 };
 
 const char descriptor_table_protodef_openoffload_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021openoffload.proto\022\016openoffload.v1\032\037goo"
+  "\n\021openoffload.proto\022\016openoffload.v2\032\037goo"
   "gle/protobuf/timestamp.proto\"\025\n\004Uuid\022\r\n\005"
   "value\030\001 \001(\t\"\037\n\tSessionId\022\022\n\nsession_id\030\001"
   " \001(\004\"x\n\020ActionParameters\022/\n\013action_type\030"
-  "\001 \001(\0162\032.openoffload.v1.ActionType\022\027\n\017act"
+  "\001 \001(\0162\032.openoffload.v2.ActionType\022\027\n\017act"
   "ion_next_hop\030\002 \001(\r\022\032\n\022action_next_hop_v6"
   "\030\003 \001(\014\"\367\002\n\016SessionRequest\022\022\n\nsession_id\030"
   "\001 \001(\004\022\016\n\006in_lif\030\002 \001(\005\022\017\n\007out_lif\030\003 \001(\005\022-"
-  "\n\nip_version\030\004 \001(\0162\031.openoffload.v1.IpVe"
+  "\n\nip_version\030\004 \001(\0162\031.openoffload.v2.IpVe"
   "rsion\022\021\n\tsource_ip\030\005 \001(\r\022\023\n\013source_ipv6\030"
   "\006 \001(\014\022\023\n\013source_port\030\007 \001(\r\022\026\n\016destinatio"
   "n_ip\030\010 \001(\r\022\030\n\020destination_ipv6\030\t \001(\014\022\030\n\020"
   "destination_port\030\n \001(\r\022/\n\013protocol_id\030\013 "
-  "\001(\0162\032.openoffload.v1.ProtocolId\0220\n\006actio"
-  "n\030\014 \001(\0132 .openoffload.v1.ActionParameter"
+  "\001(\0162\032.openoffload.v2.ProtocolId\0220\n\006actio"
+  "n\030\014 \001(\0132 .openoffload.v2.ActionParameter"
   "s\022\025\n\rcache_timeout\030\r \001(\r\"@\n\024SessionRespo"
   "nseError\022\022\n\nsession_id\030\001 \001(\004\022\024\n\014error_st"
   "atus\030\002 \001(\005\"[\n\020SessionResponses\0225\n\014sessio"
-  "n_info\030\001 \003(\0132\037.openoffload.v1.SessionRes"
+  "n_info\030\001 \003(\0132\037.openoffload.v2.SessionRes"
   "ponse\022\020\n\010next_key\030\002 \001(\004\"\322\001\n\022AddSessionRe"
   "sponse\0228\n\016request_status\030\001 \001(\0162 .openoff"
-  "load.v1.AddSessionStatus\022\024\n\014error_status"
+  "load.v2.AddSessionStatus\022\024\n\014error_status"
   "\030\002 \001(\004\022.\n\nstart_time\030\003 \001(\0132\032.google.prot"
   "obuf.Timestamp\022<\n\016response_error\030\004 \003(\0132$"
-  ".openoffload.v1.SessionResponseError\"\373\002\n"
+  ".openoffload.v2.SessionResponseError\"\373\002\n"
   "\017SessionResponse\022\022\n\nsession_id\030\001 \001(\004\022\022\n\n"
   "in_packets\030\002 \001(\004\022\023\n\013out_packets\030\003 \001(\004\022\020\n"
   "\010in_bytes\030\004 \001(\004\022\021\n\tout_bytes\030\005 \001(\004\0223\n\rse"
-  "ssion_state\030\006 \001(\0162\034.openoffload.v1.Sessi"
+  "ssion_state\030\006 \001(\0162\034.openoffload.v2.Sessi"
   "onState\022<\n\022session_close_code\030\007 \001(\0162 .op"
-  "enoffload.v1.SessionCloseCode\0225\n\016request"
-  "_status\030\010 \001(\0162\035.openoffload.v1.RequestSt"
+  "enoffload.v2.SessionCloseCode\0225\n\016request"
+  "_status\030\010 \001(\0162\035.openoffload.v2.RequestSt"
   "atus\022.\n\nstart_time\030\t \001(\0132\032.google.protob"
   "uf.Timestamp\022,\n\010end_time\030\n \001(\0132\032.google."
   "protobuf.Timestamp\"L\n\022SessionRequestArgs"
@@ -344,25 +344,25 @@ const char descriptor_table_protodef_openoffload_2eproto[] PROTOBUF_SECTION_VARI
   "SSIONS\020\005\022\034\n\030_REJECTED_INTERNAL_ERROR\020\006*>"
   "\n\nActionType\022\t\n\005_DROP\020\000\022\014\n\010_FORWARD\020\001\022\013\n"
   "\007_MIRROR\020\002\022\n\n\006_SNOOP\020\0032\267\003\n\014SessionTable\022"
-  "T\n\nAddSession\022\036.openoffload.v1.SessionRe"
-  "quest\032\".openoffload.v1.AddSessionRespons"
-  "e\"\000(\001\022J\n\nGetSession\022\031.openoffload.v1.Ses"
-  "sionId\032\037.openoffload.v1.SessionResponse\""
-  "\000\022M\n\rDeleteSession\022\031.openoffload.v1.Sess"
-  "ionId\032\037.openoffload.v1.SessionResponse\"\000"
-  "\022X\n\016GetAllSessions\022\".openoffload.v1.Sess"
-  "ionRequestArgs\032 .openoffload.v1.SessionR"
+  "T\n\nAddSession\022\036.openoffload.v2.SessionRe"
+  "quest\032\".openoffload.v2.AddSessionRespons"
+  "e\"\000(\001\022J\n\nGetSession\022\031.openoffload.v2.Ses"
+  "sionId\032\037.openoffload.v2.SessionResponse\""
+  "\000\022M\n\rDeleteSession\022\031.openoffload.v2.Sess"
+  "ionId\032\037.openoffload.v2.SessionResponse\"\000"
+  "\022X\n\016GetAllSessions\022\".openoffload.v2.Sess"
+  "ionRequestArgs\032 .openoffload.v2.SessionR"
   "esponses\"\000\022\\\n\021GetClosedSessions\022\".openof"
-  "fload.v1.SessionRequestArgs\032\037.openoffloa"
-  "d.v1.SessionResponse\"\0000\001B\027Z\025.;openoffloa"
-  "d_v1beta1b\006proto3"
+  "fload.v2.SessionRequestArgs\032\037.openoffloa"
+  "d.v2.SessionResponse\"\0000\001B\022Z\020.;openoffloa"
+  "d_v2b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_openoffload_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_openoffload_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_openoffload_2eproto = {
-  false, false, 2657, descriptor_table_protodef_openoffload_2eproto, "openoffload.proto", 
+  false, false, 2652, descriptor_table_protodef_openoffload_2eproto, "openoffload.proto", 
   &descriptor_table_openoffload_2eproto_once, descriptor_table_openoffload_2eproto_deps, 1, 9,
   schemas, file_default_instances, TableStruct_openoffload_2eproto::offsets,
   file_level_metadata_openoffload_2eproto, file_level_enum_descriptors_openoffload_2eproto, file_level_service_descriptors_openoffload_2eproto,
@@ -374,7 +374,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_openoffload_2eproto(&descriptor_table_openoffload_2eproto);
 namespace openoffload {
-namespace v1 {
+namespace v2 {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* IpVersion_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_openoffload_2eproto);
   return file_level_enum_descriptors_openoffload_2eproto[0];
@@ -504,7 +504,7 @@ Uuid::Uuid(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.Uuid)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.Uuid)
 }
 Uuid::Uuid(const Uuid& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -517,7 +517,7 @@ Uuid::Uuid(const Uuid& from)
     value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_value(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.Uuid)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.Uuid)
 }
 
 inline void Uuid::SharedCtor() {
@@ -528,7 +528,7 @@ value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlread
 }
 
 Uuid::~Uuid() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.Uuid)
+  // @@protoc_insertion_point(destructor:openoffload.v2.Uuid)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -550,7 +550,7 @@ void Uuid::SetCachedSize(int size) const {
 }
 
 void Uuid::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.Uuid)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.Uuid)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -570,7 +570,7 @@ const char* Uuid::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_value();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "openoffload.v1.Uuid.value"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "openoffload.v2.Uuid.value"));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -600,7 +600,7 @@ failure:
 
 uint8_t* Uuid::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.Uuid)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.Uuid)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -609,7 +609,7 @@ uint8_t* Uuid::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_value().data(), static_cast<int>(this->_internal_value().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "openoffload.v1.Uuid.value");
+      "openoffload.v2.Uuid.value");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_value(), target);
   }
@@ -618,12 +618,12 @@ uint8_t* Uuid::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.Uuid)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.Uuid)
   return target;
 }
 
 size_t Uuid::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.Uuid)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.Uuid)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -654,7 +654,7 @@ void Uuid::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void Uuid::MergeFrom(const Uuid& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.Uuid)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.Uuid)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -666,7 +666,7 @@ void Uuid::MergeFrom(const Uuid& from) {
 }
 
 void Uuid::CopyFrom(const Uuid& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.Uuid)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.Uuid)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -707,13 +707,13 @@ SessionId::SessionId(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.SessionId)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.SessionId)
 }
 SessionId::SessionId(const SessionId& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   session_id_ = from.session_id_;
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.SessionId)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.SessionId)
 }
 
 inline void SessionId::SharedCtor() {
@@ -721,7 +721,7 @@ session_id_ = uint64_t{0u};
 }
 
 SessionId::~SessionId() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.SessionId)
+  // @@protoc_insertion_point(destructor:openoffload.v2.SessionId)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -742,7 +742,7 @@ void SessionId::SetCachedSize(int size) const {
 }
 
 void SessionId::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.SessionId)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.SessionId)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -790,7 +790,7 @@ failure:
 
 uint8_t* SessionId::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.SessionId)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.SessionId)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -804,12 +804,12 @@ uint8_t* SessionId::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.SessionId)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.SessionId)
   return target;
 }
 
 size_t SessionId::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.SessionId)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.SessionId)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -838,7 +838,7 @@ void SessionId::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void SessionId::MergeFrom(const SessionId& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.SessionId)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.SessionId)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -850,7 +850,7 @@ void SessionId::MergeFrom(const SessionId& from) {
 }
 
 void SessionId::CopyFrom(const SessionId& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.SessionId)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.SessionId)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -885,7 +885,7 @@ ActionParameters::ActionParameters(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.ActionParameters)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.ActionParameters)
 }
 ActionParameters::ActionParameters(const ActionParameters& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -901,7 +901,7 @@ ActionParameters::ActionParameters(const ActionParameters& from)
   ::memcpy(&action_type_, &from.action_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&action_next_hop_) -
     reinterpret_cast<char*>(&action_type_)) + sizeof(action_next_hop_));
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.ActionParameters)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.ActionParameters)
 }
 
 inline void ActionParameters::SharedCtor() {
@@ -916,7 +916,7 @@ action_next_hop_v6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmpt
 }
 
 ActionParameters::~ActionParameters() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.ActionParameters)
+  // @@protoc_insertion_point(destructor:openoffload.v2.ActionParameters)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -938,7 +938,7 @@ void ActionParameters::SetCachedSize(int size) const {
 }
 
 void ActionParameters::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.ActionParameters)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.ActionParameters)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -956,12 +956,12 @@ const char* ActionParameters::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .openoffload.v1.ActionType action_type = 1;
+      // .openoffload.v2.ActionType action_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_action_type(static_cast<::openoffload::v1::ActionType>(val));
+          _internal_set_action_type(static_cast<::openoffload::v2::ActionType>(val));
         } else
           goto handle_unusual;
         continue;
@@ -1007,11 +1007,11 @@ failure:
 
 uint8_t* ActionParameters::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.ActionParameters)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.ActionParameters)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .openoffload.v1.ActionType action_type = 1;
+  // .openoffload.v2.ActionType action_type = 1;
   if (this->_internal_action_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -1034,12 +1034,12 @@ uint8_t* ActionParameters::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.ActionParameters)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.ActionParameters)
   return target;
 }
 
 size_t ActionParameters::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.ActionParameters)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.ActionParameters)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1053,7 +1053,7 @@ size_t ActionParameters::ByteSizeLong() const {
         this->_internal_action_next_hop_v6());
   }
 
-  // .openoffload.v1.ActionType action_type = 1;
+  // .openoffload.v2.ActionType action_type = 1;
   if (this->_internal_action_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_action_type());
@@ -1081,7 +1081,7 @@ void ActionParameters::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void ActionParameters::MergeFrom(const ActionParameters& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.ActionParameters)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.ActionParameters)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1099,7 +1099,7 @@ void ActionParameters::MergeFrom(const ActionParameters& from) {
 }
 
 void ActionParameters::CopyFrom(const ActionParameters& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.ActionParameters)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.ActionParameters)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1137,10 +1137,10 @@ void ActionParameters::InternalSwap(ActionParameters* other) {
 
 class SessionRequest::_Internal {
  public:
-  static const ::openoffload::v1::ActionParameters& action(const SessionRequest* msg);
+  static const ::openoffload::v2::ActionParameters& action(const SessionRequest* msg);
 };
 
-const ::openoffload::v1::ActionParameters&
+const ::openoffload::v2::ActionParameters&
 SessionRequest::_Internal::action(const SessionRequest* msg) {
   return *msg->action_;
 }
@@ -1151,7 +1151,7 @@ SessionRequest::SessionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.SessionRequest)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.SessionRequest)
 }
 SessionRequest::SessionRequest(const SessionRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1173,14 +1173,14 @@ SessionRequest::SessionRequest(const SessionRequest& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_action()) {
-    action_ = new ::openoffload::v1::ActionParameters(*from.action_);
+    action_ = new ::openoffload::v2::ActionParameters(*from.action_);
   } else {
     action_ = nullptr;
   }
   ::memcpy(&session_id_, &from.session_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&cache_timeout_) -
     reinterpret_cast<char*>(&session_id_)) + sizeof(cache_timeout_));
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.SessionRequest)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.SessionRequest)
 }
 
 inline void SessionRequest::SharedCtor() {
@@ -1199,7 +1199,7 @@ destination_ipv6_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyS
 }
 
 SessionRequest::~SessionRequest() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.SessionRequest)
+  // @@protoc_insertion_point(destructor:openoffload.v2.SessionRequest)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -1223,7 +1223,7 @@ void SessionRequest::SetCachedSize(int size) const {
 }
 
 void SessionRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.SessionRequest)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.SessionRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1270,12 +1270,12 @@ const char* SessionRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         } else
           goto handle_unusual;
         continue;
-      // .openoffload.v1.IpVersion ip_version = 4;
+      // .openoffload.v2.IpVersion ip_version = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_ip_version(static_cast<::openoffload::v1::IpVersion>(val));
+          _internal_set_ip_version(static_cast<::openoffload::v2::IpVersion>(val));
         } else
           goto handle_unusual;
         continue;
@@ -1329,16 +1329,16 @@ const char* SessionRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         } else
           goto handle_unusual;
         continue;
-      // .openoffload.v1.ProtocolId protocol_id = 11;
+      // .openoffload.v2.ProtocolId protocol_id = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_protocol_id(static_cast<::openoffload::v1::ProtocolId>(val));
+          _internal_set_protocol_id(static_cast<::openoffload::v2::ProtocolId>(val));
         } else
           goto handle_unusual;
         continue;
-      // .openoffload.v1.ActionParameters action = 12;
+      // .openoffload.v2.ActionParameters action = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_action(), ptr);
@@ -1379,7 +1379,7 @@ failure:
 
 uint8_t* SessionRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.SessionRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.SessionRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1401,7 +1401,7 @@ uint8_t* SessionRequest::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_out_lif(), target);
   }
 
-  // .openoffload.v1.IpVersion ip_version = 4;
+  // .openoffload.v2.IpVersion ip_version = 4;
   if (this->_internal_ip_version() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -1444,14 +1444,14 @@ uint8_t* SessionRequest::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(10, this->_internal_destination_port(), target);
   }
 
-  // .openoffload.v1.ProtocolId protocol_id = 11;
+  // .openoffload.v2.ProtocolId protocol_id = 11;
   if (this->_internal_protocol_id() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       11, this->_internal_protocol_id(), target);
   }
 
-  // .openoffload.v1.ActionParameters action = 12;
+  // .openoffload.v2.ActionParameters action = 12;
   if (this->_internal_has_action()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1469,12 +1469,12 @@ uint8_t* SessionRequest::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.SessionRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.SessionRequest)
   return target;
 }
 
 size_t SessionRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.SessionRequest)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.SessionRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1495,7 +1495,7 @@ size_t SessionRequest::ByteSizeLong() const {
         this->_internal_destination_ipv6());
   }
 
-  // .openoffload.v1.ActionParameters action = 12;
+  // .openoffload.v2.ActionParameters action = 12;
   if (this->_internal_has_action()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1517,7 +1517,7 @@ size_t SessionRequest::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_out_lif());
   }
 
-  // .openoffload.v1.IpVersion ip_version = 4;
+  // .openoffload.v2.IpVersion ip_version = 4;
   if (this->_internal_ip_version() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_ip_version());
@@ -1543,7 +1543,7 @@ size_t SessionRequest::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32SizePlusOne(this->_internal_destination_port());
   }
 
-  // .openoffload.v1.ProtocolId protocol_id = 11;
+  // .openoffload.v2.ProtocolId protocol_id = 11;
   if (this->_internal_protocol_id() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_protocol_id());
@@ -1571,7 +1571,7 @@ void SessionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void SessionRequest::MergeFrom(const SessionRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.SessionRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.SessionRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1583,7 +1583,7 @@ void SessionRequest::MergeFrom(const SessionRequest& from) {
     _internal_set_destination_ipv6(from._internal_destination_ipv6());
   }
   if (from._internal_has_action()) {
-    _internal_mutable_action()->::openoffload::v1::ActionParameters::MergeFrom(from._internal_action());
+    _internal_mutable_action()->::openoffload::v2::ActionParameters::MergeFrom(from._internal_action());
   }
   if (from._internal_session_id() != 0) {
     _internal_set_session_id(from._internal_session_id());
@@ -1619,7 +1619,7 @@ void SessionRequest::MergeFrom(const SessionRequest& from) {
 }
 
 void SessionRequest::CopyFrom(const SessionRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.SessionRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.SessionRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1671,7 +1671,7 @@ SessionResponseError::SessionResponseError(::PROTOBUF_NAMESPACE_ID::Arena* arena
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.SessionResponseError)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.SessionResponseError)
 }
 SessionResponseError::SessionResponseError(const SessionResponseError& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1679,7 +1679,7 @@ SessionResponseError::SessionResponseError(const SessionResponseError& from)
   ::memcpy(&session_id_, &from.session_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&error_status_) -
     reinterpret_cast<char*>(&session_id_)) + sizeof(error_status_));
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.SessionResponseError)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.SessionResponseError)
 }
 
 inline void SessionResponseError::SharedCtor() {
@@ -1690,7 +1690,7 @@ inline void SessionResponseError::SharedCtor() {
 }
 
 SessionResponseError::~SessionResponseError() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.SessionResponseError)
+  // @@protoc_insertion_point(destructor:openoffload.v2.SessionResponseError)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -1711,7 +1711,7 @@ void SessionResponseError::SetCachedSize(int size) const {
 }
 
 void SessionResponseError::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.SessionResponseError)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.SessionResponseError)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1769,7 +1769,7 @@ failure:
 
 uint8_t* SessionResponseError::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.SessionResponseError)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.SessionResponseError)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1789,12 +1789,12 @@ uint8_t* SessionResponseError::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.SessionResponseError)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.SessionResponseError)
   return target;
 }
 
 size_t SessionResponseError::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.SessionResponseError)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.SessionResponseError)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1828,7 +1828,7 @@ void SessionResponseError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void SessionResponseError::MergeFrom(const SessionResponseError& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.SessionResponseError)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.SessionResponseError)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1843,7 +1843,7 @@ void SessionResponseError::MergeFrom(const SessionResponseError& from) {
 }
 
 void SessionResponseError::CopyFrom(const SessionResponseError& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.SessionResponseError)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.SessionResponseError)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1884,14 +1884,14 @@ SessionResponses::SessionResponses(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.SessionResponses)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.SessionResponses)
 }
 SessionResponses::SessionResponses(const SessionResponses& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       session_info_(from.session_info_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   next_key_ = from.next_key_;
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.SessionResponses)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.SessionResponses)
 }
 
 inline void SessionResponses::SharedCtor() {
@@ -1899,7 +1899,7 @@ next_key_ = uint64_t{0u};
 }
 
 SessionResponses::~SessionResponses() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.SessionResponses)
+  // @@protoc_insertion_point(destructor:openoffload.v2.SessionResponses)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -1920,7 +1920,7 @@ void SessionResponses::SetCachedSize(int size) const {
 }
 
 void SessionResponses::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.SessionResponses)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.SessionResponses)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1936,7 +1936,7 @@ const char* SessionResponses::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .openoffload.v1.SessionResponse session_info = 1;
+      // repeated .openoffload.v2.SessionResponse session_info = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -1982,11 +1982,11 @@ failure:
 
 uint8_t* SessionResponses::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.SessionResponses)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.SessionResponses)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .openoffload.v1.SessionResponse session_info = 1;
+  // repeated .openoffload.v2.SessionResponse session_info = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_session_info_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -2004,19 +2004,19 @@ uint8_t* SessionResponses::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.SessionResponses)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.SessionResponses)
   return target;
 }
 
 size_t SessionResponses::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.SessionResponses)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.SessionResponses)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .openoffload.v1.SessionResponse session_info = 1;
+  // repeated .openoffload.v2.SessionResponse session_info = 1;
   total_size += 1UL * this->_internal_session_info_size();
   for (const auto& msg : this->session_info_) {
     total_size +=
@@ -2045,7 +2045,7 @@ void SessionResponses::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void SessionResponses::MergeFrom(const SessionResponses& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.SessionResponses)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.SessionResponses)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2058,7 +2058,7 @@ void SessionResponses::MergeFrom(const SessionResponses& from) {
 }
 
 void SessionResponses::CopyFrom(const SessionResponses& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.SessionResponses)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.SessionResponses)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2106,7 +2106,7 @@ AddSessionResponse::AddSessionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.AddSessionResponse)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.AddSessionResponse)
 }
 AddSessionResponse::AddSessionResponse(const AddSessionResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -2120,7 +2120,7 @@ AddSessionResponse::AddSessionResponse(const AddSessionResponse& from)
   ::memcpy(&error_status_, &from.error_status_,
     static_cast<size_t>(reinterpret_cast<char*>(&request_status_) -
     reinterpret_cast<char*>(&error_status_)) + sizeof(request_status_));
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.AddSessionResponse)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.AddSessionResponse)
 }
 
 inline void AddSessionResponse::SharedCtor() {
@@ -2131,7 +2131,7 @@ inline void AddSessionResponse::SharedCtor() {
 }
 
 AddSessionResponse::~AddSessionResponse() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.AddSessionResponse)
+  // @@protoc_insertion_point(destructor:openoffload.v2.AddSessionResponse)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2153,7 +2153,7 @@ void AddSessionResponse::SetCachedSize(int size) const {
 }
 
 void AddSessionResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.AddSessionResponse)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.AddSessionResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2175,12 +2175,12 @@ const char* AddSessionResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .openoffload.v1.AddSessionStatus request_status = 1;
+      // .openoffload.v2.AddSessionStatus request_status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_request_status(static_cast<::openoffload::v1::AddSessionStatus>(val));
+          _internal_set_request_status(static_cast<::openoffload::v2::AddSessionStatus>(val));
         } else
           goto handle_unusual;
         continue;
@@ -2200,7 +2200,7 @@ const char* AddSessionResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         } else
           goto handle_unusual;
         continue;
-      // repeated .openoffload.v1.SessionResponseError response_error = 4;
+      // repeated .openoffload.v2.SessionResponseError response_error = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
@@ -2238,11 +2238,11 @@ failure:
 
 uint8_t* AddSessionResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.AddSessionResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.AddSessionResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .openoffload.v1.AddSessionStatus request_status = 1;
+  // .openoffload.v2.AddSessionStatus request_status = 1;
   if (this->_internal_request_status() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2263,7 +2263,7 @@ uint8_t* AddSessionResponse::_InternalSerialize(
         3, _Internal::start_time(this), target, stream);
   }
 
-  // repeated .openoffload.v1.SessionResponseError response_error = 4;
+  // repeated .openoffload.v2.SessionResponseError response_error = 4;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_response_error_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -2275,19 +2275,19 @@ uint8_t* AddSessionResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.AddSessionResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.AddSessionResponse)
   return target;
 }
 
 size_t AddSessionResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.AddSessionResponse)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.AddSessionResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .openoffload.v1.SessionResponseError response_error = 4;
+  // repeated .openoffload.v2.SessionResponseError response_error = 4;
   total_size += 1UL * this->_internal_response_error_size();
   for (const auto& msg : this->response_error_) {
     total_size +=
@@ -2306,7 +2306,7 @@ size_t AddSessionResponse::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64SizePlusOne(this->_internal_error_status());
   }
 
-  // .openoffload.v1.AddSessionStatus request_status = 1;
+  // .openoffload.v2.AddSessionStatus request_status = 1;
   if (this->_internal_request_status() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_request_status());
@@ -2329,7 +2329,7 @@ void AddSessionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void AddSessionResponse::MergeFrom(const AddSessionResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.AddSessionResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.AddSessionResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2348,7 +2348,7 @@ void AddSessionResponse::MergeFrom(const AddSessionResponse& from) {
 }
 
 void AddSessionResponse::CopyFrom(const AddSessionResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.AddSessionResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.AddSessionResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2411,7 +2411,7 @@ SessionResponse::SessionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.SessionResponse)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.SessionResponse)
 }
 SessionResponse::SessionResponse(const SessionResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2429,7 +2429,7 @@ SessionResponse::SessionResponse(const SessionResponse& from)
   ::memcpy(&session_id_, &from.session_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&request_status_) -
     reinterpret_cast<char*>(&session_id_)) + sizeof(request_status_));
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.SessionResponse)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.SessionResponse)
 }
 
 inline void SessionResponse::SharedCtor() {
@@ -2440,7 +2440,7 @@ inline void SessionResponse::SharedCtor() {
 }
 
 SessionResponse::~SessionResponse() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.SessionResponse)
+  // @@protoc_insertion_point(destructor:openoffload.v2.SessionResponse)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2463,7 +2463,7 @@ void SessionResponse::SetCachedSize(int size) const {
 }
 
 void SessionResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.SessionResponse)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.SessionResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2528,30 +2528,30 @@ const char* SessionResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         } else
           goto handle_unusual;
         continue;
-      // .openoffload.v1.SessionState session_state = 6;
+      // .openoffload.v2.SessionState session_state = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_session_state(static_cast<::openoffload::v1::SessionState>(val));
+          _internal_set_session_state(static_cast<::openoffload::v2::SessionState>(val));
         } else
           goto handle_unusual;
         continue;
-      // .openoffload.v1.SessionCloseCode session_close_code = 7;
+      // .openoffload.v2.SessionCloseCode session_close_code = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_session_close_code(static_cast<::openoffload::v1::SessionCloseCode>(val));
+          _internal_set_session_close_code(static_cast<::openoffload::v2::SessionCloseCode>(val));
         } else
           goto handle_unusual;
         continue;
-      // .openoffload.v1.RequestStatus request_status = 8;
+      // .openoffload.v2.RequestStatus request_status = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_request_status(static_cast<::openoffload::v1::RequestStatus>(val));
+          _internal_set_request_status(static_cast<::openoffload::v2::RequestStatus>(val));
         } else
           goto handle_unusual;
         continue;
@@ -2596,7 +2596,7 @@ failure:
 
 uint8_t* SessionResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.SessionResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.SessionResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2630,21 +2630,21 @@ uint8_t* SessionResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(5, this->_internal_out_bytes(), target);
   }
 
-  // .openoffload.v1.SessionState session_state = 6;
+  // .openoffload.v2.SessionState session_state = 6;
   if (this->_internal_session_state() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       6, this->_internal_session_state(), target);
   }
 
-  // .openoffload.v1.SessionCloseCode session_close_code = 7;
+  // .openoffload.v2.SessionCloseCode session_close_code = 7;
   if (this->_internal_session_close_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       7, this->_internal_session_close_code(), target);
   }
 
-  // .openoffload.v1.RequestStatus request_status = 8;
+  // .openoffload.v2.RequestStatus request_status = 8;
   if (this->_internal_request_status() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2671,12 +2671,12 @@ uint8_t* SessionResponse::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.SessionResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.SessionResponse)
   return target;
 }
 
 size_t SessionResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.SessionResponse)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.SessionResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2722,19 +2722,19 @@ size_t SessionResponse::ByteSizeLong() const {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64SizePlusOne(this->_internal_out_bytes());
   }
 
-  // .openoffload.v1.SessionState session_state = 6;
+  // .openoffload.v2.SessionState session_state = 6;
   if (this->_internal_session_state() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_session_state());
   }
 
-  // .openoffload.v1.SessionCloseCode session_close_code = 7;
+  // .openoffload.v2.SessionCloseCode session_close_code = 7;
   if (this->_internal_session_close_code() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_session_close_code());
   }
 
-  // .openoffload.v1.RequestStatus request_status = 8;
+  // .openoffload.v2.RequestStatus request_status = 8;
   if (this->_internal_request_status() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_request_status());
@@ -2757,7 +2757,7 @@ void SessionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void SessionResponse::MergeFrom(const SessionResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.SessionResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.SessionResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2796,7 +2796,7 @@ void SessionResponse::MergeFrom(const SessionResponse& from) {
 }
 
 void SessionResponse::CopyFrom(const SessionResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.SessionResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.SessionResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2836,7 +2836,7 @@ SessionRequestArgs::SessionRequestArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:openoffload.v1.SessionRequestArgs)
+  // @@protoc_insertion_point(arena_constructor:openoffload.v2.SessionRequestArgs)
 }
 SessionRequestArgs::SessionRequestArgs(const SessionRequestArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2844,7 +2844,7 @@ SessionRequestArgs::SessionRequestArgs(const SessionRequestArgs& from)
   ::memcpy(&page_size_, &from.page_size_,
     static_cast<size_t>(reinterpret_cast<char*>(&start_session_) -
     reinterpret_cast<char*>(&page_size_)) + sizeof(start_session_));
-  // @@protoc_insertion_point(copy_constructor:openoffload.v1.SessionRequestArgs)
+  // @@protoc_insertion_point(copy_constructor:openoffload.v2.SessionRequestArgs)
 }
 
 inline void SessionRequestArgs::SharedCtor() {
@@ -2855,7 +2855,7 @@ inline void SessionRequestArgs::SharedCtor() {
 }
 
 SessionRequestArgs::~SessionRequestArgs() {
-  // @@protoc_insertion_point(destructor:openoffload.v1.SessionRequestArgs)
+  // @@protoc_insertion_point(destructor:openoffload.v2.SessionRequestArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -2876,7 +2876,7 @@ void SessionRequestArgs::SetCachedSize(int size) const {
 }
 
 void SessionRequestArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:openoffload.v1.SessionRequestArgs)
+// @@protoc_insertion_point(message_clear_start:openoffload.v2.SessionRequestArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2942,7 +2942,7 @@ failure:
 
 uint8_t* SessionRequestArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v1.SessionRequestArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:openoffload.v2.SessionRequestArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2968,12 +2968,12 @@ uint8_t* SessionRequestArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v1.SessionRequestArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:openoffload.v2.SessionRequestArgs)
   return target;
 }
 
 size_t SessionRequestArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:openoffload.v1.SessionRequestArgs)
+// @@protoc_insertion_point(message_byte_size_start:openoffload.v2.SessionRequestArgs)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3012,7 +3012,7 @@ void SessionRequestArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void SessionRequestArgs::MergeFrom(const SessionRequestArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v1.SessionRequestArgs)
+// @@protoc_insertion_point(class_specific_merge_from_start:openoffload.v2.SessionRequestArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3030,7 +3030,7 @@ void SessionRequestArgs::MergeFrom(const SessionRequestArgs& from) {
 }
 
 void SessionRequestArgs::CopyFrom(const SessionRequestArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v1.SessionRequestArgs)
+// @@protoc_insertion_point(class_specific_copy_from_start:openoffload.v2.SessionRequestArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3058,35 +3058,35 @@ void SessionRequestArgs::InternalSwap(SessionRequestArgs* other) {
 }
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace v1
+}  // namespace v2
 }  // namespace openoffload
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::openoffload::v1::Uuid* Arena::CreateMaybeMessage< ::openoffload::v1::Uuid >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::Uuid >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::Uuid* Arena::CreateMaybeMessage< ::openoffload::v2::Uuid >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::Uuid >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::SessionId* Arena::CreateMaybeMessage< ::openoffload::v1::SessionId >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::SessionId >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::SessionId* Arena::CreateMaybeMessage< ::openoffload::v2::SessionId >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::SessionId >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::ActionParameters* Arena::CreateMaybeMessage< ::openoffload::v1::ActionParameters >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::ActionParameters >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::ActionParameters* Arena::CreateMaybeMessage< ::openoffload::v2::ActionParameters >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::ActionParameters >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::SessionRequest* Arena::CreateMaybeMessage< ::openoffload::v1::SessionRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::SessionRequest >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::SessionRequest* Arena::CreateMaybeMessage< ::openoffload::v2::SessionRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::SessionRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::SessionResponseError* Arena::CreateMaybeMessage< ::openoffload::v1::SessionResponseError >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::SessionResponseError >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::SessionResponseError* Arena::CreateMaybeMessage< ::openoffload::v2::SessionResponseError >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::SessionResponseError >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::SessionResponses* Arena::CreateMaybeMessage< ::openoffload::v1::SessionResponses >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::SessionResponses >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::SessionResponses* Arena::CreateMaybeMessage< ::openoffload::v2::SessionResponses >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::SessionResponses >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::AddSessionResponse* Arena::CreateMaybeMessage< ::openoffload::v1::AddSessionResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::AddSessionResponse >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::AddSessionResponse* Arena::CreateMaybeMessage< ::openoffload::v2::AddSessionResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::AddSessionResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::SessionResponse* Arena::CreateMaybeMessage< ::openoffload::v1::SessionResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::SessionResponse >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::SessionResponse* Arena::CreateMaybeMessage< ::openoffload::v2::SessionResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::SessionResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::openoffload::v1::SessionRequestArgs* Arena::CreateMaybeMessage< ::openoffload::v1::SessionRequestArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::openoffload::v1::SessionRequestArgs >(arena);
+template<> PROTOBUF_NOINLINE ::openoffload::v2::SessionRequestArgs* Arena::CreateMaybeMessage< ::openoffload::v2::SessionRequestArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::openoffload::v2::SessionRequestArgs >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
