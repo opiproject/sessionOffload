@@ -18,7 +18,7 @@
 
 syntax = "proto3";
 
-package tunneloffload.v1alpha1;
+package tunneloffload.v2;
 option go_package = "github.com/att/sessionOffload/protos";
 
 //
