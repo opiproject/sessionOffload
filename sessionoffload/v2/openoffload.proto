@@ -22,7 +22,7 @@ syntax = "proto3";
 
 package openoffload.v2;
 
-option go_package = ".;openoffload_v2";
+option go_package = "github.com/opiproject/sessionOffload/sessionoffload/v2/gen/go";
 
 import "google/protobuf/timestamp.proto";
 
