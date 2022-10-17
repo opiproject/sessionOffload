@@ -26,7 +26,7 @@ VERSION=1.0
 SERVER_LIB := libopof_server.so
 CLIENT_LIB := libopof_client.so
 #
-ROOT_DIR ?= $(HOME)/.local
+ROOT_DIR ?= $(HOME)
 MOUNT_PATH := ../../../
 #
 # CPP gRPC Definitions
@@ -77,77 +77,77 @@ CC := gcc -g
 CPP := g++ -g
 
 #CFLAGS := -c -O2 -I include -I /usr/local/include -I $(ROOT_DIR)/local/include -std=gnu99 -Wall -DDEBUG -DVISIBLE
-CFLAGS := -fPIC -c -O0 -I include -Wno-undef -I include -I $(ROOT_DIR)/include -std=gnu99  -Wall
+CFLAGS := -fPIC -c -O0 -I include -Wno-undef -I include -I $(ROOT_DIR)/local/include -std=gnu99  -Wall
 #CPPFLAGS := -c -O2 -std=c++17 -I ./ -I include  -I $(ROOT_DIR)/local/include -Wno-deprecated-declarations  -DDEBUG -DVISIBLE
 #CPPFLAGS := -c -O2 -std=c++17 -Wno-undef -I include -I $(ROOT_DIR)/local/include -Wno-deprecated-declarations -DSSL -DDEBUG
-CPPFLAGS := -fPIC -c -O0 -std=c++17 -Wno-undef -I include -I $(ROOT_DIR)/include -Werror -Wall -Wno-deprecated-declarations
+CPPFLAGS := -fPIC -c -O0 -std=c++17 -Wno-undef -I include -I $(ROOT_DIR)/local/include -Werror -Wall -Wno-deprecated-declarations
 #
 #
 # Link Flags
 #
-LIBDIR := $(ROOT_DIR)/lib
-LIB64DIR := $(ROOT_DIR)/lib64
+LIBDIR := $(ROOT_DIR)/local/lib
+LIB64DIR := $(ROOT_DIR)/local/lib64
 #
 GPR_LIB := $(LIBDIR)/libgpr.a
-CHANNELZ_LIB := $(LIBDIR)/libgrpcpp_channelz.a
+CHANNELZ_LIB := $(LIB64DIR)/libgrpcpp_channelz.a
 GRPCPP_LIB := $(LIBDIR)/libgrpc++.a
 GRPC_LIB := $(LIBDIR)/libgrpc.a
-PROTOBUF_LIB := $(LIBDIR)/libprotobuf.a
-CARES_LIB := $(LIBDIR)/libcares.a
-REFLECTION_LIB := $(LIBDIR)/libgrpc++_reflection.a
+PROTOBUF_LIB := $(LIB64DIR)/libprotobuf.a
+CARES_LIB := $(LIB64DIR)/libcares.a
+REFLECTION_LIB := $(LIB64DIR)/libgrpc++_reflection.a
 UPB_LIB := $(LIBDIR)/libupb.a
-ABSL_BASE_LIB := $(LIBDIR)/libabsl_base.a
-ABSL_FORMAT_LIB := $(LIBDIR)/libabsl_str_format_internal.a
-ABSL_INT28_LIB := $(LIBDIR)/libabsl_int128.a
-ABSL_STRINGS_LIB := $(LIBDIR)/libabsl_strings.a 
-ABSL_BAD_LIB := $(LIBDIR)/libabsl_bad_optional_access.a
+ABSL_BASE_LIB := $(LIB64DIR)/libabsl_base.a
+ABSL_FORMAT_LIB := $(LIB64DIR)/libabsl_str_format_internal.a
+ABSL_INT28_LIB := $(LIB64DIR)/libabsl_int128.a
+ABSL_STRINGS_LIB := $(LIB64DIR)/libabsl_strings.a
+ABSL_BAD_LIB := $(LIB64DIR)/libabsl_bad_optional_access.a
 SSL_LIB := $(LIBDIR)/libssl.a
 CRYPTO_LIB := $(LIBDIR)/libcrypto.a
-ABSL_STR_INTERNAL_LIB := $(LIBDIR)/libabsl_strings_internal.a 
+ABSL_STR_INTERNAL_LIB := $(LIB64DIR)/libabsl_strings_internal.a
 ADDRESS_SORT_LIB := $(LIBDIR)/libaddress_sorting.a
 Z_LIB := $(LIBDIR)/libz.a
-ABSL_LOGGING_LIB := $(LIBDIR)/libabsl_raw_logging_internal.a 
-ABSL_THROW := $(LIBDIR)/libabsl_throw_delegate.a
-ABSL_TIME_LIB := $(LIBDIR)/libabsl_time.a
-ABSL_TIME_ZONE_LIB := $(LIBDIR)/libabsl_time_zone.a
-ABSL_SYNC_LIB := $(LIBDIR)/libabsl_synchronization.a
-ABSL_STATUS_LIB := $(LIBDIR)/libabsl_status.a
-ABSL_CORD_LIB := $(LIBDIR)/libabsl_cord.a
-ABSL_CORD_INT := $(LIBDIR)/libabsl_cord_internal.a
-ABSL_STATUSOR_LIB := $(LIBDIR)/libabsl_statusor.a
-ABSL_RAND_DIST_LIB := $(LIBDIR)/libabsl_random_distributions.a
-ABSL_RAND_INT_HWAES := $(LIBDIR)/libabsl_random_internal_randen_hwaes.a
-ABSL_RAND_INT_HWAES_IMPL := $(LIBDIR)/libabsl_random_internal_randen_hwaes_impl.a
-ABSL_RAND_INT_RAND_SLOW := $(LIBDIR)/libabsl_random_internal_randen_slow.a
-ABSL_RAND_INT_RAND := $(LIBDIR)/libabsl_random_internal_randen.a
-ABSL_RAND_INT_POOL_URBG := $(LIBDIR)/libabsl_random_internal_pool_urbg.a
-ABSL_RAND_INT_PLAT := $(LIBDIR)/libabsl_random_internal_platform.a
-ABSL_RAND_INT_SEED_MAT := $(LIBDIR)/libabsl_random_internal_seed_material.a
-ABSL_RAND_SEED_GEN_EXEC := $(LIBDIR)/libabsl_random_seed_gen_exception.a
-ABSL_RAW_HASH_SET := $(LIBDIR)/libabsl_raw_hash_set.a
-ABSL_HASH := $(LIBDIR)/libabsl_hash.a
-ABSL_CORDZ_INFO := $(LIBDIR)/libabsl_cordz_info.a
-ABSL_CORDZ_FUNC := $(LIBDIR)/libabsl_cordz_functions.a
-ABSL_CORDZ_HANDLE := $(LIBDIR)/libabsl_cordz_handle.a
-ABSL_STR_ERR := $(LIBDIR)/libabsl_strerror.a
-RE2 := $(LIBDIR)/libre2.a
-ABSL_SPINLOCK_WAIT := $(LIBDIR)/libabsl_spinlock_wait.a
-ABSL_MALLOC_INT := $(LIBDIR)/libabsl_malloc_internal.a
-ABSL_STACK_TRACE := $(LIBDIR)/libabsl_stacktrace.a
-ABSL_GRAPHCYCLES_INT := $(LIBDIR)/libabsl_graphcycles_internal.a
-ABSL_SYMBOLIZE := $(LIBDIR)/libabsl_symbolize.a
-ABSL_THROW_DELEGATE := $(LIBDIR)/libabsl_throw_delegate.a
-ABSL_CITY := $(LIBDIR)/libabsl_city.a
-ABSL_LOW_LEVEL_HASH := $(LIBDIR)/libabsl_low_level_hash.a
-ABSL_EXP_BIAS := $(LIBDIR)/libabsl_exponential_biased.a
-ABSL_DEBUG_INTERNAL := $(LIBDIR)/libabsl_debugging_internal.a
-ABSL_SYMBOLIZE := $(LIBDIR)/libabsl_symbolize.a
-ABSL_DEMANGLE := $(LIBDIR)/libabsl_demangle_internal.a
+ABSL_LOGGING_LIB := $(LIB64DIR)/libabsl_raw_logging_internal.a
+ABSL_THROW := $(LIB64DIR)/libabsl_throw_delegate.a
+ABSL_TIME_LIB := $(LIB64DIR)/libabsl_time.a
+ABSL_TIME_ZONE_LIB := $(LIB64DIR)/libabsl_time_zone.a
+ABSL_SYNC_LIB := $(LIB64DIR)/libabsl_synchronization.a
+ABSL_STATUS_LIB := $(LIB64DIR)/libabsl_status.a
+ABSL_CORD_LIB := $(LIB64DIR)/libabsl_cord.a
+ABSL_CORD_INT := $(LIB64DIR)/libabsl_cord_internal.a
+ABSL_STATUSOR_LIB := $(LIB64DIR)/libabsl_statusor.a
+ABSL_RAND_DIST_LIB := $(LIB64DIR)/libabsl_random_distributions.a
+ABSL_RAND_INT_HWAES := $(LIB64DIR)/libabsl_random_internal_randen_hwaes.a
+ABSL_RAND_INT_HWAES_IMPL := $(LIB64DIR)/libabsl_random_internal_randen_hwaes_impl.a
+ABSL_RAND_INT_RAND_SLOW := $(LIB64DIR)/libabsl_random_internal_randen_slow.a
+ABSL_RAND_INT_RAND := $(LIB64DIR)/libabsl_random_internal_randen.a
+ABSL_RAND_INT_POOL_URBG := $(LIB64DIR)/libabsl_random_internal_pool_urbg.a
+ABSL_RAND_INT_PLAT := $(LIB64DIR)/libabsl_random_internal_platform.a
+ABSL_RAND_INT_SEED_MAT := $(LIB64DIR)/libabsl_random_internal_seed_material.a
+ABSL_RAND_SEED_GEN_EXEC := $(LIB64DIR)/libabsl_random_seed_gen_exception.a
+ABSL_RAW_HASH_SET := $(LIB64DIR)/libabsl_raw_hash_set.a
+ABSL_HASH := $(LIB64DIR)/libabsl_hash.a
+ABSL_CORDZ_INFO := $(LIB64DIR)/libabsl_cordz_info.a
+ABSL_CORDZ_FUNC := $(LIB64DIR)/libabsl_cordz_functions.a
+ABSL_CORDZ_HANDLE := $(LIB64DIR)/libabsl_cordz_handle.a
+ABSL_STR_ERR := $(LIB64DIR)/libabsl_strerror.a
+RE2 := $(LIB64DIR)/libre2.a
+ABSL_SPINLOCK_WAIT := $(LIB64DIR)/libabsl_spinlock_wait.a
+ABSL_MALLOC_INT := $(LIB64DIR)/libabsl_malloc_internal.a
+ABSL_STACK_TRACE := $(LIB64DIR)/libabsl_stacktrace.a
+ABSL_GRAPHCYCLES_INT := $(LIB64DIR)/libabsl_graphcycles_internal.a
+ABSL_SYMBOLIZE := $(LIB64DIR)/libabsl_symbolize.a
+ABSL_THROW_DELEGATE := $(LIB64DIR)/libabsl_throw_delegate.a
+ABSL_CITY := $(LIB64DIR)/libabsl_city.a
+ABSL_LOW_LEVEL_HASH := $(LIB64DIR)/libabsl_low_level_hash.a
+ABSL_EXP_BIAS := $(LIB64DIR)/libabsl_exponential_biased.a
+ABSL_DEBUG_INTERNAL := $(LIB64DIR)/libabsl_debugging_internal.a
+ABSL_SYMBOLIZE := $(LIB64DIR)/libabsl_symbolize.a
+ABSL_DEMANGLE := $(LIB64DIR)/libabsl_demangle_internal.a
 
 
 LD = g++ -g
 #LDFLAGS = -lc  -lc++ -lgrpc++ -lprotobuf -L~/.local/lib -L /opt/local/lib
-LIBCONFIG := /usr/lib/x86_64-linux-gnu/libconfig.a
+LIBCONFIG := /usr/local/lib/libconfig.a
 LDFLAGS = -lc  -lstdc++ -pthread 
 SERVERFLAGS =  -L $(LIB_DIR) -lopof_server
 CLIENTFLAGS =  -L $(LIB_DIR) -lopof_client
@@ -228,15 +228,13 @@ $(DIRECTORIES):
 # Generate gPRC files
 #
 $(PROTO_NAME).pb.cc: $(PROTO_NAME).proto
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l cpp -o ./openoffload/cpp/framework/src  --go-source-relative
-	#$(PROTOC) -I $(PROTOS_PATH) --cpp_out=src $(PROTO_NAME).proto
-	mv src/$(PROTO_NAME).pb.h $(INC_DIR)
-	mv src/$(PROTO_NAME).grpc.pb.h $(INC_DIR)
+	$(PROTOC) --cpp_out=src $(PROTO_NAME).proto
+	mv src/$(PROTO_NAME).pb.h include/
 #
 $(PROTO_NAME).grpc.pb.cc: $(PROTO_NAME).proto
-	docker run -v "${PWD}/${MOUNT_PATH}":/defs namely/protoc-all --lint -d ./sessionoffload/v2 -l cpp -o ./openoffload/cpp/framework/src  --go-source-relative
-	#$(PROTOC) -I $(PROTOS_PATH) --grpc_out=src --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
-	mv src/$(PROTO_NAME).grpc.pb.h $(INC_DIR)
+	$(PROTOC) --grpc_out=src --plugin=protoc-gen-grpc=$(GRPC_CPP_PLUGIN_PATH) $<
+	mv src/$(PROTO_NAME).grpc.pb.h include/
+
 #
 #$(PROTOS):  $(PROTO_NAME).grpc.pb.cc $(PROTO_NAME).pb.cc
 $(PROTOS):  $(PROTO_NAME).pb.cc

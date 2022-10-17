@@ -14,10 +14,9 @@ COPY Makefile /home/grpc/local/tests/Makefile
 
 RUN mkdir -p /home/protos
 
-COPY openoffload.proto /home/protos/
+COPY openoffload.proto /home/grpc/local/tests
 
-RUN ls ../../../sessionoffload/v2 && \
-    bash -c "mkdir -p {bin,obj,log}" && \
+RUN bash -c "mkdir -p {bin,obj,log}" && \
     make clean && \
     make HOME=/home/grpc all
 

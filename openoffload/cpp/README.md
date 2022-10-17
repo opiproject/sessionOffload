@@ -30,20 +30,23 @@ yum group install "Development Tools"
 ```
 
 ```bash
-wget -q -O cmake-linux.sh https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0-Linux-x86_64.sh
+wget -q -O cmake-linux.sh https://github.com/Kitware/CMake/releases/download/v3.23.4/cmake-3.23.4-Linux-x86_64.sh
 sh cmake-linux.sh -- --skip-license --prefix=$GRPC_INSTALL
 rm cmake-linux.sh
 export PATH=$GRPC_INSTALL/bin:$PATH
 ```
 
 ```bash
-git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc
+git clone --recurse-submodules -b v1.49.1 https://github.com/grpc/grpc
 cd grpc
 mkdir -p cmake/build
 pushd cmake/build
 cmake -DgRPC_INSTALL=ON \
       -DgRPC_BUILD_TESTS=OFF \
       -DCMAKE_INSTALL_PREFIX=$GRPC_INSTALL \
+      -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE \
+      -DCMAKE_CXX_STANDARD=17 \
+      -DABSL_PROPAGATE_CXX_STD=TRUE \
       ../..
 make -j 4
 make install
