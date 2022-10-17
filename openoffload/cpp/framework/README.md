@@ -23,9 +23,9 @@ Libconfig is used to configure test files the the test client only.
 [libconfig install instructions](https://github.com/hyperrealm/libconfig/blob/master/INSTALL)
 
 ```bash
-wget http://hyperrealm.github.io/libconfig/dist/libconfig-1.7.2.tar.gz
-tar xvzf libconfig-1.7.2.tar.gz
-cd libconfig-1.7.2
+wget http://hyperrealm.github.io/libconfig/dist/libconfig-1.7.3.tar.gz
+tar xvzf libconfig-1.7.3.tar.gz
+cd libconfig-1.7.3
 ./configure
 make 
 sudo make install
@@ -64,18 +64,21 @@ This will print out links to libconfig.so
 ```bash
 mkdir -p $HOME/local
 export GRPC_INSTALL=$HOME/local
-wget --no-check-certificate -q -O cmake-linux.sh https://github.com/Kitware/CMake/releases/download/v3.17.5/cmake-3.17.5-Linux-x86_64.sh
+wget --no-check-certificate -q -O cmake-linux.sh https://github.com/Kitware/CMake/releases/download/v3.23.4/cmake-3.23.4-Linux-x86_64.sh
 ./cmake-linux.sh  -- --skip-license --prefix=$HOME/local
 rm cmake-linux.sh
 export PATH=$GRPC_INSTALL/bin:$PATH
 git config --global  http.sslVerify false
-git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc
+git clone --recurse-submodules -b v1.49.1 https://github.com/grpc/grpc
 cd grpc 
 mkdir -p $GRPC_INSTALL/grpc/cmake/build
 pushd cmake/build
 cmake -DgRPC_INSTALL=ON \
       -DgRPC_BUILD_TESTS=OFF \
       -DCMAKE_INSTALL_PREFIX=$GRPC_INSTALL \
+      -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE \
+      -DCMAKE_CXX_STANDARD=17 \
+      -DABSL_PROPAGATE_CXX_STD=TRUE \
       ../..
 make -j 4
 make install
