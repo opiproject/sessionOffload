@@ -1,0 +1,33 @@
+---
+version: '3.7'
+
+services:
+  opi-offload-server:
+    build:
+      context: server
+    networks:
+      - internet
+      - intranet
+    command: /opi-sessionoffload-bridge -port=50151
+
+  opi-offload-client:
+    build:
+      context: client
+    networks:
+      - internet
+      - intranet
+    depends_on:
+      - opi-offload-server
+    command: /opi-sessionoffload-client -addr=opi-offload-server:50151
+
+networks:
+  internet:
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.200.0/24
+  intranet:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/16
