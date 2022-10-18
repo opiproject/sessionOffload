@@ -27,6 +27,8 @@ jobs:
         dockerfile:
           - ./openoffload/cpp/framework/Dockerfile
           - ./openoffload/cpp/framework/build/Dockerfile
+          - ./openoffload/go/client/Dockerfile
+          - ./openoffload/go/server/Dockerfile
     steps:
       - uses: actions/checkout@v3.1.0
       - uses: hadolint/hadolint-action@v2.1.0

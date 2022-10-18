@@ -1,0 +1,37 @@
+---
+name: 'OPI sessionOffload golang Framework CI'
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'openoffload/go/**'
+      - 'sessionoffload/**'
+      - '.github/workflows/framework.yml'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - 'openoffload/go/**'
+      - 'sessionoffload/**'
+      - '.github/workflows/framework.yml'
+
+concurrency:
+  # if workflow for PR or push is already running stop it, and start new one
+  group: sessionoffload-framework-golang-skip-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sessionoffload-framework-golang-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package:
+          - server
+          - client
+    steps:
+      - run: 'echo "No sessionOffload golang framework test run required"'
+
+  sessionoffload-framework-golang-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No sessionOffload golang framework test run required"'
