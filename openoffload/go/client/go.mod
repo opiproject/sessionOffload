@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/go-ping/ping v1.1.0
-	github.com/opiproject/sessionOffload v0.0.0-20221017202014-e064375b3627
+	github.com/opiproject/sessionOffload v0.0.0-20221020210936-1840d7870cab
 	google.golang.org/grpc v1.50.1
 )
 
