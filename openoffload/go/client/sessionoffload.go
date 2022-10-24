@@ -43,6 +43,8 @@ func do_sessionoffload(conn grpc.ClientConnInterface, ctx context.Context) {
 		log.Printf("close and receive: %v", err)
 	}
 
+	log.Printf("%+v\n", response)
+
 	// Load a few more sessions
 	add_session_requests2 := []*fw.SessionRequest{
 		{InLif: 9, OutLif: 5, IpVersion: fw.IpVersion__IPV4, SourceIp: 0x101a1a01, DestinationPort: 800, ProtocolId: fw.ProtocolId__UDP, Action: &fw.ActionParameters{ActionType: fw.ActionType__DROP}, },

@@ -16,6 +16,12 @@ import (
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 )
 
+type action_params struct {
+	action_type        fw.ActionType
+	action_next_hop    uint32
+	action_next_hop_v6 []byte
+}
+
 // Per session state in the table
 type session struct {
 	session_id uint64
@@ -29,7 +35,7 @@ type session struct {
         destination_ipv6 []byte
         destination_port uint32
         protocol_id fw.ProtocolId
-        action fw.ActionParameters
+        action action_params
         cache_timeout uint32
         in_packets uint64
         out_packets uint64
@@ -43,7 +49,7 @@ type session struct {
 }
 
 // Mutex for global session table
-var session_lock sync.Mutex
+var session_lock sync.RWMutex
 
 // The global session table
 var sessions map[uint64]session
@@ -60,9 +66,10 @@ func session_update() {
 		log.Printf("----- session_update running -----")
 		time.Sleep(time.Duration(*update) * time.Second)
 
-		session_lock.Lock()
 
 		for k, v := range sessions {
+			session_lock.RLock()
+
 			// Increment packet counters
 			v.in_packets  += uint64(rand.Intn(1000))
 			v.out_packets += uint64(rand.Intn(1000))
@@ -71,9 +78,9 @@ func session_update() {
 
 			// Dump the session
 			log.Printf("Session %d: %v", k, v)
-		}
 
-		session_lock.Unlock()
+			session_lock.RUnlock()
+		}
 	}
 }
 
@@ -87,8 +94,8 @@ func init_sessionoffload() {
 func next_session_id() (uint64, error) {
 	var cnt uint64
 
-	session_lock.Lock()
-	defer session_lock.Unlock()
+	session_lock.RLock()
+	defer session_lock.RUnlock()
 
 	cnt = 0
 	for {
@@ -142,7 +149,11 @@ func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 			destination_ipv6: sr.DestinationIpv6,
 			destination_port: sr.DestinationPort,
 			protocol_id:      sr.ProtocolId,
-			action:           *sr.Action,
+			action:           action_params{
+				action_type:        sr.Action.ActionType,
+				action_next_hop:    sr.Action.ActionNextHop,
+				action_next_hop_v6: sr.Action.ActionNextHopV6,
+			},
 			cache_timeout:    sr.CacheTimeout,
 			in_packets:       0,
 			out_packets:      0,
@@ -160,11 +171,11 @@ func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 }
 
 func (s *server) GetSession(ctx context.Context, in *fw.SessionId) (*fw.SessionResponse, error) {
-	session_lock.Lock()
-	defer session_lock.Unlock()
+	session_lock.RLock()
+	defer session_lock.RUnlock()
 
 	session, valid := sessions[in.SessionId]
-	if valid != true {
+	if !valid {
 		log.Printf("Session not found")
 		return nil, errors.New("Session not found")
 	}
@@ -188,7 +199,7 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 	defer session_lock.Unlock()
 
 	session, valid := sessions[in.SessionId]
-	if valid != true {
+	if !valid {
 		log.Printf("Session not found")
 		return nil, errors.New("Session not found")
 	}
@@ -214,8 +225,8 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 func (s *server) GetAllSession(ctx context.Context, in *fw.SessionRequestArgs) (*fw.SessionResponses, error) {
 	var return_sessions fw.SessionResponses
 
-	session_lock.Lock()
-	defer session_lock.Unlock()
+	session_lock.RLock()
+	defer session_lock.RUnlock()
 
 	for k, v := range sessions {
 		// Skip if requested session start is greater than current session
@@ -247,8 +258,8 @@ func (s *server) GetClosedSessions(in *fw.SessionRequestArgs, stream fw.SessionT
 	// Use a wait group to allow for process concurrency
 	var wg sync.WaitGroup
 
-	session_lock.Lock()
-	defer session_lock.Unlock()
+	session_lock.RLock()
+	defer session_lock.RUnlock()
 
 	for _, v := range sessions {
 		if v.session_state == fw.SessionState__CLOSED {
