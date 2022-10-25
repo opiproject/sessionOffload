@@ -3,7 +3,7 @@ module session_server
 go 1.19
 
 require (
-	github.com/opiproject/sessionOffload v0.0.0-20221021142122-842704d60d29
+	github.com/opiproject/sessionOffload v0.0.0-20221025142715-a6c298d90f38
 	google.golang.org/grpc v1.50.1
 	google.golang.org/protobuf v1.28.1
 )
