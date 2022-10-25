@@ -4,6 +4,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"errors"
 	"io"
@@ -24,28 +25,28 @@ type action_params struct {
 
 // Per session state in the table
 type session struct {
-	session_id uint64
-	in_lif int32
-        out_lif int32
-        ip_version fw.IpVersion
-        source_ip uint32
-        source_ipv6 []byte
-        source_port uint32
-        destination_ip uint32
-        destination_ipv6 []byte
-        destination_port uint32
-        protocol_id fw.ProtocolId
-        action action_params
-        cache_timeout uint32
-        in_packets uint64
-        out_packets uint64
-        in_bytes uint64
-        out_bytes uint64
-        session_state fw.SessionState
-        session_close_code fw.SessionCloseCode
-        request_status fw.RequestStatus
-        start_time time.Time
-	end_time time.Time
+	session_id         uint64
+	in_lif             int32
+	out_lif            int32
+	ip_version         fw.IpVersion
+	source_ip          uint32
+	source_ipv6        []byte
+	source_port        uint32
+	destination_ip     uint32
+	destination_ipv6   []byte
+	destination_port   uint32
+	protocol_id        fw.ProtocolId
+	action             action_params
+	cache_timeout      uint32
+	in_packets         uint64
+	out_packets        uint64
+	in_bytes           uint64
+	out_bytes          uint64
+	session_state      fw.SessionState
+	session_close_code fw.SessionCloseCode
+	request_status     fw.RequestStatus
+	start_time         time.Time
+	end_time           time.Time
 }
 
 // Mutex for global session table
@@ -93,6 +94,46 @@ func session_update() {
 	}
 }
 
+func find_session_by_7_tuple(in_lif, out_lif int32, source_ipv4 uint32, source_ipv6 []byte,
+			dest_ipv4 uint32, dest_ipv6 []byte,
+			src_port, dst_port uint32,
+			protocol_id *fw.ProtocolId, ip_version *fw.IpVersion) uint64 {
+	for _, v := range sessions {
+		session_lock.RLock()
+
+		if *ip_version == fw.IpVersion__IPV4 {
+			if v.in_lif == in_lif &&
+			   v.out_lif == out_lif &&
+			   v.source_ip == source_ipv4 &&
+			   v.destination_ip == dest_ipv4 &&
+			   v.source_port == src_port &&
+			   v.destination_port == dst_port &&
+			   v.protocol_id == *protocol_id {
+				session_lock.RUnlock()
+				return v.session_id
+			}
+		} else if *ip_version == fw.IpVersion__IPV6 {
+			srcv6 := bytes.Compare(v.source_ipv6, source_ipv6)
+			dstv6 := bytes.Compare(v.destination_ipv6, dest_ipv6)
+
+			if v.in_lif == in_lif &&
+			   v.out_lif == out_lif &&
+			   srcv6 == 0 &&
+			   dstv6 == 0 &&
+			   v.source_port == src_port &&
+			   v.destination_port == dst_port &&
+			   v.protocol_id == *protocol_id {
+				session_lock.RUnlock()
+				return v.session_id
+			}
+		}
+
+		session_lock.RUnlock()
+	}
+
+	return 0
+}
+
 func init_sessionoffload() {
 	sessions = make(map[uint64]session)
 	last = *start_session
@@ -127,54 +168,72 @@ func next_session_id() (uint64, error) {
 
 func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 	var total int32
+	var resp fw.AddSessionResponse
+	var add_new_session bool
 
 	for {
+		add_new_session = true
 		sr, err := stream.Recv()
 		if err == io.EOF {
-			return stream.SendAndClose(&fw.AddSessionResponse{
-				RequestStatus: fw.AddSessionStatus__SESSION_ACCEPTED,
-				ErrorStatus:   0,
-			})
+			return stream.SendAndClose(&resp)
 		}
 		if err != nil {
 			return err
+		}
+
+		// Check if this session already exists
+		if existing_session := find_session_by_7_tuple(sr.InLif, sr.OutLif,
+								sr.SourceIp, sr.SourceIpv6,
+								sr.DestinationIp, sr.DestinationIpv6,
+								sr.SourcePort, sr.DestinationPort,
+								&sr.ProtocolId, &sr.IpVersion); existing_session != 0 {
+			log.Printf("Existing session with 7-tuple found")
+			session_resp_err := fw.SessionResponseError{
+				SessionId: existing_session,
+				ErrorStatus: fw.RequestStatus_value["_REJECTED_SESSION_ALREADY_EXISTS"],
+			}
+			resp.ResponseError = append(resp.ResponseError, &session_resp_err)
+			add_new_session = false
 		}
 
 		newSessionId, err := next_session_id()
 		if err != nil {
 			log.Printf("Error getting new session ID: %v", err)
-			return err
+			add_new_session = false
 		}
 
-		new_session := session {
-			session_id:       newSessionId,
-			in_lif:           sr.InLif,
-			out_lif:          sr.OutLif,
-			ip_version:       sr.IpVersion,
-			source_ip:        sr.SourceIp,
-			source_ipv6:      sr.SourceIpv6,
-			source_port:      sr.SourcePort,
-			destination_ip:   sr.DestinationIp,
-			destination_ipv6: sr.DestinationIpv6,
-			destination_port: sr.DestinationPort,
-			protocol_id:      sr.ProtocolId,
-			action:           action_params{
-				action_type:        sr.Action.ActionType,
-				action_next_hop:    sr.Action.ActionNextHop,
-				action_next_hop_v6: sr.Action.ActionNextHopV6,
-			},
-			cache_timeout:    sr.CacheTimeout,
-			in_packets:       0,
-			out_packets:      0,
-			in_bytes:         0,
-			out_bytes:        0,
+		if add_new_session {
+			new_session := session {
+				session_id:       newSessionId,
+				in_lif:           sr.InLif,
+				out_lif:          sr.OutLif,
+				ip_version:       sr.IpVersion,
+				source_ip:        sr.SourceIp,
+				source_ipv6:      sr.SourceIpv6,
+				source_port:      sr.SourcePort,
+				destination_ip:   sr.DestinationIp,
+				destination_ipv6: sr.DestinationIpv6,
+				destination_port: sr.DestinationPort,
+				protocol_id:      sr.ProtocolId,
+				action:           action_params{
+					action_type:        sr.Action.ActionType,
+					action_next_hop:    sr.Action.ActionNextHop,
+					action_next_hop_v6: sr.Action.ActionNextHopV6,
+				},
+				cache_timeout:    sr.CacheTimeout,
+				in_packets:       0,
+				out_packets:      0,
+				in_bytes:         0,
+				out_bytes:        0,
+			}
+
+			session_lock.Lock()
+			sessions[newSessionId] = new_session
+			session_lock.Unlock()
+
+			total++
 		}
 
-		session_lock.Lock()
-		sessions[newSessionId] = new_session
-		session_lock.Unlock()
-
-		total++
 		log.Printf("%+v\n", sr)
 	}
 }
