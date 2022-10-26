@@ -1,0 +1,97 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright (c) 2022 Intel Corporation, or its subsidiaries.
+//
+// This file contains the logic for the session_update thread. This is meant to
+// simulate the random updating of sessions in the session table and would not
+// be used in a setup on actual hardware.
+//
+
+package main
+
+import (
+	"log"
+	"math/rand"
+	"time"
+
+	fw "github.com/opiproject/sessionOffload/sessionoffload/v2/gen/go"
+)
+
+// Update packet counters
+func session_update_packet_counters(v *session) {
+	// Increment packet counters
+	v.in_packets  += uint64(rand.Intn(1000))
+	v.out_packets += uint64(rand.Intn(1000))
+	v.in_bytes    += uint64(rand.Intn(100000))
+	v.out_bytes   += uint64(rand.Intn(100000))
+}
+
+func session_timeout(v *session) {
+	v.session_state      = fw.SessionState__CLOSED
+	v.session_close_code = fw.SessionCloseCode__TIMEOUT
+	v.end_time           = time.Now()
+}
+
+func session_fin(v *session) {
+	v.session_state      = fw.SessionState__CLOSED
+	v.session_close_code = fw.SessionCloseCode__FINACK
+	v.end_time           = time.Now()
+}
+
+// Function which runs in the background updating the session table entries
+func session_update() {
+	states := [18]string  {
+		"noop", "noop", "noop", "noop", "noop", "noop", "noop", "noop", "noop", "noop",
+		"stats", "stats", "stats", "stats", "stats",
+		"timeout", "clientfin", "serverfin",
+	}
+
+	for {
+		log.Printf("----- session_update running -----")
+		time.Sleep(time.Duration(*update) * time.Second)
+
+
+		for k, v := range sessions {
+			session_lock.RLock()
+
+			if v.session_state == fw.SessionState__CLOSED {
+				// Skip this session
+				log.Printf("Skipping update for session %d", v.session_id)
+				session_lock.RUnlock()
+				continue
+			}
+
+			// Get a random state
+			switch state := states[rand.Intn(len(states))]; state {
+			case "stats":
+				log.Printf("Updating stats for session %d", v.session_id)
+				session_update_packet_counters(&v)
+			case "timeout":
+				log.Printf("Timing out session %d", v.session_id)
+				session_timeout(&v)
+			case "clientfin":
+				log.Printf("Session %d: CLIENTFIN", v.session_id)
+				session_fin(&v)
+			case "serverfin":
+				log.Printf("Session %d: SERVERFIN", v.session_id)
+				session_fin(&v)
+			case "noop":
+			default:
+				log.Printf("default for session %d", v.session_id)
+			}
+
+			// Save the new session in the session map
+			sessions[k] = v
+
+			// Use v for printing the output again
+			v = sessions[k]
+
+			// Dump the session
+			log.Printf("Session %d: ID: [%d] State: [%s] In packets/bytes [%d/%d] Out packets/bytes [%d/%d]",
+				k, v.session_id, v.session_state.String(),
+				v.in_packets, v.in_bytes,
+				v.out_packets, v.out_bytes)
+
+			session_lock.RUnlock()
+		}
+	}
+}
