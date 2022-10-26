@@ -61,39 +61,6 @@ var last uint64
 // The max session ID we can allocate
 var max uint64
 
-// Function which runs in the background updating the session table entries
-func session_update() {
-	for {
-		log.Printf("----- session_update running -----")
-		time.Sleep(time.Duration(*update) * time.Second)
-
-
-		for k, v := range sessions {
-			session_lock.RLock()
-
-			// Increment packet counters
-			v.in_packets  += uint64(rand.Intn(1000))
-			v.out_packets += uint64(rand.Intn(1000))
-			v.in_bytes    += uint64(rand.Intn(100000))
-			v.out_bytes   += uint64(rand.Intn(100000))
-
-			// Save the new session in the session map
-			sessions[k] = v
-
-			// Use v for printing the output again
-			v = sessions[k]
-
-			// Dump the session
-			log.Printf("Session %d: ID: [%d] State: [%s] In packets/bytes [%d/%d] Out packets/bytes [%d/%d]",
-				k, v.session_id, v.session_state.String(),
-				v.in_packets, v.in_bytes,
-				v.out_packets, v.out_bytes)
-
-			session_lock.RUnlock()
-		}
-	}
-}
-
 func find_session_by_7_tuple(in_lif, out_lif int32, source_ipv4 uint32, source_ipv6 []byte,
 			dest_ipv4 uint32, dest_ipv6 []byte,
 			src_port, dst_port uint32,
@@ -135,6 +102,7 @@ func find_session_by_7_tuple(in_lif, out_lif int32, source_ipv4 uint32, source_i
 }
 
 func init_sessionoffload() {
+	rand.Seed(time.Now().Unix())
 	sessions = make(map[uint64]session)
 	last = *start_session
 	max  = *max_session
@@ -229,6 +197,7 @@ func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 				out_packets:      0,
 				in_bytes:         0,
 				out_bytes:        0,
+				start_time:       time.Now(),
 			}
 
 			session_lock.Lock()
