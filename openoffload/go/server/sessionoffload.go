@@ -199,6 +199,10 @@ func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 		newSessionId, err := next_session_id()
 		if err != nil {
 			log.Printf("Error getting new session ID: %v", err)
+			session_resp_err := fw.SessionResponseError{
+				ErrorStatus: fw.RequestStatus_value["_REJECTED_SESSION_TABLE_FULL"],
+			}
+			resp.ResponseError = append(resp.ResponseError, &session_resp_err)
 			add_new_session = false
 		}
 
