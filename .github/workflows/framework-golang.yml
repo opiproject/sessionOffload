@@ -8,13 +8,13 @@ on:
     paths:
       - 'openoffload/go/**'
       - 'sessionoffload/**'
-      - '.github/workflows/framework.yml'
+      - '.github/workflows/framework-golang.yml'
   pull_request:
     branches: [ main ]
     paths:
       - 'openoffload/go/**'
       - 'sessionoffload/**'
-      - '.github/workflows/framework.yml'
+      - '.github/workflows/framework-golang.yml'
 
 env:
   # Use docker.io for Docker Hub if empty
