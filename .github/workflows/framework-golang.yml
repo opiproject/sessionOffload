@@ -105,11 +105,10 @@ jobs:
         "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.DeleteSession -l
         "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.GetAllSessions -l
         "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.GetClosedSessions -l
-        docker-compose down
       working-directory: openoffload/go
 
     - name: Logs
-      if: failure()
+      if: always()
       run: docker-compose logs
       working-directory: openoffload/go
 
