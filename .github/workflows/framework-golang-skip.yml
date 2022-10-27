@@ -7,13 +7,13 @@ on:
     paths-ignore:
       - 'openoffload/go/**'
       - 'sessionoffload/**'
-      - '.github/workflows/framework.yml'
+      - '.github/workflows/framework-golang.yml'
   pull_request:
     branches: [ main ]
     paths-ignore:
       - 'openoffload/go/**'
       - 'sessionoffload/**'
-      - '.github/workflows/framework.yml'
+      - '.github/workflows/framework-golang.yml'
 
 concurrency:
   # if workflow for PR or push is already running stop it, and start new one
