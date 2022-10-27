@@ -50,13 +50,12 @@ func session_update() {
 		time.Sleep(time.Duration(*update) * time.Second)
 
 
+		session_lock.RLock()
 		for k, v := range sessions {
-			session_lock.RLock()
 
 			if v.session_state == fw.SessionState__CLOSED {
 				// Skip this session
 				log.Printf("Skipping update for session %d", v.session_id)
-				session_lock.RUnlock()
 				continue
 			}
 
@@ -82,16 +81,13 @@ func session_update() {
 			// Save the new session in the session map
 			sessions[k] = v
 
-			// Use v for printing the output again
-			v = sessions[k]
-
 			// Dump the session
 			log.Printf("Session %d: ID: [%d] State: [%s] In packets/bytes [%d/%d] Out packets/bytes [%d/%d]",
 				k, v.session_id, v.session_state.String(),
 				v.in_packets, v.in_bytes,
 				v.out_packets, v.out_bytes)
 
-			session_lock.RUnlock()
 		}
+		session_lock.RUnlock()
 	}
 }
