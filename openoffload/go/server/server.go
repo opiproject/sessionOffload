@@ -18,7 +18,7 @@ var (
 	port           = flag.Int("port", 50151, "The server port")
 	start_session  = flag.Uint64("start", 1, "The starting session ID")
 	max_session    = flag.Uint64("max", 8192, "The maximum session ID")
-	update         = flag.Int("update", 10, "Delay for each session update run")
+	update         = flag.Int("simulate", 0, "Enable simulation with a delay per run, disabled by default")
 )
 
 type server struct {

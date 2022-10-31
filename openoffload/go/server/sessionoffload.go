@@ -106,7 +106,9 @@ func init_sessionoffload() {
 	sessions = make(map[uint64]session)
 	last = *start_session
 	max  = *max_session
-	go session_update()
+	if *update != 0 {
+		go session_update()
+	}
 }
 
 func next_session_id() (uint64, error) {
