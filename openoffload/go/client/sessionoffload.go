@@ -43,7 +43,7 @@ func do_sessionoffload(conn grpc.ClientConnInterface, ctx context.Context) {
 		log.Printf("close and receive: %v", err)
 	}
 
-	log.Printf("%+v\n", response)
+	log.Printf("Response: %v\n", response)
 
 	// Load a few more sessions
 	add_session_requests2 := []*fw.SessionRequest{
@@ -68,5 +68,5 @@ func do_sessionoffload(conn grpc.ClientConnInterface, ctx context.Context) {
 		log.Printf("close and receive: %v", err)
 	}
 
-	log.Printf("%+v\n", response)
+	log.Printf("Response: %v\n", response)
 }

@@ -241,6 +241,9 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 	session_lock.Lock()
 	defer session_lock.Unlock()
 
+	log.Printf("----- DELETE SESSION -----")
+	log.Printf("Looking for session %d", in.SessionId)
+
 	session, valid := sessions[in.SessionId]
 	if !valid {
 		log.Printf("Session not found")
@@ -265,15 +268,18 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 	return return_session, nil
 }
 
-func (s *server) GetAllSession(ctx context.Context, in *fw.SessionRequestArgs) (*fw.SessionResponses, error) {
+func (s *server) GetAllSessions(ctx context.Context, in *fw.SessionRequestArgs) (*fw.SessionResponses, error) {
 	var return_sessions fw.SessionResponses
+
+	log.Printf("----- GET ALL SESSIONS -----")
+	log.Printf("Starting with session %d", in.StartSession)
 
 	session_lock.RLock()
 	defer session_lock.RUnlock()
 
 	for k, v := range sessions {
 		// Skip if requested session start is greater than current session
-		if k > in.StartSession {
+		if k < in.StartSession {
 			continue
 		}
 
@@ -305,33 +311,34 @@ func (s *server) GetClosedSessions(in *fw.SessionRequestArgs, stream fw.SessionT
 	defer session_lock.RUnlock()
 
 	for _, v := range sessions {
-		if v.session_state == fw.SessionState__CLOSED {
+		if v.session_state != fw.SessionState__CLOSED {
 			continue
 		}
 
 		// Stream this session
 		wg.Add(1)
 
-		// Collect the response
-		return_session := &fw.SessionResponse{
-			SessionId:        v.session_id,
-			InPackets:        v.in_packets,
-			OutPackets:       v.out_packets,
-			InBytes:          v.in_bytes,
-			OutBytes:         v.out_bytes,
-			SessionState:     v.session_state,
-			SessionCloseCode: v.session_close_code,
-			RequestStatus:    v.request_status,
-			StartTime:        timestamppb.New(v.start_time),
-			EndTime:          timestamppb.New(v.end_time),
-		}
-		go func(session *fw.SessionResponse) {
+		go func(v session) {
 			defer wg.Done()
 
-			if err := stream.Send(session); err != nil {
+			// Collect the response
+			return_session := &fw.SessionResponse{
+				SessionId:        v.session_id,
+				InPackets:        v.in_packets,
+				OutPackets:       v.out_packets,
+				InBytes:          v.in_bytes,
+				OutBytes:         v.out_bytes,
+				SessionState:     v.session_state,
+				SessionCloseCode: v.session_close_code,
+				RequestStatus:    v.request_status,
+				StartTime:        timestamppb.New(v.start_time),
+				EndTime:          timestamppb.New(v.end_time),
+			}
+
+			if err := stream.Send(return_session); err != nil {
 				log.Printf("send error %v", err)
 			}
-		}(return_session)
+		}(v)
 	}
 
 	wg.Wait()
