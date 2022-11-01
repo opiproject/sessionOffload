@@ -33,4 +33,8 @@ func main() {
 	defer cancel()
 
 	do_sessionoffload(conn, ctx)
+
+	done := make(chan bool)
+	go do_client_background(conn, done)
+	<-done
 }
