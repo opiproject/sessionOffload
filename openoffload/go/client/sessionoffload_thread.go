@@ -11,13 +11,14 @@ import (
 	"context"
 	"io"
         "log"
+	"sync"
         "time"
 
         fw "github.com/opiproject/sessionOffload/sessionoffload/v2/gen/go"
 	"google.golang.org/grpc"
 )
 
-func do_client_background(conn grpc.ClientConnInterface, ch chan<- bool) {
+func do_client_background(conn grpc.ClientConnInterface, wg *sync.WaitGroup) {
 	log.Printf("----- Entered do_client_background -----")
 
 	// Count sessions
@@ -47,7 +48,7 @@ func do_client_background(conn grpc.ClientConnInterface, ch chan<- bool) {
 			for {
 				resp, err := stream.Recv()
 				if err == io.EOF {
-					done <- true //means stream is finished
+					done <- true // Signal the stream is finished
 					return
 				}
 				if err != nil {
@@ -60,6 +61,7 @@ func do_client_background(conn grpc.ClientConnInterface, ch chan<- bool) {
 				}
 
 				// Clear out this session
+				log.Printf("Deleting session %d", resp.SessionId)
 				_, err = client.DeleteSession(context.Background(), sess_id)
 				if err != nil {
 					log.Printf("Failed removing session %d", sess_id.SessionId)
@@ -67,21 +69,20 @@ func do_client_background(conn grpc.ClientConnInterface, ch chan<- bool) {
 			}
 		}(client)
 
-		<-done //we will wait until all response is received
-		log.Printf("finished")
+		<-done // Wait until all responses are received
 
 		// Get current sessions
 		all_sessions, sess_err := client.GetAllSessions(context.Background(), request_args)
 		if sess_err != nil {
 			log.Printf("Error contacting server")
-			done <- true
+			wg.Done()
 			return
 		}
 
 		if len(all_sessions.SessionInfo) == 0 && count == 0 {
 			// Exit as we processed all closed sessions
 			log.Printf("All sessions closed, returning")
-			done <- true
+			wg.Done()
 			return
 		}
 	}
