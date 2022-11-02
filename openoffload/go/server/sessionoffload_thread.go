@@ -19,10 +19,10 @@ import (
 // Update packet counters
 func session_update_packet_counters(v *session) {
 	// Increment packet counters
-	v.in_packets  += uint64(rand.Intn(1000))
-	v.out_packets += uint64(rand.Intn(1000))
-	v.in_bytes    += uint64(rand.Intn(100000))
-	v.out_bytes   += uint64(rand.Intn(100000))
+	v.in_packets  += uint64(rand.Intn(50))
+	v.out_packets += uint64(rand.Intn(700))
+	v.in_bytes    += uint64(rand.Intn(7000))
+	v.out_bytes   += uint64(rand.Intn(500000))
 }
 
 func session_timeout(v *session) {

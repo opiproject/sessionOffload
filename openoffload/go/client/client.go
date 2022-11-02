@@ -8,6 +8,7 @@ import (
 	"flag"
 	"log"
 	"math/rand"
+	"sync"
 	"time"
 
 	"google.golang.org/grpc"
@@ -34,7 +35,8 @@ func main() {
 
 	do_sessionoffload(conn, ctx)
 
-	done := make(chan bool)
-	go do_client_background(conn, done)
-	<-done
+	wg := sync.WaitGroup{}
+	wg.Add(1)
+	go do_client_background(conn, &wg)
+	wg.Wait()
 }
