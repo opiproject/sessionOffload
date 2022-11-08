@@ -20,6 +20,18 @@ services:
       - opi-offload-server
     command: /opi-sessionoffload-client -addr=opi-offload-server:50151
 
+  opi-xdp:
+    build:
+      context: xdp
+    networks:
+      - internet
+      - intranet
+    ulimits:
+      memlock: 1073741824
+    cap_add:
+      - SYS_ADMIN
+    command: sleep infinity
+
 networks:
   internet:
     ipam:
