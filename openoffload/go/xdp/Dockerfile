@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bullseye-20221024
 
 RUN apt-get -y update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
