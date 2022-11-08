@@ -33,6 +33,7 @@ jobs:
         package:
           - server
           - client
+          - xdp
     steps:
     - uses: actions/checkout@v3
     - uses: docker/setup-qemu-action@v2
@@ -50,7 +51,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@57396166ad8aefe6098280995947635806a0e6ea
       with:
-        images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/opi-sessionoffload-framework-golang-${{ matrix.package }}
+        images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/opi-sessionoffload-${{ matrix.package }}
 
     - name: Build and push Docker image
       id: build-and-push
