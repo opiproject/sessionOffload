@@ -28,6 +28,7 @@ jobs:
         package:
           - server
           - client
+          - xdp
     steps:
       - run: 'echo "No sessionOffload golang framework test run required"'
 
