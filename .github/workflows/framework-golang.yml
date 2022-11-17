@@ -31,7 +31,6 @@ jobs:
     strategy:
       matrix:
         package:
-          - server
           - client
           - xdp
     steps:
@@ -54,10 +53,25 @@ jobs:
         images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/opi-sessionoffload-${{ matrix.package }}
 
     - name: Build and push Docker image
+      if: matrix.package != 'xdp'
       id: build-and-push
       uses: docker/build-push-action@175d02bffea74695e96b351069ac938b338802f9
       with:
         context: openoffload/go/${{ matrix.package }}
+        platforms: linux/amd64,linux/arm64
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Build and push Docker image
+      if: matrix.package == 'xdp'
+      id: build-and-push-xdp
+      uses: docker/build-push-action@ffe65bfc276d2ef003d5ea483a9947a8f6d408da
+      with:
+        context: openoffload/go
+        file: openoffload/go/${{ matrix.package }}/Dockerfile
         platforms: linux/amd64,linux/arm64
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}
@@ -97,15 +111,15 @@ jobs:
         set -x
         docker-compose up -d
         docker-compose ps
-        docker-compose up -d opi-offload-client
+        docker-compose up -d opi-sessionoffload-client
         grpc_cli=(docker run --network=go_intranet --rm namely/grpc-cli)
-        "${grpc_cli[@]}" ls opi-offload-server:50151
-        "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable -l
-        "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.AddSession -l
-        "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.GetSession -l
-        "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.DeleteSession -l
-        "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.GetAllSessions -l
-        "${grpc_cli[@]}" ls opi-offload-server:50151 openoffload.v2.SessionTable.GetClosedSessions -l
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151 openoffload.v2.SessionTable -l
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151 openoffload.v2.SessionTable.AddSession -l
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151 openoffload.v2.SessionTable.GetSession -l
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151 openoffload.v2.SessionTable.DeleteSession -l
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151 openoffload.v2.SessionTable.GetAllSessions -l
+        "${grpc_cli[@]}" ls opi-sessionoffload-server:50151 openoffload.v2.SessionTable.GetClosedSessions -l
       working-directory: openoffload/go
 
     - name: Logs

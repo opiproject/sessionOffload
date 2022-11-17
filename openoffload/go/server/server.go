@@ -16,9 +16,10 @@ import (
 
 var (
 	port           = flag.Int("port", 50151, "The server port")
-	start_session  = flag.Uint64("start", 1, "The starting session ID")
-	max_session    = flag.Uint64("max", 8192, "The maximum session ID")
+	start_session  = flag.Uint("start", 1, "The starting session ID")
+	max_session    = flag.Uint("max", 8192, "The maximum session ID")
 	update         = flag.Int("simulate", 0, "Enable simulation with a delay per run, disabled by default")
+	xdp_backend    = flag.Bool("backend", false, "Enable the XDP backend")
 )
 
 type server struct {
@@ -38,6 +39,10 @@ func main() {
 	reflection.Register(s)
 
 	init_sessionoffload()
+
+	if *xdp_backend {
+		init_xdp()
+	}
 
 	log.Printf("server listening at %v", lis.Addr())
 	if err := s.Serve(lis); err != nil {

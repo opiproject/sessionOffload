@@ -2,27 +2,22 @@
 version: '3.7'
 
 services:
-  opi-offload-server:
-    build:
-      context: server
-    networks:
-      - internet
-      - intranet
-    command: /opi-sessionoffload-bridge -port=50151 -simulate 7
-
-  opi-offload-client:
+  opi-sessionoffload-client:
+    container_name: opi-sessionoffload-client
     build:
       context: client
     networks:
       - internet
       - intranet
     depends_on:
-      - opi-offload-server
-    command: /opi-sessionoffload-client -addr=opi-offload-server:50151
+      - opi-sessionoffload-server
+    command: /opi-sessionoffload-client -addr=opi-sessionoffload-server:50151
 
-  opi-xdp:
+  opi-sessionoffload-server:
+    container_name: opi-sessionoffload-server
     build:
-      context: xdp
+      context: .
+      dockerfile: xdp/Dockerfile
     networks:
       - internet
       - intranet
@@ -30,7 +25,11 @@ services:
       memlock: 1073741824
     cap_add:
       - SYS_ADMIN
-    command: sleep infinity
+      - NET_ADMIN
+    sysctls:
+      - net.ipv4.conf.all.rp_filter=0
+    privileged: true
+    command: /opt/xdp/start.sh
 
 networks:
   internet:
