@@ -25,7 +25,7 @@ type action_params struct {
 
 // Per session state in the table
 type session struct {
-	session_id         uint64
+	session_id         uint32
 	in_lif             int32
 	out_lif            int32
 	ip_version         fw.IpVersion
@@ -53,18 +53,18 @@ type session struct {
 var session_lock sync.RWMutex
 
 // The global session table
-var sessions map[uint64]session
+var sessions map[uint32]session
 
 // The last session ID we allocated
-var last uint64
+var last uint32
 
 // The max session ID we can allocate
-var max uint64
+var max uint32
 
 func find_session_by_7_tuple(in_lif, out_lif int32, source_ipv4 uint32, source_ipv6 []byte,
 			dest_ipv4 uint32, dest_ipv6 []byte,
 			src_port, dst_port uint32,
-			protocol_id *fw.ProtocolId, ip_version *fw.IpVersion) uint64 {
+			protocol_id *fw.ProtocolId, ip_version *fw.IpVersion) uint32 {
 	for _, v := range sessions {
 		session_lock.RLock()
 
@@ -103,16 +103,16 @@ func find_session_by_7_tuple(in_lif, out_lif int32, source_ipv4 uint32, source_i
 
 func init_sessionoffload() {
 	rand.Seed(time.Now().Unix())
-	sessions = make(map[uint64]session)
-	last = *start_session
-	max  = *max_session
+	sessions = make(map[uint32]session)
+	last = uint32(*start_session)
+	max  = uint32(*max_session)
 	if *update != 0 {
 		go session_update()
 	}
 }
 
-func next_session_id() (uint64, error) {
-	var cnt uint64
+func next_session_id() (uint32, error) {
+	var cnt uint32
 
 	session_lock.RLock()
 	defer session_lock.RUnlock()
@@ -159,7 +159,7 @@ func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 								&sr.ProtocolId, &sr.IpVersion); existing_session != 0 {
 			log.Printf("Existing session with 7-tuple found")
 			session_resp_err := fw.SessionResponseError{
-				SessionId: existing_session,
+				SessionId: uint64(existing_session),
 				ErrorStatus: fw.RequestStatus_value["_REJECTED_SESSION_ALREADY_EXISTS"],
 			}
 			resp.ResponseError = append(resp.ResponseError, &session_resp_err)
@@ -206,6 +206,13 @@ func (s *server) AddSession(stream fw.SessionTable_AddSessionServer) error {
 			sessions[newSessionId] = new_session
 			session_lock.Unlock()
 
+			if *xdp_backend {
+				err = xdp_add_session(newSessionId, sr)
+				if err != nil {
+					log.Printf("Failed adding session %d into eBPF map", newSessionId)
+				}
+			}
+
 			total++
 		}
 
@@ -217,24 +224,32 @@ func (s *server) GetSession(ctx context.Context, in *fw.SessionId) (*fw.SessionR
 	session_lock.RLock()
 	defer session_lock.RUnlock()
 
-	session, valid := sessions[in.SessionId]
+	session, valid := sessions[uint32(in.SessionId >> 32)]
 	if !valid {
 		log.Printf("Session not found")
 		return nil, errors.New("Session not found")
 	}
 
-	return &fw.SessionResponse{
-		SessionId:        session.session_id,
-		InPackets:        session.in_packets,
-		OutPackets:       session.out_packets,
-		InBytes:          session.in_bytes,
-		OutBytes:         session.out_bytes,
-		SessionState:     session.session_state,
-		SessionCloseCode: session.session_close_code,
-		RequestStatus:    session.request_status,
-		StartTime:        timestamppb.New(session.start_time),
-		EndTime:          timestamppb.New(session.end_time),
-	}, nil
+	if *xdp_backend {
+		resp, err := xdp_get_session(uint32(in.SessionId))
+		if err != nil {
+			log.Printf("Failed adding session %d into eBPF map", in.SessionId)
+		}
+		return resp, nil
+	} else {
+		return &fw.SessionResponse{
+			SessionId:        uint64(session.session_id),
+			InPackets:        session.in_packets,
+			OutPackets:       session.out_packets,
+			InBytes:          session.in_bytes,
+			OutBytes:         session.out_bytes,
+			SessionState:     session.session_state,
+			SessionCloseCode: session.session_close_code,
+			RequestStatus:    session.request_status,
+			StartTime:        timestamppb.New(session.start_time),
+			EndTime:          timestamppb.New(session.end_time),
+		}, nil
+	}
 }
 
 func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.SessionResponse, error) {
@@ -244,14 +259,14 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 	log.Printf("----- DELETE SESSION -----")
 	log.Printf("Looking for session %d", in.SessionId)
 
-	session, valid := sessions[in.SessionId]
+	session, valid := sessions[uint32(in.SessionId >> 32)]
 	if !valid {
 		log.Printf("Session not found")
 		return nil, errors.New("Session not found")
 	}
 
 	return_session := &fw.SessionResponse{
-		SessionId:        session.session_id,
+		SessionId:        uint64(session.session_id),
 		InPackets:        session.in_packets,
 		OutPackets:       session.out_packets,
 		InBytes:          session.in_bytes,
@@ -263,7 +278,14 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 		EndTime:          timestamppb.New(session.end_time),
 	}
 
-	delete(sessions, in.SessionId)
+	delete(sessions, uint32(in.SessionId >> 32))
+
+	if *xdp_backend {
+		_, err := xdp_del_session(uint32(in.SessionId))
+		if err != nil {
+			log.Printf("Failed adding session %d into eBPF map", in.SessionId)
+		}
+	}
 
 	return return_session, nil
 }
@@ -279,25 +301,34 @@ func (s *server) GetAllSessions(ctx context.Context, in *fw.SessionRequestArgs) 
 
 	for k, v := range sessions {
 		// Skip if requested session start is greater than current session
-		if k < in.StartSession {
+		if k < uint32(in.StartSession >> 32) {
 			continue
 		}
 
 		// Collect the response
-		return_session := &fw.SessionResponse{
-			SessionId:        v.session_id,
-			InPackets:        v.in_packets,
-			OutPackets:       v.out_packets,
-			InBytes:          v.in_bytes,
-			OutBytes:         v.out_bytes,
-			SessionState:     v.session_state,
-			SessionCloseCode: v.session_close_code,
-			RequestStatus:    v.request_status,
-			StartTime:        timestamppb.New(v.start_time),
-			EndTime:          timestamppb.New(v.end_time),
-		}
+		if *xdp_backend {
+			resp, err := xdp_get_session(k)
+			if err != nil {
+				log.Printf("Failed adding session %d into eBPF map", k)
+			}
 
-		return_sessions.SessionInfo = append(return_sessions.SessionInfo, return_session)
+			return_sessions.SessionInfo = append(return_sessions.SessionInfo, resp)
+		} else {
+			return_session := &fw.SessionResponse{
+				SessionId:        uint64(v.session_id),
+				InPackets:        v.in_packets,
+				OutPackets:       v.out_packets,
+				InBytes:          v.in_bytes,
+				OutBytes:         v.out_bytes,
+				SessionState:     v.session_state,
+				SessionCloseCode: v.session_close_code,
+				RequestStatus:    v.request_status,
+				StartTime:        timestamppb.New(v.start_time),
+				EndTime:          timestamppb.New(v.end_time),
+			}
+
+			return_sessions.SessionInfo = append(return_sessions.SessionInfo, return_session)
+		}
 	}
 
 	return &return_sessions, nil
@@ -310,35 +341,56 @@ func (s *server) GetClosedSessions(in *fw.SessionRequestArgs, stream fw.SessionT
 	session_lock.RLock()
 	defer session_lock.RUnlock()
 
-	for _, v := range sessions {
-		if v.session_state != fw.SessionState__CLOSED {
-			continue
+	for k, v := range sessions {
+		if *xdp_backend {
+			resp, err := xdp_get_session(k)
+			if err != nil {
+				log.Printf("Failed adding session %d into eBPF map", k)
+			}
+
+			if resp.SessionState != fw.SessionState__CLOSED {
+				continue
+			}
+
+			wg.Add(1)
+
+			go func(session *fw.SessionResponse) {
+				defer wg.Done()
+
+				if err := stream.Send(resp); err != nil {
+					log.Printf("Error sending closed session reply: %v", err)
+				}
+			}(resp)
+		} else {
+			if v.session_state != fw.SessionState__CLOSED {
+				continue
+			}
+
+			// Stream this session
+			wg.Add(1)
+
+			go func(v session) {
+				defer wg.Done()
+
+				// Collect the response
+				return_session := &fw.SessionResponse{
+					SessionId:        uint64(v.session_id),
+					InPackets:        v.in_packets,
+					OutPackets:       v.out_packets,
+					InBytes:          v.in_bytes,
+					OutBytes:         v.out_bytes,
+					SessionState:     v.session_state,
+					SessionCloseCode: v.session_close_code,
+					RequestStatus:    v.request_status,
+					StartTime:        timestamppb.New(v.start_time),
+					EndTime:          timestamppb.New(v.end_time),
+				}
+
+				if err := stream.Send(return_session); err != nil {
+					log.Printf("send error %v", err)
+				}
+			}(v)
 		}
-
-		// Stream this session
-		wg.Add(1)
-
-		go func(v session) {
-			defer wg.Done()
-
-			// Collect the response
-			return_session := &fw.SessionResponse{
-				SessionId:        v.session_id,
-				InPackets:        v.in_packets,
-				OutPackets:       v.out_packets,
-				InBytes:          v.in_bytes,
-				OutBytes:         v.out_bytes,
-				SessionState:     v.session_state,
-				SessionCloseCode: v.session_close_code,
-				RequestStatus:    v.request_status,
-				StartTime:        timestamppb.New(v.start_time),
-				EndTime:          timestamppb.New(v.end_time),
-			}
-
-			if err := stream.Send(return_session); err != nil {
-				log.Printf("send error %v", err)
-			}
-		}(v)
 	}
 
 	wg.Wait()
