@@ -224,7 +224,7 @@ func (s *server) GetSession(ctx context.Context, in *fw.SessionId) (*fw.SessionR
 	session_lock.RLock()
 	defer session_lock.RUnlock()
 
-	session, valid := sessions[uint32(in.SessionId >> 32)]
+	session, valid := sessions[uint32(in.SessionId)]
 	if !valid {
 		log.Printf("Session not found")
 		return nil, errors.New("Session not found")
@@ -259,7 +259,7 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 	log.Printf("----- DELETE SESSION -----")
 	log.Printf("Looking for session %d", in.SessionId)
 
-	session, valid := sessions[uint32(in.SessionId >> 32)]
+	session, valid := sessions[uint32(in.SessionId)]
 	if !valid {
 		log.Printf("Session not found")
 		return nil, errors.New("Session not found")
@@ -278,7 +278,7 @@ func (s *server) DeleteSession(ctx context.Context, in *fw.SessionId) (*fw.Sessi
 		EndTime:          timestamppb.New(session.end_time),
 	}
 
-	delete(sessions, uint32(in.SessionId >> 32))
+	delete(sessions, uint32(in.SessionId))
 
 	if *xdp_backend {
 		_, err := xdp_del_session(uint32(in.SessionId))
@@ -301,7 +301,7 @@ func (s *server) GetAllSessions(ctx context.Context, in *fw.SessionRequestArgs) 
 
 	for k, v := range sessions {
 		// Skip if requested session start is greater than current session
-		if k < uint32(in.StartSession >> 32) {
+		if k < uint32(in.StartSession) {
 			continue
 		}
 
