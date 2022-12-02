@@ -84,8 +84,8 @@ func xdp_convert_session(req *fw.SessionRequest)(*xdp_session, error) {
 		session.Ip_version = 0 // .FIXME: Hardcoded
 		session.Ipv4.Saddr = req.SourceIp
 		session.Ipv4.Daddr = req.DestinationIp
-		session.Ipv4.Sport = uint16(req.SourcePort >> 16)
-		session.Ipv4.Dport = uint16(req.DestinationPort >> 16)
+		session.Ipv4.Sport = uint16(req.SourcePort)
+		session.Ipv4.Dport = uint16(req.DestinationPort)
 		session.Action.Action_next_hop = req.Action.ActionNextHop
 	} else {
 		session.Ip_version = 1 // .FIXME: Hardcoded
@@ -101,8 +101,8 @@ func xdp_convert_session(req *fw.SessionRequest)(*xdp_session, error) {
 			log.Printf("Failed reading IPv6 destination")
 			return nil, err
 		}
-		session.Ipv6.Sport = uint16(req.SourcePort >> 16)
-		session.Ipv6.Dport = uint16(req.DestinationPort >> 16)
+		session.Ipv6.Sport = uint16(req.SourcePort)
+		session.Ipv6.Dport = uint16(req.DestinationPort)
 		rbuf = bytes.NewReader(req.Action.ActionNextHopV6)
 		err = binary.Read(rbuf, binary.LittleEndian, &session.Action.Action_next_hop_v6)
 		if err != nil {
@@ -122,29 +122,100 @@ func xdp_convert_session(req *fw.SessionRequest)(*xdp_session, error) {
 }
 
 func xdp_convert_session_to_proto(session_id uint32, entry xdp_session)(*fw.SessionResponse, error) {
-	var session fw.SessionResponse
+	var s fw.SessionResponse
 
-	session.SessionId = uint64(session_id)
-	session.InPackets = entry.In_packets
-	session.OutPackets = entry.Out_packets
-	session.InBytes = entry.In_bytes
-	session.OutBytes = entry.Out_bytes
-	session.SessionState = fw.SessionState(entry.Session_state)
-	session.SessionCloseCode = fw.SessionCloseCode(entry.Session_close_code)
+	s.SessionId = uint64(session_id)
+	s.InPackets = entry.In_packets
+	s.OutPackets = entry.Out_packets
+	s.InBytes = entry.In_bytes
+	s.OutBytes = entry.Out_bytes
+	s.SessionState = fw.SessionState(entry.Session_state)
+	s.SessionCloseCode = fw.SessionCloseCode(entry.Session_close_code)
 
-	return &session, nil
+	return &s, nil
+}
+
+func xdp_update_map_entry(s *session)(error) {
+	var entry xdp_session
+
+	mapdata, err := sessionmap.Lookup(s.session_id)
+	if err != nil {
+		log.Printf("Error reading session map")
+		return err
+	}
+	buf := bytes.NewBuffer(mapdata)
+
+	if err := binary.Read(buf, binary.LittleEndian, &entry); err != nil {
+		log.Printf("Error reading data from session map")
+		return err
+	}
+
+	// Update the entry
+	entry.In_lif = uint32(s.in_lif)
+	entry.Out_lif = uint32(s.out_lif)
+	if s.ip_version == fw.IpVersion__IPV4 {
+		entry.Ip_version = 0
+		entry.Ipv4.Saddr = s.source_ip
+		entry.Ipv4.Daddr = s.destination_ip
+		entry.Ipv4.Sport = uint16(s.source_port)
+		entry.Ipv4.Dport = uint16(s.destination_port)
+		entry.Action.Action_next_hop = s.action.action_next_hop
+	} else {
+		entry.Ip_version = 1
+		rbuf := bytes.NewReader(s.source_ipv6)
+		err := binary.Read(rbuf, binary.LittleEndian, &entry.Ipv6.Saddr)
+		if err != nil {
+			log.Printf("Failed reading IPv6 source")
+			return err
+		}
+		rbuf = bytes.NewReader(s.destination_ipv6)
+		err = binary.Read(rbuf, binary.LittleEndian, &entry.Ipv6.Daddr)
+		if err != nil {
+			log.Printf("Failed reading IPv6 destination")
+			return err
+		}
+		entry.Ipv6.Sport = uint16(s.source_port)
+		entry.Ipv6.Dport = uint16(s.destination_port)
+		rbuf = bytes.NewReader(s.action.action_next_hop_v6)
+		err = binary.Read(rbuf, binary.LittleEndian, &entry.Action.Action_next_hop_v6)
+		if err != nil {
+			log.Printf("Error reading V6 next hop")
+			return err
+		}
+	}
+	entry.In_packets = s.in_packets
+	entry.Out_packets = s.out_packets
+	entry.In_bytes = s.in_bytes
+	entry.Out_bytes = s.out_bytes
+	entry.Session_state = uint32(s.session_state)
+	entry.Session_close_code = uint32(s.session_close_code)
+
+	buf2 := &bytes.Buffer{}
+
+	err = binary.Write(buf2, binary.LittleEndian, entry)
+	if err != nil {
+		log.Printf("Failed writing session map for ID %d: %v", s.session_id, err)
+	}
+
+	err = sessionmap.Upsert(s.session_id, buf2.Bytes())
+	if err != nil {
+		log.Printf("Failed adding session %d into eBPF map: %v", s.session_id, err)
+	}
+	return nil
 }
 
 func xdp_add_session(sessionId uint32, req *fw.SessionRequest) error {
-	session, err := xdp_convert_session(req)
+	entry, err := xdp_convert_session(req)
 	if err != nil {
 		log.Printf("Failed converting session map structure")
 		return err
 	}
 
+	log.Printf("xdp_add_session: Adding ID [%d] [%v]", sessionId, entry)
+
 	buf := &bytes.Buffer{}
 
-	err = binary.Write(buf, binary.LittleEndian, session)
+	err = binary.Write(buf, binary.LittleEndian, entry)
 	if err != nil {
 		log.Printf("Failed writing session map for ID %d: %v", sessionId, err)
 	}
@@ -158,7 +229,6 @@ func xdp_add_session(sessionId uint32, req *fw.SessionRequest) error {
 }
 
 func xdp_get_session(session uint32)(*fw.SessionResponse, error) {
-	var resp *fw.SessionResponse
 	var entry xdp_session
 
 	mapdata, err := sessionmap.Lookup(session)
@@ -173,10 +243,10 @@ func xdp_get_session(session uint32)(*fw.SessionResponse, error) {
 		return nil, err
 	}
 
-	resp, err = xdp_convert_session_to_proto(session, entry)
-	if err != nil {
+	resp, err2 := xdp_convert_session_to_proto(session, entry)
+	if err2 != nil {
 		log.Printf("Failed converting map entry to proto struct")
-		return nil, err
+		return nil, err2
 	}
 
 	return resp, nil

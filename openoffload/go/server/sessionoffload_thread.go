@@ -23,18 +23,36 @@ func session_update_packet_counters(v *session) {
 	v.out_packets += uint64(rand.Intn(700))
 	v.in_bytes    += uint64(rand.Intn(7000))
 	v.out_bytes   += uint64(rand.Intn(500000))
+
+	if *xdp_backend {
+		if err := xdp_update_map_entry(v); err != nil {
+			log.Printf("Failed updating stats for eBPF map %d", v.session_id)
+		}
+	}
 }
 
 func session_timeout(v *session) {
 	v.session_state      = fw.SessionState__CLOSED
 	v.session_close_code = fw.SessionCloseCode__TIMEOUT
 	v.end_time           = time.Now()
+
+	if *xdp_backend {
+		if err := xdp_update_map_entry(v); err != nil {
+			log.Printf("Failed updating session timeout for eBPF map %d", v.session_id)
+		}
+	}
 }
 
 func session_fin(v *session) {
 	v.session_state      = fw.SessionState__CLOSED
 	v.session_close_code = fw.SessionCloseCode__FINACK
 	v.end_time           = time.Now()
+
+	if *xdp_backend {
+		if err := xdp_update_map_entry(v); err != nil {
+			log.Printf("Failed updating session fin for eBPF map %d", v.session_id)
+		}
+	}
 }
 
 // Function which runs in the background updating the session table entries
