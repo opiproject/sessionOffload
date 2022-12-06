@@ -2,7 +2,7 @@
 
 # Alpine is chosen for its small footprint
 # compared to Ubuntu
-FROM golang:1.19.3-bullseye
+FROM golang:1.19.4-bullseye
 
 WORKDIR /app
 
