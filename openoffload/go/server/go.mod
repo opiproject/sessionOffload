@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/dropbox/goebpf v0.0.0-20221212193212-e568275f8431
-	github.com/opiproject/sessionOffload v0.0.0-20221108181755-c2bd4d950024
+	github.com/opiproject/sessionOffload v0.0.0-20221214145510-2e8d64352145
 	google.golang.org/grpc v1.51.0
 	google.golang.org/protobuf v1.28.1
 )
