@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/dropbox/goebpf v0.0.0-20221212193212-e568275f8431
 	github.com/vishvananda/netlink v1.2.1-beta.2.0.20221213174145-7f2b136d34a5
-	gopkg.in/yaml.v2 v2.4.0
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
