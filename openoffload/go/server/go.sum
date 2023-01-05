@@ -34,6 +34,8 @@ github.com/opiproject/sessionOffload v0.0.0-20221108181755-c2bd4d950024 h1:eGA4T
 github.com/opiproject/sessionOffload v0.0.0-20221108181755-c2bd4d950024/go.mod h1:qtDmMW2lb+oNVNHmiw2lxRiaUczywGNgkf3dqr0QD1s=
 github.com/opiproject/sessionOffload v0.0.0-20221214145510-2e8d64352145 h1:D0sADNBqpl3UNVXd85NS1urdRdq865rQxHjVZ1/u/Zc=
 github.com/opiproject/sessionOffload v0.0.0-20221214145510-2e8d64352145/go.mod h1:qtDmMW2lb+oNVNHmiw2lxRiaUczywGNgkf3dqr0QD1s=
+github.com/opiproject/sessionOffload v0.0.0-20230105152146-f6fab5c1781c h1:Pp2X6sqIzi/g4lBxhG0FSajS2WxrGOb+36YU+yRCGmI=
+github.com/opiproject/sessionOffload v0.0.0-20230105152146-f6fab5c1781c/go.mod h1:qtDmMW2lb+oNVNHmiw2lxRiaUczywGNgkf3dqr0QD1s=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
