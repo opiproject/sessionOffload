@@ -39,6 +39,8 @@ github.com/opiproject/sessionOffload v0.0.0-20230105152146-f6fab5c1781c h1:Pp2X6
 github.com/opiproject/sessionOffload v0.0.0-20230105152146-f6fab5c1781c/go.mod h1:qtDmMW2lb+oNVNHmiw2lxRiaUczywGNgkf3dqr0QD1s=
 github.com/opiproject/sessionOffload v0.0.0-20230105203031-35f255ba085b h1:WBcfh0c6oC8lI8/CnUi1at/gxYfng6irQ40NdQgZqvM=
 github.com/opiproject/sessionOffload v0.0.0-20230105203031-35f255ba085b/go.mod h1:qtDmMW2lb+oNVNHmiw2lxRiaUczywGNgkf3dqr0QD1s=
+github.com/opiproject/sessionOffload v0.0.0-20230128191522-98c70c7959d9 h1:oFHDWghzl0VAZPhCVmuAIq4+2d2QjimDD+CPQnxYHis=
+github.com/opiproject/sessionOffload v0.0.0-20230128191522-98c70c7959d9/go.mod h1:qtDmMW2lb+oNVNHmiw2lxRiaUczywGNgkf3dqr0QD1s=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/exp v0.0.0-20190121172915-509febef88a4/go.mod h1:CJ0aWSM057203Lf6IL+f9T1iT9GByDxfZKAQTCR3kQA=
