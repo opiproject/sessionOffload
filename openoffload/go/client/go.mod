@@ -3,7 +3,7 @@ module github.com/opiproject/sessionOffload/sessionoffload/v2
 go 1.19
 
 require (
-	github.com/opiproject/sessionOffload v0.0.0-20230128191522-98c70c7959d9
+	github.com/opiproject/sessionOffload v0.0.0-20230130130450-ee84537b81a9
 	google.golang.org/grpc v1.52.3
 )
 
