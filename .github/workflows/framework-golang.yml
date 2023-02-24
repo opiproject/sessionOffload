@@ -55,7 +55,7 @@ jobs:
     - name: Build and push Docker image
       if: matrix.package != 'xdp'
       id: build-and-push
-      uses: docker/build-push-action@a3ae207c1434ab875aa11554ce639ff512f25e89
+      uses: docker/build-push-action@d63c96254b2c3dce2a3e8745f423cf62caafb13a
       with:
         context: openoffload/go/${{ matrix.package }}
         platforms: linux/amd64,linux/arm64
@@ -68,7 +68,7 @@ jobs:
     - name: Build and push Docker image
       if: matrix.package == 'xdp'
       id: build-and-push-xdp
-      uses: docker/build-push-action@a3ae207c1434ab875aa11554ce639ff512f25e89
+      uses: docker/build-push-action@d63c96254b2c3dce2a3e8745f423cf62caafb13a
       with:
         context: openoffload/go
         file: openoffload/go/${{ matrix.package }}/Dockerfile
