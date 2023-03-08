@@ -13,7 +13,7 @@ COPY xdp/ .
 RUN make
 
 # Next, we build the golang application
-FROM golang:1.20.1-bullseye as server-builder
+FROM golang:1.20.2-bullseye as server-builder
 
 WORKDIR /app
 
