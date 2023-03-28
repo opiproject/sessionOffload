@@ -3,6 +3,8 @@
 [![Linters](https://github.com/opiproject/sessionOffload/actions/workflows/linters.yml/badge.svg)](https://github.com/opiproject/sessionOffload/actions/workflows/linters.yml)
 [![robotframework-tests](https://github.com/opiproject/sessionOffload/actions/workflows/main.yml/badge.svg)](https://github.com/opiproject/sessionOffload/actions/workflows/main.yml)
 [![OPI sessionOffload golang Framework CI](https://github.com/opiproject/sessionOffload/actions/workflows/framework-golang.yml/badge.svg)](https://github.com/opiproject/sessionOffload/actions/workflows/framework-golang.yml)
+[![GitHub stars](https://img.shields.io/github/stars/opiproject/sessionOffload.svg?style=flat-square&label=github%20stars)](https://github.com/opiproject/sessionOffload)
+[![GitHub Contributors](https://img.shields.io/github/contributors/opiproject/sessionOffload.svg?style=flat-square)](https://github.com/opiproject/sessionOffload/graphs/contributors)
 
 This repository has definitions of API's to accellerate network applications by offloading packet processing to a hardware switch.
 
