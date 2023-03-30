@@ -3,6 +3,9 @@
   "extends": [
     "config:base"
   ],
+  "schedule": [
+    "every weekend"
+  ],
   "ignorePaths": ["openoffload/cpp/framework/Dockerfile"],
   "includeForks": true
 }
